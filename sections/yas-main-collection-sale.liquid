@@ -1,0 +1,465 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<style>
+  .custom-collection .yas-collection-grid-wrapp .collection-variant-Color-0 input[type=radio]:nth-child(n + 4){
+    display: block;
+  }
+  .custom-collection .facets__form-vertical {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .facets{
+    width: 100%;
+  }
+  .facet-filters {
+    padding-left: 3rem;
+    min-width: 300px;
+  }
+  .yas-collection-grid-wrapp li.grid__item h5{
+      display: none;
+  }
+
+  .yas-collection-grid-wrapp li.grid__item:nth-child(n+9) {
+    display: none;
+  }
+  .yas-collection-grid-wrapp .last_cont li.grid__item:nth-child(n+9){
+    display: list-item;
+  }
+  @media  (min-width: 1025px){
+    .yas-main-collection-look .card_yas_size h4 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .yas-main-collection-look .card_yas_size span {
+      min-width: 35px;
+    }
+  }
+  @media (max-width: 1024px){
+
+    .yas-collection-grid-wrapp li.grid__item.open_size .card__heading {
+      position: unset;
+    }
+
+    .yas-collection-grid-wrapp li.grid__item.open_size{
+      position: relative;
+    }
+    .yas-collection-grid-wrapp li.grid__item.open_size .card__heading .card_yas_size{
+      display: block;
+      opacity: 1;
+       height: 110%;
+      width: 100%;
+      top: -10%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      padding: 5px 10px;
+    }
+    .yas-main-collection-look li.grid__item.open_size .card_yas_size_color-otions.card_yas_size_color-otions_active{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+   
+    .yas-collection-grid-wrapp li.grid__item.open_size span,
+    .yas-collection-grid-wrapp li.grid__item.open_size button{
+      color: #000;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 12px;
+      line-height: 28px;
+    }
+    .yas-collection-grid-wrapp li.grid__item.open_size h4{
+      display: none;
+    }
+    .yas-collection-grid-wrapp li.grid__item.open_size h5{
+      display: flex;
+      color: #000;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+       font-size: 12px;
+    }
+    .yas-collection-grid-wrapp li.grid__item.open_size span{
+      border-bottom: 1px solid #B19F67;
+    }
+    .yas-collection-grid-wrapp li.grid__item.open_size span *{
+       width: 100%;
+    }
+    .yas-main-collection-look .card-wrapper:hover .yas-card-title_wrapp {
+      opacity: 1;
+    }
+  }
+  
+</style>
+<script defer>
+  function changeImageColor(e){
+    let wrapp = e.closest('.card-wrapper');
+    let wrappId = wrapp.attr('id');
+    let mediaImg = wrapp.find('.card__inner .media img');
+    let slider = wrapp.find('.card__inner .swiper');
+    let sliderColorVal =  e.attr('color-variant');
+    let activeSliderProd = wrapp.find('.active_slider');
+    mediaImg.attr('src', e.attr('image-variant'));
+
+    let priceColor = e.attr('price-variant');
+    wrapp.find('.price-item--regular .money').text(priceColor);
+
+    let priceDisColor = e.attr('price-variantdis');
+    if(priceDisColor.length > 3){
+      wrapp.find('el.yas_newd_pric span').text(priceDisColor);
+    }
+
+    
+    let wrappSize = wrapp.find('.card__content .card_yas_size');
+    let countSizeVar = wrappSize.find('div').length;
+    console.log(countSizeVar);
+    if(countSizeVar > 0){
+      wrappSize.find('.card_yas_size_color-otions_active').removeClass('card_yas_size_color-otions_active');
+      wrappSize.find('.card_yas_size_color-'+sliderColorVal).addClass('card_yas_size_color-otions_active');
+    }
+    
+    let curentSwiper = wrapp.find('.swiper.swiper-color_'+ sliderColorVal);
+
+    let destroy = document.querySelector('#' + wrappId + ' .active_slider').swiper;
+
+    if(destroy != null){
+      destroy.destroy();
+    }
+    
+    activeSliderProd.removeClass('active_slider');
+    curentSwiper.addClass('active_slider');
+    
+    let swiper = new Swiper('#' + wrappId + ' .swiper-color_'+ sliderColorVal, {
+      // Optional parameters
+      loop: false,
+      lazy: true,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-color_' +sliderColorVal+ ' .swiper-button-next',
+        prevEl: '.swiper-color_' +sliderColorVal+ ' .swiper-button-prev',
+      },
+    });    
+
+
+   
+    let wrappInfoId = wrapp.find('.card_yas_size_color-otions_active > span')[0];
+
+    let var_url = wrappInfoId.getAttribute('url-variant');
+ 
+    let mass_a = wrapp.find('a');
+    mass_a.each(function(){
+      console.log($(this))
+      $(this).attr('href', var_url);
+    })
+
+    
+  }
+
+  function yas_cartAdd(e){
+  // const notification = new CartNotification();
+ 
+  }
+  function starProdSlider(){
+     //$('.card-wrapper .collection_all_images_info .swiper:first-child').addClass('active_slider');
+       let swiper = new Swiper('.card-wrapper .collection_all_images_info .swiper.active_slider', {
+      // Optional parameters
+      loop: false,
+      lazy: true,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.card-wrapper .collection_all_images_info .swiper.active_slider .swiper-button-next',
+        prevEl: '.card-wrapper .collection_all_images_info .swiper.active_slider .swiper-button-prev',
+      },
+
+    });    
+  }
+
+ 
+ 
+
+  
+  function yas_openSize(e){
+    let wrapp = e.closest('li');
+    wrapp.addClass('open_size');
+  }
+  function yas_closeSize(e){
+    let wrapp = e.closest('li');
+    wrapp.removeClass('open_size');
+  }
+
+  $(function(){
+      starProdSlider();
+
+      $('aside input[type="checkbox"]').on('change', function(){
+         let wrapp = $(this).closest('aside');
+         if($('aside input:checked').length == 0){
+           $('#product-grid li').show();
+         }else{
+           $('#product-grid li').hide();
+           wrapp.find('input:checked').each(function(){
+            
+             $('#product-grid li[data-type="'+$(this).val()+'"]').show()
+             
+           })
+         }
+         
+      })
+
+
+      
+
+      $('#SortBy').on('change',function(){
+          if($(this).val() == 'price-ascending' || $(this).val() == 'price-descending'){
+            var ascending = false;
+            $(this).val() == 'price-descending' ? ascending = true : ascending = false;
+            var sorted = $('#product-grid li').sort(function(a,b){
+                return (ascending ==
+                       (convertToNumber($(a).find('.money').html()) < 
+                        convertToNumber($(b).find('.money').html()))) ? 1 : -1;
+            });
+            $('#product-grid').html(sorted);
+          }
+        
+          if($(this).val() == 'title-ascending' || $(this).val() == 'title-descending'){
+            var ascending = false;
+            $(this).val() == 'title-descending' ? ascending = true : ascending = false;
+            var sorted = $('#product-grid li').sort(function(a,b){
+                return (ascending ==
+                       ($(a).find('.product_small_desc_info').html() < 
+                        $(b).find('.product_small_desc_info').html())) ? 1 : -1;
+            });
+            $('#product-grid').html(sorted);
+          }
+
+           if($(this).val() == 'created-ascending' || $(this).val() == 'created-descending'){
+            var ascending = false;
+            $(this).val() == 'created-descending' ? ascending = true : ascending = false;
+            var sorted = $('#product-grid li').sort(function(a,b){
+                return (ascending ==
+                       ($(a).attr('data-time') < 
+                        $(b).attr('data-time'))) ? 1 : -1;
+            });
+            $('#product-grid').html(sorted);
+          }
+        
+      });
+      
+      var convertToNumber = function(value){
+           return parseFloat(value.replace('$',''));
+      }
+
+    /*
+      let x = 8;
+      var c = $('.product-grid-container #product-grid li.grid__item').length;
+      $(window).scroll(function(){
+        let contentWrapp = $('.product-grid-container #product-grid');
+        if(!contentWrapp.hasClass('load_cont') && !contentWrapp.hasClass('last_cont')){
+         
+          let element = contentWrapp.height();
+          let y = $(window).scrollTop();
+          
+            if (y >= element){
+                  contentWrapp.addClass('load_cont');
+                  
+                  x = (x + 4 <= c) ? x + 4 : contentWrapp.addClass('last_cont');;
+  
+                  
+                    setTimeout(function(){
+                      $('#preload_sec').remove();
+                      contentWrapp.removeClass('load_cont');
+                      $('.product-grid-container .grid__item:lt(' + x + ')').show();
+                    },500)
+  
+            }
+          }
+      });
+
+    
+      var sorted = $('#product-grid li').sort(function(a,b){
+                return (true ==
+                       ($(a).attr('data-time') < 
+                        $(b).attr('data-time'))) ? 1 : -1;
+            });
+            $('#product-grid').html(sorted);
+
+    */
+  })
+
+  
+  
+  
+</script>
+
+
+<link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% assign collection_product = collection.products %}
+{% for variant in collection_product %}
+  {% assign array = variant %}
+  {% assign collection_meta_prod = collection_meta_prod | concat: array %}
+{% endfor %}
+
+{% assign collection_meta = collection.metafields.custom.fariants_for_sale.value%}
+{% for variant in collection_meta %}
+  {% assign array = variant | map: "product" %}
+  {% assign collection_meta_prod = collection_meta_prod | concat: array %}
+{% endfor %}
+
+{% assign collection_color = collection.metafields.custom.color_product_look_template.value %}
+{% for variant in collection_color %}
+  {% assign array = variant | map: "product" %}
+  {% assign collection_color_arr = collection_color | concat: array %}
+{% endfor %}
+
+
+{% for variant in collection_meta  %}
+  {% assign array = variant.product | map: "type" %}
+  {% assign collectionAll = collectionAll | concat: array %}
+{% endfor %}
+
+{% assign selectType = collectionAll | uniq %}
+  
+  
+
+  
+<div class="section-{{ section.id }}-padding yas-collection-grid-wrapp">
+
+  <div class="facets-vertical page-width">
+    {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+
+    <aside aria-labelledby="verticalTitle" class="facets-wrapper id="main-collection-filters" data-id="{{ section.id }}">
+        {% render 'facets-look', type: selectType, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
+    </aside>
+
+   
+    <div class="product-grid-container product-grid-container-vertical" id="ProductGridContainer">
+      
+          <div class="collection">
+            <div class="loading-overlay gradient"></div>
+          
+            <ul id="product-grid" data-id="{{ section.id }}" class="
+              grid product-grid grid--2-col-tablet-down
+              grid--4-col-desktop">
+              
+
+
+            {% for variant in collection_meta %}
+        
+                <li class="grid__item"  data-time="{{ variant.product.created_at | date: "%y%m%d%H%M" }}" data-type="{{ variant.product.type }}">
+             
+                          
+                              {%- render 'yas-main-collection-look',
+                                  card_product: variant.product,
+                                  variant_default: variant,
+                                  media_aspect_ratio: 'adapt',
+                                  color_variant: collection_color_arr,
+                                  show_secondary_image: true,
+                                  lazy_load: false,
+                                  section_id: section.id
+                                  forloop_cust: forloop.index0
+                              -%}
+                             
+                  
+                </li>
+            {%- endfor -%}
+
+            </ul>
+  
+          </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$( document ).ready(function() {
+  // $("ul#product-grid li.grid__item .card-wrapper .card__content .card__information fieldset.collection-variant-Color-0").
+$('ul#product-grid li.grid__item .card-wrapper .card__content .card__information fieldset.collection-variant-Color-0').each(function(index) {
+  var inputs = $(this).find($("input[type='radio']") ).val();
+console.log(inputs)
+  if(inputs != ""){
+    $(".variant-collection-repeat").show();
+  }else{
+ $(".variant-collection-repeat").hide();
+    
+  }
+})
+
+
+     let x = 8;
+      var c = $('.product-grid-container #product-grid li.grid__item').length;
+      $(window).scroll(function(){
+        let contentWrapp = $('.product-grid-container #product-grid');
+        let footerHeight = $('footer').height();
+        let headerHeight = $('.yas-main-header').height();
+        if(!contentWrapp.hasClass('load_cont') && !contentWrapp.hasClass('last_cont')){
+         
+          let element = contentWrapp.height() - footerHeight - headerHeight;
+          let y = $(window).scrollTop();
+          console.log(y)
+           console.log(' === ' + element)
+            if (y >= element){
+                  contentWrapp.addClass('load_cont');
+                  contentWrapp.append('<div id="preload_sec"><div class="spinner"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>');
+              
+                  x = (x + 4 <= c) ? x + 4 : contentWrapp.addClass('last_cont');
+  
+                  
+                    setTimeout(function(){
+                      $('#preload_sec').remove();
+                      contentWrapp.removeClass('load_cont');
+                      $('.product-grid-container .grid__item:lt(' + x + ')').show();
+                    },1000)
+  
+            }
+          }
+      });
+  
+});
+
+</script>
+
+
+{% schema %}
+  {
+    "name": "Yas main collection sale",
+    "class": "yas-main-collection-look custom-collection",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

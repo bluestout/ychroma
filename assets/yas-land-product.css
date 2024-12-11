@@ -1,0 +1,838 @@
+.mfp-bg.mfp-ready{
+    display: block;
+  }
+.mfp-close-btn-in .mfp-close {
+    color: #fff;
+}
+#shopify-section-announcement-bar, #shopify-section-header-second{
+  transition: all 0.2s linear;
+}
+.yas-main-header {
+    background: transparent;
+}
+.yas-main-header .yas-centerside-h img {
+    filter: invert(1);
+}
+.yas-main-header a{
+  color: #000;
+}
+.heder_second_yas[open] .yas-main-header a{
+  color: #fff;
+}
+.heder_second_yas[open] .yas-main-header .yas-centerside-h img {
+    filter: invert(0);
+}
+#shopify-section-header.shopify-section-header-sticky,
+.yas-stik_head #shopify-section-announcement-bar{
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden;
+}
+#shopify-section-header.shopify-section-header-sticky + #shopify-section-header-second{
+  opacity: 0 !important;
+  overflow: hidden;
+}
+#klaviyo-product-reviews-wrapper .kl_reviews__review__response{
+  display: none !important;
+}
+
+#klaviyo-product-reviews-wrapper{
+  padding: 0;
+}
+
+#klaviyo-product-reviews-wrapper .kl_reviews__review_item{
+  position: relative;
+}
+#klaviyo-product-reviews-wrapper .kl_reviews__review_item.kl_reviews__review_item.kl_reviews__review_item>div{
+  gap: 0px;
+}
+#klaviyo-product-reviews-wrapper  .kl_reviews__review__author{
+  margin-bottom: 30px;
+}
+
+#klaviyo-product-reviews-wrapper .kl_reviews__time_badge{
+  position: absolute;
+  top: 87px;
+  text-transform: uppercase;
+}
+
+#kl_reviews_tabs__reviews_panel * {
+     background-color: unset; 
+}
+#kl_reviews_tabs__reviews_panel .kl_reviews__review__image_row{
+  display: flex;
+  flex-wrap: wrap;
+}
+#klaviyo-reviews-list{
+  padding: 0;
+}
+#klaviyo-reviews-list .kl_reviews__filters{
+  display: none;
+}
+#klaviyo-reviews-list .kl_reviews__list__tabs{
+  display: none;
+}
+#klaviyo-reviews-list .kl_reviews__button{
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+#klaviyo-reviews-list .kl_reviews__button:after{
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='16' viewBox='0 0 19 16'%3E%3Cpath id='Многоугольник_1' data-name='Многоугольник 1' d='M9.5,0,19,16H0Z' transform='translate(19 16) rotate(180)'/%3E%3C/svg%3E%0A");
+  margin-top: 16px;
+}
+#klaviyo-reviews-list .kl_reviews__stars_badge svg{
+  width: 27px !important;
+  height: auto !important;
+}
+#klaviyo-reviews-list .kl_reviews__stars_badge path{
+  fill: #B49E5F;
+}
+#klaviyo-product-reviews-wrapper .kl_reviews__review__author{
+  font-family: 'CentraNo2-Bold' !important;
+}
+#klaviyo-reviews-list .tkl_reviews__review__author{
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  color: #767676;
+  
+}
+#klaviyo-reviews-list .kl_reviews__review__title{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 5px;
+  min-height: 28px;
+  margin-top: 7px;
+  font-family: 'Centra_No2' !important;
+  font-weight: 400;
+}
+@media(min-width: 990px){
+  #klaviyo-reviews-list .kl_reviews__review__title{
+    display: block;
+  }
+}
+#klaviyo-reviews-list .kl_reviews__review__conten{
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+}
+
+
+#cart-notification{
+  display: none !important;
+}
+.yas-land-product{
+  background: #fff;
+}
+.yas-land-product *{
+   color: #000;
+}
+.yas-land-product section{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+p strong{
+  font-family: 'CentraNo2-Bold' !important;
+}
+.land-info{
+  padding-top: 120px;
+}
+.land-info-wrapp{
+  display: flex
+}
+.land-info-left{
+    border-right: 2px solid #d5d5d5;
+    padding-right: 25px;
+    width: 65%;
+}
+.land-info-left h3{
+  font-family: "Centra_No2";
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 40px;
+}
+.land-info-left p{
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 30px;
+}
+.land-info-right{
+  width: 35%;
+  margin-left: 25px;
+  padding: 20px 25px;
+  background: #F5F5ED;
+}
+.land-info-right p{
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 20px;
+}
+.land-info-right div p{
+  font-size: 20px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.land-prod{
+  padding-bottom: 45px;
+}
+.land-prod-w{
+  margin-top: 55px;
+}
+.land-prod-info{
+  border-top: 2px solid #d5d5d5;
+  text-align: center;
+  margin-bottom: 45px;
+  padding-top: 50px;
+}
+.land-prod-info h2{
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 28px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 25px;
+}
+.land-prod-info p{
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  color: #000;
+}
+.land-prod-items{
+  display: flex;
+  gap: 50px 16px;
+  flex-wrap: wrap;
+}
+.land-prod-item{
+  max-width: 260px;
+}
+
+.custom-page-yas-land-product-v2 .land-prod-item[data-visible="true"]{
+  display: block;
+}
+.custom-page-yas-land-product-v2 .land-prod-item[data-visible="false"],
+.custom-page-yas-land-product-v2 .land-prod-item[data-aviable="false"]{
+  display: none;
+}
+.land-prod-item_img{
+  max-width: 260px;
+  margin-bottom: 8px;
+}
+.land-prod-item_img img{
+  width: 100%;
+  height: auto;
+}
+.land-prod-item p{
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 0px;
+}
+.land-prod-item .land-prod-item_option{
+  font-family: CentraNo2-Bold !important;
+}
+.land-prod-item button{
+  margin: 15px 0 0;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  font-family: CentraNo2-Bold !important;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  border-radius: 13px;
+  background: #dd4124;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 3px 0;
+  cursor: pointer;
+  min-height: 0;
+}
+.land-prod-item button:before, .land-prod-item button:after{
+  content: unset;
+}
+.land-reviews-w{
+  border-top: 2px solid #d5d5d5;
+  padding-top: 30px;
+  display: flex;
+}
+.land-reviews-l{
+   border-right: 2px solid #d5d5d5;
+   padding-right: 25px;
+   width: 68%;
+}
+.land-reviews-l h3{
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 16px;
+}
+.land-reviews-l p.land-reviews_under-titele{
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+}
+.land-reviews-l p.land-reviews_under-titele + p{
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 35px;
+}
+.land-reviews-r{
+  width: 32%;
+  margin-left: 25px;
+  padding: 20px 25px 50px;
+  background: #CBC09C;
+}
+.land-reviews-r h3{
+  font-size: 42px;
+  line-height: 40px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.land-reviews-r p{
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 25px;
+}
+.land-reviews-r p strong{
+  font-family: CentraNo2-Bold !important;
+  font-weight: 700;
+}
+.land-reviews-avard{
+  border-top: 2px solid #d5d5d5;
+  
+  padding-top: 25px;
+  margin-top: 25px;
+}
+.land-reviews-avard h3{
+  text-align: center;
+}
+.land-reviews-avard p{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.land-banner-w{
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  border-top: 2px solid #d5d5d5;
+  margin-top: 25px;
+}
+.land-banner-w img{
+  width: 100%;
+  height: auto;
+}
+.land-banner-info{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: unset;
+    max-width: 95%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+}
+.land-banner-info h1{
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.land-banner-info p{
+  font-family: "Source Serif Pro" !important;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.land-banner-info a{
+    background: transparent;
+    color: #EDBA44;
+    letter-spacing: 1px;
+    border: 3px solid #EDBA44;
+    font-family: CentraNo2-Extrabold, sans-serif !important;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 15px auto 0px;
+    transition: all 0.3s ease;
+    line-height: normal;
+    width: auto;
+    min-height: 50px;
+    text-decoration: none;
+}
+.land-banner-info a:hover {
+    text-decoration: none;
+    background-color: #EDBA44;
+    color: #000;
+}
+.land-banner-info a svg {
+    margin-left: 25px;
+}
+.land-banner-info a path {
+    transition: all 0.3s ease;
+    fill: #EDBA44;
+}
+.land-banner-info a:hover path {
+    fill: #000;
+}
+
+.popup-wrapp-lend .mfp-content{
+  max-width: 806px;
+  margin: 0 auto;
+  background: #fff;
+}
+.popup-variant-land .popup-variant-land-img{
+  max-width: 395px;
+  margin-left: 30px;
+}
+.popup-variant-land .popup-variant-land-img img{
+  width: 100%;
+  height: auto;
+}
+.popup-variant-land-w{
+  padding: 0 30px;
+  position: relative;
+  display: flex;
+}
+swiper-container{
+  position: unset;
+}
+swiper-container::part(container) {
+  overflow: hidden;
+  position: unset;
+}
+swiper-container::part(wrapper) {
+  position: relative;
+}
+swiper-container::part(pagination){
+  max-width: 395px;
+  margin-left: 60px;
+  bottom: 30px;
+}
+swiper-container::part(button-next), swiper-container::part(button-prev){
+  color: #9A9A9A;
+}
+swiper-container::part(button-next):hover, swiper-container::part(button-prev):hover{
+  color: #dd4124;
+}
+swiper-container::part(bullet-active){
+  background: #000;
+  width: 10px;
+  height: 10px;
+}
+swiper-container::part(bullet){
+  background: #BABABA;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+.popup-variant-land-info .land-prod-item_option{
+  font-family: CentraNo2-Bold !important;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 0px;
+}
+.popup-variant-land-info .land-prod-item_price{
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 25px;
+}
+.popup-variant-land-info{
+    width: 100%;
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.popup-variant-land-info button {
+    margin: 15px 0 0;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-family: CentraNo2-Bold !important;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: .03em;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    border-radius: 13px;
+    background: #dd4124;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3px 0;
+    cursor: pointer;
+    min-height: 0;
+    margin-bottom: 25px;
+}
+.popup-variant-land-info button:after, .popup-variant-land-info button:before{
+  content: unset;
+}
+
+.land-info-right-mobkVis{
+  display: none;
+}
+
+.land-reviews-avard svg{
+  display: block;
+  margin: 0 auto;
+}
+.land-reviews-avard svg:last-child{
+  margin-top: 25px;
+}
+@media (max-width: 989px){
+  .land-info-right-deskVis{
+    display: none;
+  }
+  .land-info-right-mobkVis{
+    display: block;
+  }
+  .land-info-first_plan-mbhide{
+    display: none;
+  }
+  .land-info {
+    padding: 40px 0 0px;
+  }
+  .land-info-wrapp {
+    flex-wrap: wrap;
+  }
+  .land-info-right, .land-info-left{
+    width: 100%;
+  }
+  .land-info-left {
+    border-right: none;
+    padding: 0 35px 35px;
+  }
+  .land-info-left h3 {
+      font-size: 30px;
+      line-height: 20px;
+      margin-bottom: 15px;
+  }
+  .land-info-left p {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 0px; 
+  }
+  .land-info-right{
+    padding: 20px 35px 30px;
+    background: #CBC09C;
+    margin: 0;
+    border-top: 1px solid #000;
+  }
+  .land-info-right p{
+    font-size: 15px;
+    line-height: 19px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  .land-info-first_plan{
+    margin-top: 15px;
+  }
+  .land-info-right div p{
+    font-size: 15px;
+    line-height: 19px;
+  }
+  .land-info-right div p strong{
+    color: #fff;
+  }
+  .land-info-right div.land-info-right-mobkVis p strong{
+    color: #000;
+  }
+  .land-prod-w{
+    margin-top: 35px;
+    padding: 0 35px;
+  }
+  .land-prod .land-prod-w:first-child .land-prod-info{
+    padding-top: 0;
+    border-top: none;
+  }
+  .land-prod-info {
+    border-top: 2px solid #000;
+    margin-bottom: 35px;
+    padding-top: 30px;
+  }
+  .land-prod-info h2{
+    font-size: 24px;
+    line-height: 26px;
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .land-prod-info p{
+    font-size: 13px;
+    line-height: 17px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .land-prod-items {
+    display: flex;
+    gap: 30px 1px;
+    flex-wrap: wrap;
+  }
+  .land-prod-item p{
+    padding: 0 5px;
+  }
+  .land-prod-item p.land-prod-item_option,
+  .land-prod-item p.land-prod-item_price{
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 17px;
+  }
+  .land-prod-item {
+    max-width: calc(50% - 1px);
+  }
+  .land-prod-item button{
+    max-width: 85%;
+  }
+  .land-prod-item .product-form__buttons{
+    text-align: left;
+  }
+   .land-prod-item button{
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 24px;
+    padding: 0;
+  }
+  .land-reviews{
+    padding: 0 0px;
+  }
+  .land-reviews-w {
+    border-top: none;
+    padding-top: 0;
+    flex-wrap: wrap;
+  }
+  .land-reviews-l{
+    padding: 0 35px;
+    width: 100%;
+    border: none;
+    border-top: 2px solid #000;
+    padding-top: 20px;
+  }
+  .land-reviews-l h3{
+    font-size: 30px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  .land-reviews-l p.land-reviews_under-titele{
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0px;
+    
+  }
+  .land-reviews-l p.land-reviews_under-titele+p{
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
+ 
+  .land-reviews-r{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+  .land-reviews-topcont{
+    padding: 35px 35px 50px;
+    background: #cbc09c;
+  }
+  .land-reviews-r h3{
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    
+  }
+  .land-reviews-r p{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+ 
+  }
+  .land-reviews-avard{
+    border-top: 2px solid #AC9C63;
+    border-bottom: 2px solid #AC9C63;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    margin: 25px 35px 35px;
+  }
+  .land-reviews-r .land-reviews-avard h3{
+    font-size: 39px;
+    letter-spacing: -0.01em;
+    line-height: 28px;
+    text-align: center;
+    color: #ac9c63;
+    margin-bottom: 15px;
+  }
+  .land-reviews-r .land-reviews-avard p{
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 305px;
+    margin: 0 auto 20px;
+  }
+  .land-banner-w {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 5px;
+    border-top: none;
+    margin-top: 0;
+  }
+  .land-banner-info{
+    padding: 0 35px;
+    width: 100%;
+  }
+  .land-banner-info h1{
+    font-size: 30px;
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
+  .land-banner-info p{
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+  .land-banner-info a{
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: .12em;
+    line-height: 22px;
+    justify-content: center;
+    margin: 0 auto;
+    display: inline-flex;
+    width: auto;
+    min-height: 35px;
+  }
+  .popup-variant-land-w{
+    flex-direction: column;
+  }
+  .popup-wrapp-lend .mfp-content{
+    max-width: 420px;
+  }
+  .popup-variant-land-w{
+    padding: 0;
+  }
+  .popup-variant-land-info{
+    padding: 10px 35px 40px;
+  }
+  .popup-variant-land .popup-variant-land-img{
+    margin: 0;
+    max-width: 100%;
+  }
+  swiper-container{
+    position: relative;
+  }
+  swiper-container::part(pagination){
+    max-width: unset;
+    margin-left: 0px;
+    bottom: 30px;
+  }
+  .popup-variant-land-info button{
+    margin: 0;
+  }
+  /*
+   #klaviyo-reviews-list .kl_reviews__stars_badge svg {
+    width: 19px !important;
+    height: auto !important;
+  }
+  #klaviyo-reviews-list .kl_reviews__review_item.kl_reviews__review_item.kl_reviews__review_item>div{
+    gap: 0;
+  }
+  #klaviyo-reviews-list .kl_reviews__review__title{
+    font-size: 30px;
+    line-height: 30px;
+    overflow: hidden;
+  }
+  #klaviyo-reviews-list .kl_reviews__review__author{
+    margin-bottom: 15px;
+  }
+  #klaviyo-product-reviews-wrapper .kl_reviews__time_badge{
+    position: unset;
+  }
+  #klaviyo-product-reviews-wrapper .kl_reviews__time_badge {
+    top: 107px;
+  }
+  #klaviyo-reviews-list .kl_reviews__review__author{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  #klaviyo-reviews-list .kl_reviews__review__content{
+    font-size: 15px;
+    line-height: 19px;
+  }
+  */
+  #klaviyo-reviews-list .kl_reviews__review__title{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

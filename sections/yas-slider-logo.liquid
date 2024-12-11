@@ -1,0 +1,208 @@
+<style>
+  #shopify-section-{{ section.id }}{
+    background: #242424;
+    margin: 19px 0 19px;
+  }
+  .yas_slider_logo-wrapp{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding: 13px 0;
+    justify-content: center;
+    max-height: 60px;
+  }
+  .yas_slider_logo-title{
+    margin-right: 60px;
+    font-family: "Centra_No2";
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    line-height: 94px;
+    color: #fff;
+    opacity: 0.36;
+    width: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  }
+  .yas_slider_logo-slider{  
+    width: 80%;
+    position: relative;
+  }
+
+
+  #shopify-section-{{ section.id }} .swiper img{
+    max-width: 100%;
+  
+  }
+  #shopify-section-{{ section.id }} .swiper-slide{
+    width: auto;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .swiper-wrapper{
+    align-items: center;
+  }
+  
+   #shopify-section-{{ section.id }} .swiper-button-next,#shopify-section-{{ section.id }} .swiper-button-prev{
+     display: none;
+   }
+
+  @media (max-width: 1170px){
+     .yas_slider_logo-slider{  
+        width: 80%;
+     }
+     #shopify-section-{{ section.id }}{
+       padding: 0 20px;
+     }
+  }
+  @media (max-width: 990px){
+    .yas_slider_logo-wrapp{
+      flex-direction: column;
+      padding: 5px 0 10px;
+       max-height: unset;
+    }
+    
+    .yas_slider_logo-title{
+        margin: 0 auto 10px;
+        line-height: normal;
+    }
+    .yas_slider_logo-slider{  
+        width: 100%;
+        padding: 0 20px;
+       
+     }
+     #shopify-section-{{ section.id }} .swiper-button-next,#shopify-section-{{ section.id }} .swiper-button-prev{
+       display: flex;
+     }
+    #shopify-section-{{ section.id }} .swiper-button-prev{
+       left: 0;
+      width: auto;
+    }
+    #shopify-section-{{ section.id }} .swiper-button-next{
+       right: 0;
+      width: auto;
+    }
+     #shopify-section-{{ section.id }} .swiper-button-next:after,#shopify-section-{{ section.id }} .swiper-button-prev:after{
+       content: unset;
+     }
+      #shopify-section-{{ section.id }} .swiper img{
+        max-width: 100%
+      }
+  }
+</style>
+
+<div class="yas_slider_logo-wrapp">
+  <div class="yas_slider_logo-title">
+    {{ section.settings.title }}
+  </div>
+  <div class="yas_slider_logo-slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+        <div class="swiper-slide">
+          <img src="{{ block.settings.image | img_url: 'x30' }}" alt="{{ block.settings.image.alt}}">  
+        </div>
+        {%- endfor -%}
+      </div>
+
+    </div>
+    <div class="swiper-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="8.762" height="25.728" viewBox="0 0 8.762 25.728">
+          <path id="Контур_16" data-name="Контур 16" d="M0,0,5.106,10.969,0,21.737" transform="translate(6.764 23.735) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" />
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="8.762" height="25.728" viewBox="0 0 8.762 25.728">
+          <path id="Контур_15" data-name="Контур 15" d="M4087.089,285.717l5.107,10.969-5.107,10.767" transform="translate(-4085.091 -283.724)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+        </svg>
+      </div>
+  </div>
+</div>
+
+<script defer>
+  $(function(){
+    const swiper = new Swiper('#shopify-section-{{ section.id }} .swiper', {
+      navigation: {
+        nextEl: '#shopify-section-{{ section.id }} .swiper-button-next',
+        prevEl: '#shopify-section-{{ section.id }} .swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+           slidesPerView: "1",
+           spaceBetween: 25,
+           
+        },
+        670: {
+           slidesPerView: "2",
+           spaceBetween: 25,
+         
+        },
+        991: {
+           slidesPerView: "auto",
+           spaceBetween: 30,
+          centeredSlides: false,
+          autoplay: false
+        },
+        // when window width is >= 1171px
+        1171: {
+          slidesPerView: "auto",
+          spaceBetween: 60,
+          
+        }
+      }
+    });
+  })
+
+
+ 
+</script>
+{% schema %}
+  {
+    "name": "YBSL slider logo",
+    "class": "yas_slider_logo",
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "AS SEEN IN"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Bg color",
+        "default": "#DED9C3"
+      }
+    ],
+	"blocks": [
+      {
+        "type": "header",
+        "name": "Slide image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "YBSL slider logo"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,123 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "38483601-8602-4195-9816-890fe0fc57d5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16551869677758__38483601-8602-4195-9816-890fe0fc57d5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your 2025 Goals x Y.Chroma",
+            "heading_size": "h1"
+          }
+        },
+        "template--16551869677758__38483601-8602-4195-9816-890fe0fc57d5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You share with us your top 4 goals, and we’ll send them back to you stamped on Y.Chroma Dog Tags.</p>",
+            "text_style": "body"
+          }
+        },
+        "template--16551869677758__38483601-8602-4195-9816-890fe0fc57d5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Create yours now",
+            "button_link": "https://www.surveymonkey.com/r/BCH5RTZ"
+          }
+        }
+      },
+      "block_order": [
+        "template--16551869677758__38483601-8602-4195-9816-890fe0fc57d5-heading-1",
+        "template--16551869677758__38483601-8602-4195-9816-890fe0fc57d5-text-1",
+        "template--16551869677758__38483601-8602-4195-9816-890fe0fc57d5-button-1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_3953_shopify.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "74266db7-0b7c-45df-92bf-0b1ba323c592": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "cover_image": "shopify://shop_images/Captura_de_ecra_2023-12-18_142132.png",
+        "video_url_file": "https://cdn.shopify.com/videos/c/o/v/81011e16510f472f92d8fdbc8f420a77.mp4",
+        "video_url": "https://youtu.be/db2ozR2Gabc?si=EHzJLj33bijOoW7q",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1a1474cf-7b0d-4d62-bbab-9956623317b1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16551869677758__1a1474cf-7b0d-4d62-bbab-9956623317b1-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16551869677758__1a1474cf-7b0d-4d62-bbab-9956623317b1-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Y.Chroma and you together in 2025.</p>"
+          }
+        },
+        "template--16551869677758__1a1474cf-7b0d-4d62-bbab-9956623317b1-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Create your tag here",
+            "button_link": "https://www.surveymonkey.com/r/BCH5RTZ",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16551869677758__1a1474cf-7b0d-4d62-bbab-9956623317b1-heading-1",
+        "template--16551869677758__1a1474cf-7b0d-4d62-bbab-9956623317b1-text-1",
+        "template--16551869677758__1a1474cf-7b0d-4d62-bbab-9956623317b1-button-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "38483601-8602-4195-9816-890fe0fc57d5",
+    "74266db7-0b7c-45df-92bf-0b1ba323c592",
+    "1a1474cf-7b0d-4d62-bbab-9956623317b1"
+  ]
+}

@@ -1,0 +1,125 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "enviro_first_dHgchA": {
+      "type": "enviro_first",
+      "settings": {
+        "image": "shopify://shop_images/log1.svg",
+        "text": "<h1>Social and Environmental <br/>Responsibility at Y.Chroma</h1><p>A premium product is more than just the quality you can touch and see.  It also means that this brand you’ve invested in acts ethically and responsibly even in ways that aren’t visible. </p><p><br/>There are <strong>four key ways</strong> in which we ensure we are working with a high degree of both <strong>social responsibility</strong> and <strong>environmental responsibility…</strong></p>",
+        "image2": "shopify://shop_images/log2.svg"
+      }
+    },
+    "enviro_video_MYED6i": {
+      "type": "enviro_video",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-01-12_at_14.09.23.jpg",
+        "url": "https://youtu.be/hfmwxwVzBMg?si=Rnc5LymiSO73EcuH"
+      }
+    },
+    "enviro_title_gQxRK9": {
+      "type": "enviro_title",
+      "settings": {
+        "image": "shopify://shop_images/icon_title.svg",
+        "before_title": "CHAPTER 01",
+        "title": "A Multitude of Made-in-Europe Textiles",
+        "text": "<p><strong>Textile production uses land, energy and water.</strong> Countries in which these resources aren’t carefully safeguarded are among the most polluted places in the world, so our sourcing choices have a major impact on our social and environmental footprint…</p>",
+        "color": "#a9cac1"
+      }
+    },
+    "enviro_video_YwcGzn": {
+      "type": "enviro_video",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-01-12_at_14.17.35.jpg",
+        "url": "https://youtu.be/W8m2LcfN99I?si=OtWtQ7vuXI9J11mw"
+      }
+    },
+    "enviro_title_UrBDn3": {
+      "type": "enviro_title",
+      "settings": {
+        "image": "shopify://shop_images/watch.svg",
+        "before_title": "CHAPTER 02",
+        "title": "Clothes That Are Made To Last For Generations",
+        "text": "<p><strong>Mall brand disposable fashion contributes to 18.6 million metric tonnes of clothing being thrown away around the world every year. </strong></p><p>One of the biggest things we do towards environmental sustainability is to make products designed to last a very long time.</p><p>This takes a lot more care – and a bit more money – but it’s a big environmental step…<br/></p>",
+        "color": "#d9cdb0"
+      }
+    },
+    "enviro_video_nqWhJw": {
+      "type": "enviro_video",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-01-12_at_14.23.38.jpg",
+        "url": "https://youtu.be/C88uoNRH_Pk?si=7Kg8be2mSL29tEF9"
+      }
+    },
+    "enviro_title_7Gkr9M": {
+      "type": "enviro_title",
+      "settings": {
+        "image": "shopify://shop_images/igla.svg",
+        "before_title": "CHAPTER 03",
+        "title": "Ethically Produced in Europe",
+        "text": "<p><strong>No Y.Chroma product costs less to you or makes us more money because some person in a factory is getting taken advantage of.  </strong><br/>Part of being a premium brand is paying the skilled artisans who deliver our top-drawer quality a fair, European wage…</p>",
+        "color": "#bb8546"
+      }
+    },
+    "enviro_video_Lbn9hf": {
+      "type": "enviro_video",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-01-12_at_14.29.52.jpg",
+        "url": "https://youtu.be/s5F6ePuwaWo?si=CWuewOe-9T9_fLOg"
+      }
+    },
+    "enviro_title_9yUXFf": {
+      "type": "enviro_title",
+      "settings": {
+        "image": "shopify://shop_images/co2.svg",
+        "before_title": "CHAPTER 04",
+        "title": "Understand Carbon – Then Offset It",
+        "text": "<p><strong>Every Y.Chroma garment comes with a full Gold Standard C02 Credit that offsets 35 kilograms of C02.</strong></p><p><br/>Offsetting the C02 a business like Y.Chroma generates is totally doable. The offset programs we invest in make real environmental and social change, and they’re a pleasure to support…</p>",
+        "color": "#b4c3b2"
+      }
+    },
+    "enviro_video_jdje3E": {
+      "type": "enviro_video",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-01-12_at_14.35.59.jpg",
+        "url": "https://youtu.be/3sQw0oJZvoM?si=ckDqRftyCSYM15S8"
+      }
+    },
+    "enviro_last_iWRXec": {
+      "type": "enviro_last",
+      "settings": {
+        "text": "<p>Every Y.Chroma garment comes with a full Gold Standard C02 Credit that offsets 35 kilograms of C02.</p>",
+        "image": "shopify://shop_images/1051.svg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "enviro_first_dHgchA",
+    "enviro_video_MYED6i",
+    "enviro_title_gQxRK9",
+    "enviro_video_YwcGzn",
+    "enviro_title_UrBDn3",
+    "enviro_video_nqWhJw",
+    "enviro_title_7Gkr9M",
+    "enviro_video_Lbn9hf",
+    "enviro_title_9yUXFf",
+    "enviro_video_jdje3E",
+    "enviro_last_iWRXec"
+  ]
+}

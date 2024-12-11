@@ -1,0 +1,100 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "350078c0-33df-46df-94e6-3280b1445dfd": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "123d1a7e-7d43-41f9-be48-1736826b2273": {
+      "type": "yas-video-color",
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 80,
+        "image": "shopify://shop_images/Paris_Wardrobe_Banner_aa85b591-f4f7-4359-97cf-01192b062203.jpg",
+        "text-box": "",
+        "title": "Paris looks good on you",
+        "show_color1": true,
+        "color1": "#b59e5f",
+        "show_color2": true,
+        "color2": "#864c24",
+        "show_color3": true,
+        "color3": "#3b363c",
+        "show_color4": true,
+        "color4": "#533146",
+        "show_color5": true,
+        "color5": "#405d73"
+      }
+    },
+    "4f934a6e-026f-44d8-9e0f-b06c04232b48": {
+      "type": "yas-reinvented",
+      "settings": {
+        "title": "YOU. REINVENTED.",
+        "under_title": "The Paris palette is a fresh take on royalty.  A slate of clean blues and citrus tones, anchored by classic gold, obsidian and plum.  It’s a timeless mix that transmits sophistication and energy."
+      }
+    },
+    "0775f415-6f2f-4113-8d8c-87e7435da317": {
+      "type": "yas-look-bilder-v2",
+      "settings": {
+        "title_white": "Your unique wardrobe.",
+        "collect": "test-8-pieces",
+        "collect_16": "test-16-pick",
+        "collect_24": "test-pieces-24",
+        "text_under_select": "<p><em>Le Café Plume opens early on weekends.  Ask, and they’ll prepare you brunch with coffee to go.  Then cross Rue St. Honoré, pass into the Louvre quad and make for the lawns which sit hard against the Musée des artes decoratifs.  </em></p><p><em>The lawn is a wonderful hideout for locals – and one of a multitude of dog friendly spots in the world's most dog friendly city.  Spread out your blanket and lounge like a king, read the papers and people watch. </em></p>",
+        "title": "",
+        "text": ""
+      }
+    },
+    "192eb4f5-1dab-4216-8619-cce6630f6ea4": {
+      "type": "yas-look-collection",
+      "disabled": true,
+      "settings": {
+        "title_white": "",
+        "collect": "test-8-pieces",
+        "title": "﻿8 Pieces",
+        "text": ""
+      }
+    },
+    "aadbd1fa-4c49-4557-85c7-17d391059d27": {
+      "type": "yas-look-collection16",
+      "disabled": true,
+      "settings": {
+        "collect": "test-16-pick",
+        "title": "﻿16 Pieces",
+        "text": ""
+      }
+    },
+    "27dff9c3-efde-4767-bd53-c1ed5b257708": {
+      "type": "yas-reborn",
+      "settings": {
+        "title": "YOU. REBORN.",
+        "under_title": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "350078c0-33df-46df-94e6-3280b1445dfd",
+    "123d1a7e-7d43-41f9-be48-1736826b2273",
+    "4f934a6e-026f-44d8-9e0f-b06c04232b48",
+    "0775f415-6f2f-4113-8d8c-87e7435da317",
+    "192eb4f5-1dab-4216-8619-cce6630f6ea4",
+    "aadbd1fa-4c49-4557-85c7-17d391059d27",
+    "27dff9c3-efde-4767-bd53-c1ed5b257708",
+    "main"
+  ]
+}

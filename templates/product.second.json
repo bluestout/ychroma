@@ -1,0 +1,357 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "3919c07c-5188-4a0d-baf3-d44d8ddadc41": {
+      "type": "custom-product-second-top",
+      "disabled": true,
+      "settings": {
+        "text-box": ""
+      }
+    },
+    "4c9a847e-42cc-41da-bd8d-c35d5c5ac03b": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "eb6b610f-a30b-42f0-a7b9-a54a02c22043": {
+      "type": "yas-main-product",
+      "blocks": {
+        "bb06b962-9d13-44c8-9b5a-b9b1cf72dd7c": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button",
+            "hide_size": true,
+            "select_size_yas": true
+          }
+        },
+        "36a90f77-ca11-4f48-97e7-4bf76a8d8f25": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<button class=\"product-form__submit button button--full-width button--primary btn_add_two\"\nonclick='document.querySelector(\"product-form button[type=submit]\").click()' >\n                        <span>Add to cart\n</span>\n                        \n                    </button>"
+          }
+        },
+        "df6a307a-84eb-47bd-bbec-606ea16b9d4b": {
+          "type": "title",
+          "settings": {}
+        },
+        "091b194c-0e2d-495c-8644-f2356a8e765b": {
+          "type": "price",
+          "settings": {
+            "price_tax_show": false
+          }
+        },
+        "ff420003-dd04-4426-94e1-bdee2c7e22ad": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "9ee9e2dc-bd66-4a64-b091-8e5cc6e6cf9c": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "hide_size": true,
+            "select_size_yas": false
+          }
+        },
+        "5f131b61-1e29-478b-96f9-23dccc4fb83a": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "subprod_title": "This is a popular piece!  We’re sold out for the moment, but if you leave your email you’ll be the first to know when it’s back in stock.",
+            "subprod_btn": "Please inform me",
+            "subprod_success": "Thanks for subscribing"
+          }
+        },
+        "icon_with_text_3yNaQt": {
+          "type": "icon_with_text",
+          "settings": {
+            "padding_top": 0,
+            "padding_bottom": 16,
+            "image": "shopify://shop_images/Group_3.svg",
+            "content": "Satisfaction Guarantee"
+          }
+        },
+        "accordion_eeieFz": {
+          "type": "accordion",
+          "settings": {}
+        },
+        "3730ff15-c823-4413-a673-6f5ec950b8b2": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "733bf207-3641-4556-9407-f4e5c9def967": {
+          "type": "autor_content",
+          "settings": {
+            "title": "<img style=\"width: 166px;height: auto;display: inline-block;\" src=\"https://cdn.shopify.com/s/files/1/0620/1648/7614/files/Max-Israel_white_high-res.png?v=1675978002\" alt=\"MAX Israel\">",
+            "title_under": "Founder/Creative Director",
+            "image": "shopify://shop_images/MAX_ILLUS_35PCT_paint_1024x1024_3551130a-7921-4773-9eda-f154f3c547f1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "bb06b962-9d13-44c8-9b5a-b9b1cf72dd7c",
+        "36a90f77-ca11-4f48-97e7-4bf76a8d8f25",
+        "df6a307a-84eb-47bd-bbec-606ea16b9d4b",
+        "091b194c-0e2d-495c-8644-f2356a8e765b",
+        "ff420003-dd04-4426-94e1-bdee2c7e22ad",
+        "9ee9e2dc-bd66-4a64-b091-8e5cc6e6cf9c",
+        "5f131b61-1e29-478b-96f9-23dccc4fb83a",
+        "icon_with_text_3yNaQt",
+        "accordion_eeieFz",
+        "3730ff15-c823-4413-a673-6f5ec950b8b2",
+        "733bf207-3641-4556-9407-f4e5c9def967"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "stacked",
+        "media_size": "medium",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "size_chart_title": "Size Chart",
+        "about_title": "About this product",
+        "size_title": "Size",
+        "composition_title": "Composition & care",
+        "composition_desc": "{{ product.metafields.custom.composition_description | metafield_tag }}",
+        "sizex_title": "SIZES EXPLAINED",
+        "delivery_title": "DELIVERY + RETURNS",
+        "delivery_desc": "<p>Satisfaction guaranteed. You can return within 90 days, exchange within a full year.</p><p>Generally at your door in 3-5 business days (and always carbon neutral) via DHL.  Free international delivery on orders with 3+ pieces.</p><p></p>",
+        "delivery_title2": "100% C02 NEUTRAL",
+        "delivery_desc2": "<p>Every Y.Chroma garment includes a 36kg Gold Standard® Carbon Offset Credit. This offsets 100% of the C02 generated by textiles, manufacturing and air transport to your door.</p>"
+      }
+    },
+    "a67da925-ac06-4a4c-ba00-182868fe78aa": {
+      "type": "yas-recomendation",
+      "blocks": {
+        "62623ad1-8ba3-4e49-a0e6-e117eac62097": {
+          "type": "product",
+          "settings": {
+            "product": "the-bastion-sunglasses"
+          }
+        },
+        "18e14d91-04bd-4aaf-9f29-9510ed650183": {
+          "type": "product",
+          "settings": {
+            "product": "dwayne-sweater"
+          }
+        },
+        "9bfffb81-d3d8-4458-a2ef-e94d8947c4df": {
+          "type": "product",
+          "settings": {
+            "product": "daytona-jacket"
+          }
+        },
+        "c8a7d9c7-04c5-43e2-8e7f-f30dd2735eea": {
+          "type": "product",
+          "settings": {
+            "product": "the-henley-long-sleeve-t-shirt"
+          }
+        },
+        "7d2aefe4-38c4-435d-b506-1bebda59c3fa": {
+          "type": "product",
+          "settings": {
+            "product": "sevilla-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "62623ad1-8ba3-4e49-a0e6-e117eac62097",
+        "18e14d91-04bd-4aaf-9f29-9510ed650183",
+        "9bfffb81-d3d8-4458-a2ef-e94d8947c4df",
+        "c8a7d9c7-04c5-43e2-8e7f-f30dd2735eea",
+        "7d2aefe4-38c4-435d-b506-1bebda59c3fa"
+      ],
+      "settings": {
+        "title": "Make the Outfit.<br>Frequently bought together..."
+      }
+    },
+    "abad51ae-346d-4624-978d-cc2ac23eb6a5": {
+      "type": "custom-product-videos",
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 15,
+        "text-box": "",
+        "title": "",
+        "detail": "",
+        "btn_text": "TAKE THE STUDIO TOUR",
+        "btn_link": ""
+      }
+    },
+    "main": {
+      "type": "custom-main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "8d200a5b-1ef3-47df-bbeb-3f9d99db28f7": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "875667de-bc7e-40d1-bca3-01460285f7b5": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"custom-product-reviews\">\n{{product.metafields.custom.custom_author_review.value}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_tax_show": false
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "8d200a5b-1ef3-47df-bbeb-3f9d99db28f7",
+        "875667de-bc7e-40d1-bca3-01460285f7b5",
+        "title",
+        "caption",
+        "price",
+        "quantity_selector",
+        "variant_picker",
+        "buy_buttons",
+        "share"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "stacked",
+        "media_size": "medium",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "size_chart_title": "Size Chart",
+        "about_title": "About this product",
+        "size_title": "Size",
+        "composition_title": "Composition & care",
+        "composition_desc": "<ul>\n          <li>The International Care Labelling System</li>\n          <li>The Japanese Care Labelling System</li>\n          <li>The Canadian Care Labelling System</li>\n          <li>The European Care Labelling System</li>\n          <li>The American Care Labelling System</li>\n        </ul>",
+        "delivery_title": "Delivery",
+        "delivery_desc": "<ul>\n<li>∙ Free delivery</li>\n<li>∙ Free returns</li>\n<li>∙ Cards accepted</li>\n</ul>",
+        "btn_text": "Play Video",
+        "stop_btn_text": "Stop video"
+      }
+    },
+    "16578875911bf48e71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Complete the look",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "04828eb5-da55-4392-904b-5f031ba3d807": {
+      "type": "custom-product-info",
+      "disabled": true,
+      "settings": {
+        "text-box": "Complete The Look"
+      }
+    },
+    "a392e804-01ad-4060-9ce3-ae89a3d61979": {
+      "type": "custom-product-videos",
+      "disabled": true,
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 50,
+        "text-box": "https://cdn.shopify.com/videos/c/o/v/46153c7a07f2426f86e75eddefa1f663.mp4",
+        "title": "",
+        "detail": "",
+        "btn_text": "TAKE THE STUDIO TOUR",
+        "btn_link": ""
+      }
+    },
+    "069b57d4-2195-478c-999f-b79aa0ab54f4": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"text/javascript\">\nvar _learnq = _learnq || [];\nvar klavForm = document.querySelector('product-form .product-form__buttons');\n  var classname = klavForm.getElementsByClassName(\"product-form__submit\");\nvar addToCart = function() {\n_learnq.push(['track', 'Added to Cart', item]);\n}; for (var i = 0; i < classname.length; i++) {\nclassname[i].addEventListener('click', addToCart, false);\n}\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "3919c07c-5188-4a0d-baf3-d44d8ddadc41",
+    "4c9a847e-42cc-41da-bd8d-c35d5c5ac03b",
+    "eb6b610f-a30b-42f0-a7b9-a54a02c22043",
+    "a67da925-ac06-4a4c-ba00-182868fe78aa",
+    "abad51ae-346d-4624-978d-cc2ac23eb6a5",
+    "main",
+    "16578875911bf48e71",
+    "product-recommendations",
+    "04828eb5-da55-4392-904b-5f031ba3d807",
+    "a392e804-01ad-4060-9ce3-ae89a3d61979",
+    "069b57d4-2195-478c-999f-b79aa0ab54f4"
+  ]
+}

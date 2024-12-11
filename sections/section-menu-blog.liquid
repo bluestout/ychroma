@@ -1,0 +1,99 @@
+<style>
+  #shopify-section-{{section.id}}{
+    background: linear-gradient(
+    to right, 
+    {{ section.blocks.first.settings.background }} 0%, 
+    {{ section.blocks.first.settings.background }} 50%, 
+    {{ section.blocks.last.settings.background }} 50%, 
+    {{ section.blocks.last.settings.background }} 100%
+  );
+  }
+  .yas_blog-menu{
+    margin: 0 auto;
+    text-align: center;
+  }
+  .yas_blog-menu-item{
+    font-family: "Centra_No2" !important;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-flex;
+    min-width: 190px;
+  }
+
+  @media (max-width: 989px){
+   
+    .yas_blog-menu-item{
+      min-width: 75px;
+      font-size: 10px;
+      padding: 10px 5px;
+      justify-content: center;
+    }
+
+  }
+  @media (max-width: 374px){
+   
+    .yas_blog-menu-item{
+      min-width: 25px;
+      padding: 10px 1rem;
+    }
+
+  }
+</style>
+<div class="yas_blog-menu">
+  {%- for block in section.blocks -%}
+    <a href="{{ block.settings.blog.url }}" class="yas_blog-menu-item" style="background-color: {{ block.settings.background }}; color: {{ block.settings.color }};">{{ block.settings.title }}</a>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "menu blog",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Select image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "menu title"
+          },
+          {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blog"
+          },
+          {
+            "type": "color",
+            "id": "background",
+            "label": "background color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "color",
+            "default": "#fff"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "yas blog menu"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

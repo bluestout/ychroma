@@ -1,0 +1,391 @@
+<style>
+  #shopify-section-{{section.id}}{
+    position: relative;
+    padding-top: 80px;
+    overflow: hidden;
+  }
+  #shopify-section-{{section.id}} .yas-youtube-secdesc{
+    font-weight: normal;
+    font-size: 22px;
+    letter-spacing: 0.17em;
+    line-height: normal;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    padding: 0 35px;
+    text-transform: uppercase;
+    max-width: 1364px;
+  }
+  #shopify-section-{{section.id}} .yas-youtube-title *{
+    font-family: 'CentraNo2-Bold' !important;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+     {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #B69E5F; 
+    {% else %}
+      color: #fff;
+    {% endif %}
+  }
+  #shopify-section-{{section.id}} .yas-youtube-title{
+    margin: 0 auto 45px;
+    padding: 0 35px;
+    max-width: 1364px;
+  }
+  #shopify-section-{{section.id}} .yas-youtube-title strong{
+    {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #000000;
+    {% else %}
+      color: #B69E5F; 
+    {% endif %}
+   
+  }
+  #shopify-section-{{section.id}} .swiper-pagination{
+    top: 478px;
+    bottom: unset;
+  }
+  #shopify-section-{{section.id}} .swiper-pagination-bullet{   
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+    margin: 0 12px;
+    {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      background: #fff;
+    {% else %}
+      background: #575757;
+    {% endif %}  
+  }
+  #shopify-section-{{section.id}} .swiper-pagination-bullet.swiper-pagination-bullet-active{  
+    {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      background: #B69E5F;
+    {% else %}
+      background: #fff;
+    {% endif %}  
+  }
+  #shopify-section-{{section.id}} .swiper-slide{
+    max-width: 964px;
+  }
+  #shopify-section-{{section.id}} .swiper{
+    max-width: 964px;
+    overflow: visible;
+    margin: 0 auto;
+  }
+  #shopify-section-{{section.id}} .yas-youtubeimage-img{
+     max-height: 450px;
+     min-height: 450px;
+    
+     display: flex;
+   margin-bottom: 43px;
+    position: relative;
+    cursor: pointer;
+  }
+  #shopify-section-{{section.id}} img{
+    width: auto;
+    height: 100%;
+    max-height: 450px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+ #shopify-section-{{section.id}} .yas-youtubeimage-cont .yas-youtubeimage-title *{
+     font-family: 'CentraNo2-Bold' !important;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 40px;
+    text-align: center;
+    margin: 30px 0 13px;
+    {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #000000; 
+    {% else %}
+      color: #fff;
+    {% endif %}
+ }
+ #shopify-section-{{section.id}} .yas-youtubeimage-cont .yas-youtubeimage-title strong{
+    font-weight: normal;
+    font-size: 26px;
+    margin: 0;
+ }
+  #shopify-section-{{section.id}} .swiper-slide{
+    width: auto !important
+  }
+  #shopify-section-{{section.id}} .swiper-slide:not(.swiper-slide-active) .yas-youtubeimage-cont{
+    display: none;
+  }
+  #shopify-section-{{section.id}} .swiper-slide:not(.swiper-slide-active){
+    opacity: 0.5;
+  }
+  #shopify-section-{{section.id}} .yas-youtubeimage-cont > p{
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    line-height: 32px;
+    text-align: center;
+    {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #000000; 
+    {% else %}
+      color: #fff;
+    {% endif %}
+  }
+  #shopify-section-{{section.id}} .yas-youtubeimage-cont a{
+    {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #B69E5F; 
+    {% else %}
+      color: #007bff;
+    {% endif %}
+  }
+
+  .yas-youtubeimage-wrapp:after{
+    content: '';
+    width: 50%;
+    /* background-color: #B69E5F; */
+    height: 3px;
+    margin: 60px auto 0;
+    display: flex;
+  }
+
+  #shopify-section-{{section.id}} .yas-youtubeimage-img svg{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    max-width: 105px;
+  }
+  #shopify-section-{{section.id}} .yas-youtubeimage-cont{
+    opacity: 0;
+  }
+ 
+  @media (max-width: 1350px){
+      #shopify-section-{{section.id}}{
+        margin-bottom: 45px;
+      }
+  }
+ @media (max-width: 790px){
+     #shopify-section-{{section.id}} img{
+
+      max-height: 270px;
+
+    }
+
+   
+    #shopify-section-{{section.id}}{
+      padding-top: 50px;
+    }
+    .yas-youtubeimage-wrapp:after{
+     margin: 54px auto 0;
+       width: 60%;
+    }
+    #shopify-section-{{section.id}} .yas-youtube-secdesc{
+      font-size: 14px;
+      line-height: 34px;
+      margin: 0;
+    }
+    #shopify-section-{{section.id}} .yas-youtube-title *{
+      font-size: 26px;
+      line-height: 30px;
+    }
+    #shopify-section-{{section.id}} .yas-youtube-title{
+      margin-bottom: 35px;
+    }
+   #shopify-section-{{section.id}} .yas-youtubeimage-img{
+     max-height: 278px;
+     min-height: 278px;
+     margin-bottom: 54px;
+   }
+    #shopify-section-{{section.id}} .swiper-pagination{
+    top: 304px;
+  }
+    #shopify-section-{{section.id}} .swiper-pagination-bullet{
+      width: 9px;
+      height: 9px;
+      margin: 0 7px;
+    }
+    #shopify-section-{{section.id}} .yas-youtubeimage-cont{
+      padding: 0 35px;
+    }
+   #shopify-section-{{section.id}} .yas-youtubeimage-cont .yas-youtubeimage-title *{
+    font-size: 20px;
+    line-height: 24px;
+   }
+   #shopify-section-{{section.id}} .yas-youtubeimage-cont .yas-youtubeimage-title strong{
+      font-size: 14px;
+   }
+    #shopify-section-{{section.id}} .yas-youtubeimage-cont > p{
+      font-size: 14px;
+      line-height: 19px;
+   }
+   #shopify-section-{{section.id}} .yas-youtubeimage-img svg{
+   
+    max-width: 90px;
+   }
+ }
+ 
+</style>
+
+<div class="yas-youtubeimage-wrapp">
+      <div class="yas-youtube-secdesc">{{ section.settings.text }}</div>
+      <div class="yas-youtube-title">{{ section.settings.title }}</div>
+      <div class="swiper yas-youtubeimage-slider">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="yas-youtubeimage-img" data-frane="{{ block.settings.url }}">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
+               <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% for block in section.blocks %}
+          <div class="yas-youtubeimage-cont" data-slide="{{ forloop.index0 }}">
+                <div class="yas-youtubeimage-title">{{ block.settings.title }}</div>
+                <p>{{ block.settings.text }}</p>
+              </div>
+        {% endfor %}
+        <div class="swiper-pagination"></div>
+      </div>
+
+      
+</div>
+
+<script defer>
+  $(function(){
+    
+        let slidesCount = $('#shopify-section-{{section.id}} .swiper .swiper-slide').length;
+    let swiper = new Swiper('#shopify-section-{{section.id}} .swiper', {
+      init: false,
+      loop: true,
+      spaceBetween: 18,
+      slidesPerView: "auto",
+      centeredSlides: true,
+      grabCursor: true,
+      loopAdditionalSlides: slidesCount,
+      pagination: {
+        el: '#shopify-section-{{section.id}} .swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 1
+      },
+      autoplay: {
+       delay: 250,
+        pauseOnMouseEnter: true
+      },
+      /*
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      */
+    });
+
+
+    swiper.on('init', function() {
+       $( '.yas-youtubeimage-cont[data-slide]').css('opacity','0');
+          $( '.yas-youtubeimage-cont[data-slide]').hide();
+          $( '.yas-youtubeimage-cont[data-slide="0').show();
+          $( '.yas-youtubeimage-cont[data-slide="0"]').css('opacity','1');
+    });
+
+    swiper.on('slideChange', function () {
+      console.log('slide changed ' + swiper.realIndex);
+        $( '.yas-youtubeimage-cont[data-slide]').css('opacity','0');
+        $( '.yas-youtubeimage-cont[data-slide]').hide();
+        $( '.yas-youtubeimage-cont[data-slide="'+ swiper.realIndex +'"]').show();
+        $( '.yas-youtubeimage-cont[data-slide="'+ swiper.realIndex +'"]').css('opacity','1');
+      swiper.autoplay.stop();
+      
+    });
+
+    swiper.init();
+   
+    
+
+
+    $('#shopify-section-{{section.id}} .yas-youtubeimage-img').on('click', function(){
+      $.magnificPopup.open({
+        items: {
+          src: $(this).attr('data-frane'),
+          type: 'iframe',
+          
+        },
+        iframe: {
+          patterns: {
+              youtube: {
+                index: 'youtu.be/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+                id: 'be/', // String that splits URL in a two parts, second part should be %id%
+                // Or null - full URL will be returned
+                // Or a function that should return %id%, for example:
+                // id: function(url) { return 'parsed id'; }
+                src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+              },
+          }
+        }
+      });
+  
+    })
+    
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "yas youtube slider",
+    "class": "yas_youtube_slider",
+    "settings": [
+          {
+            "id": "title",
+            "type": "richtext",
+            "label": "title"
+          },
+          {
+            "id": "text",
+            "type": "textarea",
+            "label": "description section"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Select image",
+        "settings": [
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image collection"
+          },
+          {
+            "id": "url",
+            "type": "url",
+            "label": "youtebe link (https://youtu.be/example)"
+          },
+          {
+            "id": "title",
+            "type": "richtext",
+            "label": "title"
+          },
+          {
+            "id": "text",
+            "type": "textarea",
+            "label": "description"
+          }
+        
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "yas youtube slider"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

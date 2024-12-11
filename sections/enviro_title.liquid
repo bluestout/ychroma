@@ -1,0 +1,120 @@
+<style>
+  #shopify-section-{{section.id}}{
+    background-color: {{ section.settings.color }};
+    text-align: center;
+    padding: 105px 35px 60px;
+  }
+  #shopify-section-{{section.id}} h5{
+    font-weight: normal !important;
+    font-size: 18px;
+    letter-spacing: 0.17em;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+    margin: 0 0 20px;
+    font-family: "Centra_No2" !important;
+  }
+  #shopify-section-{{section.id}} h1{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-weight: normal;
+    font-size: 84px;
+    letter-spacing: -0.02em;
+    line-height: 77px;
+    text-align: center;
+    color: #000;
+    margin: 0 0 25px;
+  }
+  #shopify-section-{{section.id}} p{
+    font-family: "Source Serif Pro" !important;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    color: #000;
+    margin: 0 0 10px;
+  }
+   #shopify-section-{{section.id}} img{
+     margin-bottom: 50px;
+   }
+  .enviro_title-w{
+    max-width: 1382px;
+    margin: 0 auto;
+  }
+@media (max-width: 989px){
+  #shopify-section-{{section.id}}{
+    background-color: {{ section.settings.color }};
+    text-align: center;
+    padding: 40px 35px 45px;
+  }
+  #shopify-section-{{section.id}} h1{
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    margin-bottom: 5px;
+  }
+  #shopify-section-{{section.id}} p{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #shopify-section-{{section.id}} h5{
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+  #shopify-section-{{section.id}} img{
+    width: 55px;
+    margin-bottom: 15px;
+  }
+}
+</style>
+
+<div class="enviro_title-w">
+  <img src="{{ section.settings.image | img_url }}" alt="">
+  <h5>{{ section.settings.before_title }}</h5>
+  <h1>{{ section.settings.title }}</h1>
+  {{ section.settings.text }}
+</div>
+
+{% schema %}
+  {
+    "name": "enviro title",
+    "settings": [
+      {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+      },
+      {
+          "id": "before_title",
+          "type": "text",
+          "label": "Top title text"
+      },
+      {
+          "id": "title",
+          "type": "text",
+          "label": "title"
+      },
+      {
+          "id": "text",
+          "type": "richtext",
+          "label": "under title"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "background color",
+        "default": "#8FBBAF"
+      }
+    ],
+    "presets": [
+      {
+        "name": "enviro title"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

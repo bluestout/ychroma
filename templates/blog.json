@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "d43195c7-8f6d-4761-9d76-a28a0a2f336d": {
+      "type": "jourtanl-after-header",
+      "settings": {
+        "title": "Y.Chroma Journal",
+        "text": "Kjjsdf jsdhfjshdjf skdjhfshdfhsdfj lskdjhfkjshdfkhskdhfkjsdhfkjshdf lskjdhfjsdf\nSdfjhsjdhfkljhsdfjkhsdfhskjdfh sdkjfh sdkjfh skdjhf kjsdhf kjshdf"
+      }
+    },
+    "21a11ed9-c845-49ab-b80b-03a6a8cd1b04": {
+      "type": "journal-main-slider",
+      "settings": {}
+    },
+    "8b170f4a-0c62-495f-89d2-15dd02fcef74": {
+      "type": "section-menu-blog",
+      "blocks": {
+        "2b6e9998-f5b6-4c01-b2cf-ad3b87df2bfc": {
+          "type": "image",
+          "settings": {
+            "title": "All",
+            "blog": "all",
+            "background": "#eee9dc",
+            "color": "#000000"
+          }
+        },
+        "2921a73a-68b5-43f1-907e-fb46a4fd3754": {
+          "type": "image",
+          "settings": {
+            "title": "Dressing",
+            "blog": "dressing-well",
+            "background": "#009398",
+            "color": "#ffffff"
+          }
+        },
+        "da31350b-82fb-42f4-8cb9-e0372a02a6ec": {
+          "type": "image",
+          "settings": {
+            "title": "THE BUILD",
+            "blog": "behind-the-build",
+            "background": "#533146",
+            "color": "#ffffff"
+          }
+        },
+        "d02ca111-30fd-43f2-8e13-da5744021ee3": {
+          "type": "image",
+          "settings": {
+            "title": "LIFESTYLE",
+            "blog": "y-chroma-life",
+            "background": "#dd4124",
+            "color": "#ffffff"
+          }
+        },
+        "488529a3-ae63-4eba-83c3-de12b5acd11d": {
+          "type": "image",
+          "settings": {
+            "title": "News",
+            "blog": "news",
+            "background": "#869e83",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "2b6e9998-f5b6-4c01-b2cf-ad3b87df2bfc",
+        "2921a73a-68b5-43f1-907e-fb46a4fd3754",
+        "da31350b-82fb-42f4-8cb9-e0372a02a6ec",
+        "d02ca111-30fd-43f2-8e13-da5744021ee3",
+        "488529a3-ae63-4eba-83c3-de12b5acd11d"
+      ],
+      "settings": {}
+    },
+    "1ce434d4-9204-4e04-a242-a3f5853842fb": {
+      "type": "yas-masonry-blog",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "d43195c7-8f6d-4761-9d76-a28a0a2f336d",
+    "21a11ed9-c845-49ab-b80b-03a6a8cd1b04",
+    "8b170f4a-0c62-495f-89d2-15dd02fcef74",
+    "1ce434d4-9204-4e04-a242-a3f5853842fb",
+    "main"
+  ]
+}

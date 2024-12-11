@@ -1,0 +1,112 @@
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'disclosure.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  
+    <div class="footer__content-top page-width">
+        <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet">
+          
+            <div class="footer-block grid__item footer-block-logo" >
+             
+              {%- if section.settings.footer_logo != blank -%}
+               <img src="{{section.settings.footer_logo | img_url:'original'}}" class="footer_logo_img">
+              {%- endif -%}
+              <div class="footer-block__details-content rte">
+                    {{ section.settings.subtext }}
+              </div>
+            </div>
+
+            <div class="footer-block grid__item{% if section.settings.heading1 != blank %} footer-block--menu{% endif %}" >
+              {%- if section.settings.heading1 != blank -%}
+                <h2 class="footer-block__heading">
+                  {{- section.settings.heading1 | escape -}}</h2>
+              {%- endif -%}
+              {%- if section.settings.menu1 != blank -%}
+                    <ul class="footer-block__details-content list-unstyled">
+                      {%- for link in section.settings.menu1.links -%}
+                        <li>
+                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+               {%- endif -%}
+            </div>
+
+            <div class="footer-block grid__item{% if section.settings.heading2 != blank %} footer-block--menu{% endif %}" >
+              {%- if section.settings.heading2 != blank -%}
+                <h2 class="footer-block__heading">
+                  {{- section.settings.heading2 | escape -}}</h2>
+              {%- endif -%}
+              {%- if section.settings.menu2 != blank -%}
+                    <ul class="footer-block__details-content list-unstyled">
+                      {%- for link in section.settings.menu2.links -%}
+                        <li>
+                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+               {%- endif -%}
+            </div>
+
+            <div class="footer-block grid__item{% if section.settings.heading3 != blank %} footer-block--menu{% endif %}" >
+              {%- if section.settings.heading3 != blank -%}
+                <h2 class="footer-block__heading">
+                  {{- section.settings.heading3 | escape -}}</h2>
+              {%- endif -%}
+              {%- if section.settings.menu3 != blank -%}
+                    <ul class="footer-block__details-content list-unstyled">
+                      {%- for link in section.settings.menu3.links -%}
+                        <li>
+                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+               {%- endif -%}
+            </div>
+ 
+       </div>
+    </div>
+  
+
+  <div class="footer__content-bottom">
+    <div class="footer__content-bottom-wrapper page-width">
+    
+      <div class="footer__column footer__column--info">
+      
+          <div class="footer__payment">
+            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+            <ul class="list list-payment" role="list">
+              {%- for type in shop.enabled_payment_types -%}
+                <li class="list-payment__item">
+                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+  
+        <div class="footer__copyright caption">
+          <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, <b>{{ shop.name | link_to: routes.root_url }}</b></small>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

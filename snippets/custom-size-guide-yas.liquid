@@ -1,0 +1,70 @@
+<style>
+  @media(max-width: 470px)
+{
+  
+} 
+</style>
+<a href="#"  data-toggle="modal" data-target="#size-guide-detail"><div class="size-btn-yas">Size Guide
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="15" viewBox="0 0 33 15">
+  <g id="Сгруппировать_12" data-name="Сгруппировать 12" transform="translate(-1206 -315)">
+    <g id="Прямоугольник_8" data-name="Прямоугольник 8" transform="translate(1206 315)" fill="none" stroke="#383838" stroke-linejoin="round" stroke-width="2.5">
+      <rect width="33" height="15" stroke="none"/>
+      <rect x="1.25" y="1.25" width="30.5" height="12.5" fill="none"/>
+    </g>
+    <line id="Линия_1" data-name="Линия 1" y2="7.904" transform="translate(1213.5 316.596)" fill="none" stroke="#383838" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Линия_2" data-name="Линия 2" y2="5.904" transform="translate(1219.5 316.596)" fill="none" stroke="#383838" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Линия_3" data-name="Линия 3" y2="5.904" transform="translate(1225.5 316.596)" fill="none" stroke="#383838" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Линия_4" data-name="Линия 4" y2="5.904" transform="translate(1231.5 316.596)" fill="none" stroke="#383838" stroke-linecap="round" stroke-width="2.5"/>
+  </g>
+</svg>
+
+</div></a>
+
+<!-- basic modal  -->
+<div class="modal fade" id="size-guide-detail" tabindex="-1" role="dialog" aria-labelledby="size-guide-detail" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+               <h4 class="modal-title" id="myModalLabel">Size Guide</h4>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><u>CLOSE</u></span>
+              </button>
+             </div>
+            <div class="modal-body">
+             <img src="{{ image | img_url: 'x2000' }}" class="size-guide-info">
+            </div>
+            <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+</div>
+
+{% assign hassCollection = false  %}
+  {% for collection in product.collections %}
+    {% if collection.title contains "Pants" %}
+      {% assign hassCollection = true %}
+    {% endif %}
+  {% endfor %}
+ 
+  {% if hassCollection != false %}
+  <script>
+    $(function(){
+         $('#size-guide-detail .modal-body').click(function(e){
+          var posY = e.offsetY;
+          if(posY < 425){
+            $('#size-guide-detail .close').click();
+            $.magnificPopup.open({
+              items: {
+                src: 'https://www.youtube.com/watch?v=fJRA9b5PIJ4'
+              },
+              type: 'iframe'
+            
+              // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+              // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+            }, 0);
+          }
+      })
+    })
+  </script>
+{% endif %}

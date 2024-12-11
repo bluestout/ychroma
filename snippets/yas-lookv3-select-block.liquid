@@ -1,0 +1,133 @@
+<div class="yas_look_wrapp-second">
+  
+  {% render 'yas-custom-select_v2', sectionid: sectionid %}
+  <div class="dashed"> 
+    <h6>NUMBER OF PIECES </h6>
+    <custom-select class="custom-select-form" data-tag="look-pieces">
+        <div class="custom-select-form-wrapp" data-open="false">
+            <input type="hidden" value="" name="">
+                 <div class="popcustom_select-title">
+                   <span>Essentials</span>
+                   {% render 'icon-caret' %}
+                 </div>
+                 <div class="popcustom_select-item_wrapp">    
+                     <div class="popcustom_select-var" data-number="0" data-val="8 pieces" data-name="Essentials" cheked="true">Essentials</div>
+                     <div class="popcustom_select-var" data-number="1" data-val="16 pieces" data-name="Foundation" cheked="false">Foundation</div>
+                     <div class="popcustom_select-var" data-number="2" data-val="24 pieces" data-name="Full Wardrobe" cheked="false">Full Wardrobe</div>
+                 </div>
+         </div>
+    </custom-select>
+  </div>
+  
+  <div class="">
+    {% capture sizeValuePants %}
+    {% assign sizeMass = '' %}
+    {% for product in products %}
+      {% assign productTags = product.tags | join: ', ' %}
+      {% if productTags contains 'look-pants' %}
+        {%- for option in product.options_with_values -%}
+                    {% if option.name == "Size"  %}
+                      {% assign sizeMassText = product.first_available_variant.option2 %}
+                      {%- for value in option.values -%}
+                        {% assign sizeMassText = sizeMassText | append: ', ' | append: value %}
+                      {% endfor %}
+                    {% endif %}
+        {% endfor %}
+        {% assign sizeMass = sizeMassText | split: ', ' | uniq %}
+      {% endif %}
+    {% endfor %}
+    {% endcapture %}
+    <h6>PANTS</h6>
+    <custom-select class="custom-select-form" data-tag="look-pants">
+        <div class="custom-select-form-wrapp" data-open="false">
+            <input type="hidden" value="" name="">
+                 <div class="popcustom_select-title">
+                   <span>PICK YOUR SIZE</span>
+                   {% render 'icon-caret' %}
+                 </div>
+                 <div class="popcustom_select-item_wrapp">
+                   {{ sizeValuePants }}
+                   {% for value in sizeMass %}
+                     <div class="popcustom_select-var" data-name="{{ value }}" data-val="{{ value }}" {% if forloop.first %}cheked="true"{% else %}cheked="false"{% endif %}>{{ value }}</div>
+                   {% endfor %}
+                   
+                 </div>
+         </div>
+    </custom-select>
+  </div>
+  <div class="">
+    {% capture sizeValueShirts %}
+    {% assign sizeMass = '' %}
+    {% for product in products %}
+      {% assign productTags = product.tags | join: ', ' %}
+      {% if productTags contains 'look-shirts' %}
+        {%- for option in product.options_with_values -%}
+                    {% if option.name == "Size"  %}
+                      {% assign sizeMassText = product.first_available_variant.option2 %}
+                      {%- for value in option.values -%}
+                        {% assign sizeMassText = sizeMassText | append: ', ' | append: value %}
+                      {% endfor %}
+                    {% endif %}
+        {% endfor %}
+        {% assign sizeMass = sizeMassText | split: ', ' | uniq %}
+      {% endif %}
+    {% endfor %}
+    {% endcapture %}
+    <h6>SHIRTS</h6>
+    <custom-select class="custom-select-form" data-tag="look-shirts">
+        <div class="custom-select-form-wrapp" data-open="false">
+            <input type="hidden" value="" name="">
+                 <div class="popcustom_select-title">
+                   <span>PICK YOUR SIZE</span>
+                   {% render 'icon-caret' %}
+                 </div>
+                 <div class="popcustom_select-item_wrapp">
+                   {{ sizeValueShirts }}
+                   {% for value in sizeMass %}
+                     <div class="popcustom_select-var" data-name="{{ value }}" data-val="{{ value }}" {% if forloop.first %}cheked="true"{% else %}cheked="false"{% endif %}>{{ value }}</div>
+                   {% endfor %}
+                 </div>
+         </div>
+    </custom-select>
+  </div>
+  <div class="">
+    {% capture sizeValueJacket %}
+    {% assign sizeMass = '' %}
+    {% for product in products %}
+      {% assign productTags = product.tags | join: ', ' %}
+      {% if productTags contains 'look-jacket' %}
+        {%- for option in product.options_with_values -%}
+                    {% if option.name == "Size"  %}
+                      {% assign sizeMassText = product.first_available_variant.option2 %}
+                      {%- for value in option.values -%}
+                        {% assign sizeMassText = sizeMassText | append: ', ' | append: value %}
+                      {% endfor %}
+                    {% endif %}
+        {% endfor %}
+        {% assign sizeMass = sizeMassText | split: ', ' | uniq %}
+      {% endif %}
+    {% endfor %}
+    {% endcapture %}
+    <h6>JACKETS</h6>
+    <custom-select class="custom-select-form" data-tag="look-jacket">
+        <div class="custom-select-form-wrapp" data-open="false">
+            <input type="hidden" value="" name="">
+                 <div class="popcustom_select-title">
+                   <span>PICK YOUR SIZE</span>
+                   {% render 'icon-caret' %}
+                 </div>
+                 <div class="popcustom_select-item_wrapp">
+                   {{ sizeValueJacket }}
+                   {% for value in sizeMass %}
+                     <div class="popcustom_select-var" data-name="{{ value }}" data-val="{{ value }}" {% if forloop.first %}cheked="true"{% else %}cheked="false"{% endif %}>{{ value }}</div>
+                   {% endfor %}
+                 </div>
+         </div>
+    </custom-select>
+  </div>
+  <div class="">
+    <button class="add_look_cart">
+      ADD LOOK TO BAG
+    </button>
+  </div>
+</div>

@@ -1,0 +1,479 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b3fc98fc-2a01-4f53-a7ee-290e2b8ed417": {
+      "type": "Hero-banner",
+      "settings": {
+        "text-box": "",
+        "text1_link": "",
+        "text1_txt": "",
+        "text2_link": "https://youtu.be/4lfc6BuW8nM",
+        "text2_txt": "Is Y.Chroma Right For You Now?",
+        "video_link": "https://cdn.shopify.com/videos/c/o/v/ea819c28fcb6454aaee7b1402e9519db.mp4",
+        "btn_text": "",
+        "stop_btn_text": "Touch to unmute",
+        "arrows_down": "shopify://shop_images/white-down-arrow-png-2.png"
+      }
+    },
+    "e20743ed-7a6d-4b72-88e1-6a4e0febb3c4": {
+      "type": "yas-slider-logo",
+      "blocks": {
+        "3eab6bcd-663b-4aee-a867-4b5478bb65d8": {
+          "type": "header",
+          "settings": {
+            "image": "shopify://shop_images/Group_2.png"
+          }
+        },
+        "f6a014f6-7929-44ad-83a1-7ade0bb65af1": {
+          "type": "header",
+          "settings": {
+            "image": "shopify://shop_images/Group_4.png"
+          }
+        },
+        "77422f55-8fb0-46ae-a629-916b8e3ac5ae": {
+          "type": "header",
+          "settings": {
+            "image": "shopify://shop_images/10.png"
+          }
+        },
+        "5798a893-0c43-44da-9b69-76427f20dd33": {
+          "type": "header",
+          "settings": {
+            "image": "shopify://shop_images/Group_14.png"
+          }
+        },
+        "3a9c073e-fda4-49c5-b32f-8db98ddfe031": {
+          "type": "header",
+          "settings": {
+            "image": "shopify://shop_images/Group_6.png"
+          }
+        }
+      },
+      "block_order": [
+        "3eab6bcd-663b-4aee-a867-4b5478bb65d8",
+        "f6a014f6-7929-44ad-83a1-7ade0bb65af1",
+        "77422f55-8fb0-46ae-a629-916b8e3ac5ae",
+        "5798a893-0c43-44da-9b69-76427f20dd33",
+        "3a9c073e-fda4-49c5-b32f-8db98ddfe031"
+      ],
+      "settings": {
+        "title": "AS SEEN IN"
+      }
+    },
+    "f3a10a4d-0b39-404c-b2b5-f8a0b20a2f3e": {
+      "type": "custom-home-slider",
+      "blocks": {
+        "466766bb-63c0-4e22-b9d3-76796e865b80": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Max_Sweater.png",
+            "text-box": "Welcome to the House of Y.Chroma",
+            "description": "A man at midlife can look into his closet and realize that he doesn't like anything he sees. He has evolved, but those clothes haven't. We make Y.Chroma for exactly this moment. More than clothes, itʼs a complete system for what the new you wears.<br><br>\n\nWelcome to the House of Y.Chroma. Make yourself at home.<br>",
+            "author-name": "<b><img style=\"width: 160px;height: auto;display: inline-block;\" src=\"https://cdn.shopify.com/s/files/1/0620/1648/7614/files/Max-Israel_white_high-res.png?v=1675978002\" alt=\"MAX Israel\"></b> | LISBON",
+            "author-position": "Founder/Creative Director"
+          }
+        }
+      },
+      "block_order": [
+        "466766bb-63c0-4e22-b9d3-76796e865b80"
+      ],
+      "settings": {}
+    },
+    "e387173e-003d-4588-a82a-ccc1b39c789d": {
+      "type": "yas-top-seling-product",
+      "blocks": {
+        "937cb1b9-bb54-4bbc-8422-44331816ed6a": {
+          "type": "product",
+          "settings": {
+            "product": "deckmaster-shirt-cut-jacket"
+          }
+        },
+        "798e3a98-455d-4fec-8656-67636254b9c8": {
+          "type": "product",
+          "settings": {
+            "product": "skyline-pant"
+          }
+        },
+        "3a110c69-da8c-4429-a110-cf9c65a9a9fe": {
+          "type": "product",
+          "settings": {
+            "product": "varial-shirt-cut-jacket"
+          }
+        },
+        "0f58c72f-8576-40b0-8162-aee89feeca67": {
+          "type": "product",
+          "settings": {
+            "product": "sevilla-short-sleeve-o"
+          }
+        },
+        "0115edd2-0594-43b7-9118-2e5645320ab9": {
+          "type": "product",
+          "settings": {
+            "product": "power-cable-sweater"
+          }
+        },
+        "d32c337f-49ec-467e-be48-5965137ccef6": {
+          "type": "product",
+          "settings": {
+            "product": "henley-t-shirt-short-sleeve-o"
+          }
+        },
+        "962b3373-9f1f-4cb1-aa62-71b0d1bd2359": {
+          "type": "product",
+          "settings": {
+            "product": "basic-workshirt"
+          }
+        },
+        "2207a37f-c920-412c-9d93-47236bc36b39": {
+          "type": "product",
+          "settings": {
+            "product": "dwayne-sweater"
+          }
+        },
+        "cdc2a3cc-aa99-48c0-a945-77854c1b934a": {
+          "type": "product",
+          "settings": {
+            "product": "becker-pant"
+          }
+        },
+        "88cb044f-8a3d-4610-8c06-6a6efdc15a23": {
+          "type": "product",
+          "settings": {
+            "product": "henley-button-t-shirt"
+          }
+        },
+        "79d6edcd-51b6-438a-97b6-abab5c52efdc": {
+          "type": "product",
+          "settings": {
+            "product": "the-henley-long-sleeve-t-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "937cb1b9-bb54-4bbc-8422-44331816ed6a",
+        "798e3a98-455d-4fec-8656-67636254b9c8",
+        "3a110c69-da8c-4429-a110-cf9c65a9a9fe",
+        "0f58c72f-8576-40b0-8162-aee89feeca67",
+        "0115edd2-0594-43b7-9118-2e5645320ab9",
+        "d32c337f-49ec-467e-be48-5965137ccef6",
+        "962b3373-9f1f-4cb1-aa62-71b0d1bd2359",
+        "2207a37f-c920-412c-9d93-47236bc36b39",
+        "cdc2a3cc-aa99-48c0-a945-77854c1b934a",
+        "88cb044f-8a3d-4610-8c06-6a6efdc15a23",
+        "79d6edcd-51b6-438a-97b6-abab5c52efdc"
+      ],
+      "settings": {
+        "title": "Fall Best Sellers"
+      }
+    },
+    "64310d50-3f8a-4bf7-8244-b6523ae965a0": {
+      "type": "yas-block-section",
+      "blocks": {
+        "285a37c6-6f89-4398-a768-841624d9fdd9": {
+          "type": "header",
+          "settings": {
+            "image": "shopify://shop_images/image_new_block1.jpg",
+            "text_btn": "Request a Catalog",
+            "url": "#",
+            "title": "SOMETIMES THE OLD WAYS ARE THE BEST WAYS. FREE HOME DELIVERY OF MAX’S SEASONAL CATALOGS ON REQUEST."
+          }
+        },
+        "c5b1a810-0dfc-4994-a0ff-e69903b73084": {
+          "type": "header",
+          "settings": {
+            "image": "shopify://shop_images/image_new_block2.jpg",
+            "text_btn": "Schedule a Stylist Call",
+            "url": "#",
+            "title": "HELP DIALING-IN YOUR COLOR PALETTE, A PERSONALISED WARDROBE PLAN AND FULL-SERVICE CUSTOMER CARE. \nALL ONE ZOOM CALL AWAY."
+          }
+        }
+      },
+      "block_order": [
+        "285a37c6-6f89-4398-a768-841624d9fdd9",
+        "c5b1a810-0dfc-4994-a0ff-e69903b73084"
+      ],
+      "settings": {}
+    },
+    "6e586e19-1656-4398-9839-355394e541c1": {
+      "type": "yas-collections5-home",
+      "blocks": {
+        "052a068c-a55e-42c0-a21e-24cd2de66dda": {
+          "type": "Baner",
+          "settings": {
+            "yas-collections-block-subtitle": "EXPLORE",
+            "title": "PANTS",
+            "yas-collections-block-bg": "shopify://shop_images/ychroma-01-pants-low.jpg",
+            "yas-collections-block-url": "shopify://collections/step-1-pants"
+          }
+        },
+        "a4257e57-54b5-4bf0-b41c-24f5b49a2807": {
+          "type": "Baner",
+          "settings": {
+            "yas-collections-block-subtitle": "EXPLORE",
+            "title": "SHIRTS",
+            "yas-collections-block-bg": "shopify://shop_images/ychroma-02-coreshirts-low.jpg",
+            "yas-collections-block-url": "shopify://collections/step-2-core-shirts"
+          }
+        },
+        "0d3d8493-d641-4a77-a4d7-cb30026a7470": {
+          "type": "Baner",
+          "settings": {
+            "yas-collections-block-subtitle": "EXPLORE",
+            "title": "Shirt-cut Jackets & Sweaters",
+            "yas-collections-block-bg": "shopify://shop_images/ychroma-03-sweaters-low.jpg",
+            "yas-collections-block-url": "shopify://collections/step-3-shirt-cut-jackets-sweaters"
+          }
+        },
+        "ec014d69-c9fe-4d4e-aea8-d4d3b3b537c2": {
+          "type": "Baner",
+          "settings": {
+            "yas-collections-block-subtitle": "EXPLORE",
+            "title": "Jackets",
+            "yas-collections-block-bg": "shopify://shop_images/ychroma-04-jackets-low.jpg",
+            "yas-collections-block-url": "shopify://collections/step-4-jackets"
+          }
+        },
+        "7c63ed04-5109-4ca0-bf78-aaef964d2ce5": {
+          "type": "Baner",
+          "settings": {
+            "yas-collections-block-subtitle": "EXPLORE",
+            "title": "FINISHING ESSENTIALS",
+            "yas-collections-block-bg": "shopify://shop_images/ychroma-05-finishing-low.jpg",
+            "yas-collections-block-url": "shopify://collections/step-5-finishing-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "052a068c-a55e-42c0-a21e-24cd2de66dda",
+        "a4257e57-54b5-4bf0-b41c-24f5b49a2807",
+        "0d3d8493-d641-4a77-a4d7-cb30026a7470",
+        "ec014d69-c9fe-4d4e-aea8-d4d3b3b537c2",
+        "7c63ed04-5109-4ca0-bf78-aaef964d2ce5"
+      ],
+      "settings": {}
+    },
+    "e6eb1d91-2947-4030-8990-bac49e56c055": {
+      "type": "yas-pick-vibe",
+      "blocks": {
+        "0a704023-a3a3-42ee-b2de-ea17998c52f8": {
+          "type": "collection",
+          "settings": {
+            "title": "TOKYO EDIT",
+            "image": "shopify://shop_images/Wardrobe_Vertical_Tokyo_B.jpg",
+            "url": "shopify://collections/you-re-sophisticated-just-like-tokyo",
+            "show_color1": false,
+            "color1": "#ffffff",
+            "show_color2": false,
+            "color2": "#ffffff",
+            "show_color3": true,
+            "color3": "#ce8498",
+            "show_color4": true,
+            "color4": "#405d73",
+            "show_color5": true,
+            "color5": "#879f84"
+          }
+        },
+        "bfb8e4e9-7929-4e9c-bb46-587bed0828fe": {
+          "type": "collection",
+          "settings": {
+            "title": "SEATTLE EDIT",
+            "image": "shopify://shop_images/Wardrobe_Vertical_Seattle_B.jpg",
+            "url": "shopify://collections/seattle-makes-you-stand-out",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#405d73",
+            "show_color3": true,
+            "color3": "#005d43",
+            "show_color4": false,
+            "color4": "#ffffff",
+            "show_color5": false,
+            "color5": "#ffffff"
+          }
+        },
+        "902bb775-bbc7-461c-b00c-1d51f0271bba": {
+          "type": "collection",
+          "settings": {
+            "title": "VALENCIA EDIT",
+            "image": "shopify://shop_images/Wardrobe_Vertical_Valencia_B.jpg",
+            "url": "shopify://collections/get-warm-with-valencia",
+            "show_color1": true,
+            "color1": "#6a6a45",
+            "show_color2": true,
+            "color2": "#009499",
+            "show_color3": true,
+            "color3": "#dd4124",
+            "show_color4": false,
+            "color4": "#ffffff",
+            "show_color5": false,
+            "color5": "#ffffff"
+          }
+        },
+        "03d52b7a-98c5-4232-84c8-f494d42d57cc": {
+          "type": "collection",
+          "settings": {
+            "title": "PARIS EDIT",
+            "image": "shopify://shop_images/Wardrobe_Vertical_Paris_B.jpg",
+            "url": "shopify://collections/you-look-great-in-paris",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#533146",
+            "show_color3": true,
+            "color3": "#405d73",
+            "show_color4": false,
+            "color4": "#ffffff",
+            "show_color5": false,
+            "color5": "#ffffff"
+          }
+        },
+        "146d9b2c-31cb-421a-a5d4-2f6adc8f4ccb": {
+          "type": "collection",
+          "settings": {
+            "title": "LISBON EDIT",
+            "image": "shopify://shop_images/Wardrobe_Vertical_Lisbon_B.jpg",
+            "url": "shopify://collections/lisbon",
+            "show_color1": true,
+            "color1": "#864c24",
+            "show_color2": true,
+            "color2": "#009499",
+            "show_color3": true,
+            "color3": "#f7b718",
+            "show_color4": false,
+            "color4": "#ffffff",
+            "show_color5": false,
+            "color5": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "0a704023-a3a3-42ee-b2de-ea17998c52f8",
+        "bfb8e4e9-7929-4e9c-bb46-587bed0828fe",
+        "902bb775-bbc7-461c-b00c-1d51f0271bba",
+        "03d52b7a-98c5-4232-84c8-f494d42d57cc",
+        "146d9b2c-31cb-421a-a5d4-2f6adc8f4ccb"
+      ],
+      "settings": {
+        "title": "Pre-designed Color Plans"
+      }
+    },
+    "8659c370-8be0-4a54-8623-cb1fbe16f17c": {
+      "type": "yas-youtube-slider",
+      "blocks": {
+        "2ad64803-6808-44bf-8683-fee79d649ece": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Carpet_Wide.jpg",
+            "url": "https://youtu.be/HfdIAJeBV2c",
+            "title": "<p>Why You Hate Your Wardrobe<strong> | 1:45</strong></p>",
+            "text": "A man right in the sweet spot of his life can look into his closet and realize he doesn't like any of his ..."
+          }
+        },
+        "405f42b6-35b2-4386-bcb8-e3b145f5e5b1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-week25-art-of-wardrobe.jpg",
+            "url": "https://youtu.be/D0j05f2p5qE",
+            "title": "<p>Monochrome Look in Caramel Café<strong> | 1:11</strong></p>",
+            "text": "Caramel Café is already a unique power color. Here's how you'll style it with a chic monochrome look."
+          }
+        },
+        "c599def3-5c54-459c-9238-b9f61b5b9c39": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-week23-art-of-wardrobe.jpg",
+            "url": "https://youtu.be/ogBVbZGlIRE",
+            "title": "<p>Better At The Beach <strong>| 1:36</strong></p>",
+            "text": "This summer, wear a silky, Pima-cotton V-Neck instead of that pre-beach or post-beach sweatshirt."
+          }
+        },
+        "f2535346-3584-4a0d-b787-8ad0347f1001": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-week22-art-of-wardrobe_290f0ea2-1f7b-4cb1-af57-a21d33ee111e.jpg",
+            "url": "https://youtu.be/DfGKN79UDuA",
+            "title": "<p>Styling A White Pant <strong>| 2:16</strong></p>",
+            "text": "I swear: A white pant is your secret summer wardrobe weapon. Here are some great ways to own the white-pant win."
+          }
+        },
+        "c9581861-8990-419b-afa6-31a98803e7e1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-week26-art-of-wardrobe.jpg",
+            "url": "https://youtu.be/jbbgjpYNXgA",
+            "title": "<p>The Color That Elevates Any Pant <strong>| 1:26</strong></p>",
+            "text": "Gray can make any guy look blah. But this casually sophisticated button-down in Obsidian elevates any pant you pair it with.  I think it's a must-have in your wardrobe."
+          }
+        },
+        "27396aa6-31a4-42a5-bac9-4de539357dd0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-week27-art-of-wardrobe.jpg",
+            "url": "https://youtu.be/xjNDZMubcB8",
+            "title": "<p>Bottega Veneta Was Right About This Green  <strong>| 1:02</strong></p>",
+            "text": "Bottega Veneta re-introduced the world to this smashing green. Here's an easy way to outshine the competition with this energetic, vibrant color."
+          }
+        },
+        "cfb61aeb-c9e9-4f06-8486-87721db75e53": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-week24-art-of-wardrobe.jpg",
+            "url": "https://youtu.be/LITcS10OufI",
+            "title": "<p>The Subtle Power of Italian Plum<strong> | 1:06</strong></p>",
+            "text": "Celebrity A-listers have been leveraging the low-key cool of Italian Plum for ages.  Take a page out of their playbook by using a monochrome look."
+          }
+        },
+        "9d331aaf-d925-4d04-9b20-caa281daabe6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/System_Static_Graphic.jpg",
+            "url": "https://youtu.be/LemCq-e7MBk",
+            "title": "<p>My Wardrobe System Explained</p>",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "2ad64803-6808-44bf-8683-fee79d649ece",
+        "405f42b6-35b2-4386-bcb8-e3b145f5e5b1",
+        "c599def3-5c54-459c-9238-b9f61b5b9c39",
+        "f2535346-3584-4a0d-b787-8ad0347f1001",
+        "c9581861-8990-419b-afa6-31a98803e7e1",
+        "27396aa6-31a4-42a5-bac9-4de539357dd0",
+        "cfb61aeb-c9e9-4f06-8486-87721db75e53",
+        "9d331aaf-d925-4d04-9b20-caa281daabe6"
+      ],
+      "settings": {
+        "title": "<p><strong>VIDEOS:</strong> The Art of Wardrobe</p>",
+        "text": "Build your new look."
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "b3fc98fc-2a01-4f53-a7ee-290e2b8ed417",
+    "e20743ed-7a6d-4b72-88e1-6a4e0febb3c4",
+    "f3a10a4d-0b39-404c-b2b5-f8a0b20a2f3e",
+    "e387173e-003d-4588-a82a-ccc1b39c789d",
+    "64310d50-3f8a-4bf7-8244-b6523ae965a0",
+    "6e586e19-1656-4398-9839-355394e541c1",
+    "e6eb1d91-2947-4030-8990-bac49e56c055",
+    "8659c370-8be0-4a54-8623-cb1fbe16f17c",
+    "main"
+  ]
+}

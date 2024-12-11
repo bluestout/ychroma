@@ -1,0 +1,162 @@
+<style>
+  #shopify-section-{{section.id}}{
+    padding: 30px 0;
+    background-color: {{section.settings.bg_color}};
+  }
+  #shopify-section-{{section.id}} .yas-newblock-w{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1587px;
+    margin: 0 auto;
+  }
+  #shopify-section-{{section.id}} .yas-newblock-item{
+    max-width: 49%;
+    width: 100%;
+  }
+   #shopify-section-{{section.id}} .yas-newblock-item img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+  }
+   #shopify-section-{{section.id}} .yas-newblock-item video{
+    width: 100%;
+    object-fit: cover;
+     aspect-ratio: 1;
+  }
+  #shopify-section-{{section.id}} .yas-newblock-item_img{
+    position: relative;
+  }
+   #shopify-section-{{section.id}} .yas-newblock-item_img a{
+    position: absolute;
+    background-color: #EDBA44;
+    color: #000;
+    letter-spacing: 1px;
+    border: 3px solid #EDBA44;
+    font-family: CentraNo2-Extrabold, sans-serif !important;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 15px auto 0px;
+    transition: all 0.3s ease;
+    line-height: normal;
+    width: auto;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+    justify-content: center;
+   }
+  #shopify-section-{{section.id}} .yas-newblock-item_img a:hover {
+      text-decoration: none;
+      background: transparent;
+      color: #EDBA44;
+  }
+  #shopify-section-{{section.id}} p{
+     text-align: center;
+    font-family: "CentraNo2-Bold" !important;
+    font-weight: 600;
+    max-width: 420px;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 20px auto;
+    {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #000; 
+    {% else %}
+      color: #FFFFFF;
+    {% endif %}
+  }
+
+  @media (max-width: 989px){
+    #shopify-section-{{section.id}} .yas-newblock-item{
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="yas-newblock-w">
+  {%- for block in section.blocks -%}
+    <div class="yas-newblock-item">
+      <div class="yas-newblock-item_img">
+        {% if block.settings.video != blank %}
+          <video poster="{{ block.settings.image | img_url: 'master' }}" autoplay="autoplay" loop="loop" muted defaultmuted playsinline>
+            <source src="{{ block.settings.video }}" type="video/mp4">
+          </video>
+        {% endif %}
+        {% if block.settings.video == blank %}
+        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt}}"> 
+        {% endif %}
+        <a href="{{ block.settings.url }}">{{ block.settings.text_btn }}</a>
+      </div>
+    {% if block.settings.title != blank %}
+      <p>{{ block.settings.title }}</p>
+    {% endif %}
+    </div>
+  {%- endfor -%}
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Yas block section",
+    "class": "yas-block-section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Bg color",
+        "default": "#EAE8DB"
+      }
+    ],
+	"blocks": [
+      {
+        "type": "header",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "video",
+            "label": "video loop bg"
+          },
+          {
+            "type": "text",
+            "id": "text_btn",
+            "label": "Text button"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "url"
+          },
+          {
+            "type": "textarea",
+            "id": "title",
+            "label": "Text under image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yas block section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

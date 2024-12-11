@@ -1,0 +1,27 @@
+<style>
+  .es-icon-with-text {
+    --padding-top: {{ block.settings.padding_top }}px;
+    --padding-bottom: {{ block.settings.padding_bottom }}px;
+  }
+
+  @media (max-width: 768px) {
+    .es-icon-with-text {
+      --padding-top: {{ block.settings.padding_top | times: 0.5 }}px;
+      --padding-bottom: 24px;
+    }
+  }
+</style>
+
+<div class="es-icon-with-text">
+  <div class="es-iwt--icon">
+    <img
+      src="{{ block.settings.image | img_url: 'master' }}"
+      width="{{ block.settings.image.width }}"
+      height="{{ block.settings.image.height }}"
+      alt="{{ block.settings.image.alt }}"
+    >
+  </div>
+  <div class="es-iwt--text">
+    <div class="es-iwt--text-wrapper">{{ block.settings.content }}</div>
+  </div>
+</div>

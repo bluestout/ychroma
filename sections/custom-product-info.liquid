@@ -1,0 +1,76 @@
+<div class="product-complete-look-info">
+{% if product.metafields.custom.custom_product_info.value != blank  %}
+    <h3>{{ section.settings.text-box }}</h3>
+
+<div class="owl-slider">
+<div id="carousel" class="owl-carousel">
+
+  {% assign recommended_products = product.metafields.custom.custom_product_info.value %}
+    {% for product in recommended_products  %}
+      <div class="item">
+      <a href="{{ product.url }}">
+        {{ product.featured_image | image_url: width: 400 | image_tag }}
+      </a>
+   <h2>{{ product.title }}</h2>
+   <p>{{ product.price | money }}</p>
+      </div>
+    {% endfor %}
+</div>
+</div>
+  
+
+ {% endif %}
+  
+</div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+jQuery("#carousel").owlCarousel({
+  autoplay: true,
+  rewind: true, /* use rewind if you don't want loop */
+  margin: 20,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
+  nav: true,
+  responsive: {
+    0: {
+      items: 2
+    },
+
+    600: {
+      items: 4
+    },
+
+    1024: {
+      items: 4
+    },
+
+    1366: {
+      items: 4
+    }
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Product Second collection",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading"
+    }
+  ]
+  ,
+  "presets": [
+    {
+      "name": "Product Second collection",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}

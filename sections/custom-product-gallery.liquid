@@ -1,0 +1,147 @@
+<div class="home-slider-section">
+  <div class="product-gallery-section">
+    <div class="owl-slider">
+    <h2>{{section.settings.heading}}</h2>
+      <div class="grid-item row product_gallery">
+        <div class="product_gallery_column column_one">
+          {% for ingredient in product.metafields.custom.leftproductgallery.value %}
+          <img src="{{ ingredient |img_url :'original'}}">
+          {% endfor %}
+        </div>
+        
+        <div class="product_gallery_column column_two">
+          {% for ingredient in product.metafields.custom.middleproductgallery.value %}
+          <img src="{{ ingredient |img_url :'original'}}">
+          {% endfor %}
+        </div>
+        
+        <div class="product_gallery_column column_three">
+          {% for ingredient in product.metafields.custom.rightproductgallery.value %}
+          <img src="{{ ingredient |img_url :'original'}}">
+          {% endfor %}
+        </div>
+        
+      </div>
+  </div>
+  </div>
+</div>
+
+{% comment %}
+<div class="home-slider-section">
+  <div class="product-gallery-section">
+    <div class="owl-slider">
+    <h2>{{section.settings.heading}}</h2>
+      <div class="grid-item row product_gallery">
+        <div class="product_gallery_column column_one">
+          {% for block in section.blocks %}
+          {% case block.type %}
+          {% when 'first-section' %}
+         <img src="{{block.settings.imageOne | img_url:'original'}}"> 
+          {% endcase %}
+          {% endfor %}
+        </div>
+        
+        <div class="product_gallery_column column_two">
+          {% for block in section.blocks %}
+          {% case block.type %}
+          {% when 'second-section' %}
+          <img src="{{block.settings.imageOne | img_url:'original'}}"> 
+          {% endcase %}
+          {% endfor %}
+        </div>
+        
+        <div class="product_gallery_column column_three">
+          {% for block in section.blocks %}
+          {% case block.type %}
+          {% when 'third-section' %}
+         <img src="{{block.settings.imageOne | img_url:'original'}}"> 
+          {% endcase %}
+          {% endfor %}
+        </div>
+        
+      </div>
+  </div>
+  </div>
+</div>
+{% endcomment %}
+{% schema %}
+{
+  "name": "Product Gallery",
+  "settings": [
+      {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading"
+      }
+  ],
+  "blocks": [
+  {
+  "type": "first-section",
+  "name": "First Section",
+  "settings": [
+  {
+  "id": "imageOne",
+  "type": "image_picker",
+  "label": "Image"
+  }
+  ]
+  },
+  {
+  "type": "second-section",
+  "name": "Second Section",
+  "settings": [
+  {
+  "id": "imageOne",
+  "type": "image_picker",
+  "label": "Image"
+  }
+  ]
+  },
+  {
+  "type": "third-section",
+  "name": "Third Section",
+  "settings": [
+  {
+  "id": "imageOne",
+  "type": "image_picker",
+  "label": "Image"
+  }
+  ]
+  }
+  ],
+  "presets": [
+    {
+      "name": "Product Gallery",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+    jQuery("#carousel").owlCarousel({
+      autoplay: true,
+      margin: 20,
+      responsiveClass: true,
+      autoplayTimeout: 7000,
+      smartSpeed: 800,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+    
+        600: {
+          items: 1
+        },
+    
+        1024: {
+          items: 2
+        },
+    
+        1366: {
+          items: 2
+        }
+      }
+    });
+{% endjavascript %}
