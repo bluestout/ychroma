@@ -534,7 +534,19 @@
       $('.heder_second_yas').removeAttr('open');
     });
    
-  
+  $(document).ready(function () {
+    if (window.innerWidth > 990) {
+      $(window).scroll(function () {
+        const scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 40) {
+          $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").addClass("scrolled");
+        } else {
+          $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").removeClass("scrolled");
+        }
+      })
+    }
+  })
 </script>
 
 {% schema %}
