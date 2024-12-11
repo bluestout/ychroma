@@ -35,6 +35,7 @@
   .es-iwt--text {
     margin-top: 4px;
     position: relative;
+    z-index: 0;
 
     &::before {
       content: '';
@@ -301,6 +302,7 @@
   #shopify-section-header-second {
     transition: .3s ease;
     background-color: #000;
+    z-index: 999;
   
     .yas-main-header {
       transition: .3s ease;
@@ -334,8 +336,21 @@
   
     &.scrolled {
       top: -40px !important;
+      z-index: 1000 !important;
+
+      .header__icons {
+        position: relative;
+        top: 40px;
+        padding: 13px 0;
+      }
     }
   }  
+
+  .yas-under-header {
+    position: absolute;
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 989px) {
