@@ -163,7 +163,7 @@
           "step4_image": "shopify://shop_images/jucket.png",
           "step5_image": "shopify://shop_images/finishing.png",
           "menu_type_desktop": "dropdown",
-          "show_line_separator": true,
+          "show_line_separator": false,
           "enable_sticky_header": true,
           "margin_bottom": 0
         }
@@ -960,7 +960,7 @@
             "logo_width": 90,
             "logo_position": "middle-left",
             "menu": "main-menu",
-            "show_line_separator": true,
+            "show_line_separator": false,
             "enable_sticky_header": true,
             "margin_bottom": 0
           }

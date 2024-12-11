@@ -1387,6 +1387,19 @@
         next: {
           translate: [0,"100%", 0],
         },
+      },
+      on: { // Navigation Readability * BS
+        scroll: function () {
+          if (window.innerWidth > 990) {
+            const scrollTop = this.translate * -1;
+
+            if (scrollTop > 40) {
+              $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").addClass("scrolled");
+            } else {
+              $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").removeClass("scrolled");
+            }
+          }
+        }
       }
     });
 
@@ -1395,6 +1408,16 @@
    swiper.on('slideChange', function () {
       let index_currentSlide = this.activeIndex + 1;
       let currentSlide = this.slides[index_currentSlide];
+
+      if (window.innerWidth > 990) {
+        const scrollTop = this.translate * -1;
+
+        if (scrollTop > 40) {
+          $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").addClass("scrolled");
+        } else {
+          $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").removeClass("scrolled");
+        }
+      }
       
       if (swiper.isEnd || currentSlide.classList.contains('footer_slide-mob')) {
           $('#shopify-section-header-second').addClass('lastSlideHead');
