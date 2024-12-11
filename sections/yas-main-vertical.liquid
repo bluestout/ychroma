@@ -1420,13 +1420,13 @@
       }
       
       if (swiper.isEnd || currentSlide.classList.contains('footer_slide-mob')) {
-          $('#shopify-section-header-second').addClass('lastSlideHead');
+          {% comment %} $('#shopify-section-header-second').addClass('lastSlideHead'); {% endcomment %}
      
           if(!swiper.autoplay.running){
             swiper.autoplay.stop;
           }
           if(window.innerWidth < 990){
-            $('#shopify-section-header').addClass('lastSlideHead');
+            {% comment %} $('#shopify-section-header').addClass('lastSlideHead'); {% endcomment %}
           }else{
             $('#shopify-section-header').removeClass('lastSlideHead');
           }

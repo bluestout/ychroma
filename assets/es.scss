@@ -340,8 +340,26 @@
 
       .header__icons {
         position: relative;
-        top: 40px;
-        padding: 13px 0;
+        top: 53px;
+
+        .modal__content {
+          min-width: 500px;
+          left: unset !important;
+
+          .modal-overlay {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .search-modal__content {
+      .field:after {
+        content: unset;
+      }
+      *:focus-visible {
+        outline: unset !important;
+        box-shadow: unset !important;
       }
     }
   }  
