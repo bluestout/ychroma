@@ -670,6 +670,13 @@
               "img": "shopify://shop_images/cognac-darkchoc.png",
               "title": "Cognac Robusta Brown"
             }
+          },
+          "color_Q6XpiM": {
+            "type": "color",
+            "settings": {
+              "color": "#864c24",
+              "title": "Cognac Silk"
+            }
           }
         },
         "block_order": [
@@ -730,7 +737,8 @@
           "color_Thfckg",
           "color_pWhcH4",
           "color_bRpAL8",
-          "color_YGcKfY"
+          "color_YGcKfY",
+          "color_Q6XpiM"
         ],
         "settings": {}
       },
