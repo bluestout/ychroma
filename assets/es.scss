@@ -374,5 +374,13 @@
 @media screen and (max-width: 989px) {
   #shopify-section-header {
     background-color: #000 !important;
+
+    details .menu-drawer__submenu {
+      display: none;
+    }
+
+    details.menu-opening > .menu-drawer__submenu {
+      display: flex;
+    }
   }
 }

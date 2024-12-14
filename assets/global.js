@@ -95,7 +95,7 @@ function trapFocus(container, elementToFocus = container) {
   document.addEventListener('focusout', trapFocusHandlers.focusout);
   document.addEventListener('focusin', trapFocusHandlers.focusin);
 
-  elementToFocus.focus();
+  elementToFocus?.focus();
 }
 
 // Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
@@ -345,6 +345,8 @@ class MenuDrawer extends HTMLElement {
     const isOpen = detailsElement.hasAttribute('open');
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+    console.log(detailsElement.hasOwnProperty("open"));
+
     function addTrapFocus() {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
       summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
@@ -356,17 +358,17 @@ class MenuDrawer extends HTMLElement {
 
      
     } else {
-      
-        detailsElement.classList.add('menu-opening');
+
+        detailsElement.classList.toggle('menu-opening');
         summaryElement.setAttribute('aria-expanded', true);
-        parentMenuElement && parentMenuElement.classList.add('submenu-open');
+        parentMenuElement && parentMenuElement.classList.toggle('submenu-open');
         !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
-      
+        // detailsElement.toggleAttribute("open");
     }
   }
 
   openMenuDrawer(summaryElement) {
-    
+
    
       this.mainDetailsToggle.classList.add('menu-opening');
 
