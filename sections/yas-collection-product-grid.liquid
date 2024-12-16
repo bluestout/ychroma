@@ -180,7 +180,7 @@
   .yas-collection-grid-wrapp li.grid__item:nth-child(n+9) {
     display: none;
   }
-  {% if collection.metafields.custom.color_background_content != blank %}
+  {% comment %} {% if collection.metafields.custom.color_background_content != blank %}
   #MainContent{
     background-color: {{collection.metafields.custom.color_background_content}} !important;
   }
@@ -210,7 +210,7 @@
     .facets__form-vertical svg.icon.icon-caret path{
       fill: {{collection.metafields.custom.color_title_content}} !important;
     }
-  {% endif %}
+  {% endif %} {% endcomment %}
   
 </style>
 
