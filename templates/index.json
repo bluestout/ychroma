@@ -529,6 +529,33 @@
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
       }
+    },
+    "es_media_with_text_kXbJc8": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_qRLiV8": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-wardrobeplan-web2.jpg",
+            "image_mb": "shopify://shop_images/ychroma-wardrobe-mob-web.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": "https://www.ychroma.com/pages/concierge-service"
+          }
+        }
+      },
+      "block_order": [
+        "media_qRLiV8"
+      ],
+      "settings": {
+        "title": "LET’S CREATE A PERSONALISED WARDROBE PLAN",
+        "url": "https://www.ychroma.com/pages/concierge-service",
+        "title_sub": "SCHEDULE A ZOOM  CALL AND LET’S HAVE FUN",
+        "url_btn": "https://www.ychroma.com/pages/concierge-service",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
+      }
     }
   },
   "order": [
@@ -545,6 +572,7 @@
     "es_curated_reviews_KfMDn7",
     "es_media_with_text_zM8xic",
     "es_media_with_text_NqL4eY",
-    "es_media_with_text_J9YWF7"
+    "es_media_with_text_J9YWF7",
+    "es_media_with_text_kXbJc8"
   ]
 }
