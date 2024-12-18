@@ -302,6 +302,33 @@
         "text_align": "right bottom",
         "logolist_heading": ""
       }
+    },
+    "es_media_with_text_pVYT4t": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_LdmDLD": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-altavista-dsk-web_66a60c5f-aaea-48ac-ace9-2e4d8c863479.jpg",
+            "image_mb": "shopify://shop_images/yc-altavista-mob-web.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": "shopify://collections/jackets"
+          }
+        }
+      },
+      "block_order": [
+        "media_LdmDLD"
+      ],
+      "settings": {
+        "title": "ALTAVISTA DOWN JACKET. LIMITED EDITION AVAILABLE FOR PRE-ORDER",
+        "url": "shopify://collections/jackets",
+        "title_sub": "EXPLORE JACKETS",
+        "url_btn": "shopify://collections/jackets",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
     }
   },
   "order": [
@@ -311,6 +338,7 @@
     "es_media_with_text_8naftQ",
     "es_media_with_text_wPmyGK",
     "es_media_with_text_zKmHMt",
-    "es_media_with_text_Cqqjgd"
+    "es_media_with_text_Cqqjgd",
+    "es_media_with_text_pVYT4t"
   ]
 }
