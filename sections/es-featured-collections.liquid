@@ -12,13 +12,13 @@
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
-  #shopify-section-{{ section.id }} {
+  .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} {
+    .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
@@ -45,7 +45,7 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient yas-collection-grid-wrapp w-100" id="shopify-block-{{ block.id }}">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient yas-collection-grid-wrapp w-100">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
@@ -60,12 +60,12 @@
       <div class="es-tab">
         <div class="es-tab--header">
           {%- for block in section.blocks -%}
-            <a href="javascript:;" class="active" data-target="#esTabBoday-{{ block.settings.collection.id }}">{{ block.settings.title }}</a>
+            <a href="javascript:;"{% if forloop.first %} class="active"{% endif %} data-target="#esTabBoday-{{ block.settings.collection.id }}">{{ block.settings.title }}</a>
           {%- endfor -%}
         </div>
         <div class="es-tab--body">
           {%- for block in section.blocks -%}
-            <div class="es-tab--body-item active" id="esTabBoday-{{ block.settings.collection.id }}" data-collection-id="{{ block.settings.collection.id }}">
+            <div class="es-tab--body-item{% if forloop.first %} active{% endif %}" id="esTabBoday-{{ block.settings.collection.id }}" data-collection-id="{{ block.settings.collection.id }}">
               {%- render 'es-featured-collection-item', section: section, block: block, products: block.settings.collection.products -%}
             </div>
           {%- endfor -%}
@@ -124,7 +124,7 @@
 {
   "name": "Featured Collections",
   "tag": "section",
-  "class": "es-featured-collection",
+  "class": "es-featured-collection custom-collection yas-collection-sec",
   "settings": [
     {
       "type": "text",

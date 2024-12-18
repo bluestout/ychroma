@@ -1,22 +1,22 @@
-<div class="swiper page-width swiper-{{  }}">
+<div class="swiper page-width swiper-{{ section.id }}">
   <div class="es-swiper">
     <ul class="swiper-wrapper" data-size="{{ products.size }}">
-      {%- for product in products limit: block.settings.products_to_show -%}
+      {%- for product in products limit: section.settings.products_to_show -%}
         <li class="swiper-slide">
           {%- render 'yas-collection-card-allcolor',
             card_product: product,
             variant_default: product.selected_or_first_available_variant,
-            media_aspect_ratio: block.settings.image_ratio,
-            show_secondary_image: block.settings.show_secondary_image,
+            media_aspect_ratio: section.settings.image_ratio,
+            show_secondary_image: section.settings.show_secondary_image,
             lazy_load: lazy_load,
-            section_id: block.id
+            section_id: section.id
             forloop_cust: forloop.index0
           -%}
         </li>
       {%- else -%}
         {%- for i in (1..4) -%}
           <li class="swiper-slide">
-            {% render 'card-product', show_vendor: block.settings.show_vendor %}
+            {% render 'card-product', show_vendor: section.settings.show_vendor %}
           </li>
         {%- endfor -%}
       {%- endfor -%}
