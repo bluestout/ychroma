@@ -348,6 +348,7 @@
   #shopify-section-announcement-bar,
   #shopify-section-header {
     transition: .3s ease;
+    z-index: 9999999999;
   
     &.scrolled {
       top: -40px !important;
@@ -388,6 +389,7 @@
 
 @media screen and (max-width: 989px) {
   #shopify-section-header {
+    z-index: 9999999999;
     background-color: #000 !important;
   }
 }
@@ -402,6 +404,10 @@
     .media-wrapper {
       display: flex;
       height: 100%;
+
+      @media screen and (max-width: 989px) {
+        flex-direction: column;
+      }
 
       .media-item {
         flex: 1;
@@ -520,6 +526,10 @@
         white-space: nowrap;
         background: #dd4124;
         border-radius: 15px;
+
+        @media screen and (max-width: 989px) {
+          white-space: wrap;
+        }
       }
     }
 
