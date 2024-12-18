@@ -329,6 +329,53 @@
         "text_align": "right bottom",
         "logolist_heading": ""
       }
+    },
+    "es_awards_4zikBK": {
+      "type": "es-awards",
+      "blocks": {
+        "image_UQirMd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_12.svg"
+          }
+        },
+        "image_8jEqiN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_17.svg"
+          }
+        },
+        "image_NbdPcT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_15.svg"
+          }
+        },
+        "image_NCrEcY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_28.svg"
+          }
+        },
+        "image_i3NfYe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_20.svg"
+          }
+        }
+      },
+      "block_order": [
+        "image_UQirMd",
+        "image_8jEqiN",
+        "image_NbdPcT",
+        "image_NCrEcY",
+        "image_i3NfYe"
+      ],
+      "settings": {
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "background_color": "#000000"
+      }
     }
   },
   "order": [
@@ -339,6 +386,7 @@
     "es_media_with_text_wPmyGK",
     "es_media_with_text_zKmHMt",
     "es_media_with_text_Cqqjgd",
-    "es_media_with_text_pVYT4t"
+    "es_media_with_text_pVYT4t",
+    "es_awards_4zikBK"
   ]
 }
