@@ -439,6 +439,43 @@
         "padding_bottom": 76,
         "background_color": "#000"
       }
+    },
+    "es_media_with_text_zM8xic": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_nWkEcg": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/006-1.jpg",
+            "video": "https://cdn.shopify.com/videos/c/o/v/fb17a6a347324409906a2d867434c656.mp4",
+            "video_mb": "",
+            "opacity": 0.1,
+            "link": "shopify://collections/core-shirts"
+          }
+        },
+        "media_9rExr3": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/006-2.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.1,
+            "link": "shopify://collections/core-shirts"
+          }
+        }
+      },
+      "block_order": [
+        "media_nWkEcg",
+        "media_9rExr3"
+      ],
+      "settings": {
+        "title": "LUX HENLEYS THAT ELEVATE ANY OUTFIT",
+        "url": "shopify://collections/core-shirts",
+        "title_sub": "EXPLORE",
+        "url_btn": "shopify://collections/core-shirts",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
+      }
     }
   },
   "order": [
@@ -452,6 +489,7 @@
     "es_media_with_text_pVYT4t",
     "es_awards_4zikBK",
     "es_media_with_text_JwfheU",
-    "es_curated_reviews_KfMDn7"
+    "es_curated_reviews_KfMDn7",
+    "es_media_with_text_zM8xic"
   ]
 }
