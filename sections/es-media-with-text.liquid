@@ -6,7 +6,7 @@
 <div class="container">
   <div class="media-wrapper">
     {%- for block in medias %}
-      <div class="media-item">
+      <div class="media-item" style="--background-color: rgba(0,0,0, {{ block.settings.opacity }})">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
             <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
@@ -41,6 +41,9 @@
               >
             </div>
           {%- endif -%}
+        {%- endif -%}
+        {%- if block.settings.link != blank -%}
+          <a href="{{ block.settings.link }}" class="media-item--link"></a>
         {%- endif -%}
       </div>
     {%- endfor -%}
