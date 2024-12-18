@@ -376,6 +376,33 @@
         "padding_bottom": 76,
         "background_color": "#000000"
       }
+    },
+    "es_media_with_text_JwfheU": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_ryEibj": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/home-ghost-geisha-dsk3.jpg",
+            "image_mb": "shopify://shop_images/home-ghost-geisha-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 1,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_ryEibj"
+      ],
+      "settings": {
+        "title": "Ghost Geisha Down Jacket",
+        "url": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
+        "title_sub": "MEXICO + JAPAN. SEE THE STORY.",
+        "url_btn": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
+        "text_align": "center",
+        "logolist_heading": "As Seen In"
+      }
     }
   },
   "order": [
@@ -387,6 +414,7 @@
     "es_media_with_text_zKmHMt",
     "es_media_with_text_Cqqjgd",
     "es_media_with_text_pVYT4t",
-    "es_awards_4zikBK"
+    "es_awards_4zikBK",
+    "es_media_with_text_JwfheU"
   ]
 }
