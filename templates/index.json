@@ -275,6 +275,33 @@
         "text_align": "right bottom",
         "logolist_heading": ""
       }
+    },
+    "es_media_with_text_Cqqjgd": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_b9caGc": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-deckmaster-v2.jpg",
+            "image_mb": "shopify://shop_images/yc-deckmaster-mob-v2.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": "https://www.ychroma.com/collections/jackets"
+          }
+        }
+      },
+      "block_order": [
+        "media_b9caGc"
+      ],
+      "settings": {
+        "title": "DECKMASTER SHIRT-CUT JACKET",
+        "url": "https://www.ychroma.com/collections/jackets",
+        "title_sub": "EXPLORE",
+        "url_btn": "https://www.ychroma.com/products/deckmaster-shirt-cut-jacket?variant=42503258996926",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
     }
   },
   "order": [
@@ -283,6 +310,7 @@
     "es_media_with_text_nmK6Ek",
     "es_media_with_text_8naftQ",
     "es_media_with_text_wPmyGK",
-    "es_media_with_text_zKmHMt"
+    "es_media_with_text_zKmHMt",
+    "es_media_with_text_Cqqjgd"
   ]
 }
