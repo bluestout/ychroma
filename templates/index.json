@@ -406,9 +406,38 @@
     },
     "es_curated_reviews_KfMDn7": {
       "type": "es-curated-reviews",
+      "blocks": {
+        "review_qy8Ty8": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“There’s weight and craft. Even more WOW in real life than in the photos.”</p>",
+            "name": "Daniel O."
+          }
+        },
+        "review_McGNmx": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“The fabric and craftsmanship are remarkable on every piece.”</p>",
+            "name": "Richard F."
+          }
+        },
+        "review_4TRzLW": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“I had way too much gray and navy. This makes colour work for me. It’s like Vuitton and Rip Curl had a baby. I love that baby.”</p>",
+            "name": "Nash F."
+          }
+        }
+      },
+      "block_order": [
+        "review_qy8Ty8",
+        "review_McGNmx",
+        "review_4TRzLW"
+      ],
       "settings": {
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "background_color": "#000"
       }
     }
   },
