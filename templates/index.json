@@ -488,7 +488,7 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": ""
+            "link": "shopify://collections/denim"
           }
         }
       },
@@ -500,6 +500,32 @@
         "url": "shopify://collections/denim",
         "title_sub": "EXPLORE",
         "url_btn": "shopify://collections/denim",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
+      }
+    },
+    "es_media_with_text_J9YWF7": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_G37c6R": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/010.jpg",
+            "video": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
+            "video_mb": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
+            "opacity": 0,
+            "link": "https://www.ychroma.com/pages/wardrobe-tutorial-video"
+          }
+        }
+      },
+      "block_order": [
+        "media_G37c6R"
+      ],
+      "settings": {
+        "title": "DISCOVER YOUR BEST Y.CHROMA COLOR PLAN",
+        "url": "https://www.ychroma.com/pages/wardrobe-tutorial-video",
+        "title_sub": "SEE PRE-DESIGNED  COLOR PLANS",
+        "url_btn": "https://www.ychroma.com/pages/wardrobe-tutorial-video",
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
       }
@@ -518,6 +544,7 @@
     "es_media_with_text_JwfheU",
     "es_curated_reviews_KfMDn7",
     "es_media_with_text_zM8xic",
-    "es_media_with_text_NqL4eY"
+    "es_media_with_text_NqL4eY",
+    "es_media_with_text_J9YWF7"
   ]
 }
