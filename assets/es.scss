@@ -471,5 +471,57 @@
         border-radius: 15px;
       }
     }
+
+    .logos-wrapper {
+      position: absolute;
+      bottom: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0 140px;
+
+      @media screen and (max-width: 768px) {
+        padding: 0 20px;
+        flex-wrap: wrap;
+      }
+
+      .logos-heading {
+        width: auto;
+        display: flex;
+        margin-right: 65px;
+        align-items: flex-end;
+        font-family: 'CentraNo2-Book' !important;
+        font-weight: 300 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        min-width: max-content;
+        line-height: 18px;
+        text-align: left;
+        font-size: 15px;
+        color: #fff;
+
+        @media screen and (max-width: 768px) {
+          margin: 0 0 15px;
+          text-align: center;
+        }
+      }
+
+      .swiper-wrapper {
+        align-items: center;
+
+        .swiper-slide {
+          img {
+            display: block;
+            margin: auto;
+          }
+        }
+
+        @media screen and (min-width: 769px) {
+          .swiper-slide {
+            max-width: max-content;
+          } 
+        }
+      }
+    }
   }
 }
