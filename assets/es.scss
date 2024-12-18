@@ -384,3 +384,27 @@
     }
   }
 }
+
+.upcart-es-message-wrapper {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+
+  .upcart-es-message-wrapper--item {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #000;
+      font-size: 13px;
+      text-align: left;
+      font-weight: 400;
+      line-height: 15px;
+      font-style: normal;
+      text-transform: capitalize;
+      font-family: "Centra No2", sans-serif;
+    }
+  }
+}
