@@ -20,10 +20,82 @@
             "opacity": 0.3,
             "link": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4"
           }
+        },
+        "logo_WDUDEk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/1-logo-wsj.svg",
+            "link": ""
+          }
+        },
+        "logo_pMrQyt": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2-logo-usatoday.svg",
+            "link": ""
+          }
+        },
+        "logo_rkYGCh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/3-logo-mh.svg",
+            "link": ""
+          }
+        },
+        "logo_mCVkmq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/4-logo-forbes.svg",
+            "link": ""
+          }
+        },
+        "logo_QaYBdU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/5-logo-business.svg",
+            "link": ""
+          }
+        },
+        "logo_99kY7i": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/6-logo-maxim.svg",
+            "link": ""
+          }
+        },
+        "logo_GAGcKe": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7-logo-mr.svg",
+            "link": ""
+          }
+        },
+        "logo_AqrfNe": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/8-logo-vogue.svg",
+            "link": ""
+          }
+        },
+        "logo_KFNfTn": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/9-logo-wwd.svg",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "media_3nthAw"
+        "media_3nthAw",
+        "logo_WDUDEk",
+        "logo_pMrQyt",
+        "logo_rkYGCh",
+        "logo_mCVkmq",
+        "logo_QaYBdU",
+        "logo_99kY7i",
+        "logo_GAGcKe",
+        "logo_AqrfNe",
+        "logo_KFNfTn"
       ],
       "settings": {
         "title": "WE MAKE FASHION FOR OUR GENERATION",
