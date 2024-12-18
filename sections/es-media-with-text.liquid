@@ -8,13 +8,17 @@
     {%- for block in medias %}
       <div class="media-item">
         {%- if block.settings.video != blank -%}
-          <video class="video_not-yas{% if block.settings.video_mb != blank %} small--hide{% endif %}" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
-            <source src="{{ block.settings.video }}" type="video/mp4">
-          </video>
-          {%- if block.settings.video_mb != blank %}
-            <video class="video_not-yas medium-up--hide" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
+          <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
+            <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="" loading="lazy">
               <source src="{{ block.settings.video }}" type="video/mp4">
             </video>
+          </div>
+          {%- if block.settings.video_mb != blank %}
+            <div class="video medium-up--hide">
+              <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="" loading="lazy">
+                <source src="{{ block.settings.video }}" type="video/mp4">
+              </video>
+            </div>
           {%- endif -%}
         {%- elsif block.settings.image != blank -%}
           <div class="image{% if block.settings.image_mb != blank %} small--hide{% endif %}">
@@ -23,6 +27,7 @@
               width="{{ block.settings.image.width }}"
               height="{{ block.settings.image.height }}"
               alt="{{ block.settings.image.alt }}"
+              loading="lazy"
             >
           </div>
           {%- if block.settings.image_mb != blank -%}
@@ -32,6 +37,7 @@
                 width="{{ block.settings.image.width }}"
                 height="{{ block.settings.image.height }}"
                 alt="{{ block.settings.image.alt }}"
+                loading="lazy"
               >
             </div>
           {%- endif -%}
@@ -39,6 +45,13 @@
       </div>
     {%- endfor -%}
   </div>
+  {%- if section.settings.title != blank -%}
+    <div class="content-wrapper {{ section.settings.text_align }}">
+      <h2 class="content-heading">
+        <a href="{{ section.settings.url }}">{{ section.settings.title }}</a>
+      </h2>
+    </div>
+  {%- endif -%}
 </div>
 
 {%- schema -%}
@@ -103,12 +116,12 @@
           "label": "Mobile Image"
         },
         {
-          "type": "video",
+          "type": "url",
           "id": "video",
           "label": "Video"
         },
         {
-          "type": "video",
+          "type": "url",
           "id": "video_mb",
           "label": "Mobile Video"
         },
