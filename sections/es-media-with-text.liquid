@@ -1,0 +1,155 @@
+{%- liquid 
+  assign medias = section.blocks | where: 'type', 'media'
+  assign logos = section.blocks | where: 'type', 'logo'
+-%}
+
+<div class="container">
+  <div class="media-wrapper">
+    {%- for block in medias %}
+      <div class="media-item">
+        {%- if block.settings.video != blank -%}
+          <video class="video_not-yas{% if block.settings.video_mb != blank %} small--hide{% endif %}" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
+            <source src="{{ block.settings.video }}" type="video/mp4">
+          </video>
+          {%- if block.settings.video_mb != blank %}
+            <video class="video_not-yas medium-up--hide" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
+              <source src="{{ block.settings.video }}" type="video/mp4">
+            </video>
+          {%- endif -%}
+        {%- elsif block.settings.image != blank -%}
+          <div class="image{% if block.settings.image_mb != blank %} small--hide{% endif %}">
+            <img
+              src="{{ block.settings.image | img_url: '1920x' }}"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              alt="{{ block.settings.image.alt }}"
+            >
+          </div>
+          {%- if block.settings.image_mb != blank -%}
+            <div class="image medium-up--hide">
+              <img
+                src="{{ block.settings.image | img_url: '1920x' }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.image.alt }}"
+              >
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- schema -%}
+{
+	"name": "Media with Text",
+	"tag": "section",
+	"class": "es-media-with-text",
+	"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Title"
+		},
+		{
+			"type": "url",
+			"id": "url",
+			"label": "Link for title"
+		},
+		{
+			"type": "text",
+			"id": "title_sub",
+			"label": "sub Title (btn)",
+			"default": "sub Title"
+		},
+		{
+			"type": "url",
+			"id": "url_btn",
+			"label": "Link for button"
+		},
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Align text",
+      "options": [
+        {
+          "value": "right bottom",
+          "label": "Right Bottom"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "center"
+    }
+	],
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mb",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "video",
+          "id": "video_mb",
+          "label": "Mobile Video"
+        },
+        {
+          "type": "range",
+          "id": "opacity",
+          "min": 0,
+          "max": 1,
+          "step": 0.1,
+          "unit": "px",
+          "label": "Opacity dark",
+          "default": 1
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+	"presets": [
+		{
+			"name": "@ Media with Text"
+		}
+	]
+}
+{%- endschema -%}
