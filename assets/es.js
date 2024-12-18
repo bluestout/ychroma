@@ -9,7 +9,7 @@ upcartOnCartLoaded = (cart) => {
 			</div>
 			<div class="upcart-es-message-wrapper--item">
 				<img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/Group_41.svg?v=1734504740">
-				<span>Hassle-Free 90-Day Returns</span>
+				<span>Hassle-Free <br>90-Day Returns</span>
 			</div>
 		</div>
 	`;
