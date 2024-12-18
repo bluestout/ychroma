@@ -9,14 +9,14 @@
       <div class="media-item">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
-            <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="" loading="lazy">
+            <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
               <source src="{{ block.settings.video }}" type="video/mp4">
             </video>
           </div>
           {%- if block.settings.video_mb != blank %}
             <div class="video medium-up--hide">
-              <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="" loading="lazy">
-                <source src="{{ block.settings.video }}" type="video/mp4">
+              <video class="video_not-yas" poster="{{ block.settings.image_mb | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
+                <source src="{{ block.settings.video_mb }}" type="video/mp4">
               </video>
             </div>
           {%- endif -%}
@@ -33,10 +33,10 @@
           {%- if block.settings.image_mb != blank -%}
             <div class="image medium-up--hide">
               <img
-                src="{{ block.settings.image | img_url: '1920x' }}"
-                width="{{ block.settings.image.width }}"
-                height="{{ block.settings.image.height }}"
-                alt="{{ block.settings.image.alt }}"
+                src="{{ block.settings.image_mb | img_url: '1920x' }}"
+                width="{{ block.settings.image_mb.width }}"
+                height="{{ block.settings.image_mb.height }}"
+                alt="{{ block.settings.image_mb.alt }}"
                 loading="lazy"
               >
             </div>
@@ -45,14 +45,72 @@
       </div>
     {%- endfor -%}
   </div>
+
   {%- if section.settings.title != blank -%}
     <div class="content-wrapper {{ section.settings.text_align }}">
       <h2 class="content-heading">
         <a href="{{ section.settings.url }}">{{ section.settings.title }}</a>
       </h2>
+      {%- if section.settings.title_sub != blank -%}
+        <a href="{% if section.settings.url_btn != blank %}{{ section.settings.url_btn }}{% else %}#{{ section.id }}-popup{% endif %}" class="content-sub-heading {% if section.settings.url_btn == blank %}popup-defolt{% endif %}">{{ section.settings.title_sub }}</a>
+      {%- endif -%}
     </div>
   {%- endif -%}
+
+  {%- if logos.size > 0 -%}
+    <div class="logos-wrapper">
+      <h2 class="logos-heading">{{ section.settings.logolist_heading | default: 'As Seen In' }}</h2>
+      <div class="swiper logos-swiper">
+        <div class="swiper-wrapper">
+          {%- for block in logos -%}
+            <div class="swiper-slide">
+              <img
+                src="{{ block.settings.image | img_url: 'master' }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.image.alt | default: block.settings.image.title }}"
+              >
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+  
+  {% if medias[0].settings.video != blank %}
+    <div id="{{ section.id }}-popup" class="mfp-hide white-popup-block">
+      <video  loop controls controlslist="nodownload" preload="none">
+        <source src="{{ medias[0].settings.video }}" type="video/mp4">
+      </video>
+    </div>
+  {% endif %}
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper1_2 = new Swiper('#shopify-section-{{ section.id }} .swiper-logo-mainslide', {
+      spaceBetween: 25,
+       autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          loop: true,
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true
+          },
+        },
+        990: {
+          slidesPerView: 'auto',
+          spaceBetween: 65,
+          effect: false  
+        }
+      }
+    });
+  })
+</script>
 
 {%- schema -%}
 {
@@ -97,6 +155,12 @@
         }
       ],
       "default": "center"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "logolist_heading",
+      "label": "Logo List Heading",
+      "default": "As Seen In"
     }
 	],
   "blocks": [
