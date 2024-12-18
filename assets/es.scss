@@ -387,7 +387,7 @@
 
 .upcart-cart {
   z-index: 21474836409999 !important;
-  
+
   .upcart-es-message-wrapper {
     gap: 24px;
     display: flex;
@@ -396,6 +396,7 @@
   
     .upcart-es-message-wrapper--item {
       gap: 12px;
+      flex: 1;
       display: flex;
       align-items: center;
   
