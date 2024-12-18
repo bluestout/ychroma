@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
@@ -85,18 +94,18 @@
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "social_twitter_link": "",
-    "social_facebook_link": "https:\/\/www.facebook.com\/ychromaapparel\/",
-    "social_pinterest_link": "https:\/\/pt.pinterest.com\/ychroma\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/y.chroma.apparel\/",
+    "social_facebook_link": "https://www.facebook.com/ychromaapparel/",
+    "social_pinterest_link": "https://pt.pinterest.com/ychroma/",
+    "social_instagram_link": "https://www.instagram.com/y.chroma.apparel/",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "https:\/\/www.youtube.com\/@Y.Chroma",
+    "social_youtube_link": "https://www.youtube.com/@Y.Chroma",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "favicon": "shopify:\/\/shop_images\/ychroma-brand-test-04.png",
+    "favicon": "shopify://shop_images/ychroma-brand-test-04.png",
     "currency_code_enabled": false,
     "easysize_shop_id": "afeef9a2b5",
     "easysize_placeholder": ".easysize-container",
@@ -119,7 +128,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "FREE Shipping 2+ Items \/ 90-day Returns, 1 Year Exchanges",
+              "text": "FREE Shipping 2+ Items / 90-day Returns, 1 Year Exchanges",
               "color_scheme": "accent-1",
               "link": ""
             }
@@ -144,15 +153,15 @@
         "type": "header",
         "settings": {
           "color_scheme": "accent-1",
-          "logo": "shopify:\/\/shop_images\/headerychroma-brand-06.png",
+          "logo": "shopify://shop_images/headerychroma-brand-06.png",
           "logo_width": 250,
           "logo_position": "middle-left",
           "menu": "new-mobile-menu",
-          "step1_image": "shopify:\/\/shop_images\/pants.png",
-          "step2_image": "shopify:\/\/shop_images\/coreshit.png",
-          "step3_image": "shopify:\/\/shop_images\/shit-cut.png",
-          "step4_image": "shopify:\/\/shop_images\/jucket.png",
-          "step5_image": "shopify:\/\/shop_images\/finishing.png",
+          "step1_image": "shopify://shop_images/pants.png",
+          "step2_image": "shopify://shop_images/coreshit.png",
+          "step3_image": "shopify://shop_images/shit-cut.png",
+          "step4_image": "shopify://shop_images/jucket.png",
+          "step5_image": "shopify://shop_images/finishing.png",
           "menu_type_desktop": "dropdown",
           "show_line_separator": false,
           "enable_sticky_header": true,
@@ -166,8 +175,8 @@
             "type": "text",
             "settings": {
               "heading": "",
-              "footer_logo": "shopify:\/\/shop_images\/ychroma-brand-02.png",
-              "subtext": "<p>Y.Chroma, Inc. (USA)<br\/>Y.Chroma Unipessoal, Lda. (Portugal)<\/p>"
+              "footer_logo": "shopify://shop_images/ychroma-brand-02.png",
+              "subtext": "<p>Y.Chroma, Inc. (USA)<br/>Y.Chroma Unipessoal, Lda. (Portugal)</p>"
             }
           },
           "dee45b85-b025-4147-b5dd-51f6dd1f2c14": {
@@ -371,7 +380,7 @@
             "type": "color",
             "settings": {
               "color": "#000000",
-              "img": "shopify:\/\/shop_images\/bastion-onix.jpg",
+              "img": "shopify://shop_images/bastion-onix.jpg",
               "title": "Onyx"
             }
           },
@@ -379,7 +388,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/roy-onix-umber.jpg",
+              "img": "shopify://shop_images/roy-onix-umber.jpg",
               "title": "Onyx Amber"
             }
           },
@@ -387,7 +396,7 @@
             "type": "color",
             "settings": {
               "color": "#b2994b",
-              "img": "shopify:\/\/shop_images\/bastion-husk.jpg",
+              "img": "shopify://shop_images/bastion-husk.jpg",
               "title": "Husk"
             }
           },
@@ -395,7 +404,7 @@
             "type": "color",
             "settings": {
               "color": "#0c1d4e",
-              "img": "shopify:\/\/shop_images\/roy-night-blue.jpg",
+              "img": "shopify://shop_images/roy-night-blue.jpg",
               "title": "Night Blue"
             }
           },
@@ -403,7 +412,7 @@
             "type": "color",
             "settings": {
               "color": "#826644",
-              "img": "shopify:\/\/shop_images\/bastion-umber.jpg",
+              "img": "shopify://shop_images/bastion-umber.jpg",
               "title": "Umber"
             }
           },
@@ -411,7 +420,7 @@
             "type": "color",
             "settings": {
               "color": "#702f0b",
-              "img": "shopify:\/\/shop_images\/roy-midnight-havana.jpg",
+              "img": "shopify://shop_images/roy-midnight-havana.jpg",
               "title": "Midnight Havana"
             }
           },
@@ -440,7 +449,7 @@
             "type": "color",
             "settings": {
               "color": "#5e2c04",
-              "img": "shopify:\/\/shop_images\/YC_Furoshiki_Lisbon2023No1-100.jpg",
+              "img": "shopify://shop_images/YC_Furoshiki_Lisbon2023No1-100.jpg",
               "title": "Lisbon 2023 No1"
             }
           },
@@ -448,7 +457,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Daytona__NetflixEdit-100.jpg",
+              "img": "shopify://shop_images/YC_Daytona__NetflixEdit-100.jpg",
               "title": "Netflix Edit"
             }
           },
@@ -456,7 +465,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Daytona_GeishaEdit-100.jpg",
+              "img": "shopify://shop_images/YC_Daytona_GeishaEdit-100.jpg",
               "title": "Geisha Edit"
             }
           },
@@ -464,7 +473,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Daytona_TealCheckEdit-100.jpg",
+              "img": "shopify://shop_images/YC_Daytona_TealCheckEdit-100.jpg",
               "title": "Teal Check Edit"
             }
           },
@@ -472,7 +481,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Furoshiki_Lisbon2023No2-100.jpg",
+              "img": "shopify://shop_images/YC_Furoshiki_Lisbon2023No2-100.jpg",
               "title": "Lisbon 2023 No2"
             }
           },
@@ -480,7 +489,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Furoshiki_Lisbon2023No3-100.jpg",
+              "img": "shopify://shop_images/YC_Furoshiki_Lisbon2023No3-100.jpg",
               "title": "Lisbon 2023 No3"
             }
           },
@@ -488,7 +497,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Furoshiki_Lisbon2023No4-100.jpg",
+              "img": "shopify://shop_images/YC_Furoshiki_Lisbon2023No4-100.jpg",
               "title": "Lisbon 2023 No4"
             }
           },
@@ -496,7 +505,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Varial_BurntOrangeEdit-100.jpg",
+              "img": "shopify://shop_images/YC_Varial_BurntOrangeEdit-100.jpg",
               "title": "Burnt Orange Edit"
             }
           },
@@ -504,7 +513,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Varial_GlitchEdit-100.jpg",
+              "img": "shopify://shop_images/YC_Varial_GlitchEdit-100.jpg",
               "title": "Glitch Edit"
             }
           },
@@ -512,7 +521,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Varial_TealGreyEdit-100.jpg",
+              "img": "shopify://shop_images/YC_Varial_TealGreyEdit-100.jpg",
               "title": "Teal and Grey Edit"
             }
           },
@@ -520,7 +529,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/varial-citrine-edit-web.jpg",
+              "img": "shopify://shop_images/varial-citrine-edit-web.jpg",
               "title": "Citrine Edit"
             }
           },
@@ -528,7 +537,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/YC_Varial_YellowGreyEdit-100.jpg",
+              "img": "shopify://shop_images/YC_Varial_YellowGreyEdit-100.jpg",
               "title": "Yellow and Grey Edit"
             }
           },
@@ -536,7 +545,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/varial-sunburst.jpg",
+              "img": "shopify://shop_images/varial-sunburst.jpg",
               "title": "Sunburst Edit"
             }
           },
@@ -544,7 +553,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/varial-snowcloud.jpg",
+              "img": "shopify://shop_images/varial-snowcloud.jpg",
               "title": "Snowcloud Edit"
             }
           },
@@ -552,7 +561,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/lotus-aperol.jpg",
+              "img": "shopify://shop_images/lotus-aperol.jpg",
               "title": "White Lotus and Aperol Orange"
             }
           },
@@ -560,7 +569,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/lotus-british.jpg",
+              "img": "shopify://shop_images/lotus-british.jpg",
               "title": "White Lotus and British Green"
             }
           },
@@ -568,7 +577,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/military-aqua.jpg",
+              "img": "shopify://shop_images/military-aqua.jpg",
               "title": "Military Olive and Aqua"
             }
           },
@@ -576,7 +585,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/military-pulm.jpg",
+              "img": "shopify://shop_images/military-pulm.jpg",
               "title": "Military Olive and Italian Plum"
             }
           },
@@ -619,7 +628,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/cognac-silk.jpg",
+              "img": "shopify://shop_images/cognac-silk.jpg",
               "title": "Cognac Cognac"
             }
           },
@@ -627,7 +636,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/cognac-soybean.jpg",
+              "img": "shopify://shop_images/cognac-soybean.jpg",
               "title": "Cognac Soybean"
             }
           },
@@ -635,7 +644,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/realteal-realteal.jpg",
+              "img": "shopify://shop_images/realteal-realteal.jpg",
               "title": "Real Teal Real Teal"
             }
           },
@@ -643,7 +652,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/realteal-soybean.jpg",
+              "img": "shopify://shop_images/realteal-soybean.jpg",
               "title": "Real Teal Soybean"
             }
           },
@@ -658,7 +667,7 @@
             "type": "color",
             "settings": {
               "color": "#ffffff",
-              "img": "shopify:\/\/shop_images\/cognac-darkchoc.png",
+              "img": "shopify://shop_images/cognac-darkchoc.png",
               "title": "Cognac Robusta Brown"
             }
           },
@@ -743,15 +752,15 @@
               "menu": "highlights",
               "menu2": "tops",
               "menu3": "bottoms",
-              "image": "shopify:\/\/shop_images\/yc01jackets.jpg",
+              "image": "shopify://shop_images/yc01jackets.jpg",
               "title1": "JACKETS",
-              "link": "shopify:\/\/collections\/jackets",
-              "image2": "shopify:\/\/shop_images\/yc02pants.jpg",
+              "link": "shopify://collections/jackets",
+              "image2": "shopify://shop_images/yc02pants.jpg",
               "title2": "PANTS",
-              "link2": "shopify:\/\/collections\/pants",
-              "image3": "shopify:\/\/shop_images\/yc03shorts.jpg",
+              "link2": "shopify://collections/pants",
+              "image3": "shopify://shop_images/yc03shorts.jpg",
               "title3": "SHORTS",
-              "link3": "shopify:\/\/collections\/shorts"
+              "link3": "shopify://collections/shorts"
             }
           },
           "4e9771f0-b0b1-4513-bbda-3154402f78b7": {
@@ -760,15 +769,15 @@
               "anchor": "Collections",
               "menu": "collections",
               "menu2": "collection-2",
-              "image": "shopify:\/\/shop_images\/yc04urban.jpg",
+              "image": "shopify://shop_images/yc04urban.jpg",
               "title1": "URBAN",
-              "link": "shopify:\/\/collections\/urban",
-              "image2": "shopify:\/\/shop_images\/yc05field.jpg",
+              "link": "shopify://collections/urban",
+              "image2": "shopify://shop_images/yc05field.jpg",
               "title2": "FIELD",
-              "link2": "shopify:\/\/collections\/field",
-              "image3": "shopify:\/\/shop_images\/yc06athleisure.jpg",
+              "link2": "shopify://collections/field",
+              "image3": "shopify://shop_images/yc06athleisure.jpg",
               "title3": "ATHLEISURE",
-              "link3": "shopify:\/\/collections\/athleisure",
+              "link3": "shopify://collections/athleisure",
               "title4": "RESORT",
               "link4": ""
             }
@@ -778,15 +787,15 @@
             "settings": {
               "anchor": "ACCESSORIES",
               "menu": "finishing-essentials",
-              "image": "shopify:\/\/shop_images\/furosguki.jpg",
+              "image": "shopify://shop_images/furosguki.jpg",
               "title1": "FUROSHIKI",
-              "link": "shopify:\/\/collections\/furoshiki",
-              "image2": "shopify:\/\/shop_images\/aef20db9b7f7870cf45aac8c3b447324.jpg",
+              "link": "shopify://collections/furoshiki",
+              "image2": "shopify://shop_images/aef20db9b7f7870cf45aac8c3b447324.jpg",
               "title2": "BASTION SUNGLASSES",
-              "link2": "shopify:\/\/collections\/sunglasses",
-              "image3": "shopify:\/\/shop_images\/b2a3a3444d4721cb85cf1d005b9a757a.jpg",
+              "link2": "shopify://collections/sunglasses",
+              "image3": "shopify://shop_images/b2a3a3444d4721cb85cf1d005b9a757a.jpg",
               "title3": "ROY SUNGLASSES",
-              "link3": "shopify:\/\/collections\/sunglasses"
+              "link3": "shopify://collections/sunglasses"
             }
           }
         },
@@ -797,7 +806,7 @@
         ],
         "settings": {
           "menu": "header-right-2",
-          "logo": "shopify:\/\/shop_images\/logo_new.png",
+          "logo": "shopify://shop_images/logo_new.png",
           "menu2": "header-right-3"
         }
       }
@@ -805,32 +814,32 @@
     "content_for_index": [],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       },
       "11349500561483629931": {
-        "type": "shopify:\/\/apps\/ReStock\/blocks\/app-embed\/b399b727-6c85-44fc-9e21-63114bd72054",
+        "type": "shopify://apps/ReStock/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
         "disabled": false,
         "settings": {}
       },
       "14952540001915115444": {
-        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
         "disabled": false,
         "settings": {}
       },
       "14327677521557774844": {
-        "type": "shopify:\/\/apps\/simprosys-google-shopping-feed\/blocks\/core_settings_block\/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
+        "type": "shopify://apps/simprosys-google-shopping-feed/blocks/core_settings_block/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
         "disabled": false,
         "settings": {}
       },
       "6143736321357441667": {
-        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
+        "type": "shopify://apps/tidio-live-chat-chatbots/blocks/app-embed/1002274d-fb18-4939-98f6-5f05a8deeadc",
         "disabled": false,
         "settings": {}
       },
       "17143716568830177004": {
-        "type": "shopify:\/\/apps\/shop-protector\/blocks\/shop-protector\/c35d1411-093f-400e-8977-af1ac4720d6d",
+        "type": "shopify://apps/shop-protector/blocks/shop-protector/c35d1411-093f-400e-8977-af1ac4720d6d",
         "disabled": true,
         "settings": {}
       }
@@ -985,7 +994,7 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
               }
             }
           },
