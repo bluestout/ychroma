@@ -194,11 +194,39 @@
         "text_align": "right bottom",
         "logolist_heading": ""
       }
+    },
+    "es_media_with_text_8naftQ": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_73tgCh": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/ychroma-home-quatro-1-web.jpg",
+            "image_mb": "shopify://shop_images/gif_quatro_v3-9x16-txt2.gif",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.4,
+            "link": "shopify://products/quatro-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "media_73tgCh"
+      ],
+      "settings": {
+        "title": "Elevate The Tech Bro Vest",
+        "url": "shopify://products/quatro-jacket",
+        "title_sub": "SEE THE VARIAL  Shirt-cut Jacket",
+        "url_btn": "shopify://collections/shirt-cut-jackets",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
     }
   },
   "order": [
     "es_media_with_text_Rc4dC6",
     "es_featured_collections_RJTYjP",
-    "es_media_with_text_nmK6Ek"
+    "es_media_with_text_nmK6Ek",
+    "es_media_with_text_8naftQ"
   ]
 }
