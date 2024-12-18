@@ -221,12 +221,68 @@
         "text_align": "right bottom",
         "logolist_heading": ""
       }
+    },
+    "es_media_with_text_wPmyGK": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_iDxthh": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/home-sevilla-3dsk-web.jpg",
+            "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.4,
+            "link": "shopify://collections/collection_sevilla"
+          }
+        }
+      },
+      "block_order": [
+        "media_iDxthh"
+      ],
+      "settings": {
+        "title": "\"I'LL JUST WEAR A GOLF SHIRT\", SAID DAVID BECKHAM, NEVER",
+        "url": "shopify://collections/collection_sevilla",
+        "title_sub": "BUTTON SHIRTS  TO REMEMBER",
+        "url_btn": "shopify://collections/collection_sevilla",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
+    },
+    "es_media_with_text_zKmHMt": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_gGQpg3": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-skyline-dsk.jpg",
+            "image_mb": "shopify://shop_images/yc-skyline-mob_640b6a55-1074-4738-a849-f4301e3230da.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": "shopify://collections/pant-collection"
+          }
+        }
+      },
+      "block_order": [
+        "media_gGQpg3"
+      ],
+      "settings": {
+        "title": "CUT TO FLATTER, ENGINEERED FOR COMFORT",
+        "url": "shopify://collections/pant-collection",
+        "title_sub": "EXPLORE:  ULTRA-PREMIUM PANTS",
+        "url_btn": "shopify://collections/pant-collection",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
     }
   },
   "order": [
     "es_media_with_text_Rc4dC6",
     "es_featured_collections_RJTYjP",
     "es_media_with_text_nmK6Ek",
-    "es_media_with_text_8naftQ"
+    "es_media_with_text_8naftQ",
+    "es_media_with_text_wPmyGK",
+    "es_media_with_text_zKmHMt"
   ]
 }
