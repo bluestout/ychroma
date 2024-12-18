@@ -403,6 +403,13 @@
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
       }
+    },
+    "es_curated_reviews_KfMDn7": {
+      "type": "es-curated-reviews",
+      "settings": {
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
     }
   },
   "order": [
@@ -415,6 +422,7 @@
     "es_media_with_text_Cqqjgd",
     "es_media_with_text_pVYT4t",
     "es_awards_4zikBK",
-    "es_media_with_text_JwfheU"
+    "es_media_with_text_JwfheU",
+    "es_curated_reviews_KfMDn7"
   ]
 }
