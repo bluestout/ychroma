@@ -476,6 +476,33 @@
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
       }
+    },
+    "es_media_with_text_NqL4eY": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_zXnqJh": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/home-enduro-1dsk-mob.jpg",
+            "image_mb": "shopify://shop_images/home-enduro-1mob-web.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_zXnqJh"
+      ],
+      "settings": {
+        "title": "THE TEXTURES, TRADITION AND TECH BEHIND OUR DENIM REBOOT",
+        "url": "shopify://collections/denim",
+        "title_sub": "EXPLORE",
+        "url_btn": "shopify://collections/denim",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
+      }
     }
   },
   "order": [
@@ -490,6 +517,7 @@
     "es_awards_4zikBK",
     "es_media_with_text_JwfheU",
     "es_curated_reviews_KfMDn7",
-    "es_media_with_text_zM8xic"
+    "es_media_with_text_zM8xic",
+    "es_media_with_text_NqL4eY"
   ]
 }
