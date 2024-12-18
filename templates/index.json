@@ -102,7 +102,70 @@
         "url": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4",
         "title_sub": "TURN ON AUDIO",
         "url_btn": "",
-        "text_align": "center"
+        "text_align": "center",
+        "logolist_heading": "As Seen In"
+      }
+    },
+    "es_featured_collections_RJTYjP": {
+      "type": "es-featured-collections",
+      "blocks": {
+        "collection_qTpbmc": {
+          "type": "collection",
+          "settings": {
+            "title": "{{ block.settings.collection.title }}",
+            "collection": "jackets"
+          }
+        },
+        "collection_MKnzn3": {
+          "type": "collection",
+          "settings": {
+            "title": "{{ block.settings.collection.title }}",
+            "collection": "collection_sevilla"
+          }
+        },
+        "collection_R7hKCG": {
+          "type": "collection",
+          "settings": {
+            "title": "{{ block.settings.collection.title }}",
+            "collection": "core-shirts"
+          }
+        },
+        "collection_FCKYyx": {
+          "type": "collection",
+          "settings": {
+            "title": "{{ block.settings.collection.title }}",
+            "collection": "sweaters"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qTpbmc",
+        "collection_MKnzn3",
+        "collection_R7hKCG",
+        "collection_FCKYyx"
+      ],
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "yas_main_vertical_B3FdCE": {
@@ -653,6 +716,7 @@
         "sreen_with_an_image_KpDhjr",
         "sreen_with_an_image_pGaRnL"
       ],
+      "disabled": true,
       "settings": {
         "footer_logo": "shopify://shop_images/logo_bottom-new.png",
         "subtext": "<p>Y.Chroma, Inc. (USA)<br/>Y.Chroma Unipessoal, Lda. (Portugal)</p>",
@@ -1619,6 +1683,7 @@
   },
   "order": [
     "es_media_with_text_Rc4dC6",
+    "es_featured_collections_RJTYjP",
     "yas_main_vertical_B3FdCE",
     "1657612310316262aa",
     "6731a16d-cbc7-4dd7-9c3a-78da7e221141",
