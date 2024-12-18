@@ -1,0 +1,199 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - card_product: {Object} Product Liquid object (optional)
+    - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+    - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+
+    - extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+    - section_id: {String} The ID of the section that contains this card.
+
+    Usage:
+    {% render 'yas-collection-card-product' %}
+{% endcomment %}
+
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+
+  {%- liquid
+    assign ratio = 1
+    if card_product.featured_media and media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = card_product.featured_media.aspect_ratio
+    endif
+    if ratio == 0 or ratio == nil
+      assign ratio = 1
+    endif
+  -%}
+  <div class="card-wrapper underline-links-hover" id="card_{{ card_product.id }}">
+    <div class="card
+      card--{{ settings.card_style }}
+      {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+      {% if extend_height %} card--extend-height{% endif %}
+      {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+      <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+        {%- if card_product.featured_media -%}
+          <div class="card__media">
+            <div class="media media--transparent media--hover-effect">
+              {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+              <img
+               
+                src="{{ card_product.featured_media | image_url: width: 720 }}"
+                alt="{{ card_product.featured_media.alt | escape }}"
+                class="motion-reduce custom-featured-image-info"
+                {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                width="{{ card_product.featured_media.width }}"
+                height="{{ card_product.featured_media.height }}"
+              >
+              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+
+             
+            </div>
+            {%- if show_secondary_image -%}
+               <div class="collection_all_images_info">
+                  {%- for option in card_product.options_with_values -%}
+                  	{% if option.name == "Color"  %}
+                      {%- for image in card_product.images offset:1 -%}
+                                {% assign imageAlt = image.alt | escape %}
+                                {% assign nameColor = value | escape %}
+                                {%- if nameColor == imageAlt and image.attached_to_variant? != true -%}
+                                    <a href="{{ card_product.url }}"><img src="{{ image.src | img_url: '300x' }}" srcset="{{ image.src | img_url: '900x' }} 2x" loading="lazy" class="testingimage 2" alt="{{ image.alt | escape }}"></a>
+                                {% break %}
+                                {%- endif -%}
+                      {%- endfor -%}
+                          
+                  	{% endif %}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+          </div>
+
+          
+        {%- endif -%}
+        <div class="card__content">
+          <div class="card__information">
+            <h3 class="card__heading"{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
+              <a href="{{ card_product.url }}" class="full-unstyled-link">
+                {{ card_product.title | escape }} 
+              </a>
+            </h3>
+          </div>
+          <div class="card__badge {{ settings.badge_position }}">
+            {%- if card_product.available == false -%}
+              <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+              <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"{% if card_product.featured_media or settings.card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
+          
+          <div class="yas-card-title_wrapp">
+            <a href="{{ card_product.url }}" class="full-unstyled-link">
+              {{ card_product.title | escape }} 
+              {% comment %}
+               {{ card_product.title| split: "/" | first}}
+              {% endcomment %}
+            </a>
+            <span class="product_small_desc_info">
+              {{ card_product.type }}
+            </span>
+          </div>
+          </h3>
+
+<!----start collection variant option---------->
+
+{%- unless card_product.has_only_default_variant -%}
+ 
+
+
+          
+  {%- for option in card_product.options_with_values -%}
+{% if option.name == "Color"  %}
+      <fieldset id="ProductSelect-option-{{ forloop.index0 }}" class="collection-variant-{{ option.name}}-{{ forloop.index0 }}" name="{{ option.name | handleize }}">
+  {% comment %}      
+  <legend>
+          {{ option.name | escape }}
+        </legend>
+  {% endcomment %}
+        {%- for value in option.values limit: 3 -%}
+          
+          {% assign option_color_name = value | escape %}
+          {% capture get_src_img_variant %}
+            {%- for variant in card_product.variants -%}
+                {% assign variant_img_previe = variant.image.src | image_url %}
+                {% assign variant_color_val = variant.option1 | escape %}
+                {% if variant_color_val == option_color_name %}
+                  {{ variant_img_previe }}
+                {% break %}
+                {% endif %}
+            {%- endfor -%}
+          {% endcapture %}
+
+        
+         {%- assign variant_label_state = true -%}
+          {%- if product.options.size == 1 -%}
+            {%- unless product.variants[forloop.index0].available -%}
+              {%- assign variant_label_state = false -%}
+            {%- endunless -%}
+          {%- endif -%}
+          <input type="radio"
+            {% if option.selected_value == value %} checked="checked"{% endif %}
+            {% unless variant_label_state %} disabled="disabled"{% endunless %}
+            value="{{ value | escape }}"
+            data-index="option{{ forloop.index }}"
+            
+            name="{{ option.name | handleize }}-{{ card_product.id }}"
+            image-variant="{{ get_src_img_variant | escape | strip  }}"
+            color-variant="{{ value | escape | downcase | replace: ' ', '_' }}"
+            
+            onclick="changeImageColor($(this));"
+            id="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}">
+<!--           <label for="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}">
+            {{ value | escape }}
+          </label> -->
+        {%- endfor -%}
+        {%- assign count_color_variant = option.values.size | minus: 3 -%}
+        {% if count_color_variant > 0 %}
+          <a href="{{ card_product.url }}">+{{ count_color_variant }} more</a>
+        {% endif %}
+      </fieldset>
+{% endif %}
+  {%- endfor -%}
+{%- endunless -%}
+<!----end collection variant option---------->
+
+
+          <div class="card-information">
+            {% render 'price', product: card_product, price_class: '' %} 
+          </div>
+        </div>
+
+  
+        <div class="card__badge {{ settings.badge_position }}">
+          {%- if card_product.available == false -%}
+            <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+          {%- endif -%}
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+

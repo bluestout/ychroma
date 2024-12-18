@@ -1,0 +1,73 @@
+<div class="custom-collection-slider-section">
+  <div class="page-width">
+    <div class="featured-main-title">
+        <h2 class="featured__title h1">{{section.settings.heading}}</h2>
+    </div>
+  <div class="owl-slider">
+    <div id="collection-carousel" class="owl-carousel">
+      {% for product in collections[section.settings.collection_link].products %} 
+      <div class="item">
+        <a href="{{ product.url}}">
+          <img src="{{ product.featured_image | product_img_url: 'original' }}" alt="">
+          <h3 class="product-title-h4">{{ product.title }}</h3>
+        </a>
+        <h4 class="price-h4"> {{ product.price | money }}</h4>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>  
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+{% schema %}
+{
+  "name": "Collection slider",
+  "settings": [
+         {
+          "id": "heading",
+          "type": "text",
+          "label": "Main Heading"
+          },
+         {
+          "id": "collection_link",
+          "type": "collection",
+          "label": "Collection"
+          }
+          
+  ], 
+  "presets": [
+    {
+      "name": "Collection slider",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+jQuery("#collection-carousel").owlCarousel({
+  autoplay: true,
+  loop:true,
+  dots:false,
+  margin: 10,
+  responsiveClass: true,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+
+    600: {
+      items: 1
+    },
+
+    1024: {
+      items: 3
+    },
+
+    1366: {
+      items: 3
+    }
+  }
+});
+{% endjavascript %}

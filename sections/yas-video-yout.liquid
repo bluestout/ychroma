@@ -1,0 +1,155 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<style>
+  #shopify-section-{{section.id}} .yas-video-yout-w{
+    margin: 65px auto 130px;
+    max-width: 956px;
+    text-align: center;
+  }
+  #shopify-section-{{section.id}} .yas-video-yout-w h1{
+    color: #B69E5F;
+    font-size: 68px;
+    font-family: "Centra_No2" !important;
+    text-transform: uppercase;
+    line-height: 68px;
+    font-weight: 600 !important;
+    margin: 0 auto 25px;
+    max-width: 668px;
+    letter-spacing: 0.06em;
+    
+    
+  }
+  #shopify-section-{{section.id}} .yas-video-yout-w p{
+    font-size: 22px !important;
+    color: #fff;
+    font-family: "Centra_No2" !important;
+    text-transform: uppercase;
+    line-height: 26px;
+    letter-spacing: 0.17em;
+    font-weight: 700 !important;
+    margin-bottom: 40px;
+  }
+  #shopify-section-{{section.id}} .yas-youtubeimage-img {
+      position: relative;
+  }
+  #shopify-section-{{section.id}} .yas-youtubeimage-img img{
+        width: 100%;
+  }
+  #shopify-section-{{section.id}} .yas-youtubeimage-img svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 132px;
+  }
+  @media (min-width: 991px){
+    #shopify-section-{{section.id}} .yas_slider_logo{
+      background: transparent !important;;
+    }
+  }
+  @media (max-width: 990px){
+   
+   #shopify-section-{{section.id}} .yas-video-yout-w{
+      margin: 55px auto 105px;
+      padding: 0 45px;
+    }
+   #shopify-section-{{section.id}} .yas-video-yout-w h1{
+      font-size: 50px !important;
+      line-height: 50px !important;
+      margin-bottom: 10px;
+    }
+   #shopify-section-{{section.id}} .yas-video-yout-w p{
+      font-size: 15px !important;
+      margin-bottom: 30px;
+    }
+   
+  }
+</style>
+
+<div class="yas-video-yout-w">
+  <h1>{{ section.settings.title }}</h1>
+  <p>{{ section.settings.text }}</p>
+  <div class="yas-youtubeimage-img" data-frane="{{ section.settings.url }}">
+  <img src="{{ section.settings.image | img_url: 'x1' }}" alt="{{ section.settings.title }}"
+    srcset="{{ section.settings.image | img_url: 'master' }}"
+    loading="lazy"
+  >
+  <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+
+  </div>
+
+  
+</div>
+
+
+<script defer>
+  $(function(){
+
+    $('#shopify-section-{{section.id}} .yas-youtubeimage-img').on('click', function(){
+      $.magnificPopup.open({
+        items: {
+          src: $(this).attr('data-frane'),
+          type: 'iframe',
+          
+        },
+        iframe: {
+          patterns: {
+              youtube: {
+                index: 'youtu.be/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+                id: 'be/', // String that splits URL in a two parts, second part should be %id%
+                // Or null - full URL will be returned
+                // Or a function that should return %id%, for example:
+                // id: function(url) { return 'parsed id'; }
+                src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+              },
+          }
+        }
+      });
+  
+    })
+    
+  })
+</script>
+
+
+{% schema %}
+  {
+    "name": "yas video yout",
+    "class": "yas-video-yout",
+    "settings": [
+       {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Title"
+       },
+       {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text under title"
+       },
+       {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image preview video"
+       },
+       {
+            "id": "url",
+            "type": "url",
+            "label": "youtebe link (https://youtu.be/example)"
+      }
+       
+    ],
+    "presets": [
+      {
+        "name": "yas video yout"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

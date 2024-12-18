@@ -1,0 +1,800 @@
+<style>
+  .heder_second_yas[open]{
+    background: #000;
+  }
+  
+  .yas-main-header{
+    display: flex;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 21.5px;
+  }
+  .custom-index .yas-main-header{
+    background: transparent;
+  }
+  .yas-main-header .yas-centerside-h img{
+    max-width: 205px;
+    margin: 0 10px;
+  }
+  .yas-main-header a{
+    margin: 0 10px;
+    color: #fff;
+    font-family: "CentraNo2-Light" !important;
+    font-weight: 300 !important;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .yas-main-header div:not(.yas-centerside-h) a.true_link:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #626262;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  .yas-main-header div:not(.yas-centerside-h) a:hover:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #626262;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  .yas-main-header div:not(.yas-centerside-h) a.active:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #626262;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  .yas-column3-img2, .yas-column1-img5, .yas-column1-img3{
+    
+    align-items: flex-start;
+    justify-content: flex-end;
+    max-width: 1375px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 35px 80px;
+    display: none;
+  }
+  .yas-column3-img2.show, .yas-column1-img5.show, .yas-column1-img3.show{
+    display: flex;
+  }
+  .yas-column3-img2 > div, .yas-column1-img5 > div, .yas-column1-img3 > div{
+    display: flex;
+  }
+  .yas-img-item{
+    display: flex;
+  }
+  .yas-under-header{
+    background-color: #000;
+  }
+  .yas-under-header a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .yas-column-menu{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+    margin-right: 6rem;
+  }
+  .yas-column1-img5 .yas-column-menu{
+    width: 220px;
+    margin: 0;
+    max-width: 220px;
+    padding-right: 0px;
+  }
+  .yas-column1-img5 .yas-column-menu:first-child{
+    margin-right: 50px;
+  }
+  .yas-column-menu.yas-column-menu-template3{
+     max-width: 240px;
+  }
+  .yas-column1-img3 .yas-column1-col{
+    margin-left: 4%;
+  }
+  .yas-column1-img3 .yas-img3-col{
+    margin-left: auto;
+  }
+   .yas-column1-img3 .yas-img-item a{
+    max-width: 210px;
+  }
+  .yas-column1-img3 .yas-img-item a:first-child{
+    max-width: 445px;
+  }
+  
+ .yas-img-item .yas-img{
+    height: 320px;
+    width: 100%;
+ }
+  yas-img-item .yas-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .yas-column-menu h3{
+    font-family: "Centra_No2";
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .yas-column-menu a, .yas-column-menu .child-ling-secmenu-w span{
+    font-family: "Centra_No2";
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  .yas-column-menu .child-link_secmenu{
+    margin-top: 15px;
+  }
+  .yas-column-menu .child-ling-secmenu-w span{
+    text-wrap: nowrap;
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+  }
+  .yas-column-menu .child-ling-secmenu-w span svg{
+    margin-left: 5px;
+  }
+  .child-ling-secmenu-w span[data-opensub="true"] #line_ver1{
+    display: none;
+  }
+  .child-ling-secmenu-w span[data-opensub="false"] + .child-link_secmenu{
+    display: none;
+  }
+  .child-ling-secmenu-w span[data-opensub="true"] + .child-link_secmenu{
+    display: block;
+  }
+  .child-link_secmenu a{
+    display: flex;
+    align-items: center;
+  }
+  .yas-img-item a{
+    max-width: 210px;
+    margin-right: 25px;
+  }
+  .yas-img-item a:last-child{
+    margin: 0;
+  }
+  .yas-img-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+  }
+  .yas-img-item p{
+    font-family: "Centra_No2";
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    line-height: 28px;
+    text-align: left;
+    color: #fff;
+    margin: 5px 0 0;
+  }
+  @media(min-width: 990px){
+    .header__heading{
+      display: none;
+    }
+  }
+  @media(max-width: 989px){
+    .heder_second_yas{
+      display: none;
+    }
+  }
+</style>
+<div class="yas-main-header" >
+ 
+  
+  
+  <div class="yas-leftside-h">
+      {%- for link in section.settings.menu.links -%}
+        {%- assign anchor = link.title | escape -%}
+        {%- capture activelink1 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.anchor == anchor -%}
+              {%- case block.type -%}
+                {% when 'template1' -%} 
+                {%- for link in block.settings.menu.links -%}
+                      {%- if link.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                {%- endfor -%}
+                {%- for link in block.settings.menu2.links -%}
+                    {%- if link.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                {%- endfor -%}
+                {%- for link in block.settings.menu3.links -%}
+                    {%- if link.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                {%- endfor -%}
+              
+                {%- if block.settings.link contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                {%- if block.settings.link2 contains request.path and request.path != '/' -%}true_link  {% break %}{%- endif -%}
+                {%- if block.settings.link3 contains request.path and request.path !='/' -%}true_link {% break %}{%- endif -%}
+              {%- endcase -%}
+             {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+        {%- capture activeMain -%}
+          {%- if request.path contains '/pages/browse' and link.title == 'BROWSE' %}true_link{%- endif -%}
+          {%- if request.path == '/' and link.title == 'BROWSE' %}true_link{%- endif -%}
+          {%- if request.path contains '/collections/new-in' and link.title == 'New' -%} true_link{%- endif -%}
+        {%- endcapture -%}
+        <a href="{{ link.url }}" data-anchor="{{ link.title | escape }}" class="{{ activeMain }} {{ activelink1 }}">{{ link.title }}</a>
+      {% endfor %}
+  </div>
+  <div class="yas-centerside-h">
+    <a href="/"><img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}"></a>
+  </div>
+  <div class="yas-rightide-h">
+      {%- for link in section.settings.menu2.links -%}
+        {%- assign anchor = link.title | escape -%}
+        {% capture activelink2 %}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.anchor == anchor -%}
+              {%- case block.type -%}
+                {% when 'template2' -%} 
+                  {%- for link in block.settings.menu.links -%}
+                        {% if link.links.size < 1 %}
+                          {%- if link.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                        {% else %}
+                          {%- for childlink in link.links -%}{%- if childlink.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}{% endfor %}
+                        {% endif %}
+                  {%- endfor -%}
+                  {%- for link in block.settings.menu2.links -%}
+                        {% if link.links.size < 1 %}
+                          {%- if link.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                        {% else %}
+                          {%- for childlink in link.links -%}{%- if childlink.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}{% endfor %}
+                        {% endif %}
+                  {%- endfor -%}
+                  {%- if block.settings.link contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                  {%- if block.settings.link2 contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                  {%- if block.settings.link3 contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                  {%- if block.settings.link4 contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                  {%- if block.settings.link5 contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+
+                {% when 'template3' %}
+                  {%- for link in block.settings.menu.links -%}
+                        {%- if link.url contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                  {%- endfor -%}
+                  {%- if block.settings.link contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                  {%- if block.settings.link2 contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                  {%- if block.settings.link3 contains request.path and request.path != '/' -%}true_link {% break %}{%- endif -%}
+                
+              {%- endcase -%}
+             {%- endif -%}
+          {%- endfor -%}
+        {% endcapture %}
+        {%- capture activeJourntal -%}
+          {%- if request.path contains '/pages/y-chroma-journal' and link.title == 'Journal' %}true_link{%- endif -%}
+          {%- if request.path contains '/blogs/' and link.title == 'Journal' %}true_link{%- endif -%}
+        {%- endcapture -%}
+        <a href="{{ link.url }}" data-anchor="{{ link.title | escape }}" class="{{ activeJourntal }} {{ activelink2 }}">{{ link.title }}</a>
+      {% endfor %}
+  </div>
+</div>
+<div class="yas-under-header">
+
+{%- for block in section.blocks -%}
+
+  {% case block.type %}
+    {% when 'template1' %}  
+    <!-- 1 temp -->
+    <div class="yas-column3-img2" data-openanchor="{{ block.settings.anchor }}">
+      <div class="yas-column3-col">
+        <div class="yas-column-menu">
+          <h3>{{ block.settings.menu.title }}</h3>
+          {%- for link in block.settings.menu.links -%}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+          {%- endfor -%}
+        </div>
+        <div class="yas-column-menu">
+          <h3>{{ block.settings.menu2.title }}</h3>
+          {%- for link in block.settings.menu2.links -%}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+          {%- endfor -%}
+        </div>
+        <div class="yas-column-menu">
+          <h3>{{ block.settings.menu3.title }}</h3>
+          {%- for link in block.settings.menu3.links -%}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="yas-img2-col">
+        <div class="yas-img-item">
+          <a href="{{ block.settings.link }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image | img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title1 }}</p>
+          </a>
+          <a href="{{ block.settings.link2 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image2 | img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title2 }}</p>
+          </a>
+          <a href="{{ block.settings.link3 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image3 | img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title3 }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    {% when 'template2' %}
+    <!-- 2 temp -->
+    <div class="yas-column1-img5" data-openanchor="{{ block.settings.anchor }}">
+      <div class="yas-column1-col">
+        <div class="yas-column-menu">
+          {%- for link in block.settings.menu.links -%}
+            {% if link.links.size < 1 %}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            {% else %}
+            <div class="child-ling-secmenu-w">
+              <span data-opensub="true">{{ link.title | escape }} <svg xmlns="http://www.w3.org/2000/svg" style="opacity: 0;" width="11" height="10.5" viewBox="0 0 11 10.5">
+                <g id="Сгруппировать_618" data-name="Сгруппировать 618" transform="translate(-254.5 -179.75)">
+                  <line id="line_hor1" data-name="line_hor" x2="11" transform="translate(254.5 185)" fill="none" stroke="#fff" stroke-width="1.5"/>
+                  <line id="line_ver1" data-name="line_ver" x2="10.5" transform="translate(260 179.75) rotate(90)" fill="none" stroke="#fff" stroke-width="1.5"/>
+                </g>
+              </svg>
+              </span>
+              <div class="child-link_secmenu">
+              {%- for childlink in link.links -%}
+                <a href="{{ childlink.url }}">
+                  {%- if childlink.object.metafields.custom.color_menu_circl.value != blank -%}
+                          {%- assign color_meta = childlink.object.metafields.custom.color_menu_circl.value -%}
+                            <div class="color-block_menu">
+                                  {%- for color in color_meta -%}
+                                    <i class="yas-color_{{ color | strip | escape | downcase | replace: ' ', '_' }}"></i>
+                                  {%- endfor -%}
+                            </div>
+                  {%- endif -%}
+                  {{ childlink.title | escape }}
+                </a>
+              {%- endfor -%}
+              </div>
+            </div>
+            {% endif %}
+          {%- endfor -%}
+        </div>
+        <div class="yas-column-menu">
+          {%- for link in block.settings.menu2.links -%}
+            {% if link.links.size < 1 %}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            {% else %}
+            <div class="child-ling-secmenu-w">
+              <span data-opensub="false">{{ link.title | escape }} <svg xmlns="http://www.w3.org/2000/svg" style="opacity: 0;" width="11" height="10.5" viewBox="0 0 11 10.5">
+                <g id="Сгруппировать_618" data-name="Сгруппировать 618" transform="translate(-254.5 -179.75)">
+                  <line id="line_hor1" data-name="line_hor" x2="11" transform="translate(254.5 185)" fill="none" stroke="#fff" stroke-width="1.5"/>
+                  <line id="line_ver1" data-name="line_ver" x2="10.5" transform="translate(260 179.75) rotate(90)" fill="none" stroke="#fff" stroke-width="1.5"/>
+                </g>
+              </svg>
+              </span>
+              <div class="child-link_secmenu">
+              {%- for childlink in link.links -%}
+                <a href="{{ childlink.url }}">
+                  {%- if childlink.object.metafields.custom.color_menu_circl.value != blank -%}
+                          {%- assign color_meta = childlink.object.metafields.custom.color_menu_circl.value -%}
+                            <div class="color-block_menu">
+                                  {%- for color in color_meta -%}
+                                    <i class="yas-color_{{ color | strip | escape | downcase | replace: ' ', '_' }}"></i>
+                                  {%- endfor -%}
+                            </div>
+                  {%- endif -%}
+                  {{ childlink.title | escape }}
+                </a>
+              {%- endfor -%}
+              </div>
+            </div>
+            {% endif %}
+          {%- endfor -%}
+        </div>            
+      </div>
+      <div class="yas-img5-col">
+        <div class="yas-img-item">
+          {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image | img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title1 }}</p>
+          </a>
+          {% endif %}
+          {% if block.settings.link2 != blank %}
+          <a href="{{ block.settings.link2 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image2 | img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title2 }}</p>
+          </a>
+          {% endif %}
+          {% if block.settings.link3 != blank %}
+          <a href="{{ block.settings.link3 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image3| img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title3 }}</p>
+          </a>
+          {% endif %}
+          {% if block.settings.link4 != blank %}
+          <a href="{{ block.settings.link4 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image4 | img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title4 }}</p>
+          </a>
+          {% endif %}
+          <!--
+          <a href="{{ block.settings.link5 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image5 | img_url: '400x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title5 }}</p>
+          </a>
+          -->
+        </div>
+      </div>
+    </div>
+    
+    {% when 'template3' %}
+    <!-- 3 temp -->
+    <div class="yas-column1-img3" data-openanchor="{{ block.settings.anchor }}">
+      <div class="yas-column1-col">
+        <div class="yas-column-menu yas-column-menu-template3">
+          <h3>{{ block.settings.menu.title }}</h3>
+          {%- for link in block.settings.menu.links -%}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="yas-img3-col">
+        <div class="yas-img-item">
+          <a href="{{ block.settings.link }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image | img_url: '850x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title1 }}</p>
+          </a>
+          <a href="{{ block.settings.link2 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image2 | img_url: '850x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title2 }}</p>
+          </a>
+          <a href="{{ block.settings.link3 }}">
+          <div class="yas-img">
+            <img src="{{ block.settings.image3 | img_url: '850x' }}" alt="">
+          </div>
+          <p>{{ block.settings.title3 }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+  {% endcase %}
+{% endfor %}
+</div>
+
+<script>
+ 
+    $('.heder_second_yas a[href="{% if request.locale.root_url != '/' %}{{ request.locale.root_url }}{% endif %}#"]').click(function(e){
+      e.preventDefault();
+      let anchor = $(this).attr('data-anchor');
+        if($(this).hasClass('active')){
+          $(this).removeClass('active');
+          $('.yas-under-header [data-openanchor="'+anchor+'"]').removeClass('show');
+          $('.heder_second_yas').removeAttr('open');
+        }else{
+          $('.heder_second_yas a.active[href="#"]').removeClass('active');
+          $('.yas-under-header .show[data-openanchor]').removeClass('show');
+          
+          $(this).addClass('active');
+          $('.heder_second_yas').attr('open', '');
+          $('.yas-under-header [data-openanchor="'+anchor+'"]').addClass('show');   
+        }
+    })
+
+    $('.child-ling-secmenu-w span[data-opensub]').on('click',function () {
+      var attr = $(this).attr('data-opensub');
+      if (attr == 'false') {
+        $(this).attr("data-opensub", true);
+      }
+      else {
+        $(this).attr("data-opensub", false);
+      }
+    });
+    
+    
+   
+    $(".heder_second_yas").on( "mouseleave", function() {
+      $('.heder_second_yas a.active[href="{{ request.locale.root_url }}#"]').removeClass('active');
+      $('.yas-under-header .show[data-openanchor]').removeClass('show');
+      $('.heder_second_yas').removeAttr('open');
+    });
+   
+  $(document).ready(function () {
+    if (window.innerWidth > 990) {
+      $(window).scroll(function () {
+        const scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 40) {
+          $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").addClass("scrolled");
+        } else {
+          $("#shopify-section-header-second, #shopify-section-announcement-bar, #shopify-section-header").removeClass("scrolled");
+        }
+      })
+    }
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "mega menu",
+    "class": "heder_second_yas",
+    "settings": [
+       {
+            "type": "link_list",
+            "id": "menu",
+            "label": "menu left side"
+       },
+       {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Image logo"
+       },
+       {
+            "type": "link_list",
+            "id": "menu2",
+            "label": "menu right side"
+       }
+    ],
+	"blocks": [
+      {
+        "type": "template1",
+        "name": "3 column 2 image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "anchor",
+            "label": "name anchor - open menu"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "menu 1 column"
+          },
+          {
+            "type": "link_list",
+            "id": "menu2",
+            "label": "menu 2 column"
+          },
+          {
+            "type": "link_list",
+            "id": "menu3",
+            "label": "menu 3 column"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image 1"
+          },
+          {
+            "type": "text",
+            "id": "title1",
+            "label": "Title 1 image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link 1 image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Image 2"
+          },
+          {
+            "type": "text",
+            "id": "title2",
+            "label": "Title 2 image"
+          },
+          {
+            "type": "url",
+            "id": "link2",
+            "label": "Link 2 image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image3",
+            "label": "Image 3"
+          },
+          {
+            "type": "text",
+            "id": "title3",
+            "label": "Title 3 image"
+          },
+          {
+            "type": "url",
+            "id": "link3",
+            "label": "Link 3 image"
+          }
+        ]
+      },
+      {
+        "type": "template2",
+        "name": "1 column 5 image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "anchor",
+            "label": "name anchor - open menu"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "menu 1 column"
+          },
+          {
+            "type": "link_list",
+            "id": "menu2",
+            "label": "menu 2 column"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image 1"
+          },
+          {
+            "type": "text",
+            "id": "title1",
+            "label": "Title 1 image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link 1 image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Image 2"
+          },
+          {
+            "type": "text",
+            "id": "title2",
+            "label": "Title 2 image"
+          },
+          {
+            "type": "url",
+            "id": "link2",
+            "label": "Link 2 image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image3",
+            "label": "Image 3"
+          },
+          {
+            "type": "text",
+            "id": "title3",
+            "label": "Title 3 image"
+          },
+          {
+            "type": "url",
+            "id": "link3",
+            "label": "Link 3 image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image4",
+            "label": "Image 4"
+          },
+          {
+            "type": "text",
+            "id": "title4",
+            "label": "Title 4 image"
+          },
+          {
+            "type": "url",
+            "id": "link4",
+            "label": "Link 4 image"
+          }
+        ]
+      },
+      {
+        "type": "template3",
+        "name": "1 column 3 image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "anchor",
+            "label": "name anchor - open menu"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "menu 1 column"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image 1"
+          },
+          {
+            "type": "text",
+            "id": "title1",
+            "label": "Title 1 image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link 1 image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Image 2"
+          },
+          {
+            "type": "text",
+            "id": "title2",
+            "label": "Title 2 image"
+          },
+          {
+            "type": "url",
+            "id": "link2",
+            "label": "Link 2 image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image3",
+            "label": "Image 3"
+          },
+          {
+            "type": "text",
+            "id": "title3",
+            "label": "Title 3 image"
+          },
+          {
+            "type": "url",
+            "id": "link3",
+            "label": "Link 3 image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "heder second"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

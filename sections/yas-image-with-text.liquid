@@ -1,0 +1,123 @@
+<style>
+  #shopify-section-{{section.id}} .yas_image_with_text-wrapp{
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0 200px 5rem;
+    margin: 0 auto;
+    
+  }
+  #shopify-section-{{section.id}} .yas_image_with_text-image img{
+    width: 100%;
+  }
+  #shopify-section-{{section.id}} .yas_image_with_text-wrapp > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  #shopify-section-{{section.id}} .yas_image_with_text-text{
+    padding: 0 150px;
+    flex-direction: column;
+  }
+  #shopify-section-{{section.id}} h2{
+    text-align: left;
+    color: #FFFFFF;
+    font-family: "CentraNo2-Bold";
+    font-size: 45px;
+    line-height: 50px;
+    margin-bottom: 45px;
+  }
+  #shopify-section-{{section.id}} p{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-family: 'Source Serif Pro' !important;
+    font-style: italic;
+    font-weight: 600;
+    max-width: 760px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  #shopify-section-{{section.id}} a{
+    letter-spacing: 0.12em;
+    color: #fff;
+    border: 3px solid #FFF;
+    font-family: "CentraNo2-Bold";
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 60px;
+    margin: 45px auto 0 0;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+  #shopify-section-{{section.id}} a:hover{
+    border-color: #FFC200;
+    background:  #FFC200;
+  }
+  @media (max-width: 1470px){
+    #shopify-section-{{section.id}} .yas_image_with_text-text{
+      padding: 0 5rem 0 150px;
+    }
+  }
+  @media (max-width: 989px){
+    #shopify-section-{{section.id}}{
+      display: none;
+    }
+  }
+</style>
+<div class="yas_image_with_text-wrapp">
+  <div class="yas_image_with_text-image">
+    <img src="{{ section.settings.image | img_url: '1600x' }}" alt="{{ section.settings.title }}">
+  </div>
+  <div class="yas_image_with_text-text">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.text }}</p>
+    <a href="{{ section.settings.url }}">EXPLORE</a>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Yas image with text",
+    "class": "yas_image_with_text",
+    "settings": [
+      {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+      },
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+      },
+      {
+          "type": "textarea",
+          "id": "text",
+          "label": "text",
+          "default": "Title"
+      },
+      {
+          "type": "url",
+          "id": "url",
+          "label": "link button"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yas image with text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

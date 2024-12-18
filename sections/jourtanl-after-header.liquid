@@ -1,0 +1,84 @@
+<style>
+  .jourtanl-after-header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 45px;
+  }
+  .jourtanl-after-header h2{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-size: 38px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .jourtanl-after-header p{
+    font-family: "Centra_No2";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #fff;
+    max-width: 650px;
+    margin: 0;
+  }
+  @media (max-width: 989px){
+    .jourtanl-after-header p{
+      display: none;
+    }
+    .jourtanl-after-header {
+        padding: 15px 0 5px;
+    }
+  }
+  @media (max-width: 680px){
+    .jourtanl-after-header h2{
+      font-size: 22px;
+    }
+  }
+</style>
+
+<div class="jourtanl-after-header">
+  {% if section.settings.url != blank %}
+   <a href="{{ section.settings.url }}"><h2>{{ section.settings.title }}</h2></a>
+  {% else %}
+  <h2>{{ section.settings.title }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}<p>{{ section.settings.text }}</p>{% endif %}
+</div>
+{% schema %}
+  {
+    "name": "jourtanl after header",
+    "settings": [
+      {
+            "type": "url",
+            "id": "url",
+            "label": "Link title"
+      },
+      {
+            "type": "text",
+            "id": "title",
+            "label": "title"
+      },
+      {
+            "type": "textarea",
+            "id": "text",
+            "label": "text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "jourtanl after header"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,181 @@
+<style>
+  #shopify-section-{{section.id}}{
+    padding: 75px 0 100px;
+  }
+  #shopify-section-{{section.id}} h2{
+    text-align: center;
+    color: #B59E5F;
+    font-family: "CentraNo2-Bold";
+    font-size: 45px;
+    letter-spacing: 3.5px; 
+    margin-bottom: 60px;
+    line-height: 50px;
+  }
+  #shopify-section-{{section.id}} h4{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "CentraNo2-Book";
+    font-size: 22px;
+    letter-spacing: 3.5px; 
+    margin: 30px 0 0;
+    line-height: 30px;
+  }
+  #shopify-section-{{section.id}} p.yas-top-seling-price{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-family: Centra_No2;
+  }
+  #shopify-section-{{section.id}} .yas-top-seling-slider_wrapp{
+    max-width: 1587px;
+    margin: 0 auto;
+  }
+  #shopify-section-{{section.id}} .swiper-slide{
+    max-width: 499px;
+    width: 100%;
+  }
+  #shopify-section-{{section.id}} .yas-pickvibe-slider_image{
+    position: relative;
+  }
+  #shopify-section-{{section.id}} .swiper-slide img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  @media (max-width: 1380px){
+     #shopify-section-{{section.id}} h4{
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: 0.05em;
+    }
+    #shopify-section-{{section.id}} p.yas-top-seling-price{
+      font-size: 25px;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+
+    }
+  }
+  @media (max-width: 989px){
+    
+    #shopify-section-{{section.id}} .yas-top-seling-slider_wrapp{
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #shopify-section-{{section.id}} .yas-top-seling-slider{
+      overflow: visible;
+    } 
+  }
+   @media (max-width: 590px){
+     #shopify-section-{{section.id}} .swiper-slide{
+        max-width: 275px;
+    }
+      #shopify-section-{{section.id}} h2{
+        font-size: 25px;
+        line-height: 30px;
+      }
+     #shopify-section-{{section.id}} h4{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    #shopify-section-{{section.id}} p.yas-top-seling-price{
+      font-size: 16px;
+      line-height: 20px;
+    }
+   }
+</style>
+
+
+
+<div class="yas-top-seling-product-wrapp">
+  <h2>{{ section.settings.title }}</h2>
+  <div class="yas-top-seling-slider_wrapp">
+    <div class="swiper yas-top-seling-slider">
+        <div class="swiper-wrapper">
+          {% for variant in section.settings.product.metafields.custom.top_selling_variant.value %}
+            
+            <div class="swiper-slide"> 
+              <a href="{{variant.url }}">
+                <div class="yas-pickvibe-slider_image">
+                  <img src="{{ variant.featured_image | img_url: '1x' }}" alt="{{ variant.product.title }}"
+                    srcset="{{ variant.featured_image | img_url: '400x' }}"
+                    loading="lazy"
+                    >
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <h4>{{ variant.title }}</h4>
+                {%- capture discount_all -%}
+                  {%- if settings.discount_n != 0 -%}
+                     {% assign dc = settings.discount_n | divided_by: 100.0 %}
+                     {% assign discount = variant.price | times: dc  %}
+                     {% assign new_price = variant.price | minus: discount  %}
+                     <el class="yas_newd_pric"><span>{{ new_price | money_without_trailing_zeros }}</span> <dis>-{{ settings.discount_n }}%</dis></el>
+                  {%- endif -%}
+                {%- endcapture -%}
+                <p class="yas-top-seling-price">{{ discount_all }} {{ variant.price | money_without_trailing_zeros }}</p>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+</div>
+
+<script defer>
+  $(function(){
+    let swiper = new Swiper('#shopify-section-{{section.id}} .swiper', {
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 25,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .swiper-button-prev',
+      },
+      breakpoints: {
+        // when window width is >= 990px
+        990: {
+          slidesPerView: '3',
+          spaceBetween: 22.5,
+          loop: false,
+          centeredSlides: false,
+        }
+      }
+    });
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "yas top sell prod variant",
+    "class": "yas-top-seling-product",
+    "settings": [
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+      },
+      {
+            "type": "collection",
+            "id": "product",
+            "label": "Collection top sell varioant list"
+      }
+    ],
+    "presets": [
+      {
+        "name": "yas top seling prod variant"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "395dbd5b-fe23-4ef4-b008-9e1caf4c896c": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "custom-shirt-cut-corner": {
+      "type": "custom-shirt-cut-corner",
+      "blocks": {
+        "8f2ea287-9b1b-4348-9cd6-a76f57295347": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "midweight-shirt-cut-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "8f2ea287-9b1b-4348-9cd6-a76f57295347"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "395dbd5b-fe23-4ef4-b008-9e1caf4c896c",
+    "custom-shirt-cut-corner"
+  ]
+}

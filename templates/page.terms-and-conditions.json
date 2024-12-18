@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "de95c966-30a5-4ffe-ae14-552d646fc0c9": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "main": {
+      "type": "terms-and-conditions",
+      "settings": {}
+    }
+  },
+  "order": [
+    "de95c966-30a5-4ffe-ae14-552d646fc0c9",
+    "main"
+  ]
+}

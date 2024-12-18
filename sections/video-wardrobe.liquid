@@ -1,0 +1,292 @@
+<style>
+   #shopify-section-{{section.id}}:before{
+     width: 100%;height: 100%;position: absolute;
+    {% if section.settings.overlay_show %}
+      {% if section.settings.overlay_opacity > 9 %}
+        {% assign prepend_zeero = '0.' %}
+      {% else %}
+        {% assign prepend_zeero = '0.0' %}
+      {% endif %}
+    content: "";
+    background-color: rgba(0,0,0, {{section.settings.overlay_opacity | prepend: prepend_zeero }});
+    opacity: 1;
+    {% else %}
+    content: none !important;
+    {% endif %}  
+  }
+  #shopify-section-{{section.id}}{
+    max-height: 662px;
+    overflow: hidden;
+    position: relative;
+    
+  }
+
+  #shopify-section-{{section.id}} video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    min-height: 456px;
+  }
+  #shopify-section-{{section.id}} .video-wardrobe-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    min-width: 340px;
+  }
+  #shopify-section-{{section.id}} h2{
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-family: "CentraNo2-Bold";
+    font-size: 40px;
+  
+  }
+  #shopify-section-{{section.id}} a{
+    letter-spacing: 3px;
+    color: #F7B718;
+    border: 5px solid #EDBA44;
+    font-family: "CentraNo2-Bold";
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    padding: 20px;
+    margin: 45px auto 0;
+    transition: all 0.3s ease;
+    line-height: normal;
+  }
+  #shopify-section-{{section.id}} a:hover{
+    text-decoration: none;
+    background-color: #FFC200;
+    color: #fff;
+  }
+  #shopify-section-{{section.id}} a svg{
+    margin-left: 25px;
+  }
+  #shopify-section-{{section.id}} a path{
+    transition: all 0.3s ease;
+    fill: #F7B718;
+  }
+  #shopify-section-{{section.id}} a:hover path{
+    fill: #fff;
+  }
+  @media (max-width: 989px){
+
+    #shopify-section-{{section.id}} h2{
+      font-size: 25px;
+    }
+    #shopify-section-{{section.id}} a{
+      font-size: 14px;
+      letter-spacing: 2.1px;
+      padding: 8px 10px;
+    }
+    #shopify-section-{{section.id}} a svg{
+      margin-left: 10px;
+    }
+  }
+</style>
+
+{% if section.settings.btn_link != blank %}
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Magnific Popup core JS file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{% assign video_domen = section.settings.btn_link | replace: 'https://', '' | split: '/' | first %}
+
+{% capture chek_url_video %}{% if video_domen == 'youtu.be' or video_domen == 'vimeo.com' %}popup-frame{% else %}popup-defolt{% endif %}{% endcapture %}
+
+{% capture iframe_video_chek %}{% if chek_url_video == 'popup-frame' %}{{ section.settings.btn_link }}{% else %}#{{ section.id }}-popup{% endif %}{% endcapture %}
+
+{% endif %}
+
+
+<video class="video_not-yas" poster="{{ section.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
+	  <source src="{{ section.settings.text-box }}" type="video/mp4">
+</video>
+<div class="video-wardrobe-wrapper">
+  <h2 class="video-wardrobe_title_info">{{ section.settings.title }}</h2>
+  {% if section.settings.btn_link != blank %}
+  <a href="{{ iframe_video_chek }}" class="{{ chek_url_video | strip }}">{{ section.settings.btn_text }} 
+    <svg xmlns="http://www.w3.org/2000/svg" width="18.903" height="21.829" viewBox="0 0 18.903 21.829">
+      <path id="video_triag" data-name="video_triag" d="M683.825,322.925l-18.9-10.914v21.829Z" transform="translate(-664.921 -312.01)" fill="#f7b717"/>
+    </svg>
+  </a>
+  {% endif %}
+</div>
+{% if section.settings.btn_link != blank %}
+<div id="{{ section.id }}-popup" class="mfp-hide white-popup-block">
+  <video  loop controls controlslist="nodownload" preload="metadata">
+	  <source src="{{ section.settings.btn_link }}" type="video/mp4">
+  </video>
+</div>
+
+<script defer>
+  $(document).ready(function() {
+	$('.popup-defolt').magnificPopup({
+		type: 'inline',
+		preloader: false,
+        callbacks: {
+          beforeClose: function() {
+            document.querySelector('.white-popup-block video').pause();
+            document.querySelector('#shopify-section-{{section.id}} video').play();
+          },
+          open: function() {
+            document.querySelector('#shopify-section-{{section.id}} video').pause();
+          },
+        }
+	});
+    $('.popup-frame').magnificPopup({
+	
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false,
+        iframe: {
+        		patterns: {
+        			youtube: {
+        				index: 'youtu.be/',
+        				id: '/',
+        				src: 'https://www.youtube.com/embed/%id%?rel=0&autoplay=1'
+                        }
+                    ,
+                    vimeo: {
+                        index: 'vimeo.com/',
+                        id: '/',
+                        src: '//player.vimeo.com/video/%id%?autoplay=1'
+                      }
+                  }
+        },
+        callbacks: {
+          beforeClose: function() {
+            document.querySelector('#shopify-section-{{section.id}} video').play();
+          },
+          open: function() {
+            document.querySelector('#shopify-section-{{section.id}} video').pause();
+          },
+        }
+      
+	});
+  })
+</script>
+
+
+<style>
+  .mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+  }
+  .mfp-fade.mfp-bg.mfp-ready {
+  	opacity: 0.8;
+  }
+  .mfp-fade.mfp-bg.mfp-removing {
+  	opacity: 0;
+  }
+  
+  .mfp-fade.mfp-wrap .mfp-content {
+  	opacity: 0;
+  	-webkit-transition: all 0.15s ease-out; 
+  	-moz-transition: all 0.15s ease-out; 
+  	transition: all 0.15s ease-out;
+  }
+  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  	opacity: 1;
+  }
+  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  	opacity: 0;
+  }
+  .mfp-bg.mfp-ready{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: .8;
+    display: block;
+  }
+  .white-popup-block{
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+  .mfp-close-btn-in .mfp-close {
+    color: #fff;
+    right: -44px;
+    top: -40px;
+    font-size: 44px;
+  } 
+</style>
+
+
+{% endif %}
+{% schema %}
+{
+  "name": "Video wardrobe",
+  "class": "video-wardrobe",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Overlay setting"
+    },
+    {
+      "type": "checkbox",
+      "id": "overlay_show",
+      "default": true,
+      "label": "Show overlay?"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 99,
+      "step": 1,
+      "default": 80,
+      "label": "Overlay Transparent"
+    },    
+    {
+       "type": "header",
+       "content": "Other setting"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image background"
+    },
+    {
+      "id": "text-box",
+      "type": "url",
+      "label": "Video Source"
+    },
+     {
+      "id": "title",
+      "type": "text",
+      "label": "Video Heading"
+    },
+     {
+      "id": "btn_text",
+      "type": "text",
+      "label": "Button Heading"
+    },
+    {
+      "id": "btn_link",
+      "type": "url",
+      "label": "Button Link"
+    }
+  ]
+  ,
+  "presets": [
+    {
+      "name": "Video wardrobe"
+    }
+  ]
+}
+{% endschema %}

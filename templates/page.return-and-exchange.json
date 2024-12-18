@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "dc4e5fc3-2821-43c8-81ca-43b3cb29690c": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "main": {
+      "type": "return-and-exchange",
+      "settings": {}
+    }
+  },
+  "order": [
+    "dc4e5fc3-2821-43c8-81ca-43b3cb29690c",
+    "main"
+  ]
+}

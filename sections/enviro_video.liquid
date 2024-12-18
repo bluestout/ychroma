@@ -1,0 +1,122 @@
+<style>
+#shopify-section-{{ section.id }}{
+  position: relative;
+  padding: 12px 0 10px;
+  background: #fff;
+}
+#shopify-section-{{ section.id }} :before{
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="70.471" height="38.738" viewBox="0 0 70.471 38.738"><path id="Контур_193" data-name="Контур 193" d="M35.235,0,70.471,38.738H0Z" transform="translate(70.471 38.738) rotate(180)" fill="%23fff"/></svg>');
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#shopify-section-{{ section.id }} .enviro-video-w{
+  height: 100%;
+  cursor: pointer;
+}
+#shopify-section-{{ section.id }} svg{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+#shopify-section-{{ section.id }} img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+@media (max-width: 989px){
+  #shopify-section-{{ section.id }}{
+    padding: 10px 0 10px;
+  }
+  #shopify-section-{{section.id}} svg{
+    width: 66px;
+  }
+  #shopify-section-{{ section.id }} :before{
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="31.76" height="17.459" viewBox="0 0 31.76 17.459"><path id="Контур_298" data-name="Контур 298" d="M15.88,0,31.76,17.459H0Z" transform="translate(31.76 17.459) rotate(180)" fill="%23fff"/></svg>');
+  }
+}
+</style>
+
+<div class="enviro-video-w" data-frane="{{ section.settings.url }}">
+
+    <img src="{{ section.settings.image | img_url: 'x1' }}" alt="{{ section.settings.image.alt }}"
+                srcset="{{ section.settings.image | img_url: 'master' }}"
+                    loading="lazy"
+                >
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="194" height="194" viewBox="0 0 194 194">
+    <g id="Сгруппировать_1004" data-name="Сгруппировать 1004" transform="translate(-800 -1268)">
+      <g id="Эллипс_28" data-name="Эллипс 28" transform="translate(800 1268)" fill="none" stroke="#fff" stroke-width="6">
+        <circle cx="97" cy="97" r="97" stroke="none"/>
+        <circle cx="97" cy="97" r="94" fill="none"/>
+      </g>
+      <g id="Многоугольник_6" data-name="Многоугольник 6" transform="translate(961.353 1307.575) rotate(90)" fill="none">
+        <path d="M57.279,0l57.279,99.822H0Z" stroke="none"/>
+        <path d="M 57.27909851074219 12.05553436279297 L 10.36048889160156 93.82192230224609 L 104.1977081298828 93.82192230224609 L 57.27909851074219 12.05553436279297 M 57.27909851074219 7.62939453125e-06 L 114.5582046508789 99.82192230224609 L -7.62939453125e-06 99.82192230224609 L 57.27909851074219 7.62939453125e-06 Z" stroke="none" fill="#fff"/>
+      </g>
+    </g>
+  </svg>
+
+
+</div>
+
+<script defer>
+  $(function(){
+  
+    $('#shopify-section-{{section.id}} .enviro-video-w').on('click', function(){
+      $.magnificPopup.open({
+        items: {
+          src: $(this).attr('data-frane'),
+          type: 'iframe',
+          
+        },
+        iframe: {
+          patterns: {
+              youtube: {
+                index: 'youtu.be/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+                id: 'be/', // String that splits URL in a two parts, second part should be %id%
+                // Or null - full URL will be returned
+                // Or a function that should return %id%, for example:
+                // id: function(url) { return 'parsed id'; }
+                src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+              },
+          }
+        }
+      });
+  
+    })
+    
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "enviro video",
+    "settings": [
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image preview"
+          },
+          {
+            "id": "url",
+            "type": "url",
+            "label": "youtebe link (https://youtu.be/example)"
+          }
+    ],
+    "presets": [
+      {
+        "name": "enviro video"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

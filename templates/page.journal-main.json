@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "jourtanl_after_header_CbLWyw": {
+      "type": "jourtanl-after-header",
+      "settings": {
+        "url": "",
+        "title": "Y.Chroma Journal",
+        "text": "Join us on our journey of midlife male re-invention. The places we go, \nthe brand we build, the clothes we wear and the craftsmanship that drives us."
+      }
+    },
+    "b40b271d-202e-4fff-808f-05c32c6a14b6": {
+      "type": "journal-tab-blog",
+      "blocks": {
+        "825dfc79-7e2f-4612-87a0-00d783e1e4c1": {
+          "type": "blog",
+          "settings": {
+            "title": "All",
+            "blog": "all",
+            "background": "#eee9dc",
+            "color": "#000000"
+          }
+        },
+        "ac14a2d0-c337-4c45-9a1f-3421f46c580d": {
+          "type": "blog",
+          "settings": {
+            "title": "DRESSING WELL",
+            "blog": "dressing-well",
+            "background": "#009398",
+            "color": "#ffffff"
+          }
+        },
+        "303b783e-b652-44be-810f-35cb6364d6d1": {
+          "type": "blog",
+          "settings": {
+            "title": "THE BUILD",
+            "blog": "behind-the-build",
+            "background": "#533146",
+            "color": "#ffffff"
+          }
+        },
+        "68a885b3-7d38-4b4e-b27d-b9b02771653c": {
+          "type": "blog",
+          "settings": {
+            "title": "LIFESTYLE",
+            "blog": "y-chroma-life",
+            "background": "#dd1d1d",
+            "color": "#ffffff"
+          }
+        },
+        "db316401-0019-4247-acb3-671265ed5ac8": {
+          "type": "blog",
+          "settings": {
+            "title": "NEWS",
+            "blog": "news",
+            "background": "#869e83",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "825dfc79-7e2f-4612-87a0-00d783e1e4c1",
+        "ac14a2d0-c337-4c45-9a1f-3421f46c580d",
+        "303b783e-b652-44be-810f-35cb6364d6d1",
+        "68a885b3-7d38-4b4e-b27d-b9b02771653c",
+        "db316401-0019-4247-acb3-671265ed5ac8"
+      ],
+      "settings": {
+        "article": "news\/coming-soon-switchable-leather-pocket-lagos-safari-shirt"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "jourtanl_after_header_CbLWyw",
+    "b40b271d-202e-4fff-808f-05c32c6a14b6",
+    "main"
+  ]
+}

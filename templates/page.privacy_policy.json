@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "091e13fd-14fa-470b-b089-16793c194963": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "main": {
+      "type": "privacy_policy",
+      "settings": {}
+    }
+  },
+  "order": [
+    "091e13fd-14fa-470b-b089-16793c194963",
+    "main"
+  ]
+}
