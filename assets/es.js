@@ -1,4 +1,4 @@
-document.addEventListener('upCart:Ready', (e) => {
+upcartOnCartLoaded = (cart) => {
 	const widget = document.querySelector('#CartPopup');
 	const container = widget.querySelector('.upcart-checkout-button-container');
 	const message = `
@@ -20,20 +20,4 @@ document.addEventListener('upCart:Ready', (e) => {
 	messageElement.innerHTML = message;
 
 	container.append(messageElement);
-});
-
-const observer = new MutationObserver((mutations) => {
-	mutations.forEach((mutation) => {
-		if (mutation.addedNodes.length) {
-			if (document.querySelector('#CartPopup')) {
-				const event = new CustomEvent("upCart:Ready", {bubbles: true});
-				document.dispatchEvent(event);
-				observer.disconnect();
-			}
-		}
-	});
-});
-
-observer.observe(document.body, {
-	childList: true
-});
+}
