@@ -624,6 +624,18 @@
         align-items: center;
       }
 
+      .footer-text {
+        max-width: 630px;
+        margin: 40px auto 110px;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        line-height: 27px;
+        font-family: "CentraNo2-Light" !important;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+
       .footer-block__heading {
         font-family: "Source Serif 4", sans-serif !important;
         font-weight: 300 !important;
