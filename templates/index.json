@@ -437,7 +437,7 @@
       "settings": {
         "padding_top": 76,
         "padding_bottom": 76,
-        "background_color": "#000"
+        "background_color": "#000000"
       }
     },
     "es_media_with_text_zM8xic": {
@@ -556,6 +556,21 @@
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
       }
+    },
+    "es_homepage_footer_Ngxenx": {
+      "type": "es-homepage-footer",
+      "settings": {
+        "footer_logo": "shopify://shop_images/logo_bottom-new.png",
+        "subtext": "<p>Y.Chroma, Inc. (USA)<br/>Y.Chroma Unipessoal, Lda. (Portugal)</p>",
+        "heading1": "1 Year Exchanges, 90-day Returns | Free Shipping on 2+ Items",
+        "menu1": "footer",
+        "heading2": "Info Links",
+        "menu2": "footer-item-menu",
+        "heading3": "Quick links 3",
+        "menu3": "main-menu",
+        "newsletter_heading": "“Y.Chroma is one of the most important brands to arrive on the scene in the last decade.”",
+        "newsletter_heading_sub": "<p>We’re all in it together, lads. <a href=\"/account/login\" title=\"/account/login\">Sign up</a> and get outfit inspiration for our generation, new product sneak previews, special offers — and other unique content I bet will raise your eyebrows.</p>"
+      }
     }
   },
   "order": [
@@ -573,6 +588,7 @@
     "es_media_with_text_zM8xic",
     "es_media_with_text_NqL4eY",
     "es_media_with_text_J9YWF7",
-    "es_media_with_text_kXbJc8"
+    "es_media_with_text_kXbJc8",
+    "es_homepage_footer_Ngxenx"
   ]
 }
