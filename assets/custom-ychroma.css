@@ -139,7 +139,7 @@ details#Details-HeaderMenu-2 span {
         z-index: 2;
         width: 100%;
     }
-    .custom-index #shopify-section-announcement-bar,.custom-index  #shopify-section-header-second {
+    .custom-index  #shopify-section-header-second {
       position: absolute !important;
     }
     #shopify-section-header-second {
