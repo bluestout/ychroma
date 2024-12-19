@@ -1,0 +1,290 @@
+<style>
+  @media (min-width: 990px) {
+    #shopify-section-{{section.id}} footer.footer .footer__blocks-wrapper {
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer__content-top{
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer__blocks-wrapper .footer-block{
+      max-width: 670px;
+      width: 100%;
+    }
+    #shopify-section-{{section.id}} .slider__newsletter .newsletter-form__field-wrapper{
+      margin-top: 25px;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer-block__heading{
+      margin: 0;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer-block__details-content .list-menu__item--link{
+       padding: 0;
+    }
+    #shopify-section-{{section.id}} .yas-mainsnew-wrapp .footer__column--info {
+        align-items: flex-start;
+    }
+    #shopify-section-{{section.id}} .yas-mainsnew-wrapp .footer__content-bottom-wrapper{
+      padding: 0;
+    }
+  }
+  @media (max-width: 989px) {
+    #shopify-section-{{section.id}} .footer_slide  .slider__newsletter{
+      padding-top: 60px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #shopify-section-{{section.id}} .footer-block-social{
+      height: 80px;
+      background: #F5F5ED;
+    }
+    
+    #shopify-section-{{section.id}} .footer-block-logo > div{
+      margin-bottom: 0;
+    }
+    #shopify-section-{{section.id}} .footer-block-logo img{
+      max-width: 50px;
+    }
+    #shopify-section-{{section.id}} .footer_slide h2 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 0;
+    }
+    #shopify-section-{{section.id}} .footer_slide .footer__blocks-wrapper h2.footer-block__heading{
+      font-size: 16px;
+    }
+    #shopify-section-{{section.id}} .footer_slide .list-social__item svg{
+      width: 28px;
+      fill: white;
+    }
+    #shopify-section-{{section.id}} .footer_slide .list-social__link{
+      padding: 0 10px;
+    }
+    #shopify-section-{{section.id}} .newsletter-form__field-wrapper .field {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #shopify-section-{{section.id}} .slider__newsletter input {
+      max-width: 100%;
+    }
+    #shopify-section-{{section.id}} .slider__newsletter .field__button {
+      position: unset;
+      margin-top: 21px;
+    }
+     #shopify-section-{{section.id}} .footer__list-social .list-social__item a svg{
+     fill: white;
+    }
+    .footer__list-social .list-social:only-child 
+    {
+        fill: white;
+    }
+    #shopify-section-{{section.id}} .footer_slide p{
+      font-weight: normal;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      font-family: "CentraNo2-Book" !important;
+      font-weight: 300 !important;
+      max-width: 210px;
+    }
+    #shopify-section-{{section.id}} .footer_slide footer.footer .footer_logo_img {
+      max-width: 60px;
+      margin-right: 15px;
+    }
+    #shopify-section-{{section.id}} .footer_slide footer.footer .footer-block__details-content .list-menu__item--link{
+      font-family: "CentraNo2-Book" !important;
+    }
+    #shopify-section-{{section.id}} .slider__newsletter .newsletter-form {
+      max-width: 90%;
+      height: calc(100% - 80px);
+      padding: 0 0px;
+    }
+    #shopify-section-{{section.id}} .slider__newsletter .newsletter-form  .field__label{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #shopify-section-{{section.id}} footer.footer .footer__content-top .footer-block{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+    #shopify-section-{{section.id}} .footer-block.grid__item.footer-block--menu{
+      flex-direction: column;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer__blocks-wrapper{
+      display: flex;
+      flex-direction: column; 
+      gap: 0;
+      align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer__content-top{
+      background: #fff;
+      padding-top: 85px;
+      height: 85%;
+    }
+    #shopify-section-{{section.id}} .footer .footer__content-bottom{
+      justify-content: center;
+      display: flex;
+    }
+    #shopify-section-{{section.id}} .footer .footer__content-bottom .footer__column--info{
+      padding: 0;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer__content-top .footer-block__details-content{
+      margin: 0;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer-block__details-content .list-menu__item--link {
+      line-height: normal;
+      font-size: 13px;
+      justify-content: center;
+    }
+    #shopify-section-{{section.id}} footer.footer .footer__content-top .footer-block-logo{
+      align-items: center;
+      text-align: left;
+      justify-content: center;
+    }
+    #shopify-section-{{section.id}} .footer{
+      padding-top: 0;
+    }
+  }
+  #shopify-section-{{section.id}} .footer-block-social{
+    background: unset;
+    margin-bottom: 60px;
+    z-index: 1;
+  }
+  @media (max-width: 1440px){
+    #shopify-section-{{section.id}} .footer-block-social{
+      margin-bottom: 10px;
+    }
+  }
+</style>
+
+<div class="footer_slide">
+  {% render 'yas_new_mainsignup', section: section %}
+  <div class="footer-desk-slide">
+    {% render 'footer-newmain', section: section %}
+  </div>
+</div>
+
+<div class="footer_slide footer_slide-mob">
+  {% render 'yas_new_mainsignup', section: section %}
+</div>
+<div class="footer_slide footer_slide-mob">
+  {% render 'footer-newmain', section: section %}
+</div>
+
+<script>
+  $(document).ready(() => {
+    function ajaxFormInit(form) {
+      var form_type = form.querySelector("[name=form_type]").value,
+        form_inner = form.querySelector('.newsletter-form__field-wrapper .submit-w-text');
+
+      var buttonForm = form.querySelector('button');
+      
+      buttonForm.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        var action = form.getAttribute("action");
+
+        fetch(action, {
+          method: 'POST',
+          body: new FormData(form)
+        }).then(function (response) {
+          console.log(response);
+          console.log(response.status);
+          form_inner.innerHTML = '<div class="succses_sub"><span style="font-weight: 600;">RECEIVED.</span> WELCOME TO THE RE-INVENTION.</div>';
+
+        }).catch(function (err) {
+          form_inner.innerHTML = '<div class="succses_sub">Error, Try later</div>';
+        });
+
+          
+      });
+    }
+
+    // Init Shopify Forms
+    document.querySelectorAll("[name=form_type]").forEach(function (el) {
+      if (el.value !== 'customer') return;
+
+      ajaxFormInit(el.closest("form"));
+    });
+  })
+</script>
+
+{%- schema -%}
+{
+  "name": "Homepage Footer",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Footer settings"
+    },
+    {
+        "type": "image_picker",
+        "id": "footer_logo",
+        "label": "Footer Logo"
+    },
+    {
+        "type": "richtext",
+        "id": "subtext",
+        "default": "<p>Y.Chroma, Inc. (USA)<br>Y.Chroma Unipessoal, Lda. (Portugal)</p>",
+        "label": "Text under Logo"
+    },
+    {
+        "type": "text",
+        "id": "heading1",
+        "default": "Quick links",
+        "label": "Title Menu 1"
+    },
+    {
+        "type": "link_list",
+        "id": "menu1",
+        "default": "footer",
+        "label": "menu table 1"
+    },
+    {
+        "type": "text",
+        "id": "heading2",
+        "default": "Quick links 2",
+        "label": "Title Menu 2"
+    },
+    {
+        "type": "link_list",
+        "id": "menu2",
+        "default": "footer",
+        "label": "menu table 2"
+    },
+    {
+        "type": "text",
+        "id": "heading3",
+        "default": "Quick links 3",
+        "label": "Title Menu 3"
+    },
+    {
+        "type": "link_list",
+        "id": "menu3",
+        "default": "footer",
+        "label": "menu table 3"
+    },
+    {
+        "type": "text",
+        "id": "newsletter_heading",
+        "default": "Receive My Weekly Y.Chroma Journal",
+        "label": "Subscribe title"
+    },
+    {
+        "type": "richtext",
+        "id": "newsletter_heading_sub",
+        "label": "Subscribe subtitle"
+    }
+  ],
+  "presets": [
+    {
+      "name": "@ Homepage Footer"
+    }
+  ]
+}
+{%- endschema -%}
