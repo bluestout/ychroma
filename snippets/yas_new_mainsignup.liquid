@@ -104,7 +104,7 @@
               {%- if form.posted_successfully? -%}
                 <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
-              <img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/image_footer_sh.jpg?v=1716321954" class="slide_fot_dopimg" alt="">
+              {% comment %} <img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/image_footer_sh.jpg?v=1716321954" class="slide_fot_dopimg" alt=""> {% endcomment %}
             {%- endform -%}
             <div class="footer-block-social">
 
