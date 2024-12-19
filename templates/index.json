@@ -561,6 +561,7 @@
       "type": "es-homepage-footer",
       "settings": {
         "footer_logo": "shopify://shop_images/logo_bottom-new.png",
+        "background_image": "shopify://shop_images/bg_footernew.jpg",
         "subtext": "<p>Y.Chroma, Inc. (USA)<br/>Y.Chroma Unipessoal, Lda. (Portugal)</p>",
         "heading1": "1 Year Exchanges, 90-day Returns | Free Shipping on 2+ Items",
         "menu1": "footer",
