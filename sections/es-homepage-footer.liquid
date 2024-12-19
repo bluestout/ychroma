@@ -265,7 +265,7 @@
   }
 </style> {% endcomment %}
 
-<div class="footer-wrapper" style="--background-image: url('{{ section.settings.background_image }}')">
+<div class="footer-wrapper" style="--background-image: url('{{ section.settings.background_image | img_url: '1920x' }}')">
   {% render 'yas_new_mainsignup', section: section %}
   {% render 'footer-newmain', section: section %}
 </div>
