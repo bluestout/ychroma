@@ -132,9 +132,9 @@
                {{ card_product.title| split: "/" | first}}
               {% endcomment %}
             </a>
-            <span class="product_small_desc_info">
+            {% comment %} <span class="product_small_desc_info">
               {{ card_product.type }}
-            </span>
+            </span> {% endcomment %}
           </div>
           <div class="card-information">
             {% render 'price', product: variant_default, price_class: '' %} 
@@ -146,19 +146,16 @@
 <!----start collection variant option---------->
 
 {%- unless card_product.has_only_default_variant -%}
- 
-    
   {%- for option in card_product.options_with_values -%}
-{% if option.name == "Color"  %}
+    {% if option.name == "Color"  %}
       <fieldset id="ProductSelect-option-{{ forloop.index0 }}" class="yas-variantsec-wrapp collection-variant-{{ option.name}}-{{ forloop.index0 }}" name="{{ option.name | handleize }}">
-  {% comment %}      
-  <legend>
-          {{ option.name | escape }}
-        </legend>
-  {% endcomment %}
+        {% comment %}      
+          <legend>
+            {{ option.name | escape }}
+          </legend>
+        {% endcomment %}
         {% assign curent_color_after-3 = 0 %}
         {%- for value in option.values  -%}
-          
           {% assign option_color_name = value | escape %}
           {% capture get_src_img_variant %}
             {%- for variant in card_product.variants -%}
@@ -229,13 +226,15 @@
           <a href="{{ card_product.url }}">+{{ count_color_variant }} more</a>
         {% endif %}
       </fieldset>
-{% endif %}
+    {% endif %}
   {%- endfor -%}
 {%- endunless -%}
 <!----end collection variant option---------->
-       
         </div>
   
+        <span class="product_small_desc_info">
+          {{ card_product.type }}
+        </span>
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>

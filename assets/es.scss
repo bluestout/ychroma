@@ -128,7 +128,26 @@
     }
   }
 
-  
+  .card-wrapper {
+    padding-bottom: 30px;
+    
+    .card__content {
+      position: relative;
+
+      .card__information {
+        padding-bottom: 8px;
+      }
+
+      .product_small_desc_info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(100%);
+      }
+    }
+  }
 
   .es-swiper {
     overflow: hidden;
