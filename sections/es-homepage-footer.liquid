@@ -1,4 +1,107 @@
-<style>
+{% comment %} <style>
+  #shopify-section-{{section.id}} .slider__newsletter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: calc(5vh + 108px);
+  }
+  #shopify-section-{{section.id}} .slider__newsletter .newsletter-form{
+    max-width: 1640px;
+    align-items: center;
+    padding: 0 50px;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter .field:after,#shopify-section-{{section.id}} .slider__newsletter .field:before{
+    content: unset;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter input{
+    border-bottom: 1px solid white;
+    max-width: 686px;
+    font-family: "CentraNo2-Light" !important;
+    font-weight: 300 !important;
+    font-size: 17px;
+    color: white;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    box-shadow: none;
+    background: transparent;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter input:focus{
+    box-shadow: none;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter input + .field__label{
+    left: 0;
+    color: #AFAFAF;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter .newsletter-form__field-wrapper{
+    max-width: 930px;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter .field__button{
+    margin: 0 auto;
+    font-family: "CentraNo2-Light" !important;
+    font-weight: 300 !important;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    line-height: 23px;
+    text-align: left;
+    color: white;
+    border: 1px solid #dd4124;
+    margin-top: 27px;
+    width: auto;
+   padding:  8px 25px;
+    position: relative;
+    color: white;
+    background: #dd4124;
+    border-radius: 15px;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter h2,
+  #shopify-section-{{section.id}} .slider__newsletter p,
+  #shopify-section-{{section.id}} .slider__newsletter p a{
+    color: #000;
+    text-transform: uppercase;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter p a{
+    font-weight: bold;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter h2{
+    font-family: "Source Serif 4", serif !important;
+    font-weight: 300 !important;
+    max-width: 660px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    text-transform: unset;
+    font-style: italic;
+  }
+  
+  #shopify-section-{{section.id}} .slider__newsletter p{
+    font-family: "CentraNo2-Light" !important;
+    font-weight: 300 !important;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    line-height: 27px;
+    text-align: center;
+    color: #000;
+    display: none;
+  }
+  #shopify-section-{{section.id}} .slider__newsletter{
+    background-image: url(https://cdn.shopify.com/s/files/1/0620/1648/7614/files/bg_footernew.jpg?v=1717349103);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  #shopify-section-{{section.id}} .footer_slide {
+    display: flex;
+    flex-wrap: wrap;
+    background: #000;
+    height: 100vh;
+  }
+  #shopify-section-{{section.id}} .footer_slide:not(.footer_slide-mob) > div{
+    width: 50%;
+    height: 100%;
+  }
   @media (min-width: 990px) {
     #shopify-section-{{section.id}} footer.footer .footer__blocks-wrapper {
       justify-content: center;
@@ -160,19 +263,10 @@
       margin-bottom: 10px;
     }
   }
-</style>
+</style> {% endcomment %}
 
-<div class="footer_slide">
+<div class="footer-wrapper" style="--background-image: url('{{ section.settings.background_image }}')">
   {% render 'yas_new_mainsignup', section: section %}
-  <div class="footer-desk-slide">
-    {% render 'footer-newmain', section: section %}
-  </div>
-</div>
-
-<div class="footer_slide footer_slide-mob">
-  {% render 'yas_new_mainsignup', section: section %}
-</div>
-<div class="footer_slide footer_slide-mob">
   {% render 'footer-newmain', section: section %}
 </div>
 
@@ -217,6 +311,7 @@
 {%- schema -%}
 {
   "name": "Homepage Footer",
+  "class": "es-homepage-footer",
   "settings": [
     {
         "type": "header",
@@ -226,6 +321,11 @@
         "type": "image_picker",
         "id": "footer_logo",
         "label": "Footer Logo"
+    },
+    {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
     },
     {
         "type": "richtext",
