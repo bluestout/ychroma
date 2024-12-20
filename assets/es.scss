@@ -167,6 +167,20 @@
             flex-direction: column;
             justify-content: space-between;
 
+            .yas-card-title_wrapp {
+              a {
+                color: #FFF;
+                text-align: center;
+                font-family: "Centra No2";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.6px;
+                text-transform: capitalize;
+              }
+            }
+
             .card__heading {
               flex: auto;
               display: flex;
