@@ -155,7 +155,7 @@
   })
   </script>
 </head>
-<body class="custom-{{collection.handle}}-wrapper gradient custom-{{ template | replace: '.', '-' | replace: '/', '-' }} {% if template.name == "page" %} pages_details {% endif %} {% if template.name == "page" and page.handle == 'les-mains' %} {{ page.handle }} {% endif %} ">
+<body class="template-{{ template }} custom-{{collection.handle}}-wrapper gradient custom-{{ template | replace: '.', '-' | replace: '/', '-' }} {% if template.name == "page" %} pages_details {% endif %} {% if template.name == "page" and page.handle == 'les-mains' %} {{ page.handle }} {% endif %} ">
   <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
   </a>
