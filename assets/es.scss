@@ -407,6 +407,7 @@
         .modal__content {
           min-width: 500px;
           left: unset !important;
+          right: -5px;
 
           .modal-overlay {
             display: none;
