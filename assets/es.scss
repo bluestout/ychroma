@@ -178,6 +178,20 @@
                 line-height: normal;
                 letter-spacing: 0.6px;
                 text-transform: capitalize;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 250px;
+                display: block;
+                margin: auto;
+
+                @media screen and (max-width: 1200px) {
+                  max-width: 200px;
+                }
+
+                @media screen and (max-width: 768px) {
+                  max-width: 140px;
+                }
               }
             }
 
