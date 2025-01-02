@@ -936,6 +936,10 @@
 .upcart-cart {
   z-index: 21474836409999 !important;
 
+  p {
+    font-family: inherit !important;
+  }
+
   .upcart-rewards-message {
     p {
       color: #000;
