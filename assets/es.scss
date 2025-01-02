@@ -936,6 +936,12 @@
 .upcart-cart {
   z-index: 21474836409999 !important;
 
+  .upcart-rewards-message {
+    p {
+      color: #000;
+    }
+  }
+
   .upcart-es-message-wrapper {
     gap: 24px;
     display: flex;
