@@ -63,6 +63,17 @@
 
   <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.href.indexOf('/pages/enviro') > -1) {
+        setTimeout(function () {
+          window.scrollTo(0, 0);
+          console.log("0000000000000");
+        }, 1000);
+      }
+    });
+  </script>
+
   {{ content_for_header }}
 
   {%- liquid
