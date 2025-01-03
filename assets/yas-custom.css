@@ -155,7 +155,7 @@ table:not([class]){
   display: block !important;
 }
 .custom-collection .yas-collection-grid-wrapp .collection-variant-Color-0 input[type=radio]:checked{
-  border: 3px solid white !important;
+  border: 2px solid white !important;
 }
 .yas_product-main .product-form[data-sold="notsize"]{
   display: block;
@@ -226,7 +226,7 @@ table:not([class]){
 }
 .yas-collection-grid-wrapp .card__heading{
     position: relative;
-    min-height: 76px;
+    /* min-height: 76px; */
     overflow: hidden;
 }
 

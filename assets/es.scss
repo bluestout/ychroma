@@ -101,6 +101,23 @@
     gap: 4px;
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  .card__information .price span {
+    font-size: 15px;
+  }
+
+  .price__container {
+    .price-item {
+      font-weight: 400 !important;
+      font-family: 'SourceSerif-Pro-regular' !important;
+      font-size: 16px !important;
+    }
+
+    .yas_newd_pric {
+      padding-right: 5px;
+    }
   }
 
   .card__heading {
@@ -143,6 +160,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
+        line-height: 110%;
         text-align: center;
         transform: translateY(100%);
       }
@@ -450,11 +468,11 @@
 
 @media screen and (max-width: 989px) {
   #shopify-section-header {
-    z-index: 9999999999;
+    z-index: 80000;
     background-color: #000 !important;
   }
   .upcart-cart {
-    z-index: 9999999999999 !important;
+    z-index: 80001 !important;
   }
 }
 
