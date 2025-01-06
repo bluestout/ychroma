@@ -205,7 +205,7 @@
             "image_mb": "shopify://shop_images/gif_quatro_v3-9x16-txt2.gif",
             "video": "",
             "video_mb": "",
-            "opacity": 0.4,
+            "opacity": 0,
             "link": "shopify://products/quatro-jacket"
           }
         }
