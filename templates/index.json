@@ -232,7 +232,7 @@
             "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0.4,
+            "opacity": 0,
             "link": "shopify://collections/collection_sevilla"
           }
         }
