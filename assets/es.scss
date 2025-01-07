@@ -101,6 +101,23 @@
     gap: 4px;
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  .card__information .price span {
+    font-size: 15px;
+  }
+
+  .price__container {
+    .price-item {
+      font-weight: 400 !important;
+      font-family: 'SourceSerif-Pro-regular' !important;
+      font-size: 16px !important;
+    }
+
+    .yas_newd_pric {
+      padding-right: 5px;
+    }
   }
 
   .card__heading {
@@ -143,6 +160,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
+        line-height: 110%;
         text-align: center;
         transform: translateY(100%);
       }
@@ -450,11 +468,11 @@
 
 @media screen and (max-width: 989px) {
   #shopify-section-header {
-    z-index: 9999999999;
+    z-index: 80000;
     background-color: #000 !important;
   }
   .upcart-cart {
-    z-index: 9999999999999 !important;
+    z-index: 80001 !important;
   }
 }
 
@@ -975,4 +993,55 @@
       }
     }
   }
+}
+
+.yas-videom-pop .white-popup-block{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.yas-videom-pop  .mfp-content {
+  height: 100%;
+  width: 100%;
+}
+.mfp-wrap.yas-videom-pop{
+  z-index: 9999999999;
+}
+.yas-videom-pop.mfp-close-btn-in .mfp-close {
+  right: 44px;
+  top: 40px;
+  z-index: 9;
+}
+
+.mfp-bg.mfp-ready{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 1;
+  display: block;
+}
+.white-popup-block{
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.mfp-close-btn-in .mfp-close {
+  color: #fff;
+  right: -44px;
+  top: -40px;
+  font-size: 44px;
+}
+.white-popup-block video{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: flex;
 }
