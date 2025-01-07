@@ -7,7 +7,6 @@ $('.popup-defolt').magnificPopup({
       document.querySelector('.white-popup-block video').pause();
     },
     open: function() {
-      swiper.autoplay.stop();
       document.querySelector('.mfp-wrap video').play();
     },
   }
