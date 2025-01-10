@@ -842,6 +842,11 @@
         "type": "shopify://apps/shop-protector/blocks/shop-protector/c35d1411-093f-400e-8977-af1ac4720d6d",
         "disabled": true,
         "settings": {}
+      },
+      "3999180998444345382": {
+        "type": "shopify://apps/convert-experiences/blocks/convert-tracking/2eacdd19-b384-4180-b32c-b323a6d9e27e",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
