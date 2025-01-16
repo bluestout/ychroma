@@ -322,10 +322,10 @@
         "media_LdmDLD"
       ],
       "settings": {
-        "title": "ALTAVISTA DOWN JACKET. LIMITED EDITION AVAILABLE FOR PRE-ORDER",
-        "url": "shopify://collections/jackets",
+        "title": "ALTAVISTA DOWN JACKET. LIMITED EDITION AVAILABLE",
+        "url": "shopify://products/altavista-down-jacket",
         "title_sub": "EXPLORE JACKETS",
-        "url_btn": "shopify://collections/jackets",
+        "url_btn": "shopify://products/altavista-down-jacket",
         "text_align": "right bottom",
         "logolist_heading": ""
       }
