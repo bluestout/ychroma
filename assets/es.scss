@@ -1172,6 +1172,14 @@
       }
     }
 
+    .styles_PreviewCarousel__ [class~='control-prev'] {
+      left: -16px !important;
+    }
+
+    .styles_PreviewCarousel__ [class~='control-next'] {
+      right: -16px !important;
+    }
+
     .Stack {
       margin: 0 !important;
 
