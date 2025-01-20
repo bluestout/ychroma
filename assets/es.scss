@@ -954,6 +954,14 @@
 .upcart-cart {
   z-index: 21474836409999 !important;
 
+  .styles_CartPreview__card__ {
+    background-color: #FFF;
+  }
+
+  .upcart-rewards-tier-description {
+    display: none;
+  }
+
   p {
     font-family: inherit !important;
   }
@@ -992,6 +1000,275 @@
         font-family: "Centra No2", sans-serif;
       }
     }
+  }
+
+  .styles_Header__closeButton__ {
+    background-color: transparent;
+
+    .styles_Header__closeButtonIcon__ {
+      fill: #000000;
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  .styles_Header__ {
+    border-bottom: 0;
+    padding-bottom: 18px;
+  }
+
+  .upcart-cart-body {
+    .upcart-rewards {
+      .upcart-rewards-message {
+        color: #000;
+        text-align: center;
+        font-family: "Centra No2";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
+      }
+    }
+  }
+
+  .upcart-rewards {
+    padding: 18px 20px 12px;
+    position: relative;
+
+    &::after {
+      content: '';
+      border-bottom: 1px solid #E2E2E2;
+      display: block;
+      position: absolute;
+      left: 20px;
+      bottom: 0;
+      width: calc(100% - 40px);
+    }
+  }
+
+  .upcart-products-section {
+    padding: 24px 0;
+    background-color: #fff;
+
+    .styles_ProductRow__product__ {
+      padding: 0 20px;
+      border-bottom: 0;
+
+      .Stack--spacingLoose {
+        margin: 0 !important;
+
+        .Stack__item {
+          margin: 0 !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .upcart-item-properties {
+            display: none;
+          }
+
+          .upcart-product-image-wrapper {
+            height: auto !important;
+
+            a {
+              max-height: unset !important;
+
+              img {
+                max-height: unset !important;
+              }
+            }
+          }
+
+          .styles_ProductRow__productHeading__ {
+            padding-left: 15px;
+
+            .upcart-product-title {
+              .upcart-product-title-link {
+                color: #000;
+                font-family: "Centra No2", sans-serif !important;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+              }
+            }
+
+            .upcart-item-option {
+              color: #707070;
+              font-family: "Centra No2";
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 9.9px; /* 66% */
+            }
+          }
+
+          .Stack {
+            margin: 0 !important;
+            padding-left: 15px;
+          }
+
+          .styles_QuantityField__ {
+            .upcart-product-quantity-minus {
+              height: 40px;
+              border-right: 0;
+              max-height: 40px;
+              border-top-left-radius: 50px !important;
+              border-bottom-left-radius: 50px !important;
+            }
+
+            input {
+              height: 40px;
+              border-left: 0;
+              border-right: 0;
+              max-height: 40px;
+            }
+
+            .upcart-product-quantity-plus {
+              height: 40px;
+              border-left: 0;
+              max-height: 40px;
+              border-top-right-radius: 50px !important;
+              border-bottom-right-radius: 50px !important;
+            }
+          }
+        }
+      }
+
+      & + .upcart-product-item {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  #up-upsell-carousel {
+    border-top: 1px solid #E2E2E2;
+    padding: 16px 18px;
+
+    &::before {
+      content: 'Great wardrobe additions';
+      color: #000;
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      font-style: normal;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      font-family: "Centra No2", sans-serif;
+    }
+
+    .upcart-upsells-title {
+      display: none;
+
+      & ~ span {
+        width: 100%;
+        display: block;
+        max-width: 380px;
+        margin-right: 16px;
+        background-color: #fff;
+
+        .styles_PreviewCarousel__verticalWrapper__ {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .Stack {
+      margin: 0 !important;
+
+      .Stack__item {
+        margin: 0 !important;
+
+        .upcart-upsell-item-image-wrapper {
+          height: 110px !important;
+          justify-content: flex-start;
+
+          img {
+            max-height: 110px !important;
+          }
+        }
+      }
+
+      & > .Stack__item--fill {
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .styles_PreviewCarousel__selectWrapper__ {
+          width: 100%;
+
+          .styles_PreviewCarousel__select__ {
+            border-radius: 50px;
+            height: 40px;
+            max-height: 40px;
+          }
+        }
+
+        .styles_PreviewCarousel__inputWrapper__ {
+          max-width: max-content;
+
+          input {
+            max-width: max-content;
+            padding: 8px 24px !important;
+            border-radius: 50px;
+            max-height: 40px !important;
+            height: 40px !important;
+          }
+        }
+      }
+    }
+
+    .flickity-viewport {
+      height: 142px;
+    }
+  }
+
+  .upcart-trust-badge-image {
+    width: 300px;
+    margin: auto;
+    display: block;
+  }
+
+  .DiscountCodeModule_DiscountCodeModule__form__ input {
+    border-radius: 50px;
+    height: 40px;
+  }
+
+  .upcart-discount-code-input-wrapper {
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .styles_TrashButton__deleteButton__ {
+    display: none;
+  }
+
+  button.UpcartDesignSettings__button {
+    background-color: #000;
+    border-radius: 50px;
+  }
+
+  .styles_Footer__ {
+    border-top: 0;
+    background-color: #F6F6F7;
+  }
+
+  .styles_CustomButton__ {
+    a {
+      border-radius: 50px;
+      height: 44px;
+      padding: 12px !important;
+    }
+  }
+
+  .styles_Footer__checkoutButton__ {
+    & + div {
+      display: none;
+    }
+  }
+
+  .styles_PreviewCarousel__item__ {
+
   }
 }
 
