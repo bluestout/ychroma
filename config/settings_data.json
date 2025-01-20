@@ -845,7 +845,7 @@
       },
       "3999180998444345382": {
         "type": "shopify://apps/convert-experiences/blocks/convert-tracking/2eacdd19-b384-4180-b32c-b323a6d9e27e",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       }
     }
