@@ -205,7 +205,7 @@
             "image_mb": "shopify://shop_images/home-enduro-1mob-web.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "shopify://collections/denim"
           }
         }
@@ -216,7 +216,7 @@
       "settings": {
         "title": "THE TEXTURES, TRADITION AND TECH BEHIND OUR DENIM REBOOT",
         "url": "shopify://collections/denim",
-        "title_sub": "EXPLORE",
+        "title_sub": "Shop Enduro Denim",
         "url_btn": "shopify://collections/denim",
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
@@ -232,7 +232,7 @@
             "image_mb": "shopify://shop_images/yc-varial-snowcloud-mob.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "shopify://collections/shirt-cut-jackets"
           }
         }
@@ -306,7 +306,7 @@
             "image_mb": "shopify://shop_images/ychroma-wardrobe-mob-web.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "https://www.ychroma.com/pages/concierge-service"
           }
         }
@@ -388,7 +388,7 @@
             "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.1,
             "link": "shopify://collections/collection_sevilla"
           }
         }
@@ -443,7 +443,7 @@
             "image_mb": "shopify://shop_images/home-ghost-geisha-mob.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.1,
             "link": "https://www.ychroma.com/products/ghost-geisha-down-jacket"
           }
         }
@@ -542,7 +542,7 @@
             "image": "shopify://shop_images/010.jpg",
             "video": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
             "video_mb": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "https://www.ychroma.com/pages/wardrobe-tutorial-video"
           }
         }
