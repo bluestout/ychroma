@@ -1105,6 +1105,7 @@
           .Stack {
             margin: 0 !important;
             padding-left: 15px;
+            flex-wrap: nowrap !important;
           }
 
           .styles_QuantityField__ {
@@ -1275,8 +1276,9 @@
     }
   }
 
-  .styles_PreviewCarousel__item__ {
-
+  .upcart-item-prices-row {
+    flex-wrap: wrap;
+    row-gap: 0 !important;
   }
 }
 
