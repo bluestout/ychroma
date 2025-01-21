@@ -306,7 +306,7 @@
             "image_mb": "shopify://shop_images/ychroma-wardrobe-mob-web.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "https://www.ychroma.com/pages/concierge-service"
           }
         }
