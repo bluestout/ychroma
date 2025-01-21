@@ -232,7 +232,7 @@
             "image_mb": "shopify://shop_images/yc-varial-snowcloud-mob.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "shopify://collections/shirt-cut-jackets"
           }
         }
