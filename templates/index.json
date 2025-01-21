@@ -542,7 +542,7 @@
             "image": "shopify://shop_images/010.jpg",
             "video": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
             "video_mb": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "https://www.ychroma.com/pages/wardrobe-tutorial-video"
           }
         }
