@@ -574,6 +574,34 @@
         "newsletter_heading": "“Y.Chroma is one of the most important brands to arrive on the scene in the last decade.”",
         "newsletter_heading_sub": "<p>We’re all in it together, lads. <strong>Sign up</strong> and get outfit inspiration for our generation.</p>"
       }
+    },
+    "es_media_with_text_pJkEmV": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_rVpPF6": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-denim-1-dsk.jpg",
+            "image_mb": "shopify://shop_images/yc-denim-1-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": "https://www.ychroma.com/collections/denim"
+          }
+        }
+      },
+      "block_order": [
+        "media_rVpPF6"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "THE TEXTURESTRADITION ANDTECH BEHIND OURDENIM REBOOT",
+        "url": "https://www.ychroma.com/collections/denim",
+        "title_sub": "EXPLORE",
+        "url_btn": "https://www.ychroma.com/collections/denim",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
+      }
     }
   },
   "order": [
@@ -592,6 +620,7 @@
     "es_curated_reviews_KfMDn7",
     "es_media_with_text_zM8xic",
     "es_media_with_text_J9YWF7",
-    "es_homepage_footer_Ngxenx"
+    "es_homepage_footer_Ngxenx",
+    "es_media_with_text_pJkEmV"
   ]
 }
