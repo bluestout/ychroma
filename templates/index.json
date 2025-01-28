@@ -168,6 +168,33 @@
         "padding_bottom": 80
       }
     },
+    "es_media_with_text_zM3T8D": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_k6K9gD": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-deckmaster1-dsk.jpg",
+            "image_mb": "shopify://shop_images/yc-deckmaster1-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_k6K9gD"
+      ],
+      "settings": {
+        "title": "The Deckmaster Jacket",
+        "url": "shopify://products/deckmaster-shirt-cut-jacket",
+        "title_sub": "Explore",
+        "url_btn": "shopify://products/deckmaster-shirt-cut-jacket",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
+      }
+    },
     "es_media_with_text_pVYT4t": {
       "type": "es-media-with-text",
       "blocks": {
@@ -479,6 +506,7 @@
       "block_order": [
         "media_ryEibj"
       ],
+      "disabled": true,
       "settings": {
         "title": "Ghost Geisha Down Jacket",
         "url": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
@@ -607,18 +635,19 @@
   "order": [
     "es_media_with_text_Rc4dC6",
     "es_featured_collections_RJTYjP",
+    "es_media_with_text_zM3T8D",
     "es_media_with_text_pVYT4t",
     "es_media_with_text_pJkEmV",
     "es_media_with_text_NqL4eY",
-    "es_media_with_text_nmK6Ek",
     "es_awards_4zikBK",
     "es_media_with_text_kXbJc8",
+    "es_media_with_text_nmK6Ek",
+    "es_media_with_text_wPmyGK",
+    "es_curated_reviews_KfMDn7",
     "es_media_with_text_8naftQ",
     "es_media_with_text_zKmHMt",
-    "es_media_with_text_wPmyGK",
     "es_media_with_text_Cqqjgd",
     "es_media_with_text_JwfheU",
-    "es_curated_reviews_KfMDn7",
     "es_media_with_text_zM8xic",
     "es_media_with_text_J9YWF7",
     "es_homepage_footer_Ngxenx"
