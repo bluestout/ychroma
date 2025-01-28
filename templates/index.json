@@ -179,7 +179,7 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": ""
+            "link": "shopify://products/deckmaster-shirt-cut-jacket"
           }
         }
       },
@@ -277,33 +277,6 @@
         "logolist_heading": "As Seen In"
       }
     },
-    "es_media_with_text_nmK6Ek": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_m7nxjB": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/yc-varial-snowcloud.jpg",
-            "image_mb": "shopify://shop_images/yc-varial-snowcloud-mob.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.2,
-            "link": "shopify://collections/shirt-cut-jackets"
-          }
-        }
-      },
-      "block_order": [
-        "media_m7nxjB"
-      ],
-      "settings": {
-        "title": "VARIAL / SNOWCLOUD EDIT",
-        "url": "https://www.ychroma.com/collections/shirt-cut-jackets",
-        "title_sub": "SEE THE VARIAL  Shirt-cut Jacket",
-        "url_btn": "shopify://collections/shirt-cut-jackets",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
     "es_awards_4zikBK": {
       "type": "es-awards",
       "blocks": {
@@ -378,6 +351,96 @@
         "logolist_heading": "As Seen In"
       }
     },
+    "es_media_with_text_nmK6Ek": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_m7nxjB": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-varial-snowcloud.jpg",
+            "image_mb": "shopify://shop_images/yc-varial-snowcloud-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.2,
+            "link": "shopify://collections/shirt-cut-jackets"
+          }
+        }
+      },
+      "block_order": [
+        "media_m7nxjB"
+      ],
+      "settings": {
+        "title": "VARIAL / SNOWCLOUD EDIT",
+        "url": "https://www.ychroma.com/collections/shirt-cut-jackets",
+        "title_sub": "SEE THE VARIAL  Shirt-cut Jacket",
+        "url_btn": "shopify://collections/shirt-cut-jackets",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
+    },
+    "es_media_with_text_wPmyGK": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_iDxthh": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/home-sevilla-3dsk-web.jpg",
+            "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.1,
+            "link": "shopify://collections/collection_sevilla"
+          }
+        }
+      },
+      "block_order": [
+        "media_iDxthh"
+      ],
+      "settings": {
+        "title": "\"I'LL JUST WEAR A GOLF SHIRT\", SAID DAVID BECKHAM, NEVER",
+        "url": "shopify://collections/collection_sevilla",
+        "title_sub": "BUTTON SHIRTS  TO REMEMBER",
+        "url_btn": "shopify://collections/collection_sevilla",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
+    },
+    "es_curated_reviews_KfMDn7": {
+      "type": "es-curated-reviews",
+      "blocks": {
+        "review_qy8Ty8": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“There’s weight and craft. Even more WOW in real life than in the photos.”</p>",
+            "name": "Daniel O."
+          }
+        },
+        "review_McGNmx": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“The fabric and craftsmanship are remarkable on every piece.”</p>",
+            "name": "Richard F."
+          }
+        },
+        "review_4TRzLW": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“I had way too much gray and navy. This makes colour work for me. It’s like Vuitton and Rip Curl had a baby. I love that baby.”</p>",
+            "name": "Nash F."
+          }
+        }
+      },
+      "block_order": [
+        "review_qy8Ty8",
+        "review_McGNmx",
+        "review_4TRzLW"
+      ],
+      "settings": {
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "background_color": "#000000"
+      }
+    },
     "es_media_with_text_8naftQ": {
       "type": "es-media-with-text",
       "blocks": {
@@ -429,33 +492,6 @@
         "url": "shopify://collections/pant-collection",
         "title_sub": "EXPLORE:  ULTRA-PREMIUM PANTS",
         "url_btn": "shopify://collections/pant-collection",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_media_with_text_wPmyGK": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_iDxthh": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/home-sevilla-3dsk-web.jpg",
-            "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.1,
-            "link": "shopify://collections/collection_sevilla"
-          }
-        }
-      },
-      "block_order": [
-        "media_iDxthh"
-      ],
-      "settings": {
-        "title": "\"I'LL JUST WEAR A GOLF SHIRT\", SAID DAVID BECKHAM, NEVER",
-        "url": "shopify://collections/collection_sevilla",
-        "title_sub": "BUTTON SHIRTS  TO REMEMBER",
-        "url_btn": "shopify://collections/collection_sevilla",
         "text_align": "right bottom",
         "logolist_heading": ""
       }
@@ -514,42 +550,6 @@
         "url_btn": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
-      }
-    },
-    "es_curated_reviews_KfMDn7": {
-      "type": "es-curated-reviews",
-      "blocks": {
-        "review_qy8Ty8": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“There’s weight and craft. Even more WOW in real life than in the photos.”</p>",
-            "name": "Daniel O."
-          }
-        },
-        "review_McGNmx": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“The fabric and craftsmanship are remarkable on every piece.”</p>",
-            "name": "Richard F."
-          }
-        },
-        "review_4TRzLW": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“I had way too much gray and navy. This makes colour work for me. It’s like Vuitton and Rip Curl had a baby. I love that baby.”</p>",
-            "name": "Nash F."
-          }
-        }
-      },
-      "block_order": [
-        "review_qy8Ty8",
-        "review_McGNmx",
-        "review_4TRzLW"
-      ],
-      "settings": {
-        "padding_top": 76,
-        "padding_bottom": 76,
-        "background_color": "#000000"
       }
     },
     "es_media_with_text_zM8xic": {
