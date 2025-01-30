@@ -1332,3 +1332,63 @@
   object-fit: contain;
   display: flex;
 }
+
+.product__info-container {
+  .es-highlight {
+    padding-bottom: 24px;
+
+    .es-highlight--text,
+    .es-highlight--text p {
+      color: #FFF;
+      font-family: "Source Serif 4", sans-serif !important;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 155%;
+      letter-spacing: 0.6px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  
+    .es-highlight--name {
+      color: #FFF;
+      font-family: "Centra No2";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      display: flex;
+      gap: 8px;
+
+      img {
+        display: block;
+        margin-top: 3px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    .product__title {
+      order: -2;
+    }
+
+    .es-highlight {
+      order: 0;
+
+      & + div {
+        order: -1;
+
+        .price__container {
+          margin-bottom: 10px !important;
+        }
+      }
+    }
+  }
+}

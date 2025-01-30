@@ -206,6 +206,27 @@
                   </h2>
                 </a>
               </div>
+            {%- when 'highlight' -%}
+              {%- if block.settings.text != blank or block.settings.name != blank -%}
+                <div class="es-highlight">
+                  {%- if block.settings.text != blank -%}
+                    <div class="es-highlight--text">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.name != blank -%}
+                    <div class="es-highlight--name">
+                      {{ block.settings.name }}
+                      {%- if block.settings.review_image != blank -%}
+                        <img
+                          src="{{ block.settings.review_image | img_url: 'master' }}"
+                          width="{{ block.settings.review_image.width }}"
+                          height="{{ block.settings.review_image.height }}"
+                          alt="{{ block.settings.review_image.alt }}"
+                        >
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -1094,6 +1115,27 @@
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
+    },
+    {
+      "type": "highlight",
+      "name": "Highlight",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_image",
+          "label": "Review Image"
+        }
+      ]
     },
     {
       "type": "price",
