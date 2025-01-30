@@ -168,6 +168,33 @@
         "padding_bottom": 80
       }
     },
+    "es_media_with_text_zM3T8D": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_k6K9gD": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-deckmaster1-dsk.jpg",
+            "image_mb": "shopify://shop_images/yc-deckmaster1-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": "shopify://products/deckmaster-shirt-cut-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "media_k6K9gD"
+      ],
+      "settings": {
+        "title": "The Deckmaster Jacket",
+        "url": "shopify://products/deckmaster-shirt-cut-jacket",
+        "title_sub": "Shop Deckmaster",
+        "url_btn": "shopify://products/deckmaster-shirt-cut-jacket",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
+      }
+    },
     "es_media_with_text_pVYT4t": {
       "type": "es-media-with-text",
       "blocks": {
@@ -189,10 +216,37 @@
       "settings": {
         "title": "ALTAVISTA DOWN JACKET. DURABLE+UNIQUE.",
         "url": "shopify://products/altavista-down-jacket",
-        "title_sub": "SEE THE ALTAVISTA JACKET",
+        "title_sub": "SHOP THE ALTAVISTA JACKET",
         "url_btn": "shopify://products/altavista-down-jacket",
         "text_align": "right bottom",
         "logolist_heading": ""
+      }
+    },
+    "es_media_with_text_pJkEmV": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_rVpPF6": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-denim-1-dsk.jpg",
+            "image_mb": "shopify://shop_images/yc-denim-1-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0,
+            "link": "https://www.ychroma.com/collections/denim"
+          }
+        }
+      },
+      "block_order": [
+        "media_rVpPF6"
+      ],
+      "settings": {
+        "title": "THE TEXTURES, TRADITION AND TECH BEHIND OUR DENIM REBOOT",
+        "url": "https://www.ychroma.com/collections/denim",
+        "title_sub": "SHOP DENIM",
+        "url_btn": "https://www.ychroma.com/collections/denim",
+        "text_align": "right bottom",
+        "logolist_heading": "As Seen In"
       }
     },
     "es_media_with_text_NqL4eY": {
@@ -213,6 +267,7 @@
       "block_order": [
         "media_zXnqJh"
       ],
+      "disabled": true,
       "settings": {
         "title": "THE TEXTURES, TRADITION AND TECH BEHIND OUR DENIM REBOOT",
         "url": "shopify://collections/denim",
@@ -220,33 +275,6 @@
         "url_btn": "shopify://collections/denim",
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
-      }
-    },
-    "es_media_with_text_nmK6Ek": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_m7nxjB": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/yc-varial-snowcloud.jpg",
-            "image_mb": "shopify://shop_images/yc-varial-snowcloud-mob.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.2,
-            "link": "shopify://collections/shirt-cut-jackets"
-          }
-        }
-      },
-      "block_order": [
-        "media_m7nxjB"
-      ],
-      "settings": {
-        "title": "VARIAL / SNOWCLOUD EDIT",
-        "url": "https://www.ychroma.com/collections/shirt-cut-jackets",
-        "title_sub": "SEE THE VARIAL  Shirt-cut Jacket",
-        "url_btn": "shopify://collections/shirt-cut-jackets",
-        "text_align": "right bottom",
-        "logolist_heading": ""
       }
     },
     "es_awards_4zikBK": {
@@ -323,6 +351,96 @@
         "logolist_heading": "As Seen In"
       }
     },
+    "es_media_with_text_nmK6Ek": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_m7nxjB": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/yc-varial-snowcloud.jpg",
+            "image_mb": "shopify://shop_images/yc-varial-snowcloud-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.2,
+            "link": "shopify://collections/shirt-cut-jackets"
+          }
+        }
+      },
+      "block_order": [
+        "media_m7nxjB"
+      ],
+      "settings": {
+        "title": "VARIAL / SNOWCLOUD EDIT",
+        "url": "https://www.ychroma.com/collections/shirt-cut-jackets",
+        "title_sub": "SHOP THE VARIAL  Shirt-cut Jacket",
+        "url_btn": "shopify://collections/shirt-cut-jackets",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
+    },
+    "es_media_with_text_wPmyGK": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_iDxthh": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/home-sevilla-3dsk-web.jpg",
+            "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.1,
+            "link": "shopify://collections/collection_sevilla"
+          }
+        }
+      },
+      "block_order": [
+        "media_iDxthh"
+      ],
+      "settings": {
+        "title": "\"I'LL JUST WEAR A GOLF SHIRT\", SAID DAVID BECKHAM, NEVER",
+        "url": "shopify://collections/collection_sevilla",
+        "title_sub": "SHOP THE SEVILLA SHIRT COLLECTION",
+        "url_btn": "shopify://collections/collection_sevilla",
+        "text_align": "right bottom",
+        "logolist_heading": ""
+      }
+    },
+    "es_curated_reviews_KfMDn7": {
+      "type": "es-curated-reviews",
+      "blocks": {
+        "review_qy8Ty8": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“There’s weight and craft. Even more WOW in real life than in the photos.”</p>",
+            "name": "Daniel O."
+          }
+        },
+        "review_McGNmx": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“The fabric and craftsmanship are remarkable on every piece.”</p>",
+            "name": "Richard F."
+          }
+        },
+        "review_4TRzLW": {
+          "type": "review",
+          "settings": {
+            "text": "<p>“I had way too much gray and navy. This makes colour work for me. It’s like Vuitton and Rip Curl had a baby. I love that baby.”</p>",
+            "name": "Nash F."
+          }
+        }
+      },
+      "block_order": [
+        "review_qy8Ty8",
+        "review_McGNmx",
+        "review_4TRzLW"
+      ],
+      "settings": {
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "background_color": "#000000"
+      }
+    },
     "es_media_with_text_8naftQ": {
       "type": "es-media-with-text",
       "blocks": {
@@ -344,7 +462,7 @@
       "settings": {
         "title": "Elevate The Tech Bro Vest",
         "url": "shopify://products/quatro-jacket",
-        "title_sub": "See The Quatro Jacket",
+        "title_sub": "SHOP The Quatro Jacket",
         "url_btn": "shopify://products/quatro-jacket",
         "text_align": "right bottom",
         "logolist_heading": ""
@@ -374,33 +492,6 @@
         "url": "shopify://collections/pant-collection",
         "title_sub": "EXPLORE:  ULTRA-PREMIUM PANTS",
         "url_btn": "shopify://collections/pant-collection",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_media_with_text_wPmyGK": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_iDxthh": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/home-sevilla-3dsk-web.jpg",
-            "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.1,
-            "link": "shopify://collections/collection_sevilla"
-          }
-        }
-      },
-      "block_order": [
-        "media_iDxthh"
-      ],
-      "settings": {
-        "title": "\"I'LL JUST WEAR A GOLF SHIRT\", SAID DAVID BECKHAM, NEVER",
-        "url": "shopify://collections/collection_sevilla",
-        "title_sub": "BUTTON SHIRTS  TO REMEMBER",
-        "url_btn": "shopify://collections/collection_sevilla",
         "text_align": "right bottom",
         "logolist_heading": ""
       }
@@ -451,6 +542,7 @@
       "block_order": [
         "media_ryEibj"
       ],
+      "disabled": true,
       "settings": {
         "title": "Ghost Geisha Down Jacket",
         "url": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
@@ -458,42 +550,6 @@
         "url_btn": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
-      }
-    },
-    "es_curated_reviews_KfMDn7": {
-      "type": "es-curated-reviews",
-      "blocks": {
-        "review_qy8Ty8": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“There’s weight and craft. Even more WOW in real life than in the photos.”</p>",
-            "name": "Daniel O."
-          }
-        },
-        "review_McGNmx": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“The fabric and craftsmanship are remarkable on every piece.”</p>",
-            "name": "Richard F."
-          }
-        },
-        "review_4TRzLW": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“I had way too much gray and navy. This makes colour work for me. It’s like Vuitton and Rip Curl had a baby. I love that baby.”</p>",
-            "name": "Nash F."
-          }
-        }
-      },
-      "block_order": [
-        "review_qy8Ty8",
-        "review_McGNmx",
-        "review_4TRzLW"
-      ],
-      "settings": {
-        "padding_top": 76,
-        "padding_bottom": 76,
-        "background_color": "#000000"
       }
     },
     "es_media_with_text_zM8xic": {
@@ -527,7 +583,7 @@
       "settings": {
         "title": "LUX HENLEYS THAT ELEVATE ANY OUTFIT",
         "url": "shopify://collections/core-shirts",
-        "title_sub": "EXPLORE",
+        "title_sub": "SHOP LUX HENLEYS",
         "url_btn": "shopify://collections/core-shirts",
         "text_align": "right bottom",
         "logolist_heading": "As Seen In"
@@ -579,17 +635,19 @@
   "order": [
     "es_media_with_text_Rc4dC6",
     "es_featured_collections_RJTYjP",
+    "es_media_with_text_zM3T8D",
     "es_media_with_text_pVYT4t",
+    "es_media_with_text_pJkEmV",
     "es_media_with_text_NqL4eY",
-    "es_media_with_text_nmK6Ek",
     "es_awards_4zikBK",
     "es_media_with_text_kXbJc8",
+    "es_media_with_text_nmK6Ek",
+    "es_media_with_text_wPmyGK",
+    "es_curated_reviews_KfMDn7",
     "es_media_with_text_8naftQ",
     "es_media_with_text_zKmHMt",
-    "es_media_with_text_wPmyGK",
     "es_media_with_text_Cqqjgd",
     "es_media_with_text_JwfheU",
-    "es_curated_reviews_KfMDn7",
     "es_media_with_text_zM8xic",
     "es_media_with_text_J9YWF7",
     "es_homepage_footer_Ngxenx"
