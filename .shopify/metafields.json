@@ -613,6 +613,36 @@
         "name": "rich_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "text",
+      "namespace": "review",
+      "name": "Review Text",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "name",
+      "namespace": "review",
+      "name": "Review Name",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "svg",
+      "namespace": "review",
+      "name": "Review SVG",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [

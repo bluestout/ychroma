@@ -13,14 +13,16 @@
 </style>
 
 <div class="es-icon-with-text">
-  <div class="es-iwt--icon">
-    <img
-      src="{{ block.settings.image | img_url: 'master' }}"
-      width="{{ block.settings.image.width }}"
-      height="{{ block.settings.image.height }}"
-      alt="{{ block.settings.image.alt }}"
-    >
-  </div>
+  {%- if block.settings.image != blank -%}
+    <div class="es-iwt--icon">
+      <img
+        src="{{ block.settings.image | img_url: 'master' }}"
+        width="{{ block.settings.image.width }}"
+        height="{{ block.settings.image.height }}"
+        alt="{{ block.settings.image.alt }}"
+      >
+    </div>
+  {%- endif -%}
   <div class="es-iwt--text">
     <div class="es-iwt--text-wrapper">{{ block.settings.content }}</div>
   </div>
