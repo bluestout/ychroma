@@ -9,13 +9,13 @@
       <div class="media-item" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }})">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
-            <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
+            <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline=""{% if block.settings.preload %} preload="auto"{% endif %}>
               <source src="{{ block.settings.video }}" type="video/mp4">
             </video>
           </div>
           {%- if block.settings.video_mb != blank %}
             <div class="video medium-up--hide">
-              <video class="video_not-yas" poster="{{ block.settings.image_mb | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline="">
+              <video class="video_not-yas" poster="{{ block.settings.image_mb | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline=""{% if block.settings.preload %} preload="auto"{% endif %}>
                 <source src="{{ block.settings.video_mb }}" type="video/mp4">
               </video>
             </div>
@@ -27,7 +27,12 @@
               width="{{ block.settings.image.width }}"
               height="{{ block.settings.image.height }}"
               alt="{{ block.settings.image.alt }}"
-              loading="lazy"
+              {% if block.settings.preload %}
+                fetchpriority="high"
+                loading="eager"
+              {% else %}
+                loading="lazy"
+              {% endif %}
             >
           </div>
           {%- if block.settings.image_mb != blank -%}
@@ -37,7 +42,12 @@
                 width="{{ block.settings.image_mb.width }}"
                 height="{{ block.settings.image_mb.height }}"
                 alt="{{ block.settings.image_mb.alt }}"
-                loading="lazy"
+                {% if block.settings.preload %}
+                  fetchpriority="high"
+                  loading="eager"
+                {% else %}
+                  loading="lazy"
+                {% endif %}
               >
             </div>
           {%- endif -%}
@@ -206,6 +216,11 @@
           "type": "url",
           "id": "link",
           "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "preload",
+          "label": "Preload"
         }
       ]
     },

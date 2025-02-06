@@ -1392,3 +1392,38 @@
     }
   }
 }
+
+
+.es-perceived-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 16px;
+  padding-bottom: 16px;
+
+  @media (max-width: 1240px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .es-perceived-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .es-pi--text {
+      color: #FFF;
+      font-family: "Centra No2", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      margin-top: 7px;
+
+      @media (max-width: 750px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

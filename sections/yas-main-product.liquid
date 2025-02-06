@@ -709,7 +709,9 @@
                 </p>
               {%- endif -%}
             {%- when 'icon_with_text' -%}
-            {%- render 'es-icon-with-text', block: block -%}
+              {%- render 'es-icon-with-text', block: block -%}
+            {%- when 'perceived_icons' -%}
+              {%- render 'es-perceived-icons', block: block -%}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -1134,6 +1136,42 @@
           "type": "image_picker",
           "id": "review_image",
           "label": "Review Image"
+        }
+      ]
+    },
+    {
+      "type": "perceived_icons",
+      "name": "Perceived Icons",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "icon_1_text",
+          "label": "Icon 1 Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "icon_2_text",
+          "label": "Icon 2 Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "icon_3_text",
+          "label": "Icon 3 Text"
         }
       ]
     },
