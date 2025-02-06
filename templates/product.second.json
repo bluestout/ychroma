@@ -79,6 +79,17 @@
             "subprod_success": "Thanks for subscribing"
           }
         },
+        "perceived_icons_dxH7dw": {
+          "type": "perceived_icons",
+          "settings": {
+            "icon_1": "shopify://shop_images/Group_45.svg",
+            "icon_1_text": "Free shipping",
+            "icon_2": "shopify://shop_images/Group_47.svg",
+            "icon_2_text": "Returns",
+            "icon_3": "shopify://shop_images/Group_49.svg",
+            "icon_3_text": "Exchanges"
+          }
+        },
         "icon_with_text_3yNaQt": {
           "type": "icon_with_text",
           "settings": {
@@ -116,6 +127,7 @@
         "ff420003-dd04-4426-94e1-bdee2c7e22ad",
         "9ee9e2dc-bd66-4a64-b091-8e5cc6e6cf9c",
         "5f131b61-1e29-478b-96f9-23dccc4fb83a",
+        "perceived_icons_dxH7dw",
         "icon_with_text_3yNaQt",
         "accordion_eeieFz",
         "3730ff15-c823-4413-a673-6f5ec950b8b2",
