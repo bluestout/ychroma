@@ -18,7 +18,8 @@
             "video": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4",
             "video_mb": "https://cdn.shopify.com/videos/c/o/v/548c0c4711b94e168f15991913a00d84.mp4",
             "opacity": 0.3,
-            "link": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4"
+            "link": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4",
+            "preload": true
           }
         },
         "logo_WDUDEk": {
@@ -179,7 +180,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "shopify://products/deckmaster-shirt-cut-jacket"
+            "link": "shopify://products/deckmaster-shirt-cut-jacket",
+            "preload": false
           }
         }
       },
@@ -206,7 +208,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "shopify://collections/jackets"
+            "link": "shopify://collections/jackets",
+            "preload": false
           }
         }
       },
@@ -233,7 +236,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "https://www.ychroma.com/collections/denim"
+            "link": "https://www.ychroma.com/collections/denim",
+            "preload": false
           }
         }
       },
@@ -260,7 +264,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0.2,
-            "link": "shopify://collections/denim"
+            "link": "shopify://collections/denim",
+            "preload": false
           }
         }
       },
@@ -335,7 +340,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0.2,
-            "link": "https://www.ychroma.com/pages/concierge-service"
+            "link": "https://www.ychroma.com/pages/concierge-service",
+            "preload": false
           }
         }
       },
@@ -362,7 +368,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0.2,
-            "link": "shopify://collections/shirt-cut-jackets"
+            "link": "shopify://collections/shirt-cut-jackets",
+            "preload": false
           }
         }
       },
@@ -389,7 +396,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0.1,
-            "link": "shopify://collections/collection_sevilla"
+            "link": "shopify://collections/collection_sevilla",
+            "preload": false
           }
         }
       },
@@ -452,7 +460,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "shopify://products/quatro-jacket"
+            "link": "shopify://products/quatro-jacket",
+            "preload": false
           }
         }
       },
@@ -479,7 +488,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "shopify://collections/pant-collection"
+            "link": "shopify://collections/pant-collection",
+            "preload": false
           }
         }
       },
@@ -507,7 +517,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "https://www.ychroma.com/collections/jackets"
+            "link": "https://www.ychroma.com/collections/jackets",
+            "preload": false
           }
         }
       },
@@ -535,7 +546,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0.1,
-            "link": "https://www.ychroma.com/products/ghost-geisha-down-jacket"
+            "link": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
+            "preload": false
           }
         }
       },
@@ -562,7 +574,8 @@
             "video": "https://cdn.shopify.com/videos/c/o/v/fb17a6a347324409906a2d867434c656.mp4",
             "video_mb": "",
             "opacity": 0.1,
-            "link": "shopify://collections/core-shirts"
+            "link": "shopify://collections/core-shirts",
+            "preload": false
           }
         },
         "media_9rExr3": {
@@ -572,7 +585,8 @@
             "video": "",
             "video_mb": "",
             "opacity": 0.1,
-            "link": "shopify://collections/core-shirts"
+            "link": "shopify://collections/core-shirts",
+            "preload": false
           }
         }
       },
@@ -599,7 +613,8 @@
             "video": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
             "video_mb": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
             "opacity": 0.2,
-            "link": "https://www.ychroma.com/pages/wardrobe-tutorial-video"
+            "link": "https://www.ychroma.com/pages/wardrobe-tutorial-video",
+            "preload": false
           }
         }
       },
