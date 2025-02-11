@@ -120,3 +120,15 @@ upcartOnCartLoaded = (cart) => {
   // }, 300);
   
 }
+
+console.log('details');
+
+$("#FacetFiltersForm .js-filter")?.each((index, details) => {
+  $(details).on("click", function () {
+    $("#FacetFiltersForm .js-filter")?.each((i, d) => {
+      if (d != details) {
+        $(d).removeAttr('open');
+      }
+    })
+  })
+})

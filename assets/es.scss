@@ -394,7 +394,7 @@
   #shopify-section-header-second {
     transition: .3s ease;
     background-color: #000;
-    z-index: 999;
+    z-index: 12;
   
     .yas-main-header {
       transition: .3s ease;
@@ -468,11 +468,11 @@
 
 @media screen and (max-width: 989px) {
   #shopify-section-header {
-    z-index: 80000;
+    z-index: 10;
     background-color: #000 !important;
   }
   .upcart-cart {
-    z-index: 80001 !important;
+    z-index: 11 !important;
   }
 }
 
@@ -1424,6 +1424,48 @@
       @media (max-width: 750px) {
         font-size: 14px;
       }
+    }
+  }
+}
+
+.custom-collection {
+  .facets-vertical.page-width {
+    position: relative;
+
+    .facets-wrapper {
+      position: sticky;
+      top: 67px;
+      z-index: 9;
+      background-color: #000;
+      max-width: unset;
+      width: 100%;
+      padding: 0;
+
+      @media (max-width: 750px) {
+        top: 59px;
+      }
+
+      .facets-container {
+        padding-right: 2rem;
+        max-width: 90%;
+        margin: auto;
+        display: flex;
+
+        @media (max-width: 750px) {
+          display: grid;
+          padding: 12px 0;
+          border-top: 0;
+          max-width: 95%;
+        }
+      }
+    }
+  }
+}
+
+main {
+  .facets-vertical.page-width {
+    .facets-wrapper:has(.menu-opening) {
+      z-index: 11 !important;
     }
   }
 }
