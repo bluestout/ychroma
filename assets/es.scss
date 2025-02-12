@@ -1434,7 +1434,7 @@
 
     .facets-wrapper {
       position: sticky;
-      top: 67px;
+      top: 65px;
       z-index: 9;
       background-color: #000;
       max-width: unset;
@@ -1442,7 +1442,7 @@
       padding: 0;
 
       @media (max-width: 750px) {
-        top: 59px;
+        top: 55px;
       }
 
       .facets-container {
