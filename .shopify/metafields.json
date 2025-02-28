@@ -234,6 +234,16 @@
         "name": "color",
         "category": "COLOR"
       }
+    },
+    {
+      "key": "mobile_featured_image",
+      "namespace": "custom",
+      "name": "Mobile Featured Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "company": [],
@@ -641,6 +651,16 @@
       "description": "",
       "type": {
         "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "size",
+      "namespace": "shopify",
+      "name": "Size",
+      "description": "Used to specify the size of a product, such as 0-3 months or Extra large (XL)",
+      "type": {
+        "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     }

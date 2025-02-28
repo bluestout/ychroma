@@ -1,3 +1,11 @@
+{%- if section.settings.full_width -%}
+  <style>
+    #shopify-section-{{ section.id }} .page-width {
+      max-width: unset;
+    }
+  </style>
+{%- endif -%}
+
 <div class="{% if section.settings.include_margins %}page-width{% endif %}">
   {%- for block in section.blocks -%}
     {% render block %}
@@ -15,6 +23,12 @@
       "id": "include_margins",
       "default": true,
       "label": "t:sections.apps.settings.include_margins.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full Width",
+      "default": false
     }
   ],
   "blocks": [

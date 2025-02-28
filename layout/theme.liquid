@@ -92,7 +92,7 @@
   {% if template.name == 'index' %}
     <style>
       main#MainContent{
-        background-color: #DED9C3;
+        background-color: #FFF;
       }
     </style>
   {% endif %}
@@ -190,13 +190,16 @@
     {{ content_for_layout }}
   </main>
 
-  {% if template.name != 'index' %}
+  {% sections 'footer-group' %}
+  {% comment %} {% if template.name != 'index' %}
     {% section 'footer' %}
-  {% endif %}
+  {% endif %} {% endcomment %}
 
   <ul hidden>
     <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
   </ul>
+
+  {%include 'swym-custom'%}
 
   <script>
     window.shopUrl = '{{ request.origin }}';

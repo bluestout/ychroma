@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "165848671390165efb": {
@@ -31,20 +40,6 @@
           "type": "price",
           "settings": {}
         },
-        "3cfc5714-8080-4d88-a894-615f5f69232a": {
-          "type": "shopify:\/\/apps\/fit-quiz-for-clothes-and-shoes\/blocks\/fitquiz-block\/b10c5f36-d033-4d47-9f46-97864f785a5a",
-          "settings": {}
-        },
-        "cad218f6-8649-480c-b2c4-bc0ef1a56681": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -73,8 +68,6 @@
         "title",
         "caption",
         "price",
-        "3cfc5714-8080-4d88-a894-615f5f69232a",
-        "cad218f6-8649-480c-b2c4-bc0ef1a56681",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -92,9 +85,9 @@
         "size_chart_title": "Size Chart",
         "about_title": "About this product",
         "size_title": "Size & Fit",
-        "size_image": "shopify:\/\/shop_images\/size-chart.jpg",
+        "size_image": "shopify://shop_images/size-chart.jpg",
         "composition_title": "Composition & care",
-        "composition_desc": "<ul>\n          <li>The International Care Labelling System<\/li>\n          <li>The Japanese Care Labelling System<\/li>\n          <li>The Canadian Care Labelling System<\/li>\n          <li>The European Care Labelling System<\/li>\n          <li>The American Care Labelling System<\/li>\n        <\/ul>",
+        "composition_desc": "<ul>\n          <li>The International Care Labelling System</li>\n          <li>The Japanese Care Labelling System</li>\n          <li>The Canadian Care Labelling System</li>\n          <li>The European Care Labelling System</li>\n          <li>The American Care Labelling System</li>\n        </ul>",
         "btn_text": "Play Video",
         "stop_btn_text": "Stop video"
       }
@@ -105,9 +98,9 @@
         "column-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-free-shipping-100.png",
+            "image": "shopify://shop_images/icons8-free-shipping-100.png",
             "title": "",
-            "text": "<p>Free Delivery<\/p>",
+            "text": "<p>Free Delivery</p>",
             "link_label": "",
             "link": ""
           }
@@ -115,9 +108,9 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-transaction-100.png",
+            "image": "shopify://shop_images/icons8-transaction-100.png",
             "title": "",
-            "text": "<p>Free Returns<\/p>",
+            "text": "<p>Free Returns</p>",
             "link_label": "",
             "link": ""
           }
@@ -125,9 +118,9 @@
         "1d1a7d29-eab9-4196-8272-14dfbdc3a179": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-chat-100.png",
+            "image": "shopify://shop_images/icons8-chat-100.png",
             "title": "",
-            "text": "<p>Chat with our concentrate team<\/p>",
+            "text": "<p>Chat with our concentrate team</p>",
             "link_label": "",
             "link": ""
           }
@@ -157,15 +150,6 @@
     },
     "16578875911bf48e71": {
       "type": "apps",
-      "blocks": {
-        "b4de2190-ce71-449b-a2c4-916ab0dee6c0": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "b4de2190-ce71-449b-a2c4-916ab0dee6c0"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -193,61 +177,61 @@
         "32dc00a3-cf7a-42c5-84c5-58edd020d8a3": {
           "type": "first-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/Rush-9.jpg"
+            "imageOne": "shopify://shop_images/Rush-9.jpg"
           }
         },
         "6624b922-24af-444c-a58b-7e11f3332673": {
           "type": "first-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/Rush-6.jpg"
+            "imageOne": "shopify://shop_images/Rush-6.jpg"
           }
         },
         "d3b0fc9c-1cd4-4d67-b9fc-0fbb800da026": {
           "type": "third-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/mob-home.jpg"
+            "imageOne": "shopify://shop_images/mob-home.jpg"
           }
         },
         "ef8cd912-766c-4d4c-87e0-d2a9e39697e2": {
           "type": "second-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/home-4.png"
+            "imageOne": "shopify://shop_images/home-4.png"
           }
         },
         "cf80f131-bfa6-46ec-9a23-18b44e5a0d39": {
           "type": "second-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/Rush-4.jpg"
+            "imageOne": "shopify://shop_images/Rush-4.jpg"
           }
         },
         "b67ef685-dbbf-43a8-8254-704335e22d81": {
           "type": "third-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/Rush-9.jpg"
+            "imageOne": "shopify://shop_images/Rush-9.jpg"
           }
         },
         "77d96856-dd49-4c09-8e1d-0b85d937bad5": {
           "type": "second-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/Rush-3.jpg"
+            "imageOne": "shopify://shop_images/Rush-3.jpg"
           }
         },
         "382485fd-dc91-4617-af6b-355d63bc18df": {
           "type": "first-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/Rush-2.jpg"
+            "imageOne": "shopify://shop_images/Rush-2.jpg"
           }
         },
         "5b92a92b-2962-4caf-bdb4-db8abd41eca8": {
           "type": "third-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/Rush-1.jpg"
+            "imageOne": "shopify://shop_images/Rush-1.jpg"
           }
         },
         "7f656124-25de-4776-a67c-bcb4ba0d3fc5": {
           "type": "second-section",
           "settings": {
-            "imageOne": "shopify:\/\/shop_images\/home-3.png"
+            "imageOne": "shopify://shop_images/home-3.png"
           }
         }
       },
@@ -273,7 +257,7 @@
         "8ff0d64d-3633-42df-b883-e6672296800d": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1212.jpg",
+            "image": "shopify://shop_images/1212.jpg",
             "star_rating": 9,
             "text-box": "Rachael",
             "description": "I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately UPS lost it during transit. Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush"
@@ -282,7 +266,7 @@
         "38fbc5ba-c468-47b2-a8f4-a079fbd84c46": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/21121.jpg",
+            "image": "shopify://shop_images/21121.jpg",
             "star_rating": 4,
             "text-box": "AK mehra",
             "description": "I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately UPS lost it during transit. Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush.I cannot express the gratitude and appreciation that I have for Ouros Jewels."
@@ -291,7 +275,7 @@
         "d962440b-4e9d-4e00-9503-c523217e9fd6": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/circle-cropped.png",
+            "image": "shopify://shop_images/circle-cropped.png",
             "star_rating": 5,
             "text-box": "Rubina gupta",
             "description": "Unfortunately UPS lost it during transit. Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush.I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece."
@@ -300,7 +284,7 @@
         "f4c63289-775c-49a1-ad7b-ec279eb3bdcf": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1212.jpg",
+            "image": "shopify://shop_images/1212.jpg",
             "star_rating": 3,
             "text-box": "Rk. Mahajan",
             "description": "Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush.I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately UPS lost it during transit."
@@ -309,7 +293,7 @@
         "2493a732-7c61-44e1-b4aa-9d065dc914cf": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/212.jpg",
+            "image": "shopify://shop_images/212.jpg",
             "star_rating": 4,
             "text-box": "PD. Verma",
             "description": "UPS lost it during transit.I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately . Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush"

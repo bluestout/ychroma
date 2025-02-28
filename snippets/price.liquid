@@ -79,7 +79,7 @@
       {% assign oneProc = compare_at_price | divided_by: 100.00   %}
       {% assign precDiscount = compare_at_price | minus: price | divided_by: oneProc | ceil  %}
 
-      <el class="yas_newd_pric" style="background: #f6c143;"><dis> SAVE {{ precDiscount }}%</dis></el>
+      <el class="yas_newd_pric" style="background: #f6c143;"><dis>{% if save_show %}- {% else %}SAVE {% endif %}{{ precDiscount }}%</dis></el>
       
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">

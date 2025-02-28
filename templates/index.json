@@ -19,652 +19,301 @@
             "video_mb": "https://cdn.shopify.com/videos/c/o/v/548c0c4711b94e168f15991913a00d84.mp4",
             "opacity": 0.3,
             "link": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4",
-            "preload": true
-          }
-        },
-        "logo_WDUDEk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/1-logo-wsj.svg",
-            "link": ""
-          }
-        },
-        "logo_pMrQyt": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/2-logo-usatoday.svg",
-            "link": ""
-          }
-        },
-        "logo_rkYGCh": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/3-logo-mh.svg",
-            "link": ""
-          }
-        },
-        "logo_mCVkmq": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/4-logo-forbes.svg",
-            "link": ""
-          }
-        },
-        "logo_QaYBdU": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/5-logo-business.svg",
-            "link": ""
-          }
-        },
-        "logo_99kY7i": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/6-logo-maxim.svg",
-            "link": ""
-          }
-        },
-        "logo_GAGcKe": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/7-logo-mr.svg",
-            "link": ""
-          }
-        },
-        "logo_AqrfNe": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/8-logo-vogue.svg",
-            "link": ""
-          }
-        },
-        "logo_KFNfTn": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/9-logo-wwd.svg",
-            "link": ""
+            "preload": true,
+            "title": "",
+            "text": ""
           }
         }
       },
       "block_order": [
-        "media_3nthAw",
-        "logo_WDUDEk",
-        "logo_pMrQyt",
-        "logo_rkYGCh",
-        "logo_mCVkmq",
-        "logo_QaYBdU",
-        "logo_99kY7i",
-        "logo_GAGcKe",
-        "logo_AqrfNe",
-        "logo_KFNfTn"
+        "media_3nthAw"
       ],
       "settings": {
-        "title": "\"I LOVE MY GENERATION. BUT WE NEEDED BETTER CLOTHES.\"",
-        "url": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4",
-        "title_sub": "TURN ON AUDIO",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width": true,
+        "title": "",
+        "url": "",
+        "title_sub": "",
         "url_btn": "",
         "text_align": "center",
         "logolist_heading": "As Seen In"
       }
     },
-    "es_featured_collections_RJTYjP": {
-      "type": "es-featured-collections",
+    "es_image_with_products_hDXG6f": {
+      "type": "es-image-with-products",
       "blocks": {
-        "collection_qTpbmc": {
-          "type": "collection",
+        "product_wDzCBi": {
+          "type": "product",
           "settings": {
-            "title": "{{ block.settings.collection.title }}",
-            "collection": "jackets"
+            "product": "daytona-jacket"
           }
         },
-        "collection_MKnzn3": {
-          "type": "collection",
+        "product_YkpkKD": {
+          "type": "product",
           "settings": {
-            "title": "{{ block.settings.collection.title }}",
-            "collection": "collection_sevilla"
+            "product": "buffed-cotton-v-neck-short-sleeve"
           }
         },
-        "collection_R7hKCG": {
-          "type": "collection",
+        "product_TDJnVm": {
+          "type": "product",
           "settings": {
-            "title": "{{ block.settings.collection.title }}",
-            "collection": "core-shirts"
+            "product": "dwayne-sweater"
           }
         },
-        "collection_FCKYyx": {
-          "type": "collection",
+        "product_ctJqW3": {
+          "type": "product",
           "settings": {
-            "title": "{{ block.settings.collection.title }}",
-            "collection": "sweaters"
+            "product": "altavista-down-jacket"
           }
         }
       },
       "block_order": [
-        "collection_qTpbmc",
-        "collection_MKnzn3",
-        "collection_R7hKCG",
-        "collection_FCKYyx"
+        "product_wDzCBi",
+        "product_YkpkKD",
+        "product_TDJnVm",
+        "product_ctJqW3"
       ],
       "settings": {
-        "title": "Tops",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "text_color": "#ffffff",
+        "image": "shopify://shop_images/knitwear_banner.jpg",
+        "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "heading": "DWAYNE V-NECK SWEATER",
+        "text": "<p>Dwayne V-neck Sweater</p>",
+        "collection": ""
+      }
+    },
+    "es_testimonial_Mg6nBC": {
+      "type": "es-testimonial",
+      "blocks": {
+        "review_gLwgcR": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.\"</p>",
+            "author": "",
+            "company_logo": "shopify://shop_images/Screenshot_12.png"
+          }
+        },
+        "review_GgLWMd": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade. 123\"</p>",
+            "author": "",
+            "company_logo": "shopify://shop_images/Screenshot_12.png"
+          }
+        },
+        "review_7XKYBE": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.234\"</p>",
+            "author": "",
+            "company_logo": "shopify://shop_images/Screenshot_12.png"
+          }
+        },
+        "review_NqUbDw": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.456\"</p>",
+            "author": "",
+            "company_logo": "shopify://shop_images/Screenshot_12.png"
+          }
+        },
+        "review_dUwkib": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.567\"</p>",
+            "author": "",
+            "company_logo": "shopify://shop_images/Screenshot_12.png"
+          }
+        }
+      },
+      "block_order": [
+        "review_gLwgcR",
+        "review_GgLWMd",
+        "review_7XKYBE",
+        "review_NqUbDw",
+        "review_dUwkib"
+      ],
+      "settings": {
         "padding_top": 80,
         "padding_bottom": 80
       }
     },
-    "es_media_with_text_zM3T8D": {
+    "es_image_with_products_bMArk4": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_GRRjTB": {
+          "type": "product",
+          "settings": {
+            "product": "daytona-jacket"
+          }
+        },
+        "product_p4d3zh": {
+          "type": "product",
+          "settings": {
+            "product": "buffed-cotton-v-neck-short-sleeve"
+          }
+        },
+        "product_HyqEMy": {
+          "type": "product",
+          "settings": {
+            "product": "dwayne-sweater"
+          }
+        },
+        "product_hWPTGK": {
+          "type": "product",
+          "settings": {
+            "product": "altavista-down-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "product_GRRjTB",
+        "product_p4d3zh",
+        "product_HyqEMy",
+        "product_hWPTGK"
+      ],
+      "settings": {
+        "text_color": "#ffffff",
+        "image": "shopify://shop_images/knitwear_banner.jpg",
+        "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "heading": "DWAYNE V-NECK SWEATER",
+        "text": "<p>Dwayne V-neck Sweater</p>",
+        "collection": ""
+      }
+    },
+    "1740611898868ee390": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_qtgibz": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/featured-reviews-carousel/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_qtgibz"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": true
+      }
+    },
+    "es_image_with_products_jrpN3G": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_cnydyt": {
+          "type": "product",
+          "settings": {
+            "product": "daytona-jacket"
+          }
+        },
+        "product_wMeAYm": {
+          "type": "product",
+          "settings": {
+            "product": "buffed-cotton-v-neck-short-sleeve"
+          }
+        },
+        "product_agr4KL": {
+          "type": "product",
+          "settings": {
+            "product": "dwayne-sweater"
+          }
+        },
+        "product_Jwc4bz": {
+          "type": "product",
+          "settings": {
+            "product": "altavista-down-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "product_cnydyt",
+        "product_wMeAYm",
+        "product_agr4KL",
+        "product_Jwc4bz"
+      ],
+      "settings": {
+        "text_color": "#ffffff",
+        "image": "shopify://shop_images/knitwear_banner.jpg",
+        "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "heading": "DWAYNE V-NECK SWEATER",
+        "text": "<p>Dwayne V-neck Sweater</p>",
+        "collection": ""
+      }
+    },
+    "es_media_with_text_ftAYM9": {
       "type": "es-media-with-text",
       "blocks": {
-        "media_k6K9gD": {
+        "media_cPhyfY": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/yc-deckmaster1-dsk.jpg",
-            "image_mb": "shopify://shop_images/yc-deckmaster1-mob.jpg",
+            "image": "shopify://shop_images/yc-mazarin-down-img-1473-lr.jpg",
+            "image_mb": "shopify://shop_images/yc-mazarin-down-img-1473-lr.jpg",
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "shopify://products/deckmaster-shirt-cut-jacket",
-            "preload": false
+            "link": "",
+            "preload": false,
+            "title": "<p>CREATE A WARDROBE WARDROBE PLAN</p>",
+            "text": "Schedule a call and let’s have fun"
           }
-        }
-      },
-      "block_order": [
-        "media_k6K9gD"
-      ],
-      "settings": {
-        "title": "The Deckmaster Jacket",
-        "url": "shopify://products/deckmaster-shirt-cut-jacket",
-        "title_sub": "Shop Deckmaster",
-        "url_btn": "shopify://products/deckmaster-shirt-cut-jacket",
-        "text_align": "right bottom",
-        "logolist_heading": "As Seen In"
-      }
-    },
-    "es_media_with_text_pVYT4t": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_LdmDLD": {
+        },
+        "media_PxnLg7": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/yc-altavista-dsk-web_66a60c5f-aaea-48ac-ace9-2e4d8c863479.jpg",
-            "image_mb": "shopify://shop_images/yc-altavista-mob-web.jpg",
+            "image": "shopify://shop_images/yc-mazarin-down-img-1480-lr.jpg",
+            "image_mb": "shopify://shop_images/yc-mazarin-down-img-1480-lr.jpg",
             "video": "",
             "video_mb": "",
             "opacity": 0,
-            "link": "shopify://collections/jackets",
-            "preload": false
+            "link": "",
+            "preload": false,
+            "title": "<p>FOUR KEY WAYS TO A BETTER PLANET</p>",
+            "text": "Social and environmental responsibility"
           }
         }
       },
       "block_order": [
-        "media_LdmDLD"
+        "media_cPhyfY",
+        "media_PxnLg7"
       ],
       "settings": {
-        "title": "ALTAVISTA DOWN JACKET. DURABLE+UNIQUE.",
-        "url": "shopify://products/altavista-down-jacket",
-        "title_sub": "SHOP THE ALTAVISTA JACKET",
-        "url_btn": "shopify://products/altavista-down-jacket",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_media_with_text_pJkEmV": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_rVpPF6": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/yc-denim-1-dsk.jpg",
-            "image_mb": "shopify://shop_images/yc-denim-1-mob.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0,
-            "link": "https://www.ychroma.com/collections/denim",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_rVpPF6"
-      ],
-      "settings": {
-        "title": "THE TEXTURES, TRADITION AND TECH BEHIND OUR DENIM REBOOT",
-        "url": "https://www.ychroma.com/collections/denim",
-        "title_sub": "SHOP DENIM",
-        "url_btn": "https://www.ychroma.com/collections/denim",
-        "text_align": "right bottom",
+        "padding_top": 120,
+        "padding_bottom": 80,
+        "full_width": false,
+        "title": "",
+        "url": "",
+        "title_sub": "",
+        "url_btn": "",
+        "text_align": "center",
         "logolist_heading": "As Seen In"
       }
     },
-    "es_media_with_text_NqL4eY": {
-      "type": "es-media-with-text",
+    "174061294355ab57dd": {
+      "type": "apps",
       "blocks": {
-        "media_zXnqJh": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/home-enduro-1dsk-mob.jpg",
-            "image_mb": "shopify://shop_images/home-enduro-1mob-web.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.2,
-            "link": "shopify://collections/denim",
-            "preload": false
-          }
+        "klaviyo_reviews_featured_reviews_carousel_mqqYd4": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/featured-reviews-carousel/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
         }
       },
       "block_order": [
-        "media_zXnqJh"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "THE TEXTURES, TRADITION AND TECH BEHIND OUR DENIM REBOOT",
-        "url": "shopify://collections/denim",
-        "title_sub": "Shop Enduro Denim",
-        "url_btn": "shopify://collections/denim",
-        "text_align": "right bottom",
-        "logolist_heading": "As Seen In"
-      }
-    },
-    "es_awards_4zikBK": {
-      "type": "es-awards",
-      "blocks": {
-        "image_UQirMd": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Group_12.svg"
-          }
-        },
-        "image_8jEqiN": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Group_17.svg"
-          }
-        },
-        "image_NbdPcT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Group_15.svg"
-          }
-        },
-        "image_NCrEcY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Group_28.svg"
-          }
-        },
-        "image_i3NfYe": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Group_20.svg"
-          }
-        }
-      },
-      "block_order": [
-        "image_UQirMd",
-        "image_8jEqiN",
-        "image_NbdPcT",
-        "image_NCrEcY",
-        "image_i3NfYe"
+        "klaviyo_reviews_featured_reviews_carousel_mqqYd4"
       ],
       "settings": {
-        "padding_top": 76,
-        "padding_bottom": 76,
-        "background_color": "#000000"
-      }
-    },
-    "es_media_with_text_kXbJc8": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_qRLiV8": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/ychroma-wardrobeplan-web2.jpg",
-            "image_mb": "shopify://shop_images/ychroma-wardrobe-mob-web.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.2,
-            "link": "https://www.ychroma.com/pages/concierge-service",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_qRLiV8"
-      ],
-      "settings": {
-        "title": "CREATE A PERSONALISED WARDROBE PLAN",
-        "url": "https://www.ychroma.com/pages/concierge-service",
-        "title_sub": "SCHEDULE A ZOOM  CALL AND LET’S HAVE FUN",
-        "url_btn": "https://www.ychroma.com/pages/concierge-service",
-        "text_align": "right bottom",
-        "logolist_heading": "As Seen In"
-      }
-    },
-    "es_media_with_text_nmK6Ek": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_m7nxjB": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/yc-varial-snowcloud.jpg",
-            "image_mb": "shopify://shop_images/yc-varial-snowcloud-mob.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.2,
-            "link": "shopify://collections/shirt-cut-jackets",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_m7nxjB"
-      ],
-      "settings": {
-        "title": "VARIAL / SNOWCLOUD EDIT",
-        "url": "https://www.ychroma.com/collections/shirt-cut-jackets",
-        "title_sub": "SHOP THE VARIAL  Shirt-cut Jacket",
-        "url_btn": "shopify://collections/shirt-cut-jackets",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_media_with_text_wPmyGK": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_iDxthh": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/home-sevilla-3dsk-web.jpg",
-            "image_mb": "shopify://shop_images/home-sevilla-3mob-web.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.1,
-            "link": "shopify://collections/collection_sevilla",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_iDxthh"
-      ],
-      "settings": {
-        "title": "\"I'LL JUST WEAR A GOLF SHIRT\", SAID DAVID BECKHAM, NEVER",
-        "url": "shopify://collections/collection_sevilla",
-        "title_sub": "SHOP THE SEVILLA SHIRT COLLECTION",
-        "url_btn": "shopify://collections/collection_sevilla",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_curated_reviews_KfMDn7": {
-      "type": "es-curated-reviews",
-      "blocks": {
-        "review_qy8Ty8": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“There’s weight and craft. Even more WOW in real life than in the photos.”</p>",
-            "name": "Daniel O."
-          }
-        },
-        "review_McGNmx": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“The fabric and craftsmanship are remarkable on every piece.”</p>",
-            "name": "Richard F."
-          }
-        },
-        "review_4TRzLW": {
-          "type": "review",
-          "settings": {
-            "text": "<p>“I had way too much gray and navy. This makes colour work for me. It’s like Vuitton and Rip Curl had a baby. I love that baby.”</p>",
-            "name": "Nash F."
-          }
-        }
-      },
-      "block_order": [
-        "review_qy8Ty8",
-        "review_McGNmx",
-        "review_4TRzLW"
-      ],
-      "settings": {
-        "padding_top": 76,
-        "padding_bottom": 76,
-        "background_color": "#000000"
-      }
-    },
-    "es_media_with_text_8naftQ": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_73tgCh": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/yc-quatro-b-web.jpg",
-            "image_mb": "shopify://shop_images/gif_quatro_v3-9x16-logo2.gif",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0,
-            "link": "shopify://products/quatro-jacket",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_73tgCh"
-      ],
-      "settings": {
-        "title": "Elevate The Tech Bro Vest",
-        "url": "shopify://products/quatro-jacket",
-        "title_sub": "SHOP The Quatro Jacket",
-        "url_btn": "shopify://products/quatro-jacket",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_media_with_text_zKmHMt": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_gGQpg3": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/yc-skyline-dsk.jpg",
-            "image_mb": "shopify://shop_images/yc-skyline-mob_640b6a55-1074-4738-a849-f4301e3230da.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0,
-            "link": "shopify://collections/pant-collection",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_gGQpg3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "CUT TO FLATTER, ENGINEERED FOR COMFORT",
-        "url": "shopify://collections/pant-collection",
-        "title_sub": "EXPLORE:  ULTRA-PREMIUM PANTS",
-        "url_btn": "shopify://collections/pant-collection",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_media_with_text_Cqqjgd": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_b9caGc": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/yc-deckmaster-v2.jpg",
-            "image_mb": "shopify://shop_images/yc-deckmaster-mob-v2.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0,
-            "link": "https://www.ychroma.com/collections/jackets",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_b9caGc"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "DECKMASTER SHIRT-CUT JACKET",
-        "url": "https://www.ychroma.com/collections/jackets",
-        "title_sub": "EXPLORE",
-        "url_btn": "https://www.ychroma.com/products/deckmaster-shirt-cut-jacket?variant=42503258996926",
-        "text_align": "right bottom",
-        "logolist_heading": ""
-      }
-    },
-    "es_media_with_text_JwfheU": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_ryEibj": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/home-ghost-geisha-dsk3.jpg",
-            "image_mb": "shopify://shop_images/home-ghost-geisha-mob.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.1,
-            "link": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_ryEibj"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Ghost Geisha Down Jacket",
-        "url": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
-        "title_sub": "MEXICO + JAPAN. SEE THE STORY.",
-        "url_btn": "https://www.ychroma.com/products/ghost-geisha-down-jacket",
-        "text_align": "right bottom",
-        "logolist_heading": "As Seen In"
-      }
-    },
-    "es_media_with_text_zM8xic": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_nWkEcg": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/006-1.jpg",
-            "video": "https://cdn.shopify.com/videos/c/o/v/fb17a6a347324409906a2d867434c656.mp4",
-            "video_mb": "",
-            "opacity": 0.1,
-            "link": "shopify://collections/core-shirts",
-            "preload": false
-          }
-        },
-        "media_9rExr3": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/006-2.jpg",
-            "video": "",
-            "video_mb": "",
-            "opacity": 0.1,
-            "link": "shopify://collections/core-shirts",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_nWkEcg",
-        "media_9rExr3"
-      ],
-      "settings": {
-        "title": "LUX HENLEYS THAT ELEVATE ANY OUTFIT",
-        "url": "shopify://collections/core-shirts",
-        "title_sub": "SHOP LUX HENLEYS",
-        "url_btn": "shopify://collections/core-shirts",
-        "text_align": "right bottom",
-        "logolist_heading": "As Seen In"
-      }
-    },
-    "es_media_with_text_J9YWF7": {
-      "type": "es-media-with-text",
-      "blocks": {
-        "media_G37c6R": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/010.jpg",
-            "video": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
-            "video_mb": "https://cdn.shopify.com/videos/c/o/v/3001339b212f42baa43d0a7dac2d721a.mp4",
-            "opacity": 0.2,
-            "link": "https://www.ychroma.com/pages/wardrobe-tutorial-video",
-            "preload": false
-          }
-        }
-      },
-      "block_order": [
-        "media_G37c6R"
-      ],
-      "settings": {
-        "title": "DISCOVER YOUR BEST Y.CHROMA COLOR PLAN",
-        "url": "https://www.ychroma.com/pages/wardrobe-tutorial-video",
-        "title_sub": "SEE PRE-DESIGNED  COLOR PLANS",
-        "url_btn": "https://www.ychroma.com/pages/wardrobe-tutorial-video",
-        "text_align": "right bottom",
-        "logolist_heading": "As Seen In"
-      }
-    },
-    "es_homepage_footer_Ngxenx": {
-      "type": "es-homepage-footer",
-      "settings": {
-        "footer_logo": "shopify://shop_images/logo_bottom-new.png",
-        "background_image": "shopify://shop_images/bg_footernew.jpg",
-        "subtext": "<p>Y.Chroma, Inc. (USA)<br/>Y.Chroma Unipessoal, Lda. (Portugal)</p>",
-        "heading1": "1 Year Exchanges, 90-day Returns | Free Shipping on 2+ Items",
-        "menu1": "footer",
-        "heading2": "Info Links",
-        "menu2": "footer-item-menu",
-        "heading3": "Quick links",
-        "menu3": "main-menu",
-        "newsletter_heading": "“Y.Chroma is one of the most important brands to arrive on the scene in the last decade.”",
-        "newsletter_heading_sub": "<p>We’re all in it together, lads. <strong>Sign up</strong> and get outfit inspiration for our generation.</p>"
+        "include_margins": true,
+        "full_width": true
       }
     }
   },
   "order": [
     "es_media_with_text_Rc4dC6",
-    "es_featured_collections_RJTYjP",
-    "es_media_with_text_zM3T8D",
-    "es_media_with_text_pVYT4t",
-    "es_media_with_text_pJkEmV",
-    "es_media_with_text_NqL4eY",
-    "es_awards_4zikBK",
-    "es_media_with_text_kXbJc8",
-    "es_media_with_text_nmK6Ek",
-    "es_media_with_text_wPmyGK",
-    "es_curated_reviews_KfMDn7",
-    "es_media_with_text_8naftQ",
-    "es_media_with_text_zKmHMt",
-    "es_media_with_text_Cqqjgd",
-    "es_media_with_text_JwfheU",
-    "es_media_with_text_zM8xic",
-    "es_media_with_text_J9YWF7",
-    "es_homepage_footer_Ngxenx"
+    "es_image_with_products_hDXG6f",
+    "es_testimonial_Mg6nBC",
+    "es_image_with_products_bMArk4",
+    "1740611898868ee390",
+    "es_image_with_products_jrpN3G",
+    "es_media_with_text_ftAYM9",
+    "174061294355ab57dd"
   ]
 }
