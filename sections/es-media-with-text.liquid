@@ -1,23 +1,70 @@
-{%- liquid 
+{%- liquid
   assign medias = section.blocks | where: 'type', 'media'
   assign logos = section.blocks | where: 'type', 'logo'
 -%}
 
-<div class="container">
+<style>
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.5 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}px;
+    }
+  }
+</style>
+
+<div class="container{% unless section.settings.full_width %} with-padding{% endunless %}">
   <div class="media-wrapper">
     {%- for block in medias %}
+      {% capture text_content %}
+        <div class="text-content">
+          <h2 class="text-content--heading font-h2">{{ block.settings.title }}</h2>
+          <div class="text-content--text font-text">{{ block.settings.text }}</div>
+        </div>
+      {% endcapture %}
+
       <div class="media-item" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }})">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
-            <video class="video_not-yas" poster="{{ block.settings.image | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline=""{% if block.settings.preload %} preload="auto"{% endif %}>
+            <video
+              class="video_not-yas desktop-video"
+              poster="{{ block.settings.image | image_url }}"
+              autoplay="autoplay"
+              loop="loop"
+              muted=""
+              defaultmuted=""
+              playsinline=""
+              {% if block.settings.preload %}
+                preload="auto"
+              {% endif %}
+            >
               <source src="{{ block.settings.video }}" type="video/mp4">
             </video>
+            {{ text_content }}
+            <button class="muteBtn" data-target="desktop-video">🔊</button>
           </div>
           {%- if block.settings.video_mb != blank %}
             <div class="video medium-up--hide">
-              <video class="video_not-yas" poster="{{ block.settings.image_mb | image_url }}" autoplay="autoplay" loop="loop" muted="" defaultmuted="" playsinline=""{% if block.settings.preload %} preload="auto"{% endif %}>
+              <video
+                class="video_not-yas mobile-video"
+                poster="{{ block.settings.image_mb | image_url }}"
+                autoplay="autoplay"
+                loop="loop"
+                muted=""
+                defaultmuted=""
+                playsinline=""
+                {% if block.settings.preload %}
+                  preload="auto"
+                {% endif %}
+              >
                 <source src="{{ block.settings.video_mb }}" type="video/mp4">
               </video>
+              {{ text_content }}
+              <button class="muteBtn" data-target="mobile-video">🔊</button>
             </div>
           {%- endif -%}
         {%- elsif block.settings.image != blank -%}
@@ -34,6 +81,7 @@
                 loading="lazy"
               {% endif %}
             >
+            {{ text_content }}
           </div>
           {%- if block.settings.image_mb != blank -%}
             <div class="image medium-up--hide">
@@ -49,12 +97,15 @@
                   loading="lazy"
                 {% endif %}
               >
+              {{ text_content }}
             </div>
           {%- endif -%}
         {%- endif -%}
-        {%- if block.settings.link != blank -%}
-          <a href="{{ block.settings.link }}" class="media-item--link"></a>
-        {%- endif -%}
+        {% comment %}
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="media-item--link"></a>
+          {%- endif -%}
+        {% endcomment %}
       </div>
     {%- endfor -%}
   </div>
@@ -65,7 +116,12 @@
         <a href="{{ section.settings.url }}">{{ section.settings.title }}</a>
       </h2>
       {%- if section.settings.title_sub != blank -%}
-        <a href="{% if section.settings.url_btn != blank %}{{ section.settings.url_btn }}{% else %}#{{ section.id }}-popup{% endif %}" class="content-sub-heading {% if section.settings.url_btn == blank %}popup-defolt{% endif %}">{{ section.settings.title_sub }}</a>
+        <a
+          href="{% if section.settings.url_btn != blank %}{{ section.settings.url_btn }}{% else %}#{{ section.id }}-popup{% endif %}"
+          class="content-sub-heading {% if section.settings.url_btn == blank %}popup-defolt{% endif %}"
+        >
+          {{- section.settings.title_sub -}}
+        </a>
       {%- endif -%}
     </div>
   {%- endif -%}
@@ -89,10 +145,10 @@
       </div>
     </div>
   {%- endif -%}
-  
+
   {% if medias[0].settings.video != blank %}
     <div id="{{ section.id }}-popup" class="mfp-hide white-popup-block">
-      <video  loop controls controlslist="nodownload" preload="none">
+      <video loop controls controlslist="nodownload" preload="none">
         <source src="{{ medias[0].settings.video }}" type="video/mp4">
       </video>
     </div>
@@ -100,59 +156,108 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const swiper1_2 = new Swiper('#shopify-section-{{ section.id }} .logos-swiper', {
       spaceBetween: 25,
-       autoplay: {
+      autoplay: {
         delay: 3000,
       },
       breakpoints: {
         0: {
           slidesPerView: 1,
           loop: true,
-          effect: "fade",
+          effect: 'fade',
           fadeEffect: {
-            crossFade: true
+            crossFade: true,
           },
         },
         990: {
           slidesPerView: 'auto',
           spaceBetween: 65,
-          effect: false  
-        }
-      }
+          effect: false,
+        },
+      },
     });
-  })
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    (() => {
+      const muteBtns = document.querySelectorAll('#shopify-section-{{ section.id }} .muteBtn');
+
+      muteBtns.forEach(muteBtn => {
+        muteBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+
+          let video = document.querySelector(`#shopify-section-{{ section.id }} .${muteBtn.dataset.target}`);
+
+          console.log(video);
+    
+          video.muted = !video.muted;
+          
+          muteBtn.textContent = video.muted ? '🔊' : '🔇';
+
+          video.addEventListener('loadedmetadata', () => {
+            muteBtn.style.display = 'block';
+          });
+        });
+      });
+    })();
+  });
 </script>
 
 {%- schema -%}
 {
-	"name": "Media with Text",
-	"tag": "section",
-	"class": "es-media-with-text",
-	"settings": [
-		{
-			"type": "text",
-			"id": "title",
-			"label": "Title",
-			"default": "Title"
-		},
-		{
-			"type": "url",
-			"id": "url",
-			"label": "Link for title"
-		},
-		{
-			"type": "text",
-			"id": "title_sub",
-			"label": "sub Title (btn)",
-			"default": "sub Title"
-		},
-		{
-			"type": "url",
-			"id": "url_btn",
-			"label": "Link for button"
-		},
+  "name": "Media with Text",
+  "tag": "section",
+  "class": "es-media-with-text",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full Width",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Link for title"
+    },
+    {
+      "type": "text",
+      "id": "title_sub",
+      "label": "sub Title (btn)",
+      "default": "sub Title"
+    },
+    {
+      "type": "url",
+      "id": "url_btn",
+      "label": "Link for button"
+    },
     {
       "type": "select",
       "id": "text_align",
@@ -175,7 +280,7 @@
       "label": "Logo List Heading",
       "default": "As Seen In"
     }
-	],
+  ],
   "blocks": [
     {
       "type": "media",
@@ -221,6 +326,16 @@
           "type": "checkbox",
           "id": "preload",
           "label": "Preload"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
         }
       ]
     },
@@ -241,10 +356,10 @@
       ]
     }
   ],
-	"presets": [
-		{
-			"name": "@ Media with Text"
-		}
-	]
+  "presets": [
+    {
+      "name": "@ Media with Text"
+    }
+  ]
 }
 {%- endschema -%}

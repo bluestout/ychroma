@@ -234,6 +234,16 @@
         "name": "color",
         "category": "COLOR"
       }
+    },
+    {
+      "key": "mobile_featured_image",
+      "namespace": "custom",
+      "name": "Mobile Featured Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "company": [],

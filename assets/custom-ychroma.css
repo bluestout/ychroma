@@ -804,9 +804,9 @@ h2#predictive-search-products {
 .blog .card.article-card .card__content .article-card__info.h5 span.circle-divider {
     color: #000;
 }
-footer.footer {
-    border-top: 3px solid #fff!important;
-}
+/* footer.footer {
+    border-top: 3px solid #fff!important; | json
+} */
 /* select#SortBy option:hover {
       background-color: #000!important;
     }
