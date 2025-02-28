@@ -1,3 +1,97 @@
+class ESCardProduct extends HTMLElement {
+  constructor() {
+    super();
+
+    this.modalOpener = this.querySelector(".open-modal");
+    this.modalContainer = this.querySelector(".quick-add-popup");
+    this.modalCloser = this.querySelector(".close-quick-add");
+    this.variantInputs = this.querySelectorAll(".variant-swatch-input");
+    this.colorVariants = this.querySelectorAll("fieldset[name='color'] input");
+    this.selectedVariantId = this.querySelector(".selected-variant-id");
+    this.variantDataElement = this.querySelector('script[type="application/json"]');
+    this.medias = this.querySelectorAll(".card__media img");
+
+    if (this.variantDataElement) {
+      this.variantData = JSON.parse(this.variantDataElement.textContent);
+    }
+
+    this.init();
+  }
+
+  modalOpen() {
+    this.modalContainer.style.display = "block";
+  }
+
+  modalClose() {
+    this.modalContainer.style.display = "none";
+  }
+
+  handleVariantChange = (event) => {
+    const selectedOption = event.target.value;
+    let publicTitle = "";
+
+    const checkedInputs = this.querySelectorAll('input[type="radio"]:checked');
+
+    checkedInputs.forEach((input, i) => {
+      if (i > 0) {
+        publicTitle += " / ";
+      }
+      publicTitle += input.value;
+    });
+
+    console.log("publicTitle:", publicTitle);
+
+    const selectedVariant = this.variantData.find(variant => variant.title === publicTitle);
+
+    if (selectedVariant) {
+      this.selectedVariantId.value = selectedVariant.id;
+      console.log("Selected Variant ID:", this.selectedVariantId);
+    } else {
+      console.log("No matching variant found.");
+    }
+
+  };
+
+  handleColorVariantChange = (event) => {
+    const value = event.target.value;
+
+    this.medias.forEach(media => {
+      if (media.getAttribute("alt").indexOf(value) > -1) {
+        media.classList.add("active");
+      } else {
+        media.classList.remove("active");
+      }
+    })
+  }
+
+  init() {
+    if (this.modalOpener && this.modalContainer && this.modalCloser) {
+      this.modalOpener.addEventListener("click", this.modalOpen.bind(this));
+      this.modalCloser.addEventListener("click", this.modalClose.bind(this));
+    } else {
+      console.error("Modal elements not found inside ESCardProduct.");
+    }
+
+    this.variantInputs.forEach((input) => {
+      input.addEventListener("change", this.handleVariantChange.bind(this));
+    
+      if (input.nextElementSibling) {
+        input.nextElementSibling.addEventListener("click", () => {
+          input.click();
+        });
+      }
+    });
+    
+    this.colorVariants.forEach((input) => {
+      input.addEventListener("change", this.handleColorVariantChange.bind(this));
+    })
+  }
+}
+
+customElements.define("es-card-product", ESCardProduct);
+
+document.dispatchEvent(new CustomEvent("swym:collections-loaded"));
+
 $('.popup-defolt').magnificPopup({
   type: 'inline',
   preloader: false,
@@ -132,3 +226,50 @@ $("#FacetFiltersForm .js-filter")?.each((index, details) => {
     })
   })
 })
+
+
+const KlaviyoReady = () => {
+  const reviewsCarousels = document.querySelectorAll('#klaviyo-featured-reviews-carousel');
+
+  reviewsCarousels?.forEach(function (el) {
+    const widget = el?.querySelector('.swiper');
+    
+    if (!widget) return;
+
+    if (widget) {
+      if (widget.swiper) {
+        widget.swiper.destroy(true, true);
+      }
+
+      const paginationEl = document.createElement('div');
+      paginationEl.classList.add('swiper-pagination');
+      widget.appendChild(paginationEl);
+
+      new Swiper(widget, {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.kl_reviews__carousel__next_button',
+          prevEl: '.kl_reviews__carousel__prev_button',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+
+      console.log('Pagination added to Klaviyo Swiper.');
+    }
+  })
+}
+
+const observer = new MutationObserver((mutations, obs) => {
+  const reviewsCarousel = document.querySelector('#klaviyo-featured-reviews-carousel .kl_reviews__carousel__content_body');
+  if (reviewsCarousel) {
+    KlaviyoReady();
+    obs.disconnect();
+  }
+});
+
+observer.observe(document.body, { childList: true, subtree: true });

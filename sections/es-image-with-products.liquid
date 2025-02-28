@@ -1,0 +1,128 @@
+{%- liquid 
+  assign s = section.settings
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} .es-card-wrapper {
+    --text-color: {{ section.settings.text_color }};
+  }
+</style>
+
+<div class="yas-collection-grid-wrapp">
+  <div class="iwp-media">
+    {%- if s.image != blank -%}
+      <div class="image{% if s.mobile_image != blank %} small--hide{% endif %}">
+        <img
+          src="{{ s.image | img_url: '1920x' }}"
+          width="{{ s.image.width }}"
+          height="{{ s.image.height }}"
+          alt="{{ s.image.alt }}"
+        >
+      </div>
+      {%- if s.mobile_image != blank -%}
+        <div class="image{% if s.mobile_image != blank %} medium-up--hide{% endif %}">
+          <img
+            src="{{ s.mobile_image | img_url: '720x' }}"
+            width="{{ s.mobile_image.width }}"
+            height="{{ s.mobile_image.height }}"
+            alt="{{ s.mobile_image.alt }}"
+          >
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+    {%- if s.heading != blank -%}
+      <div class="iwp-content">
+        <h2 class="font-h2">{{ s.heading }}</h2>
+        {%- if s.text != blank -%}
+          <div class="font-text">{{ s.text }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+  <div class="iwp-products">
+    <ul class="grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list">
+      {%- if section.blocks.size > 0 -%}
+        {% for block in section.blocks %}
+          <li class="grid__item">
+            {% render 'es-card-product',
+              card_product: block.settings.product,
+              show_secondary_image: true,
+              media_aspect_ratio: 'portrait',
+              extend_height: true
+            %}
+          </li>
+        {% endfor %}
+      {%- else -%}
+        {% for product in s.collection.products limit: 4 %}
+          <li class="grid__item">
+            {% render 'es-card-product',
+              card_product: product,
+              show_secondary_image: true,
+              media_aspect_ratio: 'portrait',
+              extend_height: true
+            %}
+          </li>
+        {% endfor %}
+      {%- endif -%}
+    </ul>
+  </div>
+</div>
+
+{%- schema -%}
+{
+	"name": "Image with Products",
+	"tag": "section",
+	"class": "es-image-with-products",
+	"settings": [
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+	"presets": [
+		{
+			"name": "@ Image with Products"
+		}
+	]
+}
+{%- endschema -%}
