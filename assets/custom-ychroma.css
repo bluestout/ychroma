@@ -109,8 +109,8 @@ details#Details-HeaderMenu-2 span {
 @media(min-width: 990px){
     .announcement-bar > div{
         max-width: 1350px;
-        padding-right: 100px;
-        padding-left: 45px;
+        padding-right: 25px;
+        padding-left: 25px;
         margin: 0 auto;
         text-align: left;
         height: 40px;
@@ -120,14 +120,14 @@ details#Details-HeaderMenu-2 span {
     }
     .announcement-bar .announcement-bar__message {
         text-align: left;
-        margin-right: auto;
+        /* margin-right: auto; */
     }
     #shopify-section-header.section-header {
         margin-top: -40px;
         
     }
     #shopify-section-header.section-header .header {
-      padding: 0 2rem;
+      /* padding: 0 2rem; */
     }
     #shopify-section-announcement-bar{
     height: 40px;
@@ -139,9 +139,9 @@ details#Details-HeaderMenu-2 span {
         z-index: 2;
         width: 100%;
     }
-    .custom-index  #shopify-section-header-second {
+    /* .custom-index  #shopify-section-header-second {
       position: absolute !important;
-    }
+    } */
     #shopify-section-header-second {
         top: 40px;
     }
@@ -240,7 +240,7 @@ details#Details-HeaderMenu-2 span {
 .field__input{font-family:'CentraNo2-Light'!important; }
 
 /* Footer Section CSS */
-footer.footer {padding-bottom: 15px; background:#3b363c;}
+footer.footer {background:#3b363c;}
 footer.footer .footer_logo_img{width: 100%;max-width: 100px;}
 footer.footer .footer-block__details-content p 
 {
@@ -1481,7 +1481,7 @@ span.circle-divider time {
 }
 /*---------------------------22-12-2022-------------------------*/
 a.header__icon.header__icon--account.link.focus-inset.small-hide {
-    margin: 0 5px 0px 5px;
+    margin: 0 5px 0px 16px;
     width: 18px;
 }
 a.swym-wishlist i.fa.fa-heart{

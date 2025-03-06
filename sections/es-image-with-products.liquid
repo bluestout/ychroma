@@ -6,10 +6,21 @@
   #shopify-section-{{ section.id }} .es-card-wrapper {
     --text-color: {{ section.settings.text_color }};
   }
+
+  #shopify-section-{{ section.id }} .iwp-media .image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,{{ s.overlay | divided_by: 100.0 }});
+  }
 </style>
 
 <div class="yas-collection-grid-wrapp">
-  <div class="iwp-media">
+  <div class="iwp-media{% if section.settings.hide_mobile %} small--hide{% endif %}">
     {%- if s.image != blank -%}
       <div class="image{% if s.mobile_image != blank %} small--hide{% endif %}">
         <img
@@ -88,6 +99,22 @@
       "type": "image_picker",
       "id": "mobile_image",
       "label": "Mobile Image"
+    },
+    {
+      "type": "range",
+      "id": "overlay",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Overlay",
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_mobile",
+      "label": "Hide Mobile",
+      "default": false
     },
     {
       "type": "inline_richtext",

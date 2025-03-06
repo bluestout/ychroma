@@ -805,9 +805,9 @@
           "3edc80e2-c588-451c-bab5-01e939702479"
         ],
         "settings": {
-          "menu": "header-right-2",
+          "menu": "header-left-3",
           "logo": "shopify://shop_images/logo_new.png",
-          "menu2": "header-right-3"
+          "menu2": "header-right-4"
         }
       }
     },

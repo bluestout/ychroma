@@ -31,6 +31,7 @@
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0,
+        "m_padding_top": 0,
         "full_width": true,
         "title": "",
         "url": "",
@@ -78,6 +79,8 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/knitwear_banner.jpg",
         "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "overlay": 30,
+        "hide_mobile": true,
         "heading": "DWAYNE V-NECK SWEATER",
         "text": "<p>Dwayne V-neck Sweater</p>",
         "collection": ""
@@ -86,57 +89,39 @@
     "es_testimonial_Mg6nBC": {
       "type": "es-testimonial",
       "blocks": {
-        "review_gLwgcR": {
+        "review_GgLWMd": {
           "type": "review",
           "settings": {
             "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.\"</p>",
             "author": "",
-            "company_logo": "shopify://shop_images/Screenshot_12.png"
-          }
-        },
-        "review_GgLWMd": {
-          "type": "review",
-          "settings": {
-            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade. 123\"</p>",
-            "author": "",
-            "company_logo": "shopify://shop_images/Screenshot_12.png"
+            "company_logo": "shopify://shop_images/dsk-maxim.svg"
           }
         },
         "review_7XKYBE": {
           "type": "review",
           "settings": {
-            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.234\"</p>",
+            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.\"</p>",
             "author": "",
-            "company_logo": "shopify://shop_images/Screenshot_12.png"
+            "company_logo": "shopify://shop_images/dsk-menshealth.svg"
           }
         },
-        "review_NqUbDw": {
+        "review_gLwgcR": {
           "type": "review",
           "settings": {
-            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.456\"</p>",
+            "review": "<p>\"Y.Chroma is one of the most important brands to arrive on the scene in the last decade.\"</p>",
             "author": "",
-            "company_logo": "shopify://shop_images/Screenshot_12.png"
-          }
-        },
-        "review_dUwkib": {
-          "type": "review",
-          "settings": {
-            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.567\"</p>",
-            "author": "",
-            "company_logo": "shopify://shop_images/Screenshot_12.png"
+            "company_logo": "shopify://shop_images/dsk-themanual.svg"
           }
         }
       },
       "block_order": [
-        "review_gLwgcR",
         "review_GgLWMd",
         "review_7XKYBE",
-        "review_NqUbDw",
-        "review_dUwkib"
+        "review_gLwgcR"
       ],
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 40,
+        "padding_bottom": 28
       }
     },
     "es_image_with_products_bMArk4": {
@@ -177,6 +162,8 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/knitwear_banner.jpg",
         "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "overlay": 30,
+        "hide_mobile": false,
         "heading": "DWAYNE V-NECK SWEATER",
         "text": "<p>Dwayne V-neck Sweater</p>",
         "collection": ""
@@ -236,6 +223,8 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/knitwear_banner.jpg",
         "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "overlay": 30,
+        "hide_mobile": false,
         "heading": "DWAYNE V-NECK SWEATER",
         "text": "<p>Dwayne V-neck Sweater</p>",
         "collection": ""
@@ -279,7 +268,8 @@
       ],
       "settings": {
         "padding_top": 120,
-        "padding_bottom": 80,
+        "padding_bottom": 0,
+        "m_padding_top": 0,
         "full_width": false,
         "title": "",
         "url": "",

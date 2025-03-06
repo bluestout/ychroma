@@ -11,7 +11,7 @@
 
   @media (max-width: 750px) {
     #shopify-section-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top | times: 0.5 }}px;
+      padding-top: {{ section.settings.m_padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}px;
     }
   }
@@ -45,7 +45,9 @@
               <source src="{{ block.settings.video }}" type="video/mp4">
             </video>
             {{ text_content }}
-            <button class="muteBtn" data-target="desktop-video">🔊</button>
+            <button class="muteBtn" data-target="desktop-video">
+              <img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556" width="" height="40">
+            </button>
           </div>
           {%- if block.settings.video_mb != blank %}
             <div class="video medium-up--hide">
@@ -64,7 +66,9 @@
                 <source src="{{ block.settings.video_mb }}" type="video/mp4">
               </video>
               {{ text_content }}
-              <button class="muteBtn" data-target="mobile-video">🔊</button>
+              <button class="muteBtn" data-target="mobile-video">
+                <img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556" width="" height="40">
+              </button>
             </div>
           {%- endif -%}
         {%- elsif block.settings.image != blank -%}
@@ -80,6 +84,7 @@
               {% else %}
                 loading="lazy"
               {% endif %}
+              style="--padding-top: {{ 100 | divided_by: block.settings.image.aspect_ratio }}"
             >
             {{ text_content }}
           </div>
@@ -96,6 +101,7 @@
                 {% else %}
                   loading="lazy"
                 {% endif %}
+                style="--padding-top: {{ 100 | divided_by: block.settings.image_mb.aspect_ratio }}"
               >
               {{ text_content }}
             </div>
@@ -195,7 +201,8 @@
     
           video.muted = !video.muted;
           
-          muteBtn.textContent = video.muted ? '🔊' : '🔇';
+          let img_url = video.muted ? 'https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556' : 'https://cdn.shopify.com/s/files/1/0620/1648/7614/files/1e4a9c7a-e92e-4fc0-a1c8-3d80a5e9b112.png?v=1740779556';
+          muteBtn.querySelector("img").setAttribute("src", img_url);
 
           video.addEventListener('loadedmetadata', () => {
             muteBtn.style.display = 'block';
@@ -225,6 +232,15 @@
       "type": "range",
       "id": "padding_bottom",
       "label": "Padding Bottom",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "m_padding_top",
+      "label": "Mobile Padding Top",
       "min": 0,
       "max": 400,
       "step": 4,

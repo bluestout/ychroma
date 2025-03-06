@@ -488,7 +488,6 @@
   .container {
     max-width: unset;
     padding: 0;
-    height: 100vh;
     position: relative;
 
     .text-content {
@@ -496,6 +495,17 @@
       bottom: 30px;
       left: 40px;
       max-width: 520px;
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        left: 20px;
+        bottom: 20px;
+        max-width: 225px;
+
+        .text-content--text {
+          margin-top: 4px;
+        }
+      }
     }
 
     .media-wrapper {
@@ -520,6 +530,18 @@
           width: 100%;
           height: 100%;
           display: block;
+        }
+
+        .video {
+          &::before {
+            padding-top: 45%;
+            content: '';
+            display: block;
+
+            @media (max-width: 750px) {
+              padding-top: 190%;
+            }
+          }
         }
 
         .video,
@@ -548,8 +570,8 @@
           /* Style custom mute button */
           .muteBtn {
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 30px;
+            right: 30px;
             background: rgba(0, 0, 0, 0.6);
             color: white;
             border: none;
@@ -558,6 +580,7 @@
             cursor: pointer;
             font-size: 20px;
             z-index: 3;
+            outline: 12px solid rgba(0, 0, 0, 0.6);
           }
 
         }
@@ -1551,7 +1574,7 @@ main {
   margin-bottom: 0;
 
   @media (max-width: 768px) {
-    font-size: 18pt;
+    font-size: 18px;
   }
 }
 
@@ -1566,7 +1589,7 @@ main {
   margin-bottom: 0;
 
   @media (max-width: 768px) {
-    font-size: 13pt;
+    font-size: 10px;
   }
 }
 
@@ -1578,6 +1601,20 @@ main {
       img {
         width: 100%;
         height: auto;
+      }
+
+      @media (max-width: 750px) {
+        position: relative;
+        padding-top: 130%;
+
+        img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;   
+        }
       }
     }
 
@@ -1933,6 +1970,18 @@ main {
   .footer__content-top {
     padding-bottom: 0 !important;
     border-bottom: 1px solid #000;
+
+    @media (max-width: 750px) {
+      padding: 0 !important;
+
+      .footer__blocks-wrapper {
+        & > div:first-child {
+          padding: 24px 30px;
+          background-color: #FFF;
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
   }
 
   .page-width {
@@ -1955,6 +2004,12 @@ main {
       letter-spacing: 0.84px;
       color: #000000;
       text-transform: uppercase;
+      text-decoration: unset;
+
+      &:hover {
+        color: #000000 !important;
+        text-decoration: underline;
+      }
     }
 
     .footer-block--newsletter {
@@ -1980,6 +2035,10 @@ main {
         text-transform: uppercase;
         line-height: 120%;
         margin-bottom: 24px;
+
+        @media (max-width: 750px) {
+          text-align: left;
+        }
         
         p {
           font-size: inherit;
@@ -2035,6 +2094,7 @@ main {
 
     .footer__list-social {
       max-height: max-content;
+      gap: 12px;
 
       .list-social__item {
         max-height: max-content;
@@ -2056,14 +2116,40 @@ main {
         padding: 24px 0;
         border-right: 1px solid #000;
 
+        @media (max-width: 750px) {
+          border-right: 0;
+          padding: 30px;
+
+          & > div {
+            padding-right: 0;
+          }
+          
+          &:nth-child(2) {
+            border-bottom: 1px solid #000;
+
+            ul {
+              margin-bottom: 0 !important;
+            }
+          }
+        }
+
         &:last-child {
           border-right: 0;
+
+          @media (max-width: 750px) {
+            .footer-block__details-content:last-child {
+              margin-bottom: 0 !important;
+            }
+          }
         }
       }
     }
   }
   
   .footer__content-bottom {
+    background-color: #FFF;
+    padding-bottom: 15px;
+
     .footer__column--info {
       flex-direction: row;
       justify-content: space-between;
@@ -2080,10 +2166,15 @@ main {
 
       .footer__payment {
         margin: 0;
+
+        @media (max-width: 750px) {
+          order: -1;
+          margin-bottom: 24px;
+        }
       }
 
       .footer__copyright,
-      .footer__copyright p {
+      .footer__copyright * {
         font: normal normal 300 14px/27px 'Centra No2' !important;
         letter-spacing: 0.84px;
         color: #000000;
@@ -2113,7 +2204,7 @@ main {
       text-shadow: 0 0 black;
 
       @media (max-width: 750px) {
-        font-size: 22px !important;
+        font-size: 19px !important;
       }
     }
 
@@ -2122,7 +2213,17 @@ main {
       font-size: 16px !important;
       line-height: 120%;
       font-weight: 400 !important;
+
+      @media (max-width: 750px) {
+        font-size: 12px !important;
+      }
     }
+  }
+
+  @media (max-width: 750px) {
+    .kl_reviews__carousel__timestamp {
+      font-size: 11px !important;
+    } 
   }
 
   .kl_reviews__carousel__author {
@@ -2131,10 +2232,25 @@ main {
     font-family: 'Centra No2', sans-serif !important;
     font-size: 16px !important;
     line-height: 120%;
-    font-weight: 400 !important;
+    font-weight: bold !important;
+
+    div {
+      padding-top: 6px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 10px !important;
+    }
 
     &::before {
-      content: url('https://cdn.shopify.com/s/files/1/0620/1648/7614/files/icons8-verified-badge-50_24x.png?v=1740659462');
+      content: '';
+      background-image: url('https://cdn.shopify.com/s/files/1/0620/1648/7614/files/icons8-verified-badge-50_48x.png?v=1740659462');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 24px;
+      width: 24px;
+      display: block;
     }
   }
 
@@ -2146,15 +2262,23 @@ main {
 .kl_reviews__carousel.kl_reviews__carousel.kl_reviews__carousel button.kl_reviews__carousel__next_button {
   box-shadow: unset;
   right: -30px;
+  z-index: 3;
+  background: transparent !important;
 }
 
 .kl_reviews__carousel.kl_reviews__carousel.kl_reviews__carousel button.kl_reviews__carousel__prev_button {
   left: -30px;
   box-shadow: unset;
+  background: transparent !important;
+  z-index: 3;
 }
 
 .kl_reviews__carousel.kl_reviews__carousel.kl_reviews__carousel {
   max-width: unset !important;
+
+  @media (max-width: 750px) {
+    padding: 0 !important;
+  }
 
   .swiper {
     max-width: 1100px !important;
@@ -2193,6 +2317,10 @@ main {
       margin: auto;
       overflow: hidden;
 
+      @media (max-width: 768px) {
+        padding-bottom: 20px;
+      }
+
       .testimonial-quote,
       .testimonial-quote p {
         color: #000;
@@ -2201,9 +2329,10 @@ main {
         line-height: 120% !important;
         font-weight: 800 !important;
         font-family: 'Centra No2', sans-serif !important;
+        text-shadow: 0 0 black;
 
         @media (max-width: 750px) {
-          font-size: 22px;
+          font-size: 19px;
         }
       }
     }
@@ -2220,5 +2349,65 @@ main {
         background-color: #0b0b0b;
       }
     }
+  }
+}
+
+.es-main-header {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  max-width: 1600px;
+  margin: auto;
+
+  .es-empty {
+    margin-right: auto;
+    display: block;
+    flex: 1;
+  }
+
+  .header__icons {
+    margin-left: auto;
+    flex: 1;
+    justify-content: flex-end;
+
+    .header__icon  {
+      width: max-content !important;
+      text-decoration: unset !important;
+      color: #fff;
+      gap: 6px;
+      font: normal normal 300 14px/20px 'Centra No2' !important;
+      letter-spacing: 0.84px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+
+      &.header__icon--cart,
+      &.header__icon--account {
+        & > span {
+          padding-top: 6px;
+        }
+      }
+
+      .cart-count-bubble {
+        position: static;
+        background-color: #FFF !important;
+        color: #000 !important;
+        padding-top: 5px;
+        font: normal normal bold 14px/20px 'Centra No2' !important;
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+        opacity: 1;
+        height: 24px;
+        width: 24px;
+      }
+
+      &:hover::after {
+        content: unset !important;
+      }
+    }
+  }
+}
+
+div[data-testid="animated-teaser"] {
+  & > span:first-child {
+    background-image: url("https://cdn.shopify.com/s/files/1/0620/1648/7614/files/dsk-footer-yc-monogram.svg?v=1741286957") !important;
   }
 }
