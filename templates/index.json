@@ -199,19 +199,19 @@
         "product_cnydyt": {
           "type": "product",
           "settings": {
-            "product": "daytona-jacket"
+            "product": "enduro-jean-button-fly"
           }
         },
         "product_wMeAYm": {
           "type": "product",
           "settings": {
-            "product": "buffed-cotton-v-neck-short-sleeve"
+            "product": "altavista-down-jacket"
           }
         },
         "product_agr4KL": {
           "type": "product",
           "settings": {
-            "product": "dwayne-sweater"
+            "product": "henley-luxury-tropical-weight-long-sleeve"
           }
         },
         "product_Jwc4bz": {
@@ -229,8 +229,8 @@
       ],
       "settings": {
         "text_color": "#ffffff",
-        "image": "shopify://shop_images/knitwear_banner.jpg",
-        "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "image": "shopify://shop_images/yc-g3-main-1-dsk.jpg",
+        "mobile_image": "shopify://shop_images/yc-g3-main-1-mob.jpg",
         "overlay": 30,
         "hide_mobile": false,
         "heading": "DWAYNE V-NECK SWEATER",
