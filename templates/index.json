@@ -244,14 +244,14 @@
         "media_cPhyfY": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/yc-mazarin-down-img-1473-lr.jpg",
-            "image_mb": "shopify://shop_images/yc-mazarin-down-img-1473-lr.jpg",
+            "image": "shopify://shop_images/max-wardrobe-plan-web.jpg",
+            "image_mb": "shopify://shop_images/max-wardrobe-plan-web-mob.jpg",
             "video": "",
             "video_mb": "",
-            "opacity": 0,
+            "opacity": 0.2,
             "link": "",
             "preload": false,
-            "title": "<p>CREATE A WARDROBE WARDROBE PLAN</p>",
+            "title": "<p>CREATE A WARDROBE</p>",
             "text": "Schedule a call and let’s have fun"
           }
         },
