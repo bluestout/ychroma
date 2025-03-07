@@ -77,8 +77,8 @@
       ],
       "settings": {
         "text_color": "#ffffff",
-        "image": "shopify://shop_images/knitwear_banner.jpg",
-        "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "image": "shopify://shop_images/yc-g1-main-2.jpg",
+        "mobile_image": "shopify://shop_images/yc-g1-main-2-mob.jpg",
         "overlay": 30,
         "hide_mobile": true,
         "heading": "DWAYNE V-NECK SWEATER",
@@ -130,13 +130,13 @@
         "product_GRRjTB": {
           "type": "product",
           "settings": {
-            "product": "daytona-jacket"
+            "product": "sevilla-shirt"
           }
         },
         "product_p4d3zh": {
           "type": "product",
           "settings": {
-            "product": "buffed-cotton-v-neck-short-sleeve"
+            "product": "varial-shirt-cut-jacket"
           }
         },
         "product_HyqEMy": {
