@@ -112,12 +112,20 @@
             "author": "",
             "company_logo": "shopify://shop_images/dsk-themanual.svg"
           }
+        },
+        "review_c3EJAe": {
+          "type": "review",
+          "settings": {
+            "review": "",
+            "author": ""
+          }
         }
       },
       "block_order": [
         "review_GgLWMd",
         "review_7XKYBE",
-        "review_gLwgcR"
+        "review_gLwgcR",
+        "review_c3EJAe"
       ],
       "settings": {
         "padding_top": 40,
@@ -160,8 +168,8 @@
       ],
       "settings": {
         "text_color": "#ffffff",
-        "image": "shopify://shop_images/knitwear_banner.jpg",
-        "mobile_image": "shopify://shop_images/SummerSaleAd_-_Mobile5.jpg",
+        "image": "shopify://shop_images/yc-g2-main-1-dsk.jpg",
+        "mobile_image": "shopify://shop_images/yc-g2-main-1-mob.jpg",
         "overlay": 30,
         "hide_mobile": false,
         "heading": "DWAYNE V-NECK SWEATER",
