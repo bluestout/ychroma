@@ -81,8 +81,8 @@
         "mobile_image": "shopify://shop_images/yc-g1-main-2-mob.jpg",
         "overlay": 30,
         "hide_mobile": true,
-        "heading": "Saturday Morning Photo Hunting",
-        "text": "<p>Sophisticated Plum</p>",
+        "heading": "Sophisticated Plum",
+        "text": "<p>Saturday Morning Photo Hunting</p>",
         "collection": ""
       }
     },
@@ -172,8 +172,8 @@
         "mobile_image": "shopify://shop_images/yc-g2-main-1-mob.jpg",
         "overlay": 30,
         "hide_mobile": false,
-        "heading": "Midday Meeting in Santos",
-        "text": "<p>Crisp, Fresh Citrine</p>",
+        "heading": "Crisp, Fresh Citrine",
+        "text": "<p>Midday Meeting in Santos</p>",
         "collection": ""
       }
     },
@@ -233,8 +233,8 @@
         "mobile_image": "shopify://shop_images/yc-g3-main-1-mob.jpg",
         "overlay": 30,
         "hide_mobile": false,
-        "heading": "Headed To Brunch in Chiado",
-        "text": "<p>Orange = Energy</p>",
+        "heading": "Orange = Energy",
+        "text": "<p>Headed to Brunch in Chiado</p>",
         "collection": ""
       }
     },
