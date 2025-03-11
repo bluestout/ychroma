@@ -49,12 +49,10 @@
           "settings": {
             "product": "henley-button-t-shirt",
             "use_variant_metafield": true,
-            "image": "shopify://shop_images/IMG_1427-trans.png",
-            "hover_image": "shopify://shop_images/yc-g2-main-1-mob.jpg",
-            "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": "The best revenge is server of hover..."
+            "image": "shopify://shop_images/images.png",
+            "hover_image": "shopify://shop_images/denim-jacket-on-a-hanger-on-transparent-background-free-png.webp",
+            "title": "Test Text Title",
+            "sub_title": "Test Text subtitle"
           }
         },
         "product_YkpkKD": {
@@ -62,10 +60,8 @@
           "settings": {
             "product": "enduro-jean-button-fly",
             "use_variant_metafield": false,
-            "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "title": "Test Text Title",
+            "sub_title": "Test Text subtitle"
           }
         },
         "product_TDJnVm": {
@@ -74,9 +70,7 @@
             "product": "grand-prix-hand-crocheted-shirt-limited-edition",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         },
         "product_ctJqW3": {
@@ -85,9 +79,7 @@
             "product": "cognac-pocket-denim-shirt",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         }
       },
@@ -158,9 +150,7 @@
             "product": "sevilla-shirt",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         },
         "product_p4d3zh": {
@@ -169,9 +159,7 @@
             "product": "varial-shirt-cut-jacket",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         },
         "product_HyqEMy": {
@@ -180,9 +168,7 @@
             "product": "henley-luxury-tropical-weight-short-sleeve",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         },
         "product_hWPTGK": {
@@ -191,9 +177,7 @@
             "product": "the-retinol-pant",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         }
       },
@@ -242,9 +226,7 @@
             "product": "enduro-jean-button-fly",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         },
         "product_wMeAYm": {
@@ -253,9 +235,7 @@
             "product": "altavista-down-jacket",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         },
         "product_agr4KL": {
@@ -264,9 +244,7 @@
             "product": "henley-luxury-tropical-weight-long-sleeve",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         },
         "product_Jwc4bz": {
@@ -275,9 +253,7 @@
             "product": "dwayne-sweater",
             "use_variant_metafield": false,
             "title": "",
-            "hover_title": "",
-            "sub_title": "",
-            "sub_hover_title": ""
+            "sub_title": ""
           }
         }
       },
