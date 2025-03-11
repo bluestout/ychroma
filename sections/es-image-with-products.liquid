@@ -17,30 +17,45 @@
     display: block;
     background-color: rgba(0,0,0,{{ s.overlay | divided_by: 100.0 }});
   }
+
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: 4px;
+    }
+  }
 </style>
 
 <div class="yas-collection-grid-wrapp">
-  <div class="iwp-media{% if section.settings.hide_mobile %} small--hide{% endif %}">
-    {%- if s.image != blank -%}
-      <div class="image{% if s.mobile_image != blank %} small--hide{% endif %}">
+  <div class="iwp-media{% if s.hide_mobile %} small--hide{% endif %}">
+    {%- if s.media_link != blank -%}
+      <a href="{{ s.media_link }}">
+    {%- endif -%}
+    <div class="image{% if s.mobile_image != blank or s.video_mb %} small--hide{% endif %}">
+      {%- if s.video != blank -%}
+        {%- render 'es-video', poster: s.image, video_source: s.video -%}
+      {%- elsif s.image != blank -%}
         <img
           src="{{ s.image | img_url: '1920x' }}"
           width="{{ s.image.width }}"
           height="{{ s.image.height }}"
           alt="{{ s.image.alt }}"
         >
-      </div>
-      {%- if s.mobile_image != blank -%}
-        <div class="image{% if s.mobile_image != blank %} medium-up--hide{% endif %}">
+      {%- endif -%}
+    </div>
+    {% if s.mobile_image != blank or s.video_mb != blank %} 
+      <div class="image medium-up--hide">
+        {%- if s.video_mb != blank or s.video_mb != blank -%}
+          {%- render 'es-video', poster: s.mobile_image, video_source: s.video_mb -%}
+        {%- elsif s.mobile_image != blank -%}
           <img
             src="{{ s.mobile_image | img_url: '720x' }}"
             width="{{ s.mobile_image.width }}"
             height="{{ s.mobile_image.height }}"
             alt="{{ s.mobile_image.alt }}"
           >
-        </div>
-      {%- endif -%}
-    {%- endif -%}
+        {%- endif -%}
+      </div>
+    {% endif %}
     {%- if s.heading != blank -%}
       <div class="iwp-content">
         <h2 class="font-h2">{{ s.heading }}</h2>
@@ -49,6 +64,9 @@
         {%- endif -%}
       </div>
     {%- endif -%}
+    {%- if s.media_link != blank -%}
+      </a>
+    {%- endif -%}
   </div>
   <div class="iwp-products">
     <ul class="grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list">
@@ -56,6 +74,7 @@
         {% for block in section.blocks %}
           <li class="grid__item">
             {% render 'es-card-product',
+              block: block,
               card_product: block.settings.product,
               show_secondary_image: true,
               media_aspect_ratio: 'portrait',
@@ -79,6 +98,34 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    (() => {
+      const muteBtns = document.querySelectorAll('#shopify-section-{{ section.id }} .muteBtn');
+
+      muteBtns.forEach(muteBtn => {
+        muteBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+
+          let video = document.querySelector(`#shopify-section-{{ section.id }} .${muteBtn.dataset.target}`);
+
+          console.log(video);
+    
+          video.muted = !video.muted;
+          
+          let img_url = video.muted ? 'https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556' : 'https://cdn.shopify.com/s/files/1/0620/1648/7614/files/1e4a9c7a-e92e-4fc0-a1c8-3d80a5e9b112.png?v=1740779556';
+          muteBtn.querySelector("img").setAttribute("src", img_url);
+
+          video.addEventListener('loadedmetadata', () => {
+            muteBtn.style.display = 'block';
+          });
+        });
+      });
+    })();
+  });
+</script>
+
 {%- schema -%}
 {
 	"name": "Image with Products",
@@ -99,6 +146,21 @@
       "type": "image_picker",
       "id": "mobile_image",
       "label": "Mobile Image"
+    },
+    {
+      "type": "url",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "url",
+      "id": "video_mb",
+      "label": "Mobile Video"
+    },
+    {
+      "type": "url",
+      "id": "media_link",
+      "label": "Media Link"
     },
     {
       "type": "range",
@@ -142,6 +204,32 @@
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_variant_metafield",
+          "label": "Use Variant Metafield",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Main Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Hover Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Secondary Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "sub_title",
+          "label": "Secondary Sub Title"
         }
       ]
     }

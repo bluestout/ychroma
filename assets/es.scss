@@ -484,6 +484,26 @@
   }
 }
 
+.muteBtn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 3;
+  
+  img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+
 .es-media-with-text {
   .container {
     max-width: unset;
@@ -550,8 +570,8 @@
           height: 100%;
           width: 100%;
 
-          video,
-          img {
+          & > video,
+          & > img {
             position: absolute;
             top: 0;
             left: 0;
@@ -568,20 +588,6 @@
           }
 
           /* Style custom mute button */
-          .muteBtn {
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 20px;
-            z-index: 3;
-            outline: 12px solid rgba(0, 0, 0, 0.6);
-          }
 
         }
 
@@ -600,17 +606,24 @@
     &.with-padding {
       height: auto;
       max-width: 1440px;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 80px;
+      padding-right: 80px;
 
       @media (max-width: 750px) {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
       }
 
       .media-wrapper {
+        @media (max-width: 750px) {
+          padding-top: 26px;
+        }
         .media-item {
-
+          @media (max-width: 750px) {
+            &:last-child {
+              display: none;
+            }
+          }
           .video,
           .image {
             padding-bottom: 130%;
@@ -1598,23 +1611,21 @@ main {
     position: relative;
 
     .image {
-      img {
+      position: relative;
+      padding-top: 50%;
+
+      & > img,
+      & > video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;   
       }
 
       @media (max-width: 750px) {
-        position: relative;
         padding-top: 130%;
-
-        img {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;   
-        }
       }
     }
 
@@ -1652,6 +1663,23 @@ main {
         width: calc(25% - 4px * 3 / 4);
         max-width: calc(25% - 4px * 3 / 4);
 
+        .card__heading {
+          position: static;
+          overflow-y: hidden !important;
+
+          .full-unstyled-link {
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
         @media (max-width: 750px) {
           width: calc(50% - 4px / 2);
           max-width: calc(50% - 4px / 2);
@@ -1671,7 +1699,8 @@ main {
   }
 
   &:hover {
-    .media.media--hover-effect>img.active~img.active {
+    .media.media--hover-effect > img.active ~ img.active,
+    .media.media--hover-effect.single-media > img ~ img {
       opacity: 1;
     }
   }
@@ -1704,6 +1733,12 @@ main {
             display: none;
 
             &.active {
+              display: block;
+            }
+          }
+          
+          &.single-media {
+            img {
               display: block;
             }
           }
@@ -1803,10 +1838,17 @@ main {
             font-family: 'Centra No2', sans-serif !important;
             font-weight: normal !important;
             margin: 0;
+
+            &.with-hovering {
+              .hover-collection-product-desc-info {
+                display: none;
+              }
+            }
           }
         }
 
         .card__content-top {
+          z-index: 5;
           display: flex;
           justify-content: space-between;
 
@@ -1957,6 +1999,21 @@ main {
           line-height: 100%;
           padding-top: 6px;
           min-width: 100px;
+        }
+      }
+    }
+
+    &:hover {
+      .card__inner {
+        .card__content {
+          .with-hovering {
+            .main-collection-product-desc-info {
+              display: none;
+            }
+            .hover-collection-product-desc-info {
+              display: block !important;
+            }
+          }
         }
       }
     }

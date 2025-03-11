@@ -47,25 +47,47 @@
         "product_wDzCBi": {
           "type": "product",
           "settings": {
-            "product": "henley-button-t-shirt"
+            "product": "henley-button-t-shirt",
+            "use_variant_metafield": true,
+            "image": "shopify://shop_images/IMG_1427-trans.png",
+            "hover_image": "shopify://shop_images/yc-g2-main-1-mob.jpg",
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": "The best revenge is server of hover..."
           }
         },
         "product_YkpkKD": {
           "type": "product",
           "settings": {
-            "product": "enduro-jean-button-fly"
+            "product": "enduro-jean-button-fly",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_TDJnVm": {
           "type": "product",
           "settings": {
-            "product": "grand-prix-hand-crocheted-shirt-limited-edition"
+            "product": "grand-prix-hand-crocheted-shirt-limited-edition",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_ctJqW3": {
           "type": "product",
           "settings": {
-            "product": "cognac-pocket-denim-shirt"
+            "product": "cognac-pocket-denim-shirt",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         }
       },
@@ -79,6 +101,9 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/yc-g1-main-2.jpg",
         "mobile_image": "shopify://shop_images/yc-g1-main-2-mob.jpg",
+        "video": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4",
+        "video_mb": "",
+        "media_link": "shopify://products/grand-prix-hand-crocheted-shirt-limited-edition",
         "overlay": 30,
         "hide_mobile": true,
         "heading": "Sophisticated Plum",
@@ -112,20 +137,12 @@
             "author": "",
             "company_logo": "shopify://shop_images/dsk-themanual.svg"
           }
-        },
-        "review_c3EJAe": {
-          "type": "review",
-          "settings": {
-            "review": "",
-            "author": ""
-          }
         }
       },
       "block_order": [
         "review_GgLWMd",
         "review_7XKYBE",
-        "review_gLwgcR",
-        "review_c3EJAe"
+        "review_gLwgcR"
       ],
       "settings": {
         "padding_top": 40,
@@ -138,25 +155,45 @@
         "product_GRRjTB": {
           "type": "product",
           "settings": {
-            "product": "sevilla-shirt"
+            "product": "sevilla-shirt",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_p4d3zh": {
           "type": "product",
           "settings": {
-            "product": "varial-shirt-cut-jacket"
+            "product": "varial-shirt-cut-jacket",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_HyqEMy": {
           "type": "product",
           "settings": {
-            "product": "henley-luxury-tropical-weight-short-sleeve"
+            "product": "henley-luxury-tropical-weight-short-sleeve",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_hWPTGK": {
           "type": "product",
           "settings": {
-            "product": "the-retinol-pant"
+            "product": "the-retinol-pant",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         }
       },
@@ -170,6 +207,9 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/yc-g2-main-1-dsk.jpg",
         "mobile_image": "shopify://shop_images/yc-g2-main-1-mob.jpg",
+        "video": "",
+        "video_mb": "",
+        "media_link": "shopify://collections",
         "overlay": 30,
         "hide_mobile": false,
         "heading": "Crisp, Fresh Citrine",
@@ -199,25 +239,45 @@
         "product_cnydyt": {
           "type": "product",
           "settings": {
-            "product": "enduro-jean-button-fly"
+            "product": "enduro-jean-button-fly",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_wMeAYm": {
           "type": "product",
           "settings": {
-            "product": "altavista-down-jacket"
+            "product": "altavista-down-jacket",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_agr4KL": {
           "type": "product",
           "settings": {
-            "product": "henley-luxury-tropical-weight-long-sleeve"
+            "product": "henley-luxury-tropical-weight-long-sleeve",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         },
         "product_Jwc4bz": {
           "type": "product",
           "settings": {
-            "product": "dwayne-sweater"
+            "product": "dwayne-sweater",
+            "use_variant_metafield": false,
+            "title": "",
+            "hover_title": "",
+            "sub_title": "",
+            "sub_hover_title": ""
           }
         }
       },
@@ -231,6 +291,9 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/yc-g3-main-1-dsk.jpg",
         "mobile_image": "shopify://shop_images/yc-g3-main-1-mob.jpg",
+        "video": "",
+        "video_mb": "",
+        "media_link": "shopify://collections/collection_sevilla",
         "overlay": 30,
         "hide_mobile": false,
         "heading": "Orange = Energy",

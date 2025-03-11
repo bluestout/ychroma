@@ -30,45 +30,11 @@
       <div class="media-item" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }})">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
-            <video
-              class="video_not-yas desktop-video"
-              poster="{{ block.settings.image | image_url }}"
-              autoplay="autoplay"
-              loop="loop"
-              muted=""
-              defaultmuted=""
-              playsinline=""
-              {% if block.settings.preload %}
-                preload="auto"
-              {% endif %}
-            >
-              <source src="{{ block.settings.video }}" type="video/mp4">
-            </video>
-            {{ text_content }}
-            <button class="muteBtn" data-target="desktop-video">
-              <img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556" width="" height="40">
-            </button>
+            {%- render 'es-video', poster: block.settings.image, video_source: block.settings.video, text_content: text_content -%}
           </div>
           {%- if block.settings.video_mb != blank %}
             <div class="video medium-up--hide">
-              <video
-                class="video_not-yas mobile-video"
-                poster="{{ block.settings.image_mb | image_url }}"
-                autoplay="autoplay"
-                loop="loop"
-                muted=""
-                defaultmuted=""
-                playsinline=""
-                {% if block.settings.preload %}
-                  preload="auto"
-                {% endif %}
-              >
-                <source src="{{ block.settings.video_mb }}" type="video/mp4">
-              </video>
-              {{ text_content }}
-              <button class="muteBtn" data-target="mobile-video">
-                <img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556" width="" height="40">
-              </button>
+              {%- render 'es-video', poster: block.settings.image_mb, video_source: block.settings.video_mb, text_content: text_content -%}
             </div>
           {%- endif -%}
         {%- elsif block.settings.image != blank -%}

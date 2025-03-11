@@ -10,6 +10,10 @@ class ESCardProduct extends HTMLElement {
     this.selectedVariantId = this.querySelector(".selected-variant-id");
     this.variantDataElement = this.querySelector('script[type="application/json"]');
     this.medias = this.querySelectorAll(".card__media img");
+    this.mainImage = this.querySelector(".main-custom-featured-image-info");
+    this.hoverImage = this.querySelector(".hover-custom-featured-image-info");
+    this.mainTitle = this.querySelector(".es-secondary-title");
+    this.subTitle = this.querySelector(".es-secondary-sub-title");
 
     if (this.variantDataElement) {
       this.variantData = JSON.parse(this.variantDataElement.textContent);
@@ -55,13 +59,28 @@ class ESCardProduct extends HTMLElement {
   handleColorVariantChange = (event) => {
     const value = event.target.value;
 
-    this.medias.forEach(media => {
-      if (media.getAttribute("alt").indexOf(value) > -1) {
-        media.classList.add("active");
-      } else {
-        media.classList.remove("active");
+    if (this.mainImage) {
+      if (event.target.dataset.image) {
+        this.mainImage.setAttribute("src", event.target.dataset.image);
       }
-    })
+      if (event.target.dataset.hoverImage) {
+        this.hoverImage.setAttribute("src", event.target.dataset.hoverImage);
+      }
+      if (event.target.dataset.title) {
+        this.mainTitle.textContent = event.target.dataset.title;
+      }
+      if (event.target.dataset.subTitle) {
+        this.subTitle.textContent = event.target.dataset.subTitle;
+      }
+    } else {
+      this.medias.forEach(media => {
+        if (media.getAttribute("alt").indexOf(value) > -1) {
+          media.classList.add("active");
+        } else {
+          media.classList.remove("active");
+        }
+      })
+    }
   }
 
   init() {

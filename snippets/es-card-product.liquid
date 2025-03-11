@@ -11,7 +11,8 @@
     endif
   -%}
   <es-card-product class="es-card-wrapper underline-links-hover">
-    <div class="card
+    <div 
+      class="card
       card--{{ settings.card_style }}
       {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
       {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
@@ -21,65 +22,80 @@
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         <div class="card__media">
-          <div class="media media--transparent media--hover-effect">
-            {%- for image in card_product.media -%}
-              {%- if forloop.first -%}
-                {%- assign first_image_alt = image.alt -%}
+          <div class="media media--transparent media--hover-effect{% if block.settings.image != blank %} single-media{% endif %}">
+            {%- if block.settings.use_variant_metafield != blank %}
+              {%- assign image = card_product.variants[0].metafields.custom.image.value -%}
+              {%- assign hover_image = card_product.variants[0].metafields.custom.hover_image.value -%}
+              {%- if image != blank -%}
+                <img
+                  src="{{ image | image_url: width: 533 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ image.alt | escape }}"
+                  class="motion-reduce custom-featured-image-info active main-custom-featured-image-info"
+                  {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                >
               {%- endif -%}
-              <img
-                srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ image | image_url }} {{ image.width }}w"
-                src="{{ image | image_url: width: 533 }}"
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                alt="{{ image.alt | escape }}"
-                class="motion-reduce custom-featured-image-info{% if first_image_alt == image.alt %} active{% endif %}"
-                {% unless lazy_load == false %}loading="lazy"{% endunless %}
-                width="{{ image.width }}"
-                height="{{ image.height }}"
-              >
-            {%- endfor -%}
-            {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-            {% comment %} <img
-              srcset="{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-                {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w"
-              src="{{ card_product.featured_media | image_url: width: 533 }}"
-              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-              alt="{{ card_product.featured_media.alt | escape }}"
-              class="motion-reduce custom-featured-image-info"
-              {% unless lazy_load == false %}loading="lazy"{% endunless %}
-              width="{{ card_product.featured_media.width }}"
-              height="{{ card_product.featured_media.height }}"
-            > {% endcomment %}
-            {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-
-            {% comment %} {%- if card_product.media[1] != nil and show_secondary_image -%}
-              <img
-                srcset="{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w"
-                src="{{ card_product.media[1] | image_url: width: 533 }}"
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                alt="{{ card_product.media[1].alt | escape }}"
-                class="motion-reduce custom-featured-image-info1"
-                loading="lazy"
-                width="{{ card_product.media[1].width }}"
-                height="{{ card_product.media[1].height }}"
-              >
-            {%- endif -%} {% endcomment %}
+              {%- if hover_image != blank -%}
+                <img
+                  src="{{ hover_image | image_url: width: 533 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ hover_image.alt | escape }}"
+                  class="motion-reduce custom-featured-image-info active hover-custom-featured-image-info"
+                  {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                  width="{{ hover_image.width }}"
+                  height="{{ hover_image.height }}"
+                >
+              {%- endif -%}
+            {%- elsif block.settings.image != blank -%}
+              {%- assign image = block.settings.image -%}
+              {%- assign hover_image = block.settings.hover_image -%}
+              {%- if image != blank -%}
+                <img
+                  src="{{ image | image_url: width: 533 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ image.alt | escape }}"
+                  class="motion-reduce custom-featured-image-info active"
+                  {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                >
+              {%- endif -%}
+              {%- if hover_image != blank -%}
+                <img
+                  src="{{ hover_image | image_url: width: 533 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ hover_image.alt | escape }}"
+                  class="motion-reduce custom-featured-image-info active"
+                  {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                  width="{{ hover_image.width }}"
+                  height="{{ hover_image.height }}"
+                >
+              {%- endif -%}
+            {%- else %}
+              {%- for image in card_product.media -%}
+                {%- if forloop.first -%}
+                  {%- assign first_image_alt = image.alt -%}
+                {%- endif -%}
+                <img
+                  srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ image | image_url }} {{ image.width }}w"
+                  src="{{ image | image_url: width: 533 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ image.alt | escape }}"
+                  class="motion-reduce custom-featured-image-info{% if first_image_alt == image.alt %} active{% endif %}"
+                  {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                >
+              {%- endfor -%}
+            {%- endif -%}
           </div>
         </div>
         <div class="card__content">
@@ -87,33 +103,30 @@
             <div>
               {%- unless card_product.has_only_default_variant -%}
                 {%- for option in card_product.options_with_values -%}
-                  {% if option.name == "Color"  %}
-                    <fieldset id="ProductSelect-option-{{ forloop.index0 }}" class="collection-variant-{{ option.name}}-{{ forloop.index0 }}" name="{{ option.name | handleize }}">
+                  {% if option.name == "Color" %}
+                    <fieldset id="ProductSelect-option-{{ forloop.index0 }}" class="collection-variant-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name | handleize }}">
                       {%- for value in option.values -%}
-                        {%- assign variant_label_state = true -%}
-                        {%- if product.options.size == 1 -%}
-                          {%- unless product.variants[forloop.index0].available -%}
-                            {%- assign variant_label_state = false -%}
-                          {%- endunless -%}
-                        {%- endif -%}
+                        {%- assign variant = card_product.variants | where: "option1", value | first -%}
+                        {%- assign variant_label_state = variant.available -%}
+                
                         <input type="radio"
-                          {% if option.selected_value == value %} checked="checked"{% endif %}
-                          {% unless variant_label_state %} disabled="disabled"{% endunless %}
+                          {% if option.selected_value == value %} checked="checked" {% endif %}
+                          {% unless variant_label_state %} disabled="disabled" {% endunless %}
                           value="{{ value | escape }}"
                           data-index="option{{ forloop.index }}"
-                          data-variant-img="{{ variant_img }}"
+                          data-image="{% if variant.metafields.custom.image != blank %}{{ variant.metafields.custom.image | img_url: 'large' }}{% endif %}"
+                          data-hover-image="{% if variant.metafields.custom.hover_image != blank %}{{ variant.metafields.custom.hover_image | img_url: 'large' }}{% endif %}"
+                          data-title="{{ variant.metafields.custom.secondary_title }}"
+                          data-sub-title="{{ variant.metafields.custom.secondary_sub_title }}"
                           name="{{ option.name | handleize }}"
                           id="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}">
                       {%- endfor -%}
                     </fieldset>
                   {% endif %}
-                {%- endfor -%}
+                {%- endfor -%}                
               {%- endunless -%}
             </div>
             <div class="card__content-cta">
-              <!-- Swym Wishlist Plus EPI Button with default first variant -->
-              <button aria-label="Add to Wishlist" data-with-epi="true" class="swym-button swym-add-to-wishlist-view-product product_{{card_product.id}}" data-swaction="addToWishlist" data-product-id="{{card_product.id | json}}" data-variant-id="{{card_product.variants[0].id}}" data-product-url="{{ shop.url }}{{ card_product.url }}"></button>
-              <!-- Swym Wishlist Plus EPI Button-->
               <a href="javascript:;" class="open-modal">+ ADD</a>
 
               <div class="quick-add-popup">
@@ -183,14 +196,28 @@
               <div>
                 <h3 class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"{% if card_product.featured_media or settings.card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
                   <a href="{{ card_product.url }}" class="full-unstyled-link">
-                    {{ card_product.title | escape }} 
+                    {%- if block.settings.use_variant_metafield and card_product.variants[0].metafields.custom.secondary_title -%}
+                      <span class="es-secondary-title">{{ card_product.variants[0].metafields.custom.secondary_title }}</span>
+                    {%- elsif block.settings.sub_title != blank -%}
+                      {{ block.settings.title }}
+                    {%- else -%}
+                      {{ card_product.title | escape }} 
+                    {%- endif -%}
                   </a>
                   <span class="product_small_desc_info">
                     {{ card_product.type }}
                   </span>
                 </h3>
                 <div class="collection-product-desc-info">
-                {{ card_product.description | truncate: 50}}
+                  <div class="main-collection-product-desc-info">
+                    {%- if block.settings.use_variant_metafield and card_product.variants[0].metafields.custom.secondary_sub_title -%}
+                      <span class="es-secondary-sub-title">{{ card_product.variants[0].metafields.custom.secondary_sub_title }}</span>
+                    {%- elsif block.settings.sub_title != blank -%}
+                      {{ block.settings.sub_title }}
+                    {%- else -%}
+                      {{ card_product.description | truncate: 50 }}
+                    {%- endif -%}
+                  </div>
                 </div>
               </div>
               {%- if show_vendor -%}
