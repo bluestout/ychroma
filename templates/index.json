@@ -48,7 +48,7 @@
           "type": "product",
           "settings": {
             "product": "henley-button-t-shirt",
-            "use_variant_metafield": true,
+            "use_variant_metafield": false,
             "image": "shopify://shop_images/images.png",
             "hover_image": "shopify://shop_images/denim-jacket-on-a-hanger-on-transparent-background-free-png.webp",
             "title": "Test Text Title",
