@@ -631,7 +631,11 @@
           }
           .video,
           .image {
-            padding-bottom: 130%;
+            &::before {
+              content: "";
+              display: block;
+              padding-top: 130%;
+            }
           }
         }
       }
