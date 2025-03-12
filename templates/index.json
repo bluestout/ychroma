@@ -251,8 +251,9 @@
             "product": "altavista-down-jacket",
             "use_variant_metafield": false,
             "image": "shopify://shop_images/yc-g3-altavista-real-soy.jpg",
-            "title": "",
-            "sub_title": ""
+            "hover_image": "shopify://shop_images/yc-g3-altavista-real-soy-hover.jpg",
+            "title": "Altavista Down Jacket",
+            "sub_title": "Have you ever felt like a Marvel hero?"
           }
         },
         "product_agr4KL": {
