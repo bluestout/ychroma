@@ -49,10 +49,10 @@
           "settings": {
             "product": "henley-button-t-shirt",
             "use_variant_metafield": false,
-            "image": "shopify://shop_images/images.png",
-            "hover_image": "shopify://shop_images/denim-jacket-on-a-hanger-on-transparent-background-free-png.webp",
-            "title": "Test Text Title",
-            "sub_title": "Test Text subtitle"
+            "image": "shopify://shop_images/yc-g1-henley-plum.jpg",
+            "hover_image": "shopify://shop_images/yc-g1-henley-plum-hover2.jpg",
+            "title": "Buffed Cotton Long-Sleeve Henley",
+            "sub_title": "Editor's Pick: Men's Health™, The Manual™"
           }
         },
         "product_YkpkKD": {
@@ -60,8 +60,10 @@
           "settings": {
             "product": "enduro-jean-button-fly",
             "use_variant_metafield": false,
-            "title": "Test Text Title",
-            "sub_title": "Test Text subtitle"
+            "image": "shopify://shop_images/yc-g1-enduro-blue.jpg",
+            "hover_image": "shopify://shop_images/yc-g1-enduro-blue-hover.jpg",
+            "title": "Enduro Jean Button Fly",
+            "sub_title": "Editor's Pick: USA Today™"
           }
         },
         "product_TDJnVm": {
@@ -69,8 +71,10 @@
           "settings": {
             "product": "grand-prix-hand-crocheted-shirt-limited-edition",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g1-grand-prix-plum.jpg",
+            "hover_image": "shopify://shop_images/yc-g1-grand-prix-plum-hover.jpg",
+            "title": "Grand Prix Hand Crocheted Shirt",
+            "sub_title": "A different league of sophistication."
           }
         },
         "product_ctJqW3": {
@@ -78,8 +82,10 @@
           "settings": {
             "product": "cognac-pocket-denim-shirt",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g1-cognac-blue_45339493-0c07-49ba-8439-b2df6e6969c6.jpg",
+            "hover_image": "shopify://shop_images/yc-g1-cognac-blue-hover.jpg",
+            "title": "Cognac Pocket Denim Shirt",
+            "sub_title": "Denim shirt, but elevated."
           }
         }
       },
@@ -93,10 +99,10 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/yc-g1-main-2.jpg",
         "mobile_image": "shopify://shop_images/yc-g1-main-2-mob.jpg",
-        "video": "https://cdn.shopify.com/videos/c/o/v/66d22f5c3bde43828befb19e933ffe30.mp4",
-        "video_mb": "",
+        "video": "https://cdn.shopify.com/videos/c/o/v/da0c976dc39f4d0e965ef7582a91a144.mp4",
+        "video_mb": "https://cdn.shopify.com/videos/c/o/v/f7983602c422433baf468f686c2f3118.mp4",
         "media_link": "shopify://products/grand-prix-hand-crocheted-shirt-limited-edition",
-        "overlay": 30,
+        "overlay": 0,
         "hide_mobile": true,
         "heading": "Sophisticated Plum",
         "text": "<p>Saturday Morning Photo Hunting</p>",
@@ -149,8 +155,10 @@
           "settings": {
             "product": "sevilla-shirt",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g2-sevilla.jpg",
+            "hover_image": "shopify://shop_images/yc-g2-sevilla-obsidian-hoven.jpg",
+            "title": "Sevilla Long Sleeve",
+            "sub_title": "Editor's Pick: Men's Health™, USA Today™"
           }
         },
         "product_p4d3zh": {
@@ -158,8 +166,10 @@
           "settings": {
             "product": "varial-shirt-cut-jacket",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g2-varial-citrine.jpg",
+            "hover_image": "shopify://shop_images/look06-326A5263-lr.jpg",
+            "title": "Varial Shirt-cut Jacket",
+            "sub_title": "Editor's Pick: Maxim™"
           }
         },
         "product_HyqEMy": {
@@ -167,8 +177,10 @@
           "settings": {
             "product": "henley-luxury-tropical-weight-short-sleeve",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g2-henley-linen-obsidian.jpg",
+            "hover_image": "shopify://shop_images/yc-g2-henley-linen-obsidian-hover.jpg",
+            "title": "Greek Linen Short-Sleeve Henley",
+            "sub_title": "Light, breathable, and luxurious."
           }
         },
         "product_hWPTGK": {
@@ -176,8 +188,10 @@
           "settings": {
             "product": "the-retinol-pant",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g2-retinol-obsidian.jpg",
+            "hover_image": "shopify://shop_images/yc-g2-retinol-obsidian-hover.webp",
+            "title": "Retinol \"No-wrinkle\" Pant",
+            "sub_title": "Sophisticated comfort without wrinkles."
           }
         }
       },
@@ -191,10 +205,10 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/yc-g2-main-1-dsk.jpg",
         "mobile_image": "shopify://shop_images/yc-g2-main-1-mob.jpg",
-        "video": "",
-        "video_mb": "",
+        "video": "https://cdn.shopify.com/videos/c/o/v/6c89ce3f4d694301b4284f9c84ef6689.mp4",
+        "video_mb": "https://cdn.shopify.com/videos/c/o/v/16edef081c934b428d0c20173f8d011d.mp4",
         "media_link": "shopify://collections",
-        "overlay": 30,
+        "overlay": 15,
         "hide_mobile": false,
         "heading": "Crisp, Fresh Citrine",
         "text": "<p>Midday Meeting in Santos</p>",
@@ -225,8 +239,10 @@
           "settings": {
             "product": "enduro-jean-button-fly",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g3-enduro-white.jpg",
+            "hover_image": "shopify://shop_images/yc-g3-enduro-white-hover.jpg",
+            "title": "Enduro Jean Button Fly",
+            "sub_title": "Editor's Pick: USA Today™"
           }
         },
         "product_wMeAYm": {
@@ -234,8 +250,10 @@
           "settings": {
             "product": "altavista-down-jacket",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g3-altavista-real-soy.jpg",
+            "hover_image": "shopify://shop_images/yc-g3-altavista-real-soy-hover2.jpg",
+            "title": "Altavista Down Jacket",
+            "sub_title": "Have you ever felt like a Marvel hero?"
           }
         },
         "product_agr4KL": {
@@ -243,8 +261,10 @@
           "settings": {
             "product": "henley-luxury-tropical-weight-long-sleeve",
             "use_variant_metafield": false,
-            "title": "",
-            "sub_title": ""
+            "image": "shopify://shop_images/yc-g3-henley-linen-caramel.jpg",
+            "hover_image": "shopify://shop_images/yc-g3-henley-linen-caramel-hover.jpg",
+            "title": "Greek Linen Long-Sleeve Henley",
+            "sub_title": "Perfect for when the sun comes out."
           }
         },
         "product_Jwc4bz": {
@@ -252,7 +272,9 @@
           "settings": {
             "product": "dwayne-sweater",
             "use_variant_metafield": false,
-            "title": "",
+            "image": "shopify://shop_images/yc-g3-dwayne-white.jpg",
+            "hover_image": "shopify://shop_images/yc-g3-dwayne-white-hover2.jpg",
+            "title": "Dwayne V-neck Sweater",
             "sub_title": ""
           }
         }
@@ -267,10 +289,10 @@
         "text_color": "#ffffff",
         "image": "shopify://shop_images/yc-g3-main-1-dsk.jpg",
         "mobile_image": "shopify://shop_images/yc-g3-main-1-mob.jpg",
-        "video": "",
-        "video_mb": "",
+        "video": "https://cdn.shopify.com/videos/c/o/v/05a51ee04ff546908ac6d374fc17ddd9.mp4",
+        "video_mb": "https://cdn.shopify.com/videos/c/o/v/ace12b911cd34627ba41cf92763fc813.mp4",
         "media_link": "shopify://collections/collection_sevilla",
-        "overlay": 30,
+        "overlay": 15,
         "hide_mobile": false,
         "heading": "Orange = Energy",
         "text": "<p>Headed to Brunch in Chiado</p>",
@@ -291,7 +313,7 @@
             "link": "https://www.ychroma.com/pages/concierge-service",
             "preload": false,
             "title": "<p>CREATE A WARDROBE PLAN</p>",
-            "text": "Schedule a call and let’s have fun"
+            "text": "Schedule a call and let’s have fun."
           }
         },
         "media_PxnLg7": {
@@ -299,13 +321,13 @@
           "settings": {
             "image": "shopify://shop_images/enviro-dsk_41dea042-be5f-4bc8-931a-acfaa0ec68e7.jpg",
             "image_mb": "shopify://shop_images/enviro-mob.jpg",
-            "video": "",
-            "video_mb": "",
+            "video": "https://cdn.shopify.com/videos/c/o/v/43fc744721f442d29692371e581b36e4.mp4",
+            "video_mb": "https://cdn.shopify.com/videos/c/o/v/d41968c4aa2143dc912c914e1fae001b.mp4",
             "opacity": 0,
             "link": "https://www.ychroma.com/pages/enviro",
             "preload": false,
             "title": "<p>FOUR KEY WAYS TO A BETTER PLANET</p>",
-            "text": "Social and environmental responsibility"
+            "text": "Social and environmental responsibility."
           }
         }
       },
