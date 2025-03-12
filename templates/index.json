@@ -273,7 +273,7 @@
             "product": "dwayne-sweater",
             "use_variant_metafield": false,
             "image": "shopify://shop_images/yc-g3-dwayne-white.jpg",
-            "hover_image": "shopify://shop_images/yc-g3-dwayne-white-hover.jpg",
+            "hover_image": "shopify://shop_images/yc-g3-dwayne-white-hover2.jpg",
             "title": "Dwayne V-neck Sweater",
             "sub_title": ""
           }
@@ -292,7 +292,7 @@
         "video": "",
         "video_mb": "",
         "media_link": "shopify://collections/collection_sevilla",
-        "overlay": 30,
+        "overlay": 15,
         "hide_mobile": false,
         "heading": "Orange = Energy",
         "text": "<p>Headed to Brunch in Chiado</p>",
