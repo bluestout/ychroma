@@ -49,8 +49,8 @@
           "settings": {
             "product": "henley-button-t-shirt",
             "use_variant_metafield": false,
-            "image": "shopify://shop_images/images.png",
-            "hover_image": "shopify://shop_images/denim-jacket-on-a-hanger-on-transparent-background-free-png.webp",
+            "image": "shopify://shop_images/Diseno_sin_titulo_1.png",
+            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "Test Text Title",
             "sub_title": "Test Text subtitle"
           }
@@ -60,6 +60,8 @@
           "settings": {
             "product": "enduro-jean-button-fly",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/Diseno_sin_titulo_1.png",
+            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "Test Text Title",
             "sub_title": "Test Text subtitle"
           }
@@ -69,6 +71,8 @@
           "settings": {
             "product": "grand-prix-hand-crocheted-shirt-limited-edition",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/Diseno_sin_titulo_1.png",
+            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
           }
@@ -78,6 +82,8 @@
           "settings": {
             "product": "cognac-pocket-denim-shirt",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/Diseno_sin_titulo_1.png",
+            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
           }
