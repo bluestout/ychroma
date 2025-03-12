@@ -815,6 +815,46 @@
         "name": "file_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "image",
+      "namespace": "custom",
+      "name": "Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "hover_image",
+      "namespace": "custom",
+      "name": "Hover Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "secondary_title",
+      "namespace": "custom",
+      "name": "Secondary Title",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "secondary_sub_title",
+      "namespace": "custom",
+      "name": "Secondary Sub Title",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "shop": []

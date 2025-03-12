@@ -2050,6 +2050,12 @@ main {
     }
   }
 
+  .footer__content-bottom-wrapper {
+    @media (min-width: 750px) {
+      padding-left: 100px;  
+    }
+  }
+
   .page-width {
     max-width: unset;
 
@@ -2093,13 +2099,14 @@ main {
       }
 
       .footer-block__heading {
-        font-size: 24px;
+        font-size: 24px !important;
         font-weight: bold !important;
         font-family: 'Centra No2', sans-serif !important;
         letter-spacing: 0.72px;
         color: #000000;
         text-transform: uppercase;
-        line-height: 120%;
+        text-shadow: 0 0 black;
+        line-height: 120% !important;
         margin-bottom: 24px;
 
         @media (max-width: 750px) {
@@ -2161,6 +2168,7 @@ main {
     .footer__list-social {
       max-height: max-content;
       gap: 12px;
+      padding-top: 20px;
 
       .list-social__item {
         max-height: max-content;
@@ -2222,7 +2230,7 @@ main {
 
       @media (max-width: 750px) {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start !important;
         text-align: center;
       }
 
@@ -2255,6 +2263,17 @@ main {
         text-transform: uppercase;
         opacity: 1;
       }
+
+      @media (max-width: 750px) {
+        .store-info {
+          padding-left: 70px;
+          text-align: left;
+        } 
+        .footer__copyright {
+          margin-left: 70px;
+          text-align: left;
+        }
+      }
     }
   }
 }
@@ -2283,6 +2302,12 @@ main {
       @media (max-width: 750px) {
         font-size: 12px !important;
       }
+    }
+  }
+
+  .kl_reviews__carousel__time_badge {
+    svg {
+      display: none;
     }
   }
 
@@ -2445,18 +2470,18 @@ main {
       color: #FFFFFF;
       text-transform: uppercase;
 
-      &.header__icon--cart,
-      &.header__icon--account {
-        & > span {
-          padding-top: 6px;
-        }
-      }
+      // &.header__icon--cart,
+      // &.header__icon--account {
+      //   & > span {
+      //     padding-top: 6px;
+      //   }
+      // }
 
       .cart-count-bubble {
         position: static;
         background-color: #FFF !important;
         color: #000 !important;
-        padding-top: 5px;
+        // padding-top: 5px;
         font: normal normal bold 14px/20px 'Centra No2' !important;
         letter-spacing: 0.84px;
         text-transform: uppercase;
@@ -2475,5 +2500,32 @@ main {
 div[data-testid="animated-teaser"] {
   & > span:first-child {
     background-image: url("https://cdn.shopify.com/s/files/1/0620/1648/7614/files/dsk-footer-yc-monogram.svg?v=1741286957") !important;
+  }
+}
+
+body {
+  position: relative;
+
+  div[aria-label="Open Form"] {
+    position: absolute !important;
+    bottom: 4px !important;
+    left: 35px !important;
+    height: 64px !important;
+    width: 64px !important;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0 !important;
+  
+    @media (max-width: 750px) {
+      bottom: 22px !important;
+    }
+  
+    div[data-testid="animated-teaser"] {
+      span {
+        background-size: contain !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+      }
+    }
   }
 }
