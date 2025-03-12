@@ -178,9 +178,9 @@
             "product": "henley-luxury-tropical-weight-short-sleeve",
             "use_variant_metafield": false,
             "image": "shopify://shop_images/yc-g2-henley-linen-obsidian.jpg",
-            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
-            "title": "",
-            "sub_title": ""
+            "hover_image": "shopify://shop_images/yc-g2-henley-linen-obsidian-hover.jpg",
+            "title": "Greek Linen Short-Sleeve Henley",
+            "sub_title": "Light, breathable, and luxurious."
           }
         },
         "product_hWPTGK": {
@@ -208,7 +208,7 @@
         "video": "https://cdn.shopify.com/videos/c/o/v/6c89ce3f4d694301b4284f9c84ef6689.mp4",
         "video_mb": "https://cdn.shopify.com/videos/c/o/v/16edef081c934b428d0c20173f8d011d.mp4",
         "media_link": "shopify://collections",
-        "overlay": 30,
+        "overlay": 15,
         "hide_mobile": false,
         "heading": "Crisp, Fresh Citrine",
         "text": "<p>Midday Meeting in Santos</p>",
