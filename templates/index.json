@@ -240,7 +240,8 @@
             "product": "enduro-jean-button-fly",
             "use_variant_metafield": false,
             "image": "shopify://shop_images/yc-g3-enduro-white.jpg",
-            "title": "",
+            "hover_image": "shopify://shop_images/yc-g3-enduro-white-hover.jpg",
+            "title": "Enduro Jean Button Fly",
             "sub_title": ""
           }
         },
