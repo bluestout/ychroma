@@ -27,7 +27,7 @@
         </div>
       {% endcapture %}
 
-      <div class="media-item" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }})">
+      <div class="media-item" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }}); --hover-background-color: rgba(0, 0, 0, {{ block.settings.opacity | plus: 0.3 }})">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
             {%- render 'es-video', poster: block.settings.image, video_source: block.settings.video, text_content: text_content -%}
@@ -73,11 +73,11 @@
             </div>
           {%- endif -%}
         {%- endif -%}
-        {% comment %}
+        
           {%- if block.settings.link != blank -%}
             <a href="{{ block.settings.link }}" class="media-item--link"></a>
           {%- endif -%}
-        {% endcomment %}
+       
       </div>
     {%- endfor -%}
   </div>
