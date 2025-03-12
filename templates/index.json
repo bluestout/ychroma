@@ -273,7 +273,8 @@
             "product": "dwayne-sweater",
             "use_variant_metafield": false,
             "image": "shopify://shop_images/yc-g3-dwayne-white.jpg",
-            "title": "",
+            "hover_image": "shopify://shop_images/yc-g3-dwayne-white-hover.jpg",
+            "title": "Dwayne V-neck Sweater",
             "sub_title": ""
           }
         }
