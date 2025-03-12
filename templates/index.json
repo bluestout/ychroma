@@ -155,7 +155,7 @@
           "settings": {
             "product": "sevilla-shirt",
             "use_variant_metafield": false,
-            "image": "shopify://shop_images/Diseno_sin_titulo_2.png",
+            "image": "shopify://shop_images/yc-g2-sevilla.jpg",
             "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
@@ -166,7 +166,7 @@
           "settings": {
             "product": "varial-shirt-cut-jacket",
             "use_variant_metafield": false,
-            "image": "shopify://shop_images/Diseno_sin_titulo_2.png",
+            "image": "shopify://shop_images/yc-g2-varial-citrine.jpg",
             "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
@@ -177,7 +177,7 @@
           "settings": {
             "product": "henley-luxury-tropical-weight-short-sleeve",
             "use_variant_metafield": false,
-            "image": "shopify://shop_images/Diseno_sin_titulo_2.png",
+            "image": "shopify://shop_images/yc-g2-henley-linen-obsidian.jpg",
             "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
@@ -188,7 +188,7 @@
           "settings": {
             "product": "the-retinol-pant",
             "use_variant_metafield": false,
-            "image": "shopify://shop_images/Diseno_sin_titulo_2.png",
+            "image": "shopify://shop_images/yc-g2-retinol-obsidian.jpg",
             "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
@@ -239,6 +239,7 @@
           "settings": {
             "product": "enduro-jean-button-fly",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/yc-g3-enduro-white.jpg",
             "title": "",
             "sub_title": ""
           }
@@ -248,6 +249,7 @@
           "settings": {
             "product": "altavista-down-jacket",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/yc-g3-altavista-real-soy.jpg",
             "title": "",
             "sub_title": ""
           }
@@ -257,6 +259,7 @@
           "settings": {
             "product": "henley-luxury-tropical-weight-long-sleeve",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/yc-g3-henley-linen-caramel.jpg",
             "title": "",
             "sub_title": ""
           }
@@ -266,6 +269,7 @@
           "settings": {
             "product": "dwayne-sweater",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/yc-g3-dwayne-white.jpg",
             "title": "",
             "sub_title": ""
           }
