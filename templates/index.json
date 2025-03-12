@@ -166,6 +166,8 @@
           "settings": {
             "product": "varial-shirt-cut-jacket",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/Diseno_sin_titulo_2.png",
+            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
           }
@@ -175,6 +177,8 @@
           "settings": {
             "product": "henley-luxury-tropical-weight-short-sleeve",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/Diseno_sin_titulo_2.png",
+            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
           }
@@ -184,6 +188,8 @@
           "settings": {
             "product": "the-retinol-pant",
             "use_variant_metafield": false,
+            "image": "shopify://shop_images/Diseno_sin_titulo_2.png",
+            "hover_image": "shopify://shop_images/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933_ab51d70c-a370-456f-9356-dccc9b09ec6d.jpg",
             "title": "",
             "sub_title": ""
           }
