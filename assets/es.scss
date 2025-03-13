@@ -553,7 +553,7 @@
           z-index: 2;
         }
 
-        &:hover::after {
+        &.hover-effect:hover::after {
           background-color: var(--hover-background-color);
         }
 
@@ -1783,12 +1783,21 @@ main {
         }
 
         .card-information {
+          gap: 20px;
           display: flex;
           align-items: flex-end;
           justify-content: space-between;
 
           @media (max-width: 768px) {
             display: none;
+          }
+
+          & > div:first-child {
+            max-width: calc(100% - 80px);
+          }
+
+          & > div:last-child {
+            min-width: 40px;
           }
 
           .price--on-sale {
@@ -1819,10 +1828,12 @@ main {
               background-color: #000 !important;
               color: #FFF;
               font-size: 10px;
+              margin: 0;
             }
 
             s.price-item--regular {
               font-size: 12px;
+              margin: 0;
             }
           }
 
@@ -1832,7 +1843,8 @@ main {
             font-size: 15px !important;
             font-weight: normal !important;
             text-transform: uppercase;
-            width: 200px;
+            max-width: 100%;
+            width: 100%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -1843,7 +1855,8 @@ main {
           .collection-product-desc-info,
           .collection-product-desc-info * {
             color: var(--text-color);
-            max-width: 200px;
+            max-width: 100%;
+            width: 100%;
             font-size: 13px !important;
             white-space: nowrap;
             overflow: hidden;
@@ -1868,6 +1881,7 @@ main {
           fieldset {
             display: flex;
             gap: 4px;
+            pointer-events: none;
           }
 
           .card__content-cta {
@@ -2103,7 +2117,7 @@ main {
       }
 
       .footer-block__heading {
-        font-size: 24px !important;
+        font-size: 20px !important;
         font-weight: bold !important;
         font-family: 'Centra No2', sans-serif !important;
         letter-spacing: 0.72px;
@@ -2257,6 +2271,11 @@ main {
         letter-spacing: 0.84px;
         color: #000000;
         text-transform: uppercase;
+
+        @media (max-width: 750px) {
+          font-size: 10px !important;
+          margin: 0;
+        }
       }
 
       .store-info,
@@ -2266,15 +2285,19 @@ main {
         color: #000000;
         text-transform: uppercase;
         opacity: 1;
+
+        @media (max-width: 750px) {
+          font-size: 10px !important;
+          margin: 0;
+        }
       }
 
       @media (max-width: 750px) {
         .store-info {
-          padding-left: 70px;
+          padding-left: 40px;
           text-align: left;
         } 
         .footer__copyright {
-          margin-left: 70px;
           text-align: left;
         }
       }
@@ -2474,18 +2497,18 @@ main {
       color: #FFFFFF;
       text-transform: uppercase;
 
-      // &.header__icon--cart,
-      // &.header__icon--account {
-      //   & > span {
-      //     padding-top: 6px;
-      //   }
-      // }
+      &.header__icon--cart,
+      &.header__icon--account {
+        & > span {
+          padding-top: 6px;
+        }
+      }
 
       .cart-count-bubble {
         position: static;
         background-color: #FFF !important;
         color: #000 !important;
-        // padding-top: 5px;
+        padding-top: 5px;
         font: normal normal bold 14px/20px 'Centra No2' !important;
         letter-spacing: 0.84px;
         text-transform: uppercase;
@@ -2511,7 +2534,6 @@ body {
   position: relative;
 
   div[aria-label="Open Form"] {
-    position: absolute !important;
     bottom: 4px !important;
     left: 35px !important;
     height: 64px !important;
@@ -2521,7 +2543,10 @@ body {
     margin: 0 !important;
   
     @media (max-width: 750px) {
-      bottom: 22px !important;
+      bottom: 38px !important;
+      left: 27px !important;
+      height: 44px !important;
+      width: 44px !important;
     }
   
     div[data-testid="animated-teaser"] {

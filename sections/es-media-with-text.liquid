@@ -27,14 +27,14 @@
         </div>
       {% endcapture %}
 
-      <div class="media-item" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }}); --hover-background-color: rgba(0, 0, 0, {{ block.settings.opacity | plus: 0.3 }})">
+      <div class="media-item{% if block.settings.hover_effect %} hover-effect{% endif %}" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }}); --hover-background-color: rgba(0, 0, 0, {{ block.settings.opacity | plus: 0.3 }})">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
-            {%- render 'es-video', poster: block.settings.image, video_source: block.settings.video, text_content: text_content -%}
+            {%- render 'es-video', poster: block.settings.image, video_source: block.settings.video, text_content: text_content, show_mute_button: block.settings.show_mute_button -%}
           </div>
           {%- if block.settings.video_mb != blank %}
             <div class="video medium-up--hide">
-              {%- render 'es-video', poster: block.settings.image_mb, video_source: block.settings.video_mb, text_content: text_content -%}
+              {%- render 'es-video', poster: block.settings.image_mb, video_source: block.settings.video_mb, text_content: text_content, show_mute_button: block.settings.show_mute_button -%}
             </div>
           {%- endif -%}
         {%- elsif block.settings.image != blank -%}
@@ -156,7 +156,7 @@
     (() => {
       const muteBtns = document.querySelectorAll('#shopify-section-{{ section.id }} .muteBtn');
 
-      muteBtns.forEach(muteBtn => {
+      muteBtns?.forEach(muteBtn => {
         muteBtn.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopImmediatePropagation();
@@ -298,6 +298,18 @@
           "unit": "px",
           "label": "Opacity dark",
           "default": 1
+        },
+        {
+          "type": "checkbox",
+          "id": "show_mute_button",
+          "label": "Show Mute Button",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "hover_effect",
+          "label": "Hover Effect",
+          "default": true
         },
         {
           "type": "url",
