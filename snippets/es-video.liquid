@@ -3,8 +3,10 @@
   poster="{{ poster | image_url }}"
   autoplay="autoplay"
   loop="loop"
-  muted=""
-  defaultmuted=""
+  {% if mute_audio %}
+    muted=""
+    defaultmuted=""
+  {% endif %}
   playsinline=""
   {% if block.settings.preload %}
     preload="auto"
