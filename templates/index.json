@@ -108,7 +108,7 @@
         "overlay": 0,
         "show_mute_button": false,
         "hover_effect": false,
-        "hide_mobile": true,
+        "hide_mobile": false,
         "heading": "Sophisticated Plum",
         "text": "<p>Saturday Morning Photo Hunting</p>",
         "collection": ""
