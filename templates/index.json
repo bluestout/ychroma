@@ -117,14 +117,6 @@
     "es_testimonial_Mg6nBC": {
       "type": "es-testimonial",
       "blocks": {
-        "review_Br6pGc": {
-          "type": "review",
-          "disabled": true,
-          "settings": {
-            "review": "",
-            "author": ""
-          }
-        },
         "review_GgLWMd": {
           "type": "review",
           "settings": {
@@ -151,7 +143,6 @@
         }
       },
       "block_order": [
-        "review_Br6pGc",
         "review_GgLWMd",
         "review_7XKYBE",
         "review_gLwgcR"
