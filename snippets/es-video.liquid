@@ -1,13 +1,11 @@
 <video
-  class="video_not-yas mobile-video"
-  poster="{{ poster | image_url }}"
-  autoplay="autoplay"
-  loop="loop"
-  {% if mute_audio %}
-    muted=""
-    defaultmuted=""
-  {% endif %}
-  playsinline=""
+  class="video_not-yas {{ target }}-video"
+  poster="{{ poster }}"
+  autoplay
+  loop
+  muted=""
+  defaultmuted=""
+  playsinline
   {% if block.settings.preload %}
     preload="auto"
   {% endif %}
@@ -16,7 +14,7 @@
 </video>
 {{ text_content }}
 {%- if show_mute_button -%}
-<button class="muteBtn" data-target="mobile-video">
+<button class="muteBtn" data-target="{{ target }}-video">
   <img src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556" width="" height="40">
 </button>
 {%- endif -%}

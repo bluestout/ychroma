@@ -38,7 +38,7 @@
     {%- endif -%}
     <div class="image{% if s.mobile_image != blank or s.video_mb %} small--hide{% endif %}">
       {%- if s.video != blank -%}
-        {%- render 'es-video', poster: s.image, video_source: s.video, show_mute_button: s.show_mute_button -%}
+        {%- render 'es-video', poster: s.image, video_source: s.video, show_mute_button: s.show_mute_button, target: 'desktop' -%}
       {%- elsif s.image != blank -%}
         <img
           src="{{ s.image | img_url: '1920x' }}"
