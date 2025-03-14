@@ -2076,12 +2076,6 @@ main {
     }
   }
 
-  .footer__content-bottom-wrapper {
-    @media (min-width: 750px) {
-      padding-left: 100px;  
-    }
-  }
-
   .page-width {
     max-width: unset;
 
@@ -2270,6 +2264,13 @@ main {
         @media (max-width: 750px) {
           order: -1;
           margin-bottom: 24px;
+
+          .list-payment__item {
+            .icon {
+              width: 26px;
+              height: auto;
+            }
+          }  
         }
       }
 
@@ -2286,6 +2287,17 @@ main {
         }
       }
 
+      .store-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .image {
+          width: 34px;
+          height: auto;
+        }
+      }
+
       .store-info,
       .store-info p {
         font: normal normal 300 14px/11px 'Centra No2' !important;
@@ -2293,6 +2305,11 @@ main {
         color: #000000;
         text-transform: uppercase;
         opacity: 1;
+        margin: 0;
+
+        & + p {
+          margin-top: 6px;
+        }
 
         @media (max-width: 750px) {
           font-size: 10px !important;
@@ -2302,7 +2319,6 @@ main {
 
       @media (max-width: 750px) {
         .store-info {
-          padding-left: 40px;
           text-align: left;
         } 
         .footer__copyright {
@@ -2506,18 +2522,18 @@ main {
       color: #FFFFFF;
       text-transform: uppercase;
 
-      &.header__icon--cart,
-      &.header__icon--account {
-        & > span {
-          padding-top: 6px;
-        }
-      }
+      // &.header__icon--cart,
+      // &.header__icon--account {
+      //   & > span {
+      //     padding-top: 6px;
+      //   }
+      // }
 
       .cart-count-bubble {
         position: static;
         background-color: #FFF !important;
         color: #000 !important;
-        padding-top: 5px;
+        // padding-top: 5px;
         font: normal normal bold 14px/20px 'Centra No2' !important;
         letter-spacing: 0.84px;
         text-transform: uppercase;
@@ -2533,39 +2549,39 @@ main {
   }
 }
 
-div[data-testid="animated-teaser"] {
-  & > span:first-child {
-    background-image: url("https://cdn.shopify.com/s/files/1/0620/1648/7614/files/dsk-footer-yc-monogram.svg?v=1741286957") !important;
-  }
-}
+// div[data-testid="animated-teaser"] {
+//   & > span:first-child {
+//     background-image: url("https://cdn.shopify.com/s/files/1/0620/1648/7614/files/dsk-footer-yc-monogram.svg?v=1741286957") !important;
+//   }
+// }
 
 body {
   position: relative;
 
-  div[aria-label="Open Form"] {
-    bottom: 4px !important;
-    left: 35px !important;
-    height: 64px !important;
-    width: 64px !important;
-    padding: 5px;
-    box-sizing: border-box;
-    margin: 0 !important;
+  // div[aria-label="Open Form"] {
+  //   bottom: 4px !important;
+  //   left: 35px !important;
+  //   height: 64px !important;
+  //   width: 64px !important;
+  //   padding: 5px;
+  //   box-sizing: border-box;
+  //   margin: 0 !important;
   
-    @media (max-width: 750px) {
-      bottom: 38px !important;
-      left: 27px !important;
-      height: 44px !important;
-      width: 44px !important;
-    }
+  //   @media (max-width: 750px) {
+  //     bottom: 38px !important;
+  //     left: 27px !important;
+  //     height: 44px !important;
+  //     width: 44px !important;
+  //   }
   
-    div[data-testid="animated-teaser"] {
-      span {
-        background-size: contain !important;
-        padding: 0 !important;
-        border-radius: 0 !important;
-      }
-    }
-  }
+  //   div[data-testid="animated-teaser"] {
+  //     span {
+  //       background-size: contain !important;
+  //       padding: 0 !important;
+  //       border-radius: 0 !important;
+  //     }
+  //   }
+  // }
 }
 
 

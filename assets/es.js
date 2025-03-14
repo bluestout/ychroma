@@ -256,15 +256,15 @@ const KlaviyoReady = () => {
     if (!widget) return;
 
     if (widget) {
-      if (widget.swiper) {
-        widget.swiper.destroy(true, true);
-      }
+      // if (widget.swiper) {
+      //   widget.swiper.destroy(true, true);
+      // }
 
       const paginationEl = document.createElement('div');
       paginationEl.classList.add('swiper-pagination');
       widget.appendChild(paginationEl);
 
-      new Swiper(widget, {
+      const sw = new Swiper(widget, {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 10,
@@ -277,8 +277,6 @@ const KlaviyoReady = () => {
           clickable: true,
         },
       });
-
-      console.log('Pagination added to Klaviyo Swiper.');
     }
   })
 }
