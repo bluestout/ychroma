@@ -117,6 +117,14 @@
     "es_testimonial_Mg6nBC": {
       "type": "es-testimonial",
       "blocks": {
+        "review_Br6pGc": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "review": "",
+            "author": ""
+          }
+        },
         "review_GgLWMd": {
           "type": "review",
           "settings": {
@@ -128,7 +136,7 @@
         "review_7XKYBE": {
           "type": "review",
           "settings": {
-            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.\"</p>",
+            "review": "<p>\"The best part is the colors offered are a touch toned down, so you can sleep well knowing the shirt won’t be too overly vibrant when trying to pair with your current wardrobe.\"</p>",
             "author": "",
             "company_logo": "shopify://shop_images/dsk-menshealth.svg"
           }
@@ -143,6 +151,7 @@
         }
       },
       "block_order": [
+        "review_Br6pGc",
         "review_GgLWMd",
         "review_7XKYBE",
         "review_gLwgcR"
