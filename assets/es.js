@@ -269,8 +269,8 @@ const KlaviyoReady = () => {
         slidesPerView: 1,
         spaceBetween: 10,
         navigation: {
-          nextEl: '.kl_reviews__carousel__next_button',
-          prevEl: '.kl_reviews__carousel__prev_button',
+          nextEl: el.querySelector('.kl_reviews__carousel__next_button'),
+          prevEl: el.querySelector('.kl_reviews__carousel__prev_button'),
         },
         pagination: {
           el: '.swiper-pagination',

@@ -19,7 +19,6 @@
       {% if extend_height %} card--extend-height{% endif %}
       {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-      onclick="window.location='{{card_product.url}}'"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         <div class="card__media">
@@ -252,6 +251,7 @@
             </div>
           </div>
         </div>
+        <a href="{{ card_product.url }}" class="es-full-linker"></a>
       </div>
     </div>
   </es-card-product>
