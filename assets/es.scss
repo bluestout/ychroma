@@ -2529,18 +2529,18 @@ main {
       color: #FFFFFF;
       text-transform: uppercase;
 
-      // &.header__icon--cart,
-      // &.header__icon--account {
-      //   & > span {
-      //     padding-top: 6px;
-      //   }
-      // }
+      &.header__icon--cart,
+      &.header__icon--account {
+        & > span {
+          padding-top: 6px;
+        }
+      }
 
       .cart-count-bubble {
         position: static;
         background-color: #FFF !important;
         color: #000 !important;
-        // padding-top: 5px;
+        padding-top: 5px;
         font: normal normal bold 14px/20px 'Centra No2' !important;
         letter-spacing: 0.84px;
         text-transform: uppercase;
