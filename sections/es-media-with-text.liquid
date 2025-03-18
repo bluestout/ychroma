@@ -12,7 +12,7 @@
   @media (max-width: 750px) {
     #shopify-section-{{ section.id }} {
       padding-top: {{ section.settings.m_padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}px;
+      padding-bottom: {{ section.settings.m_padding_bottom }}px;
     }
   }
 </style>
@@ -216,6 +216,15 @@
       "type": "range",
       "id": "m_padding_top",
       "label": "Mobile Padding Top",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "m_padding_bottom",
+      "label": "Mobile Padding Bottom",
       "min": 0,
       "max": 400,
       "step": 4,
