@@ -1,0 +1,383 @@
+{%- liquid
+  assign medias = section.blocks | where: 'type', 'media'
+  assign logos = section.blocks | where: 'type', 'logo'
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.m_padding_top }}px;
+      padding-bottom: {{ section.settings.m_padding_bottom }}px;
+    }
+  }
+</style>
+
+<div class="container{% unless section.settings.full_width %} with-padding{% endunless %}">
+  <div class="media-wrapper">
+    {%- for block in medias %}
+      {% capture text_content %}
+        <div class="text-content">
+          <h2 class="text-content--heading font-h2">{{ block.settings.title }}</h2>
+          <div class="text-content--text font-text">{{ block.settings.text }}</div>
+        </div>
+      {% endcapture %}
+
+      <div class="media-item{% if block.settings.hover_effect %} hover-effect{% endif %}" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }}); --hover-background-color: rgba(0, 0, 0, {{ block.settings.opacity | plus: 0.3 }})">
+        {%- if block.settings.video != blank -%}
+          <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
+            {%- render 'es-video', poster: block.settings.image, video_source: block.settings.video, text_content: text_content, show_mute_button: block.settings.show_mute_button, mute_audio: block.settings.mute_audio, target: 'desktop' -%}
+          </div>
+          {%- if block.settings.video_mb != blank %}
+            <div class="video medium-up--hide">
+              {%- render 'es-video', poster: block.settings.image_mb, video_source: block.settings.video_mb, text_content: text_content, show_mute_button: block.settings.show_mute_button, mute_audio: block.settings.mute_audio, target: 'mobile' -%}
+            </div>
+          {%- endif -%}
+        {%- elsif block.settings.image != blank -%}
+          <div class="image{% if block.settings.image_mb != blank %} small--hide{% endif %}">
+            <img
+              src="{{ block.settings.image | img_url: '1920x' }}"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              alt="{{ block.settings.image.alt }}"
+              {% if block.settings.preload %}
+                fetchpriority="high"
+                loading="eager"
+              {% else %}
+                loading="lazy"
+              {% endif %}
+              style="--padding-top: {{ 100 | divided_by: block.settings.image.aspect_ratio }}"
+            >
+            {{ text_content }}
+          </div>
+          {%- if block.settings.image_mb != blank -%}
+            <div class="image medium-up--hide">
+              <img
+                src="{{ block.settings.image_mb | img_url: '1920x' }}"
+                width="{{ block.settings.image_mb.width }}"
+                height="{{ block.settings.image_mb.height }}"
+                alt="{{ block.settings.image_mb.alt }}"
+                {% if block.settings.preload %}
+                  fetchpriority="high"
+                  loading="eager"
+                {% else %}
+                  loading="lazy"
+                {% endif %}
+                style="--padding-top: {{ 100 | divided_by: block.settings.image_mb.aspect_ratio }}"
+              >
+              {{ text_content }}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+        
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="media-item--link"></a>
+          {%- endif -%}
+       
+      </div>
+    {%- endfor -%}
+  </div>
+
+  {%- if section.settings.title != blank -%}
+    <div class="content-wrapper {{ section.settings.text_align }}">
+      <h2 class="content-heading">
+        <a href="{{ section.settings.url }}">{{ section.settings.title }}</a>
+      </h2>
+      {%- if section.settings.title_sub != blank -%}
+        <a
+          href="{% if section.settings.url_btn != blank %}{{ section.settings.url_btn }}{% else %}#{{ section.id }}-popup{% endif %}"
+          class="content-sub-heading {% if section.settings.url_btn == blank %}popup-defolt{% endif %}"
+        >
+          {{- section.settings.title_sub -}}
+        </a>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if logos.size > 0 -%}
+    <div class="logos-wrapper">
+      <h2 class="logos-heading">{{ section.settings.logolist_heading | default: 'As Seen In' }}</h2>
+      <div class="swiper logos-swiper">
+        <div class="swiper-wrapper">
+          {%- for block in logos -%}
+            <div class="swiper-slide">
+              <img
+                src="{{ block.settings.image | img_url: 'master' }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.image.alt | default: block.settings.image.title }}"
+              >
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {% if medias[0].settings.video != blank %}
+    <div id="{{ section.id }}-popup" class="mfp-hide white-popup-block">
+      <video loop controls controlslist="nodownload" preload="none">
+        <source src="{{ medias[0].settings.video }}" type="video/mp4">
+      </video>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper1_2 = new Swiper('#shopify-section-{{ section.id }} .logos-swiper', {
+      spaceBetween: 25,
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          loop: true,
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true,
+          },
+        },
+        990: {
+          slidesPerView: 'auto',
+          spaceBetween: 65,
+          effect: false,
+        },
+      },
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    (() => {
+      const muteBtns = document.querySelectorAll('#shopify-section-{{ section.id }} .muteBtn');
+
+      muteBtns?.forEach(muteBtn => {
+        muteBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+
+          let video = document.querySelector(`#shopify-section-{{ section.id }} .${muteBtn.dataset.target}`);
+
+          console.log(video);
+    
+          video.muted = !video.muted;
+          
+          let img_url = video.muted ? 'https://cdn.shopify.com/s/files/1/0620/1648/7614/files/d1bb3df3-6f7e-4fc1-857a-d86e70ce18f6.png?v=1740779556' : 'https://cdn.shopify.com/s/files/1/0620/1648/7614/files/1e4a9c7a-e92e-4fc0-a1c8-3d80a5e9b112.png?v=1740779556';
+          muteBtn.querySelector("img").setAttribute("src", img_url);
+
+          video.addEventListener('loadedmetadata', () => {
+            muteBtn.style.display = 'block';
+          });
+        });
+      });
+{% comment %} 
+      setTimeout(() => {
+        if (window.innerWidth > 750) {
+          document.querySelector('#shopify-section-{{ section.id }} .muteBtn[data-target="desktop-video"]').click();
+        } else {
+          document.querySelector('#shopify-section-{{ section.id }} .muteBtn[data-target="mobile-video"]').click();
+        }
+      }, 2000) {% endcomment %}
+      
+    })();
+  });
+</script>
+
+{%- schema -%}
+{
+  "name": "Media with Text",
+  "tag": "section",
+  "class": "es-media-with-text",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "m_padding_top",
+      "label": "Mobile Padding Top",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "m_padding_bottom",
+      "label": "Mobile Padding Bottom",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full Width",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Link for title"
+    },
+    {
+      "type": "text",
+      "id": "title_sub",
+      "label": "sub Title (btn)",
+      "default": "sub Title"
+    },
+    {
+      "type": "url",
+      "id": "url_btn",
+      "label": "Link for button"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Align text",
+      "options": [
+        {
+          "value": "right bottom",
+          "label": "Right Bottom"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "logolist_heading",
+      "label": "Logo List Heading",
+      "default": "As Seen In"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mb",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "url",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "url",
+          "id": "video_mb",
+          "label": "Mobile Video"
+        },
+        {
+          "type": "range",
+          "id": "opacity",
+          "min": 0,
+          "max": 1,
+          "step": 0.1,
+          "unit": "px",
+          "label": "Opacity dark",
+          "default": 1
+        },
+        {
+          "type": "checkbox",
+          "id": "show_mute_button",
+          "label": "Show Mute Button",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "mute_audio",
+          "label": "Mute Audio",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "hover_effect",
+          "label": "Hover Effect",
+          "default": true
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "preload",
+          "label": "Preload"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "@ Media with Text"
+    }
+  ]
+}
+{%- endschema -%}

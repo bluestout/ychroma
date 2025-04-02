@@ -1,0 +1,23 @@
+<div class="product-top-detail">
+<h2>{{ product.metafields.custom.product_top_title.value }}</h2>
+<p>{{ product.metafields.custom.product_top_description.value }}</p>
+</div>
+{% schema %}
+{
+  "name": "Product Second Top",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Video Source"
+    }
+  ]
+  ,
+  "presets": [
+    {
+      "name": "Product Second Top",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}

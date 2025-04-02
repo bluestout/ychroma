@@ -1,0 +1,480 @@
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script>
+  function yas_openSize(e){
+    let wrapp = e.closest('.swiper-slide').find('.yas-wrapp-all_picl');
+    wrapp.addClass('open_size');
+  }
+  function yas_closeSize(e){
+    let wrapp = e.closest('.swiper-slide').find('.yas-wrapp-all_picl');
+    wrapp.removeClass('open_size');
+  }
+ 
+</script>
+<style>
+  #shopify-section-{{section.id}}{
+    padding: 75px 0 100px;
+  }
+  #shopify-section-{{section.id}} h2{
+    text-align: center;
+    color: #B59E5F;
+    font-family: "CentraNo2-Bold";
+    font-size: 45px;
+    letter-spacing: 3.5px; 
+    margin-bottom: 60px;
+    line-height: 50px;
+  }
+  #shopify-section-{{section.id}} h4{
+    text-align: center;
+    color: #FFFFFF;
+   
+    font-size: 22px;
+    margin: 30px 0 0;
+    line-height: 30px;
+  }
+  #shopify-section-{{section.id}} p.yas-top-seling-price{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+ 
+  }
+  #shopify-section-{{section.id}} .yas-top-seling-slider_wrapp{
+    max-width: 1587px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #shopify-section-{{section.id}} .swiper-slide{
+    max-width: 499px;
+    width: 100%;
+  }
+  #shopify-section-{{section.id}} .yas-pickvibe-slider_image{
+    position: relative;
+  }
+  #shopify-section-{{section.id}} .swiper-slide img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next:after,
+  #shopify-section-{{section.id}} .swiper-button-prev:after{
+    content: none;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next{
+    right: -82px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-prev{
+    left: -82px;
+  }
+   #shopify-section-{{section.id}} .yas-wrapp-info_recsize{
+    position: relative;
+     min-height: 145px;
+  }
+  #shopify-section-{{section.id}} .card_yas_size{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    min-height: 145px;
+  }
+  #shopify-section-{{section.id}} .swiper-slide:hover .card_yas_size{
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+  }
+  #shopify-section-{{section.id}} .swiper-slide:hover  .yas-wrapp-info_recsize > p, 
+  #shopify-section-{{section.id}} .swiper-slide:hover  .yas-wrapp-info_recsize > h4{
+    opacity: 0;
+  }
+  #shopify-section-{{section.id}} .card_yas_size,
+  #shopify-section-{{section.id}} .card_yas_size .card_yas_size_color-otions{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #shopify-section-{{section.id}} .card_yas_size{
+    flex-direction: column;
+  }
+  #shopify-section-{{section.id}} .card_yas_size h4{
+    font-size: 20px;
+    line-height: 25px;
+    font-style: italic;
+    margin: 0px auto 5px;
+  }
+  #shopify-section-{{section.id}} .card_yas_size h5{
+    display: none;
+  }
+  #shopify-section-{{section.id}} .card_yas_size span {
+    border: 0px solid #fff;
+    margin: 0;
+    display: inline-flex;
+    width: auto;
+    cursor: pointer;
+    transition: all .4s ease;
+    min-width: 95px;
+    justify-content: center;
+    margin: 2px 0;
+  }
+  #shopify-section-{{section.id}} .card_yas_size .product-form__buttons button {
+    line-height: normal;
+    font-weight: 600;
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+    min-width: unset;
+    font-size: 12px;
+    min-height: unset;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+    padding: 4px 10px;
+    margin: 0;
+  }
+
+  #shopify-section-{{section.id}} .card_yad_add-cart span {
+    background: #B19F67;
+    font-weight: 600;
+    font-family: CentraNo2-Bold!important;
+    font-size: 15px;
+    display: none;
+    line-height: 25px;
+    margin-top: 10px;
+    padding: 7.5px 0;
+    color: #000;
+    width: 100%;
+    text-align: center;
+  }
+ 
+  @media (max-width: 1380px){
+     #shopify-section-{{section.id}} h4{
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: 0.05em;
+    }
+    #shopify-section-{{section.id}} p.yas-top-seling-price{
+      font-size: 25px;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+
+    }
+  }
+  @media (max-width: 1024px){
+    #shopify-section-{{section.id}} .swiper-slide:hover .card_yas_size{
+      display: none;
+    }
+    #shopify-section-{{section.id}} .swiper-slide:hover .yas-wrapp-info_recsize > p,
+    #shopify-section-{{section.id}} .swiper-slide:hover .yas-wrapp-info_recsize > h4{
+      opacity: 1;
+    }
+     #shopify-section-{{section.id}} .yas-wrapp-info_recsize{
+      position: unset;
+    }
+    #shopify-section-{{section.id}} .card_yad_add-cart span {
+      display: block;
+      
+    }
+    #shopify-section-{{section.id}} .swiper-slide a .card_yas_size{
+      display: none;
+    }
+    #shopify-section-{{section.id}} .swiper-slide div.open_size .card_yas_size {
+      display: block;
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      padding: 5px 10px;
+    }
+
+    #shopify-section-{{section.id}} div.open_size{
+      position: relative;
+    }
+    
+    #shopify-section-{{section.id}} div.open_size .card_yas_size_color-otions{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+   
+    #shopify-section-{{section.id}} div.open_size span,
+    #shopify-section-{{section.id}} div.open_size button{
+      color: #000;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 12px;
+      line-height: normal;
+    }
+    #shopify-section-{{section.id}} div.open_size .card_yas_size h4{
+      display: none;
+    }
+    #shopify-section-{{section.id}} div.open_size h5{
+      display: flex;
+      color: #000;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+       font-size: 12px;
+    }
+    #shopify-section-{{section.id}} div.open_size span{
+      border-bottom: 1px solid #B19F67;
+     
+    }
+    #shopify-section-{{section.id}} div.open_size span *{
+       width: 100%;
+    }
+    #shopify-section-{{section.id}} .swiper-slide:hover .yas-card-title_wrapp {
+      opacity: 1;
+    }
+    #shopify-section-{{section.id}} .swiper-slide div.open_size + .card_yad_add-cart{
+      display: none;
+    } 
+  }
+  @media (max-width: 989px){
+    
+    #shopify-section-{{section.id}} .yas-top-seling-slider_wrapp{
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #shopify-section-{{section.id}} .yas-top-seling-slider{
+      overflow: visible;
+    } 
+  }
+  @media (max-width: 749px){
+    #shopify-section-{{section.id}} .yas-wrapp-info_recsize{
+      min-height: 75px;
+    }
+  }
+   @media (max-width: 590px){
+     #shopify-section-{{section.id}} .swiper-slide{
+        max-width: 275px;
+    }
+      #shopify-section-{{section.id}} h2{
+        font-size: 25px;
+        line-height: 30px;
+      }
+     #shopify-section-{{section.id}} h4{
+      font-size: 25px;
+      line-height: 30px;
+    }
+    #shopify-section-{{section.id}} p.yas-top-seling-price{
+      font-size: 15px;
+      line-height: 20px;
+    }
+   }
+</style>
+
+{% assign collection_meta = product.metafields.custom.recommended_variant.value %}
+
+{% assign collection_var_meta = variant.metafields.custom.recommended_variant.value %}
+
+<div class="yas-top-seling-product-wrapp">
+  <h2>{{ section.settings.title }}</h2>
+  <div class="yas-top-seling-slider_wrapp">
+    <div class="swiper yas-top-seling-slider"> 
+          <div class="swiper-wrapper">
+
+            {% for variant in product.variants %}
+                {% for variant_met in variant.metafields.custom.recommended_variant.value %}
+                  <div class="swiper-slide {{ variant.option1 | escape | downcase | replace: ' ', '_' }}"> 
+                    <div class="yas-wrapp-all_picl">
+                      <div class="yas-pickvibe-slider_image">
+                        <a href="{{ variant_met.url }}">
+                        <img src="{{ variant_met.featured_image | img_url: '500x' }}"    alt="{{ variant_met.title }}">
+                        </a>
+                        
+                      </div>
+                      <div class="yas-wrapp-info_recsize">
+                        <div class="card_yas_size">
+                          <h4>SELECT SIZE TO ADD TO BAG</h4>
+                          <h5>SELECT SIZE 
+                          <i onclick="yas_closeSize($(this));">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="9.593" height="9.592" viewBox="0 0 9.593 9.592">
+                              <g id="Сгруппировать_318" data-name="Сгруппировать 318" transform="translate(-6421.872 -245.873)">
+                                <line id="Линия_14" data-name="Линия 14" y2="11.566" transform="translate(6430.758 246.58) rotate(45)" fill="none" stroke="#3a363c" stroke-width="2"/>
+                                <line id="Линия_15" data-name="Линия 15" y2="11.566" transform="translate(6430.758 254.758) rotate(135)" fill="none" stroke="#3a363c" stroke-width="2"/>
+                              </g>
+                            </svg>
+                          </i>
+                          </h5>
+                         
+                            <div class="card_yas_size_color-otions">
+                                      {% for variant in variant_met.product.variants -%}
+                                        {% if variant_met.option1 == variant.option1 %}
+                                          <span data-variantid="{{ variant.id }}" url-variant="{{ variant.url }}" data-aviable="{%if variant.inventory_quantity > 0 %}true{% else %}false{% endif %}">
+                                          <product-form class="product-form">
+                                            <div class="product-form__error-message-wrapper" role="alert" hidden>
+                                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                                              </svg>
+                                              <span class="product-form__error-message"></span>
+                                            </div>
+                                            {%- assign product_form_id = 'product-form-' | append: section.id -%}
+                                            {%- form 'product', variant_met.product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                                              <input type="hidden" name="id" value="{{ variant.id }}" disabled>
+                                              <div class="product-form__buttons">
+                                                <button
+                                                  type="submit"
+                                                  name="add"
+                                                  class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                                                {% if variant.inventory_quantity < 1 %}disabled{% endif %}
+                                                >
+                                                    {{ variant.option2 }}
+                                                    <div class="loading-overlay__spinner hidden">
+                                                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                      </svg>
+                                                    </div>
+                                                </button>
+                                                {%- if block.settings.show_dynamic_checkout -%}
+                                                  {{ form | payment_button }}
+                                                {%- endif -%}
+                                              </div>
+                                            {%- endform -%}
+                                          </product-form>
+                                         </span>
+                                        {% endif %}
+                                      {%- endfor %}
+                             </div>
+                                    
+                        </div>
+                        <h4>{{ variant_met.product.title }}</h4>
+                        <p class="yas-top-seling-price">{{ variant_met.price | money_without_trailing_zeros }}</p>
+                      </div>
+                                                   
+                    </div>
+                     <div class="card_yad_add-cart" onclick="yas_openSize($(this));">
+                      <span>ADD TO BAG</span>
+                      </div>                             
+                  </div>
+                {% endfor %}
+            {% endfor %}
+            {% comment %}
+            {% if collection_meta != blank %}
+              {% for variant in collection_meta %}
+                <div class="swiper-slide"> 
+                  <a href="{{ variant.url }}">
+                    <div class="yas-pickvibe-slider_image">
+                      <img src="{{ variant.featured_image | img_url: '500x' }}" alt="{{ variant.title }}">
+                    </div>
+                    <h4>{{ variant.title }}</h4>
+                    <p class="yas-top-seling-price">{{ variant.price | money_without_trailing_zeros }}</p>
+                  </a>
+                </div>
+              {% endfor %}
+            {% else %}
+            {% for block in section.blocks %}
+              <div class="swiper-slide"> 
+                <a href="{{ block.settings.product.url }}">
+                  <div class="yas-pickvibe-slider_image">
+                    <img src="{{ block.settings.product.featured_image | img_url: '500x' }}" alt="{{ block.settings.product.title }}">
+                  </div>
+                  <h4>{{ block.settings.product.title }}</h4>
+                  <p class="yas-top-seling-price">{{ block.settings.product.price | money_without_trailing_zeros }}</p>
+                </a>
+              </div>
+            {% endfor %}
+            {% endif %}
+            {% endcomment %}
+          </div>
+         
+      </div>
+      <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33.09" height="128.809" viewBox="0 0 33.09 128.809">
+            <path id="left_arrow_rec" data-name="left_arrow_rec" d="M0,0,61.109,27.288,122.2,0" transform="translate(29.788 3.302) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33.09" height="128.809" viewBox="0 0 33.09 128.809">
+            <path id="right_arrow_rec" data-name="right_arrow_rec" d="M0,0,61.109,27.288,122.2,0" transform="translate(3.302 125.507) rotate(-90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+          </svg>
+       </div>
+  </div>
+</div>
+
+<script defer>
+  $(function(){
+    let swiper = new Swiper('#shopify-section-{{section.id}} .swiper', {
+     
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 25,
+      preloadImages: false,
+      observer: true,
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .swiper-button-prev',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: "auto",
+          spaceBetween: 25,
+          loop: false,
+          centeredSlides: true,
+          preloadImages: false,
+          observer: true,
+        },
+        // when window width is >= 990px
+        990: {
+          slidesPerView: '3',
+          spaceBetween: 22.5,
+          loop: false,
+          centeredSlides: false,
+          preloadImages: false,
+           observer: true,
+        }
+      }
+    });
+  })
+</script>
+
+
+{% schema %}
+  {
+    "name": "yas recomendation",
+    "class": "yas-recomendation",
+    "settings": [
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Select product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "product"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "yas recomendation"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

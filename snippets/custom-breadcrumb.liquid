@@ -1,0 +1,107 @@
+ {% unless template == 'index' or template == 'cart' or template == 'list-collections'   %}
+
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+
+  <a href="/" title="Home">Home</a>
+
+  {% if template contains 'page' %}
+
+    
+ {% if page.handle contains 'look' %}
+   <span aria-hidden="true">&rsaquo;&nbsp</span>
+      {{ pages['wardrobe-tutorial-video'].title | link_to:  pages['wardrobe-tutorial-video'].url  }}
+    {% endif %}
+    <span aria-hidden="true">&rsaquo;</span>
+    <span>{{ page.title }}</span>
+   
+  {% elsif template contains 'product' %}
+
+  
+   
+      <span aria-hidden="true">&rsaquo;</span>
+ {% if product.type contains 'sweater' or  product.type contains 'Shirt-cut' or product.type contains 'Lightweight Sweater'  %}
+
+              <span>{{ collections['step-3-shirt-cut-jackets-sweaters'].title | link_to: collections['step-3-shirt-cut-jackets-sweaters'].url }}</span>
+
+  {% elsif product.type contains 'Scarf' or product.type contains 'Case'  or product.type contains 'Case'   %}
+        <span>{{ collections['step-5-finishing-essentials'].title | link_to: collections['step-5-finishing-essentials'].url }}</span>
+   
+        
+      {% elsif product.type contains 'Shirt' or product.type contains 'Layer' %}
+          <span>{{ collections['step-2-core-shirts'].title | link_to: collections['step-2-core-shirts'].url }}</span>
+       
+      {% elsif product.type contains 'Pant' %}
+          <span>{{ collections['step-1-pants'].title | link_to: collections['step-1-pants'].url }}</span>
+       
+       {% elsif product.type == 'Jackets' %}
+          <span>{{ collections['step-4-jackets'].title | link_to: collections['step-4-jackets'].url }}</span>
+
+         
+     
+    {% endif %}
+
+    <span aria-hidden="true">&rsaquo;</span>
+
+    <span>{{ product.title }}</span>
+
+  {% elsif template contains 'collection' and collection.handle %}
+
+    <span aria-hidden="true">&rsaquo;</span>
+
+    {% if current_tags %}
+
+      {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+
+      {{ collection.title | link_to: url }}
+
+      <span aria-hidden="true">&rsaquo;</span>
+
+      <span>{{ current_tags | join: " + " }}</span>
+
+    {% else %}
+
+      <span>{{ collection.title }}</span>
+
+    {% endif %}
+
+  {% elsif template == 'blog' %}
+
+    <span aria-hidden="true">&rsaquo;</span>
+
+    {% if current_tags %}
+
+      {{ blog.title | link_to: blog.url }}
+
+      <span aria-hidden="true">&rsaquo;</span>
+
+      <span>{{ current_tags | join: " + " }}</span>
+
+    {% else %}
+
+    <span>{{ blog.title }}</span>
+
+    {% endif %}
+
+  {% elsif template == 'article' %}
+
+    <span aria-hidden="true">&rsaquo;</span>
+
+    {{ blog.title | link_to: blog.url }}
+
+    <span aria-hidden="true">&rsaquo;</span>
+
+    <span>{{ article.title }}</span>
+  
+   
+    
+  {% else %}
+
+   <span aria-hidden="true">&rsaquo;</span>
+
+   <span>{{ page_title }}</span>
+
+  {% endif %}
+
+</nav>
+
+{% endunless %} 

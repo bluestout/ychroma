@@ -1,0 +1,96 @@
+<style>
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp{
+    background: #000;
+    border-radius: 0;
+    width: 342px;
+    font-family: "CentraNo2-Bold" !important;
+    font-size: 22px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transition: all .3s;
+    border: 3px solid #fff;
+}
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp .popcustom_select-title{
+    color: #fff;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 17px;
+    transition: all .3s;
+    text-transform: uppercase;
+}
+
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp .popcustom_select-title[data-open="false"]{
+    margin-bottom: 0px;
+}
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp .popcustom_select-title[data-open="false"] + .popcustom_select-item_wrapp{
+    height: 0;
+}
+
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp .popcustom_select-var{
+    line-height: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp{
+     position: relative;
+     width: 275px;
+     overflow: hidden;
+     transition: all 0s;
+     margin: 0;
+     padding: 0;
+  }
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp[data-open=true]{
+    border-radius: 0;
+    overflow: visible;
+  }
+#shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp .popcustom_select-title{
+    margin-bottom: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+  }
+#shopify-section-{{sectionid}} custom-select .popcustom_select-title svg{
+    width: 15px;
+  }
+#shopify-section-{{sectionid}} custom-select .popcustom_select-item_wrapp{
+    position: absolute;
+    top: 100%;
+    width: calc(100% + 6px);
+    left: -3px;
+    height: 160px;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #000;
+    border-radius: 0;
+    border: 3px solid #fff;
+    padding: 17px 20px;
+    ms-overflow-style: none;
+    scrollbar-width: none;
+    z-index: 1;
+  }
+#shopify-section-{{sectionid}} custom-select .popcustom_select-item_wrapp::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
+  @media(max-width: 740px){
+    #shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp{
+      width: 300px;
+    }
+    #shopify-section-{{sectionid}} custom-select .custom-select-form-wrapp .popcustom_select-title{
+      height: 60px;
+      font-size: 1.7rem;
+    }
+  }
+</style>
+

@@ -1,0 +1,249 @@
+<style>
+#shopify-section-{{section.id}}{
+  padding: 95px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#shopify-section-{{section.id}} .subscirebe_main_title{
+  max-width: 1110px;
+  padding: 0 35px 35px;
+}
+#shopify-section-{{section.id}} form{
+  width: 100%;
+  max-width: 100%;
+  padding: 0 35px;
+}
+#shopify-section-{{section.id}} .newsletter-form__field-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+#shopify-section-{{section.id}} form .field__input,#shopify-section-{{section.id}} form field__button{
+  height: 85px;
+  box-shadow: none;
+  outline: none;
+}
+#shopify-section-{{section.id}} form .field__input{
+  background: #fff;
+  color: #000;
+  font-size: 25px;
+}
+
+#shopify-section-{{section.id}} .newsletter__wrapper{
+  padding: 0;
+  max-width: 100%;
+}
+#shopify-section-{{section.id}} .newsletter__wrapper .newsletter-form__field-wrapper{
+  max-width: 100%;
+}
+#shopify-section-{{section.id}} .newsletter-form__field-wrapper .field:after, #shopify-section-{{section.id}} .newsletter-form__field-wrapper .field:before{
+  content: none;
+}
+#shopify-section-{{section.id}} .newsletter-form__field-wrapper .field__input:focus-visible{
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#shopify-section-{{section.id}} .field__label{
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #C7C7C7;
+   font-size: 25px;
+  font-family: "CentraNo2-Bold";
+}
+#shopify-section-{{section.id}} .field__input:focus~.field__label, 
+#shopify-section-{{section.id}} .field__input:not(:placeholder-shown)~.field__label, 
+#shopify-section-{{section.id}} .field__input:-webkit-autofill~.field__label{
+   top: 20%;
+   transform: translate(0, -20%);
+  font-size: 15px;
+}
+
+ 
+#shopify-section-{{section.id}} .subscirebe_main_title h1 {
+  font-size: 45px;
+  font-family: "CentraNo2-Bold";
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+   {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #b69e5f;; 
+    {% else %}
+      color: #FFFFFF;
+    {% endif %}
+}
+  #shopify-section-{{section.id}} .subscirebe_main_title h1 span{
+    color: #000;
+  }
+#shopify-section-{{section.id}} .subscirebe_main_title p{
+  font-family: 'Source Serif Pro' !important;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  {% if template.name == 'index' or template.suffix == 'land-old-main' %}
+      color: #000;; 
+    {% else %}
+      color: #FFFFFF;
+    {% endif %}
+}  
+#shopify-section-{{section.id}} button#Subscribe {
+  background: #B59E5F;
+  color: #fff;
+  width: 31%;
+  font-size: 25px;
+      font-family: "CentraNo2-Bold" !important;
+}
+  
+       #shopify-section-{{section.id}} .banner .newsletter__subheading {
+       color: #fff;
+      } 
+   
+
+      #shopify-section-{{section.id}} .banner .newsletter__subheading p {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      #shopify-section-{{section.id}} .newsletter-form__message {
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+      #shopify-section-{{section.id}} .newsletter-form__message:focus-visible {
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none;
+}
+      @media screen and (max-width: 989px){
+          #shopify-section-{{section.id}} .banner:not(.banner--mobile-bottom) form .field__input {
+              background: #fff;
+          }
+          #shopify-section-{{section.id}} button#Subscribe{
+            width: 45%;
+          }
+
+      }
+      @media screen and (max-width: 768px) {
+       #shopify-section-{{section.id}} .field__input:focus~.field__label, 
+        #shopify-section-{{section.id}} .field__input:not(:placeholder-shown)~.field__label, 
+        #shopify-section-{{section.id}} .field__input:-webkit-autofill~.field__label{
+          font-size: 12px;
+        }
+        #shopify-section-{{section.id}} .subscirebe_main_title h1 {
+          font-size: 25px;
+          line-height: 30px;
+          margin-bottom: 25px;
+        }
+        #shopify-section-{{section.id}} .subscirebe_main_title p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+     
+       #shopify-section-{{section.id}} form .field__input {
+          font-size: 20px;
+       }
+        #shopify-section-{{section.id}} .newsletter-form__field-wrapper .field{
+          display: flex;
+          flex-direction: column;
+        }
+        #shopify-section-{{section.id}} .newsletter-form__field-wrapper .field > div,
+        #shopify-section-{{section.id}} .newsletter-form__field-wrapper .field > button{
+          width: 100% !important;
+          position: relative !important;
+          display: flex;
+        }
+        #shopify-section-{{section.id}} form .field__input {
+            height: 60px;
+        }
+        #shopify-section-{{section.id}} .newsletter-form__field-wrapper .field > button{
+          height: 60px;
+          position: unset !important;
+          margin-top: 15px;
+          font-size: 20px;
+        }
+       
+      }
+      @media screen and (max-width: 480px) {
+        
+      }
+    </style>
+  <div class="subscribe_main_form">
+    <div class="subscirebe_main_title">
+      <h1>{{ section.settings.title }}</h1>
+      <p>{{ section.settings.title_sub }}</p>
+    </div>
+              {% form 'customer', class: 'newsletter-form' %}
+                <input type="hidden" name="contact[tags]" value="newsletter">
+                <div class="newsletter-form__field-wrapper">
+                  <div class="field">
+                    <div style="position: relative; width: 99%;">
+                    <input
+                      id="NewsletterForm--{{ section.id }}"
+                      type="email"
+                      name="contact[email]"
+                      class="field__input"
+                      value="{{ form.email }}"
+                      aria-required="true"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      autocomplete="email"
+                      {% if form.errors %}
+                        autofocus
+                        aria-invalid="true"
+                        aria-describedby="Newsletter-error--{{ section.id }}"
+                      {% elsif form.posted_successfully? %}
+                        aria-describedby="Newsletter-success--{{ section.id }}"
+                      {% endif %}
+                      placeholder="Your best email"
+                      required
+                    >
+                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                      Your best email
+                    </label>
+                    </div>
+                    <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                     Join the Re-invention
+                      {% comment %}  {% render 'icon-arrow' %}  {% endcomment %}
+                    </button>
+                  </div>
+                  {%- if form.errors -%}
+                    <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                  {%- endif -%}
+                </div>
+                {%- if form.posted_successfully? -%}
+                  <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+                {%- endif -%}
+              {% endform %}
+    </div>
+
+
+{% schema %}
+ {
+    "name": "Yas signup",
+    "class": "yas_signup",
+    "settings": [
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+      },
+      {
+            "type": "textarea",
+            "id": "title_sub",
+            "label": "text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yas signup"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

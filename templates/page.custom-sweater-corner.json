@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "a5abb166-4111-41d3-afeb-f52450ef56d2": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "custom-sweater-corner": {
+      "type": "custom-sweater-corner",
+      "blocks": {
+        "64a2418b-a8c0-47e8-b72b-6de12167eb43": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lightweight-sweater"
+          }
+        },
+        "04aba2fa-76d3-4b2b-a67f-c0243f7a4969": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "strong-sweater"
+          }
+        }
+      },
+      "block_order": [
+        "64a2418b-a8c0-47e8-b72b-6de12167eb43",
+        "04aba2fa-76d3-4b2b-a67f-c0243f7a4969"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "a5abb166-4111-41d3-afeb-f52450ef56d2",
+    "custom-sweater-corner"
+  ]
+}

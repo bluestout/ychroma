@@ -1,0 +1,61 @@
+<div class="custom-gradient">
+  <div class="collection-wrapper-info">
+    {%- unless section.settings.title == blank -%}
+      <div class="title-wrapper">
+        <h2 class="collection-list-title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+     </div>
+    {%- endunless -%}
+  
+    <div class="cusslider-mobile-gutter">
+      <ul class="collection-list contains-card">
+        {%- for block in section.blocks -%}
+          <li class="collection-list__itinfo">
+            {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Jacket Corner",
+  "tag": "section",
+  "class": "section custom-shirt-list",
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Jacket Corner",
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

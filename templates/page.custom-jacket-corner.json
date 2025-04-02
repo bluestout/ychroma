@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "a2486c4d-747d-44e6-bfd4-c5c73cfee80c": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "custom-jacket-corner": {
+      "type": "custom-jacket-corner",
+      "blocks": {
+        "b91aa869-b358-4246-906c-fce38023e0f6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "midweight-jacket"
+          }
+        },
+        "57bc5741-6e7a-4117-b0c0-49db1c996427": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "outdoor-weight-shirt-cut-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "b91aa869-b358-4246-906c-fce38023e0f6",
+        "57bc5741-6e7a-4117-b0c0-49db1c996427"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "a2486c4d-747d-44e6-bfd4-c5c73cfee80c",
+    "custom-jacket-corner"
+  ]
+}

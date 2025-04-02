@@ -1,0 +1,341 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "8841c3b6-506a-4c3f-a6ba-b5d33a9994bc": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "d8a37637-f0d6-4dfd-97da-142e03f902e7": {
+      "type": "video-wardrobe",
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 26,
+        "text-box": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c772680517b9471fb2b90c9f807309ad.mp4",
+        "title": "Your exclusive wardrobe. Ready made just for you.",
+        "btn_text": "WATCH THE VIDEO TUTORIAL",
+        "btn_link": "https:\/\/youtu.be\/LemCq-e7MBk"
+      }
+    },
+    "35ce1da1-4cc2-4fce-87a5-396dfd3a2fbe": {
+      "type": "yas-reinvented",
+      "settings": {
+        "title": "A SYSTEM FOR DRESSING WELL",
+        "under_title": "A great wardrobe starts with great color.  Here are 5 strong, vibrant palettes for you to choose from — named for favourite cities. <br><br> Each curated collection of Y.Chroma wardrobe essentials includes the key pieces you’ll need to own the look."
+      }
+    },
+    "2bb0a48e-4705-44b7-8e21-56d69e86f807": {
+      "type": "yas-pick-vibe",
+      "blocks": {
+        "b3d5310e-e866-4a9f-8127-3a2039c92a52": {
+          "type": "collection",
+          "settings": {
+            "title": "LISBON",
+            "image": "shopify:\/\/shop_images\/Wardrobe_Vertical_Lisbon_B.jpg",
+            "url": "shopify:\/\/collections\/lisbon",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#864c24",
+            "show_color3": true,
+            "color3": "#3b363c",
+            "show_color4": true,
+            "color4": "#009499",
+            "show_color5": true,
+            "color5": "#f7b718"
+          }
+        },
+        "0b173d6c-fa34-45f3-9135-7aa9bb03e694": {
+          "type": "collection",
+          "settings": {
+            "title": "PARIS",
+            "image": "shopify:\/\/shop_images\/Wardrobe_Vertical_Paris_B.jpg",
+            "url": "shopify:\/\/collections\/you-look-great-in-paris",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#ac681a",
+            "show_color3": true,
+            "color3": "#3b363c",
+            "show_color4": true,
+            "color4": "#533146",
+            "show_color5": true,
+            "color5": "#405d73"
+          }
+        },
+        "96bfcf1a-36ab-45a9-9b13-f3f178ab48e5": {
+          "type": "collection",
+          "settings": {
+            "title": "SEATTLE",
+            "image": "shopify:\/\/shop_images\/Wardrobe_Vertical_Seattle_B.jpg",
+            "url": "shopify:\/\/collections\/seattle-makes-you-stand-out",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#3b363c",
+            "show_color3": true,
+            "color3": "#405d73",
+            "show_color4": true,
+            "color4": "#009499",
+            "show_color5": true,
+            "color5": "#005d43"
+          }
+        },
+        "275be141-ad30-400c-91d0-e76c0d5947d3": {
+          "type": "collection",
+          "settings": {
+            "title": "TOKYO",
+            "image": "shopify:\/\/shop_images\/Wardrobe_Vertical_Tokyo_B.jpg",
+            "url": "shopify:\/\/collections\/you-re-sophisticated-just-like-tokyo",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#3b363c",
+            "show_color3": true,
+            "color3": "#ce8498",
+            "show_color4": true,
+            "color4": "#405d73",
+            "show_color5": true,
+            "color5": "#879f84"
+          }
+        },
+        "fd91769b-3332-420e-bd61-c33a8664756c": {
+          "type": "collection",
+          "settings": {
+            "title": "VALENCIA",
+            "image": "shopify:\/\/shop_images\/Wardrobe_Vertical_Valencia_B.jpg",
+            "url": "shopify:\/\/collections\/get-warm-with-valencia",
+            "show_color1": true,
+            "color1": "#864c24",
+            "show_color2": true,
+            "color2": "#635635",
+            "show_color3": true,
+            "color3": "#3b363c",
+            "show_color4": true,
+            "color4": "#ce8498",
+            "show_color5": true,
+            "color5": "#dd4124"
+          }
+        }
+      },
+      "block_order": [
+        "b3d5310e-e866-4a9f-8127-3a2039c92a52",
+        "0b173d6c-fa34-45f3-9135-7aa9bb03e694",
+        "96bfcf1a-36ab-45a9-9b13-f3f178ab48e5",
+        "275be141-ad30-400c-91d0-e76c0d5947d3",
+        "fd91769b-3332-420e-bd61-c33a8664756c"
+      ],
+      "settings": {
+        "title": "PICK YOUR PALETTE, PICK YOUR VIBE."
+      }
+    },
+    "a733a24d-9621-4ea0-8cd5-b096648b4dfb": {
+      "type": "yas-reborn",
+      "settings": {
+        "title": "YOUR NEW LOOK. AUTOMATIC.",
+        "under_title": "Each curated collection of Y.Chroma wardrobe essentials<br> includes the key pieces you’ll need to own the look."
+      }
+    },
+    "00dc23bf-e0f8-4b78-80ee-12ae60475b98": {
+      "type": "yas-wardrobe-slider-collection",
+      "blocks": {
+        "7c12501e-5a6d-4428-bfd0-265dc4561453": {
+          "type": "collection",
+          "settings": {
+            "title": "LISBON",
+            "description": "Warm tones of charcoal, milk coffee and curry welcome. Bright aqua and spectra yellow surprise.",
+            "image": "shopify:\/\/shop_images\/Lisbon_Wardrobe_Banner_a81a7c90-0a6f-4825-824a-a1677c9f41bf.jpg",
+            "url": "shopify:\/\/collections\/lisbon",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#864c24",
+            "show_color3": true,
+            "color3": "#3b363c",
+            "show_color4": true,
+            "color4": "#009499",
+            "show_color5": true,
+            "color5": "#f7b718"
+          }
+        },
+        "81a5746e-66a9-456d-bf12-ee3e1ea5fc8b": {
+          "type": "collection",
+          "settings": {
+            "title": "PARIS",
+            "description": "What the Sun King wore. Clean blues and citrus tones, anchored by classic gold, obsidian and plum.",
+            "image": "shopify:\/\/shop_images\/Paris_Wardrobe_Banner_aa85b591-f4f7-4359-97cf-01192b062203.jpg",
+            "url": "shopify:\/\/collections\/you-look-great-in-paris",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#ac681a",
+            "show_color3": true,
+            "color3": "#3b363c",
+            "show_color4": true,
+            "color4": "#533146",
+            "show_color5": true,
+            "color5": "#405d73"
+          }
+        },
+        "cd6d870c-7a52-48b2-ae51-3efc4d8d9c91": {
+          "type": "collection",
+          "settings": {
+            "title": "SEATTLE",
+            "description": "Classy golds and blues signal reliability and success.  Vibrant greens hum with fresh life.",
+            "image": "shopify:\/\/shop_images\/Seattle_Wardrobe_Banner_6ba21f42-2b3a-41ce-9ca7-7a9085163a87.jpg",
+            "url": "shopify:\/\/collections\/seattle-makes-you-stand-out",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#3b363c",
+            "show_color3": true,
+            "color3": "#405d73",
+            "show_color4": true,
+            "color4": "#009499",
+            "show_color5": true,
+            "color5": "#005d43"
+          }
+        },
+        "41707752-4fc8-4bfc-a8a2-553b93e28ed9": {
+          "type": "collection",
+          "settings": {
+            "title": "TOKYO",
+            "description": "Blues and charcoal shot through with the pinks and pale greens Japan knows for freshness, vigor, and luck.",
+            "image": "shopify:\/\/shop_images\/Tokyo_Wardrobe_Banner_c701e98a-0620-4a09-83ce-769607f4ac61.jpg",
+            "url": "shopify:\/\/collections\/you-re-sophisticated-just-like-tokyo",
+            "show_color1": true,
+            "color1": "#b59e5f",
+            "show_color2": true,
+            "color2": "#3b363c",
+            "show_color3": true,
+            "color3": "#ce8498",
+            "show_color4": true,
+            "color4": "#405d73",
+            "show_color5": true,
+            "color5": "#879f84"
+          }
+        },
+        "d6972263-b08f-48ef-b741-37acab3e91db": {
+          "type": "collection",
+          "settings": {
+            "title": "VALENCIA",
+            "description": "Mediterranean bliss.  Tones of olives, paella, wine, and coffee finished with unmistakably sexy tones of orange and grapefruit. ",
+            "image": "shopify:\/\/shop_images\/Valencia_Wardrobe_Banner_d112b70e-cdb1-49ab-9a25-a168b7b5dd2a.jpg",
+            "url": "shopify:\/\/collections\/get-warm-with-valencia",
+            "show_color1": true,
+            "color1": "#864c24",
+            "show_color2": true,
+            "color2": "#6a6a45",
+            "show_color3": true,
+            "color3": "#3b363c",
+            "show_color4": true,
+            "color4": "#ce8498",
+            "show_color5": true,
+            "color5": "#dd4124"
+          }
+        }
+      },
+      "block_order": [
+        "7c12501e-5a6d-4428-bfd0-265dc4561453",
+        "81a5746e-66a9-456d-bf12-ee3e1ea5fc8b",
+        "cd6d870c-7a52-48b2-ae51-3efc4d8d9c91",
+        "41707752-4fc8-4bfc-a8a2-553b93e28ed9",
+        "d6972263-b08f-48ef-b741-37acab3e91db"
+      ],
+      "settings": {}
+    },
+    "8989c8f0-1690-4e0d-bb6d-b42af00c3f5b": {
+      "type": "custom-breadcrumb-info",
+      "disabled": true,
+      "settings": {}
+    },
+    "custom-wardrobe-hero": {
+      "type": "custom-wardrobe-hero",
+      "disabled": true,
+      "settings": {
+        "text-box": "Wardrobe Tutorial Video",
+        "url_link": "https:\/\/www.ychroma.com",
+        "prebuild_txt": "PREBUILT WARD RO BE",
+        "addcart": "ADD ALL TO CART",
+        "tab1": "LISBON",
+        "tab2": "PARIS",
+        "tab3": "SEATTLE",
+        "tab4": "TOKYO",
+        "tab5": "VALENCIA"
+      }
+    },
+    "9717dff8-266b-4150-9f22-c22f2eb37c66": {
+      "type": "yas-image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_281.png",
+        "title": "Your closet has a new plan.",
+        "text": "Whether you’re shopping by individual item or choosing a Pre-built wardrobe, everything follows a plan.",
+        "url": "shopify:\/\/pages\/wardrobe-tutorial-video"
+      }
+    },
+    "26059e58-754e-43ae-aece-2eb675bc6107": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your closet has a new plan.",
+            "heading_size": "h1"
+          }
+        },
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re shopping by individual item or choosing a Pre-built wardrobe, everything follows a plan.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "cd94f853-866d-4685-844d-e9c6ab201d8a": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-0",
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-1",
+        "cd94f853-866d-4685-844d-e9c6ab201d8a"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_281.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "8841c3b6-506a-4c3f-a6ba-b5d33a9994bc",
+    "d8a37637-f0d6-4dfd-97da-142e03f902e7",
+    "35ce1da1-4cc2-4fce-87a5-396dfd3a2fbe",
+    "2bb0a48e-4705-44b7-8e21-56d69e86f807",
+    "a733a24d-9621-4ea0-8cd5-b096648b4dfb",
+    "00dc23bf-e0f8-4b78-80ee-12ae60475b98",
+    "8989c8f0-1690-4e0d-bb6d-b42af00c3f5b",
+    "custom-wardrobe-hero",
+    "9717dff8-266b-4150-9f22-c22f2eb37c66",
+    "26059e58-754e-43ae-aece-2eb675bc6107"
+  ]
+}
