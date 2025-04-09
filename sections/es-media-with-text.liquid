@@ -30,11 +30,11 @@
       <div class="media-item{% if block.settings.hover_effect %} hover-effect{% endif %}" style="--background-color: rgba(0, 0, 0, {{ block.settings.opacity }}); --hover-background-color: rgba(0, 0, 0, {{ block.settings.opacity | plus: 0.3 }})">
         {%- if block.settings.video != blank -%}
           <div class="video{% if block.settings.video_mb != blank %} small--hide{% endif %}">
-            {%- render 'es-video', poster: block.settings.image, video_source: block.settings.video, text_content: text_content, show_mute_button: block.settings.show_mute_button, mute_audio: block.settings.mute_audio, target: 'desktop' -%}
+            {%- render 'es-video', poster: block.settings.image, video_source: block.settings.video, text_content: text_content, show_mute_button: block.settings.show_mute_button, mute_audio: block.settings.mute_audio, target: 'desktop', preload: block.settings.preload -%}
           </div>
           {%- if block.settings.video_mb != blank %}
             <div class="video medium-up--hide">
-              {%- render 'es-video', poster: block.settings.image_mb, video_source: block.settings.video_mb, text_content: text_content, show_mute_button: block.settings.show_mute_button, mute_audio: block.settings.mute_audio, target: 'mobile' -%}
+              {%- render 'es-video', poster: block.settings.image_mb, video_source: block.settings.video_mb, text_content: text_content, show_mute_button: block.settings.show_mute_button, mute_audio: block.settings.mute_audio, target: 'mobile', preload: block.settings.preload -%}
             </div>
           {%- endif -%}
         {%- elsif block.settings.image != blank -%}

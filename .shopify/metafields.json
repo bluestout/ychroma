@@ -1,0 +1,860 @@
+{
+  "article": [
+    {
+      "key": "description",
+      "namespace": "custom",
+      "name": "Subtitle",
+      "description": "Custom text description (top title text)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "slider_product",
+      "namespace": "custom",
+      "name": "Section product info",
+      "description": "Section product info",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "slider_product_new",
+      "namespace": "custom",
+      "name": "Item section product",
+      "description": "Item product custom image",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "author_of_text_and_photo",
+      "namespace": "custom",
+      "name": "Author of text and photo",
+      "description": "Author of text and photo",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_date",
+      "namespace": "custom",
+      "name": "custom date",
+      "description": "Custom date post",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "blog": [
+    {
+      "key": "color",
+      "namespace": "custom",
+      "name": "color",
+      "description": "background color",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
+    }
+  ],
+  "collection": [
+    {
+      "key": "image",
+      "namespace": "custom",
+      "name": "image",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "main_image",
+      "namespace": "custom",
+      "name": "main-image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "tokyo",
+      "namespace": "custom",
+      "name": "Tokyo",
+      "description": "select variants",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "lisbon",
+      "namespace": "custom",
+      "name": "Lisbon",
+      "description": "",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "paris",
+      "namespace": "custom",
+      "name": "Paris",
+      "description": "",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "valencia",
+      "namespace": "custom",
+      "name": "Valencia",
+      "description": "",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "seatle",
+      "namespace": "custom",
+      "name": "Seattle",
+      "description": "",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_template_look",
+      "namespace": "custom",
+      "name": "product_template_look",
+      "description": "Variant product collection template",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "color_product_look_template",
+      "namespace": "custom",
+      "name": "color product look template",
+      "description": "Color look template collection",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "color_menu_circl",
+      "namespace": "custom",
+      "name": "color_menu_circl",
+      "description": "Color menu circl",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "top_selling_variant",
+      "namespace": "custom",
+      "name": "Top selling variant",
+      "description": "Section top selling variant",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "sale_variants",
+      "namespace": "custom",
+      "name": "Sale variants",
+      "description": "",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "fariants_for_sale",
+      "namespace": "custom",
+      "name": "Variants for sale",
+      "description": "",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "video_section",
+      "namespace": "custom",
+      "name": "video section",
+      "description": "",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "color_title_content",
+      "namespace": "custom",
+      "name": "color title content",
+      "description": "",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
+    },
+    {
+      "key": "color_sub_title_content",
+      "namespace": "custom",
+      "name": "color sub title content",
+      "description": "",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
+    },
+    {
+      "key": "color_background_content",
+      "namespace": "custom",
+      "name": "color background content",
+      "description": "",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
+    },
+    {
+      "key": "mobile_featured_image",
+      "namespace": "custom",
+      "name": "Mobile Featured Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "company": [],
+  "company_location": [],
+  "location": [],
+  "market": [],
+  "order": [],
+  "page": [
+    {
+      "key": "main_image",
+      "namespace": "custom",
+      "name": "Cape Town Top Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "image",
+      "namespace": "custom",
+      "name": "Cape Town Image",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "valencia_main_image",
+      "namespace": "custom",
+      "name": "Valencia Main Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "valencia_slider_images",
+      "namespace": "custom",
+      "name": "Valencia Slider Images",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "bordeaux_main_image",
+      "namespace": "custom",
+      "name": "Bordeaux Main Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "bordeaux_slider_images",
+      "namespace": "custom",
+      "name": "Bordeaux Slider Images",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "yokohama_main_image",
+      "namespace": "custom",
+      "name": "Yokohama Main Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "yokohama_slider_images",
+      "namespace": "custom",
+      "name": "Yokohama Slider Images",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "buenos_aires_main_image",
+      "namespace": "custom",
+      "name": "Buenos Aires Main Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "buenos_aires_slider_images",
+      "namespace": "custom",
+      "name": "Buenos Aires Slider Images",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "filte_product",
+      "namespace": "custom",
+      "name": "filte product",
+      "description": "",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "product": [
+    {
+      "key": "rating",
+      "namespace": "reviews",
+      "name": "Product rating",
+      "description": "Average rating from customers",
+      "type": {
+        "name": "rating",
+        "category": "RATING"
+      }
+    },
+    {
+      "key": "rating_count",
+      "namespace": "reviews",
+      "name": "Product rating count",
+      "description": "Total number of ratings from customers",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "productmatch",
+      "namespace": "custom",
+      "name": "productmatch",
+      "description": "",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "leftproductgallery",
+      "namespace": "custom",
+      "name": "leftproductgallery",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "middleproductgallery",
+      "namespace": "custom",
+      "name": "middleproductgallery",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "rightproductgallery",
+      "namespace": "custom",
+      "name": "rightproductgallery",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_small_description",
+      "namespace": "custom",
+      "name": "Product Small Description",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_top_title",
+      "namespace": "custom",
+      "name": "Product Top Title",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_top_description",
+      "namespace": "custom",
+      "name": "Product Top Description",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_product_info",
+      "namespace": "custom",
+      "name": "Custom product Info",
+      "description": "",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "custom_author_review",
+      "namespace": "custom",
+      "name": "Custom Author Review",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "productvideobg",
+      "namespace": "custom",
+      "name": "productvideobg",
+      "description": "Product video background",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "productvideo",
+      "namespace": "custom",
+      "name": "productvideo",
+      "description": "Video product popup",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "video_bg_title",
+      "namespace": "custom",
+      "name": "video-bg-title",
+      "description": "Title video section product",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "video_bg_description",
+      "namespace": "custom",
+      "name": "video-bg-description",
+      "description": "Description video section product",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "queries",
+      "namespace": "shopify--discovery--product_search_boost",
+      "name": "Search product boosts",
+      "description": "List of search queries for which a product gets higher rank in search results",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "related_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products",
+      "description": "List of related products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "related_products_display",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products settings",
+      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "complementary_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Complementary products",
+      "description": "List of complementary products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "productimgvideobg",
+      "namespace": "custom",
+      "name": "Product Image instead Video",
+      "description": "video bg image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "composition_description",
+      "namespace": "custom",
+      "name": "composition description",
+      "description": "composition description",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_chart_image",
+      "namespace": "custom",
+      "name": "Sizing Explained",
+      "description": "Image for size chart",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "size_guide",
+      "namespace": "custom",
+      "name": "Size Chart",
+      "description": "Size guide image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "custom_product",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Product",
+      "description": "Use to indicate whether or not the unique product identifiers (UPIs) GTIN, MPN, and brand are available for your product.",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "browse_abandonment_email_1_text_1",
+      "namespace": "custom",
+      "name": "Browse Abandonment - Email 1 - Text 1",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "text",
+      "namespace": "review",
+      "name": "Review Text",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "name",
+      "namespace": "review",
+      "name": "Review Name",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "svg",
+      "namespace": "review",
+      "name": "Review SVG",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "size",
+      "namespace": "shopify",
+      "name": "Size",
+      "description": "Used to specify the size of a product, such as 0-3 months or Extra large (XL)",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "variant": [
+    {
+      "key": "hover_prev_collection",
+      "namespace": "custom",
+      "name": "hover_prev_collection",
+      "description": "Image hover previw collection",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "recommended_variant",
+      "namespace": "custom",
+      "name": "recommended_variant",
+      "description": "recommended variant section",
+      "type": {
+        "name": "list.variant_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "custom_label_4",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 4",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_3",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 3",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_2",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 2",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_1",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 1",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_0",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 0",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_system",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size System",
+      "description": "The country of the size system used by your product.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_type",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size Type",
+      "description": "Your apparel product’s cut.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "mpn",
+      "namespace": "mm-google-shopping",
+      "name": "Google: MPN",
+      "description": "Your product’s Manufacturer Part Number (MPN).",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "gender",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Gender",
+      "description": "The gender for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "condition",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Condition",
+      "description": "The condition of your product at time of sale.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "age_group",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Age Group",
+      "description": "The demographic for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "banner_product_collection",
+      "namespace": "custom",
+      "name": "banner product collection",
+      "description": "",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "preview_wardrobe_image",
+      "namespace": "custom",
+      "name": "preview wardrobe image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "image",
+      "namespace": "custom",
+      "name": "Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "hover_image",
+      "namespace": "custom",
+      "name": "Hover Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "secondary_title",
+      "namespace": "custom",
+      "name": "Secondary Title",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "secondary_sub_title",
+      "namespace": "custom",
+      "name": "Secondary Sub Title",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "shop": []
+}
