@@ -1,5 +1,5 @@
 <video
-  class="video_not-yas {{ target }}-video"
+  class="video_not-yas {{ target }}-video{% unless preload %} lazy{% endunless %}"
   poster
   autoplay
   loop
@@ -10,7 +10,7 @@
     preload="auto"
   {% endif %}
 >
-  <source src="{{ video_source }}" type="video/mp4">
+  <source {% unless preload %}data-{% endunless %}src="{{ video_source }}" type="video/mp4">
 </video>
 {{ text_content }}
 {%- if show_mute_button -%}

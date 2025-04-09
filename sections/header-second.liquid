@@ -16,6 +16,7 @@
   .yas-main-header .yas-centerside-h img{
     max-width: 165px;
     margin: 0 10px;
+    height: auto;
   }
   .yas-main-header a{
     margin: 0 10px;
@@ -241,7 +242,7 @@
       {% endfor %}
   </div>
   <div class="yas-centerside-h">
-    <a href="/"><img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}"></a>
+    <a href="/"><img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" loading="lazy"></a>
   </div>
   <div class="yas-rightide-h">
       {%- for link in section.settings.menu2.links -%}
@@ -425,19 +426,19 @@
         <div class="yas-img-item">
           <a href="{{ block.settings.link }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image | img_url: '400x' }}" alt="">
+            <img src="{{ block.settings.image | img_url: '400x' }}" alt="" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title1 }}</p>
           </a>
           <a href="{{ block.settings.link2 }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image2 | img_url: '400x' }}" alt="">
+            <img src="{{ block.settings.image2 | img_url: '400x' }}" alt="" width="{{ block.settings.image2.width }}" height="{{ block.settings.image2.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title2 }}</p>
           </a>
           <a href="{{ block.settings.link3 }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image3 | img_url: '400x' }}" alt="">
+            <img src="{{ block.settings.image3 | img_url: '400x' }}" alt="" width="{{ block.settings.image3.width }}" height="{{ block.settings.image3.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title3 }}</p>
           </a>
@@ -519,7 +520,7 @@
           {% if block.settings.link != blank %}
           <a href="{{ block.settings.link }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image | img_url: '400x' }}" alt="">
+            <img src="{{ block.settings.image | img_url: '400x' }}" alt="" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title1 }}</p>
           </a>
@@ -527,7 +528,7 @@
           {% if block.settings.link2 != blank %}
           <a href="{{ block.settings.link2 }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image2 | img_url: '400x' }}" alt="">
+            <img src="{{ block.settings.image2 | img_url: '400x' }}" alt="" width="{{ block.settings.image2.width }}" height="{{ block.settings.image2.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title2 }}</p>
           </a>
@@ -535,7 +536,7 @@
           {% if block.settings.link3 != blank %}
           <a href="{{ block.settings.link3 }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image3| img_url: '400x' }}" alt="">
+            <img src="{{ block.settings.image3| img_url: '400x' }}" alt="" width="{{ block.settings.image3.width }}" height="{{ block.settings.image3.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title3 }}</p>
           </a>
@@ -543,7 +544,7 @@
           {% if block.settings.link4 != blank %}
           <a href="{{ block.settings.link4 }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image4 | img_url: '400x' }}" alt="">
+            <img src="{{ block.settings.image4 | img_url: '400x' }}" alt="" width="{{ block.settings.image4.width }}" height="{{ block.settings.image4.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title4 }}</p>
           </a>
@@ -575,19 +576,19 @@
         <div class="yas-img-item">
           <a href="{{ block.settings.link }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image | img_url: '850x' }}" alt="">
+            <img src="{{ block.settings.image | img_url: '850x' }}" alt="" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title1 }}</p>
           </a>
           <a href="{{ block.settings.link2 }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image2 | img_url: '850x' }}" alt="">
+            <img src="{{ block.settings.image2 | img_url: '850x' }}" alt="" width="{{ block.settings.image2.width }}" height="{{ block.settings.image2.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title2 }}</p>
           </a>
           <a href="{{ block.settings.link3 }}">
           <div class="yas-img">
-            <img src="{{ block.settings.image3 | img_url: '850x' }}" alt="">
+            <img src="{{ block.settings.image3 | img_url: '850x' }}" alt="" width="{{ block.settings.image3.width }}" height="{{ block.settings.image3.height }}" loading="lazy">
           </div>
           <p>{{ block.settings.title3 }}</p>
           </a>
