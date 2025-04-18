@@ -1,0 +1,146 @@
+<div class="section-bg-with-text desktop-view-info">
+  <div class="full-bg-img bg-img-pants">
+    <img class="top-image-bar" src="{{section.settings.image | img_url:'original'}}">
+    <div class="page-widths position-relative">
+      <div class="bg-img-content-info text-align-right">
+        <a href="{{ section.settings.top_link }}"><span class="btn-link-white top-right-corner-text">{{ section.settings.top_linktext }}</span></a>
+        <h2 class="clr-black" style="color:{{ section.settings.heading_color }};">{{ section.settings.text-box }}</h2>
+        <div class="clr-black" style="color:{{ section.settings.detail_color }};">{{section.settings.detail}}</div>
+        <a href="{{ section.settings.link }}" class="btn-link-white">{{ section.settings.linktext }}</a>
+        <div class="bottom-btn-below-info">
+          <div class="bottom-left-text-info">
+            <div class="clr-black text-easily_info" style="color:{{ section.settings.easily_color }};">{{section.settings.easily_info}}</div>
+            <div class="pant_star_check"> 
+              {{section.settings.star_info}}
+            </div>
+          </div>
+          <div class="bottom-right-text-info">
+            {% if section.settings.person_image != blank %}
+            <img src="{{section.settings.person_image | img_url:'original'}}">
+            {% endif %}
+          </div>
+        </div>
+        </div>
+     </div>
+  </div>  
+</div>
+
+<div class="section-bg-with-text mobile-view-info">
+  <div class="full-bg-img bg-img-pants">
+     <a href="{{ section.settings.top_link }}">
+       <span class="mobile-text-button  btn-link-white top-right-corner-text">{{ section.settings.top_linktext }}</span>
+     </a>
+    <img src="{{section.settings.mob_image | img_url:'original'}}" class="cus-top-image">
+    <div class="page-width position-relative">
+      <div class="bg-img-content-info text-align-right" style="background-image: url({{section.settings.mob_image1 | img_url:'original'}});">
+        <h2 class="clr-black" style="color:{{ section.settings.heading_color }};">{{ section.settings.text-box }}</h2>
+        <div class="clr-black" style="color:{{ section.settings.detail_color }};">{{section.settings.detail}}</div>
+        <a href="{{ section.settings.link }}" class="btn-link-white">{{ section.settings.linktext }}</a>
+        <div class="bottom-btn-below-info">
+          <div class="bottom-left-text-info">
+            <div class="clr-black text-easily_info" style="color:{{ section.settings.easily_color }};">{{section.settings.easily_info}}</div>
+            <div class="pant_star_check"> 
+              {{section.settings.star_info}}
+            </div>
+          </div>
+          <div class="bottom-right-text-info">
+            {% if section.settings.person_image != blank %}
+            <img src="{{section.settings.person_image | img_url:'original'}}">
+            {% endif %}
+          </div>
+        </div>
+        </div>
+     </div>
+  </div>  
+</div>
+
+{% schema %}
+{
+  "name": "Home Image pants",
+  "settings": [
+   {
+      "id": "top_link",
+      "type": "url",
+      "label": "Top Corner Link URL"
+    },
+     {
+      "id": "top_linktext",
+      "type": "text",
+      "label": "Top Corner Link Text"
+    },
+     {
+      "id": "heading_color",
+      "type": "color",
+      "label": "Heading Color"
+    },
+   {
+      "id": "text-box",
+      "type": "html",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "id": "detail_color",
+      "type": "color",
+      "label": "Description Color"
+    },
+    {
+      "id": "detail",
+      "type": "html",
+      "label": "Description"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    },
+    {
+      "id": "mob_image",
+      "type": "image_picker",
+      "label": "Mobile Image"
+    },
+     {
+      "id": "mob_image1",
+      "type": "image_picker",
+      "label": "Mobile Text Image"
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Link URL"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Link Text"
+    },
+    {
+      "id": "easily_color",
+      "type": "color",
+      "label": "Easily Color"
+    },
+    {
+      "id": "easily_info",
+      "type": "html",
+      "label": "Easily Description"
+    },
+    {
+      "id": "star_info",
+      "type": "html",
+      "label": "Stars Text"
+    },
+    {
+      "id": "person_image",
+      "type": "image_picker",
+      "label": "Customer Image"
+    }
+  ]
+  ,
+  "presets": [
+    {
+      "name": "Home Image pants",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}

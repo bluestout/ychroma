@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "a428c15d-b3c8-44cf-bc0f-e1f68ea5de2c": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "e61b5cb4-814d-4c67-9d9b-9393325ec94b": {
+      "type": "yas-video-color",
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 80,
+        "image": "shopify:\/\/shop_images\/Valencia_Wardrobe_Banner_d112b70e-cdb1-49ab-9a25-a168b7b5dd2a.jpg",
+        "text-box": "",
+        "title": "Valencia looks good on you",
+        "show_color1": true,
+        "color1": "#864c24",
+        "show_color2": true,
+        "color2": "#6a6a45",
+        "show_color3": true,
+        "color3": "#3b363c",
+        "show_color4": true,
+        "color4": "#ce8498",
+        "show_color5": true,
+        "color5": "#dd4124"
+      }
+    },
+    "1cc2947f-a19f-4684-af13-0dd148cc35f3": {
+      "type": "yas-reinvented",
+      "settings": {
+        "title": "YOU. REINVENTED.",
+        "under_title": "Mediterranean bliss from my adopted home town.  The color of olives, paella, wine, and coffee are finished with unmistakably sexy tones of orange and grapefruit."
+      }
+    },
+    "1802a7cc-b12c-4ad1-855d-7497d39fba42": {
+      "type": "yas-look-bilder-v2",
+      "settings": {
+        "title_white": "Your unique wardrobe.",
+        "collect": "test-8-pieces",
+        "collect_16": "test-16-pick",
+        "collect_24": "test-pieces-24",
+        "text_under_select": "<p>Mediterranean bliss from my adopted home town.  The color of olives, paella, wine, and coffee are finished with unmistakably sexy tones of orange and grapefruit.  <\/p>",
+        "title": "",
+        "text": ""
+      }
+    },
+    "b5c40958-4925-4327-88c3-fb62faa1e27b": {
+      "type": "yas-look-collection",
+      "disabled": true,
+      "settings": {
+        "title_white": "",
+        "collect": "test-8-pieces",
+        "title": "8 Pieces",
+        "text": "Title This look includes 2 Pants, 1 Shorts, 2 Shirts, 1 Sweater, 1 Jacket and 1 Beannie"
+      }
+    },
+    "1116fbbd-a725-470f-b03b-104a12217f7c": {
+      "type": "yas-look-collection16",
+      "disabled": true,
+      "settings": {
+        "collect": "test-16-pick",
+        "title": "16 Pieces",
+        "text": "Title This look includes 2 Pants, 1 Shorts, 2 Shirts, 1 Sweater, 1 Jacket and 1 Beannie"
+      }
+    },
+    "fa26a626-f666-48a0-8ff9-b42e6f8eb87a": {
+      "type": "yas-reborn",
+      "settings": {
+        "title": "YOU. RECONSIDERED.",
+        "under_title": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "a428c15d-b3c8-44cf-bc0f-e1f68ea5de2c",
+    "e61b5cb4-814d-4c67-9d9b-9393325ec94b",
+    "1cc2947f-a19f-4684-af13-0dd148cc35f3",
+    "1802a7cc-b12c-4ad1-855d-7497d39fba42",
+    "b5c40958-4925-4327-88c3-fb62faa1e27b",
+    "1116fbbd-a725-470f-b03b-104a12217f7c",
+    "fa26a626-f666-48a0-8ff9-b42e6f8eb87a",
+    "main"
+  ]
+}

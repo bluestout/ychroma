@@ -1,0 +1,94 @@
+<style>
+  #shopify-section-{{section.id}}{
+    background: #E3DAC3;
+    padding: 40px 35px 100px;
+  }
+  .masonry-wrapp {
+	columns: 250px;
+	column-gap: 20px; 
+    max-width: 970px;
+    margin: 0 auto;
+  }
+  .masonry-wrapp article {
+    padding: 0px;
+    border: 0px solid #999;
+    border-radius: 0px;
+    background: transparent;
+    
+  }
+  .masonry-wrapp article {
+  	break-inside: avoid-column;
+  	margin-bottom: 30px;
+  }
+  .masonry-wrapp article img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .masonry-wrapp p{
+    font-family: "Centra_No2" !important;;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 26px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 5px;
+  }
+  .masonry-wrapp h3{
+    font-family: "Source Serif Pro" !important;;
+    font-weight: normal;
+    font-size: 33px;
+    letter-spacing: -0.02em;
+    line-height: 37px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 5px;
+  }
+  .masonry-blog_tag{
+    font-family: "Centra_No2";
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 0.17em;
+    line-height: 19px;
+    text-align: left;
+    color: #fff;
+    background: #dd4124;
+    padding: 7px 10px 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+</style>
+<div class="masonry-wrapp">
+  {%- for article in blog.articles -%}
+  <article>
+     <a href="{{ article.url }}">
+     <img src="{{ article.image.src | img_url: '610x' }}" alt="{{ article.title }}">
+     <p>{{ article.metafields.custom.description }}</p>
+     <h3>{{ article.title }}</h3>
+     <span class="masonry-blog_tag" style="background-color: {{ blog.metafields.custom.color }};">{{ blog.title }}</span>
+     </a>
+  </article>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "yas masonry blog",
+    "settings": [],
+    "presets": [
+      {
+        "name": "yas masonry blog"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

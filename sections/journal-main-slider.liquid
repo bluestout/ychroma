@@ -1,0 +1,283 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<style>
+  #shopify-section-{{section.id}}{
+    position: relative;
+    background: #f5f5ed;
+    overflow: hidden;
+  }
+  #shopify-section-{{section.id}} img{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+  #shopify-section-{{section.id}} .blog_slider-img{
+    margin-bottom: 20px;
+  }
+  
+  #shopify-section-{{section.id}} .swiper{
+    overflow: visible;
+  }
+ 
+  #shopify-section-{{section.id}} .yas-sliderimage-wrapp{
+    max-width: 980px;
+    padding: 35px 20px;
+    margin: 0 auto;
+    
+  }
+
+  #shopify-section-{{section.id}} .swiper-button-next,
+  #shopify-section-{{section.id}} .swiper-button-prev{
+    display: flex;
+    height: 122px;
+    width: 40px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next{
+    right: 60px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-prev{
+    left: 60px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next:after,
+  #shopify-section-{{section.id}} .swiper-button-prev:after{
+
+    content: none;
+  }
+  #shopify-section-{{section.id}} .swiper-slide:not(.swiper-slide-active){
+    opacity: 0.34;
+  }
+  #shopify-section-{{section.id}} .blog_slider-bread{
+    font-family: "Centra_No2";
+    font-weight: bold;
+    font-size: 9.5px;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+  #shopify-section-{{section.id}} h5{
+    font-family: "Centra_No2" !important;
+    font-weight: normal !important;
+    font-size: 18px;
+    letter-spacing: 0.17em;
+    line-height: 26px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 5px;;
+  }
+  #shopify-section-{{section.id}} h3{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-size: 44px;
+    letter-spacing: -0.02em;
+    line-height: 34px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 10px;
+  }
+  #shopify-section-{{section.id}} .blog_slider-tag{
+    font-family: "Centra_No2";
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.17em;
+    line-height: 19px;
+    text-align: left;
+    color: #fff;
+    background: #dd4124;
+    padding: 7px 10px 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  #shopify-section-{{section.id}} .swiper-pagination{
+    display: none;
+  }
+ @media (max-width: 1350px){
+    #shopify-section-{{section.id}} .swiper-button-next,
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      height: 68px;
+      width: 19px;
+      margin-top: 0;
+    }
+    #shopify-section-{{section.id}} .swiper-button-next{
+      right: 45px;
+    }
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      left: 45px;
+    }
+ }
+  @media (max-width: 989px){
+
+    #shopify-section-{{section.id}} .swiper {
+      width: 80%;
+      margin: 0 auto;
+    }
+     #shopify-section-{{section.id}} .swiper-pagination{
+      display: block;
+      bottom: 0;
+    }
+    #shopify-section-{{section.id}} img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #shopify-section-{{section.id}} .swiper-button-next,
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      display: none;
+    }
+    .blog_slider-bread{
+      display: none;
+    }
+    #shopify-section-{{section.id}} h3{
+      font-size: 22px;
+    }
+    #shopify-section-{{section.id}} h5{
+      font-size: 10px;
+    }
+    #shopify-section-{{section.id}} .blog_slider-tag{
+      font-size: 9px;
+    }
+    #shopify-section-{{section.id}}  .swiper-pagination-bullet{
+      background: #000;
+      opacity: 1;
+    }
+    #shopify-section-{{section.id}}  .swiper-pagination-bullet-active{
+      background: #A0A0A0;
+    }
+  }
+  
+</style>
+
+<div class="yas-sliderimage-wrapp">
+      
+      <div class="swiper yas-sliderimage-slider">
+
+        <div class="swiper-wrapper">
+        
+          {% if blog.articles.size < 1 %}
+            {% for block in section.blocks %}
+              {%- for article in block.settings.blog.articles -%}
+                <div class="swiper-slide">
+                  <a href="{{ blog.url }}">
+                  <div class="blog_slider-bread">Home | {{ blog.title }}</div>
+                  <div class="blog_slider-img">
+                    <img src="{{ article.image.src | img_url: 'x1' }}" alt="{{ article.title }}"
+                    srcset="{{ article.image.src | img_url: 'x500' }}"
+                    loading="lazy"
+                    >
+                    <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="blog_slider-info">
+                    <h5>{{ article.metafields.custom.description }}</h5>
+                    <h3>{{ article.title }}</h3>
+                    <span class="blog_slider-tag" style="background-color: {{ block.settings.blog.metafields.custom.color }};">{{ block.settings.blog.title }}</span>
+                  </div>
+                  </a>
+                </div>
+              {% endfor %}
+            {% endfor %}
+          {% else %}
+            {% for article in blog.articles %}
+              <div class="swiper-slide">
+                <a href="{{ blog.url }}">
+                <div class="blog_slider-bread">Home | {{ blog.title }}</div>
+                <div class="blog_slider-img">
+                  <img src="{{ article.image.src | img_url: 'x1' }}" alt="{{ article.title }}"
+                  srcset="{{ article.image.src | img_url: 'x500' }}"
+                  loading="lazy"
+                  >
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="blog_slider-info">
+                  <h5>{{ article.metafields.custom.description }}</h5>
+                  <h3>{{ article.title }}</h3>
+                  <span class="blog_slider-tag" style="background-color: {{ blog.metafields.custom.color }};">{{ blog.title }}</span>
+                </div>
+                </a>
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+          <div class="swiper-pagination"></div>
+      </div>
+        <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+            <g id="Сгруппировать_519" data-name="Сгруппировать 519" transform="translate(709 1175) rotate(180)">
+              <circle id="Эллипс_14" data-name="Эллипс 14" cx="19.5" cy="19.5" r="19.5" transform="translate(670 1136)"/>
+              <path id="Контур_108" data-name="Контур 108" d="M2238.105-20683.766l9.036,9.25-9.036,9.252" transform="translate(-1552.444 21830.064)" fill="none" stroke="#fff" stroke-width="4"/>
+            </g>
+          </svg>
+
+        </div>
+        <div class="swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+            <g id="Сгруппировать_520" data-name="Сгруппировать 520" transform="translate(-670 -1136)">
+              <circle id="Эллипс_14" data-name="Эллипс 14" cx="19.5" cy="19.5" r="19.5" transform="translate(670 1136)"/>
+              <path id="Контур_108" data-name="Контур 108" d="M2238.105-20683.766l9.036,9.25-9.036,9.252" transform="translate(-1552.444 21830.064)" fill="none" stroke="#fff" stroke-width="4"/>
+            </g>
+          </svg>
+
+        </div>
+</div>
+
+<script defer>
+  $(function(){
+    let slidesCount = $('#shopify-section-{{section.id}} .swiper .swiper-slide').length;
+    let swiper = new Swiper('#shopify-section-{{section.id}} .swiper', {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: '1',
+      loopedSlides: slidesCount,
+      watchSlidesVisibility: true,
+      spaceBetween: 15,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .swiper-button-prev',
+      }
+    });
+  })
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "journal slider",
+    "class": "yas-sliderimage",
+    "settings": [
+  
+    ],
+    "blocks": [
+      {
+        "type": "blog",
+        "name": "select blog",
+        "settings": [
+          {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blog"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "journal slider"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

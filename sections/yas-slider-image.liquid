@@ -1,0 +1,150 @@
+<style>
+  #shopify-section-{{section.id}}{
+    position: relative;
+  }
+  #shopify-section-{{section.id}} img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #shopify-section-{{section.id}} .yas-sliderimage-wrapp{
+    max-width: 1110px;
+    padding: 35px 35px 0;
+    margin: 0 auto;
+    
+  }
+
+  #shopify-section-{{section.id}} .swiper-button-next,
+  #shopify-section-{{section.id}} .swiper-button-prev{
+    display: flex;
+    height: 122px;
+    width: 40px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next{
+    right: 60px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-prev{
+    left: 60px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next:after,
+  #shopify-section-{{section.id}} .swiper-button-prev:after{
+
+    content: none;
+  }
+ @media (max-width: 1350px){
+    #shopify-section-{{section.id}} .swiper-button-next,
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      height: 68px;
+      width: 19px;
+      margin-top: 0;
+    }
+    #shopify-section-{{section.id}} .swiper-button-next{
+      right: 45px;
+    }
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      left: 45px;
+    }
+ }
+  @media (max-width: 989px){
+   
+ 
+    #shopify-section-{{section.id}} img {
+      width: 75%;
+    }
+  }
+</style>
+
+<div class="yas-sliderimage-wrapp">
+
+      <div class="swiper yas-sliderimage-slider">
+
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <img src="{{ block.settings.image | img_url: 'x1' }}" alt="{{ block.settings.title }}"
+                srcset="{{ block.settings.image | img_url: 'x400' }}"
+                    loading="lazy"
+                >
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+        <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44.942" height="129.109" viewBox="0 0 44.942 129.109">
+            <path d="M0,0,61.109,38.99,122.2,0" transform="translate(41.49 3.452) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44.942" height="129.109" viewBox="0 0 44.942 129.109">
+            <path d="M0,0,61.109,38.99,122.2,0" transform="translate(3.452 125.657) rotate(-90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+          </svg>
+        </div>
+</div>
+
+<script defer>
+  $(function(){
+    let swiper = new Swiper('#shopify-section-{{section.id}} .swiper', {
+      loop: false,
+      slidesPerView: '1',
+   
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .swiper-button-prev',
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        0: {
+          slidesPerView: '1',
+        },
+        // when window width is >= 480px
+        480: {
+          spaceBetween: 25,
+        },
+        // when window width is >= 640px
+        990: {
+          slidesPerView: '3',
+          spaceBetween: 22.5,
+        }
+      }
+    });
+  })
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "Yas slider image only",
+    "class": "yas-sliderimage",
+    "settings": [
+  
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Select image",
+        "settings": [
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yas slider image only"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

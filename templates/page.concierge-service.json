@@ -1,0 +1,124 @@
+{
+  "sections": {
+    "26059e58-754e-43ae-aece-2eb675bc6107": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Thirty minutes to a better wardrobe.",
+            "heading_size": "h1"
+          }
+        },
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every Y.Chroma customer, no matter how much they spend, gets free wardrobe planning.<\/p><p>We'll meet with you on Zoom to talk through your current wardrobe and your goals for your updated look. Then you'll get a comprehensive wardrobe plan covering the pieces you'll use and how you'll combine them. <\/p><p>(Here's an <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0620\/1648\/7614\/files\/Jacques_Clouseau_s_Wardrobe_Y.Chroma_Plan_1.pdf?v=1708703219\" target=\"_blank\" title=\"Example Wardrobe Plan from Y.Chroma\">example<\/a> of what one of our Wardrobe Plans looks like.)  <\/p><p>Scroll down to book your session. We'll see you there!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "831fdaba-1b1f-458c-a2de-3e580ac62c6b": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Book your time",
+            "button_link": "#calendly"
+          }
+        }
+      },
+      "block_order": [
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-0",
+        "template--16032891535550__26059e58-754e-43ae-aece-2eb675bc6107-1676642441f5eb9e8b-1",
+        "831fdaba-1b1f-458c-a2de-3e580ac62c6b"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/varial2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c4ed9186-5087-4889-8bef-87bc3c73070f": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div id=\"calendly\" class=“calendly-inline-widget” data-url=“https:\/\/calendly.com\/ychroma-concierge\/30min?hide_gdpr_banner=1” style=“min-width:280px;height:560px;“><\/div>\n<script type=“text\/javascript” src=“https:\/\/assets.calendly.com\/assets\/external\/widget.js” async><\/script>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "ce5a67e8-08ac-4de0-b758-19060d3f4540": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16248953995454__ce5a67e8-08ac-4de0-b758-19060d3f4540-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "CALENDLY HERE",
+            "heading_size": "h0"
+          }
+        },
+        "a53cee24-a2ad-4996-9789-4ee3433f743a": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Book your time",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16248953995454__ce5a67e8-08ac-4de0-b758-19060d3f4540-heading-1",
+        "a53cee24-a2ad-4996-9789-4ee3433f743a"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "2c8b4b44-48ba-469f-853d-d7b805a86cf6": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "cover_image": "shopify:\/\/shop_images\/week23-aow-pimavneckatthebeach.jpg",
+        "video_url": "",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "22cee4a0-f976-4c3a-b424-0a71a45b3172": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<!-- Calendly inline widget begin -->\n<div id=\"calendly\" class=\"calendly-inline-widget\" data-url=\"\nhttps:\/\/calendly.com\/ychroma-concierge\/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=000000&primary_color=e28413\" style=\"min-width:320px;height:930px;\"><\/div>\n<script type=\"text\/javascript\" src=\"https:\/\/assets.calendly.com\/assets\/external\/widget.js\" async><\/script>\n<!-- Calendly inline widget end -->",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "26059e58-754e-43ae-aece-2eb675bc6107",
+    "c4ed9186-5087-4889-8bef-87bc3c73070f",
+    "ce5a67e8-08ac-4de0-b758-19060d3f4540",
+    "2c8b4b44-48ba-469f-853d-d7b805a86cf6",
+    "22cee4a0-f976-4c3a-b424-0a71a45b3172"
+  ]
+}

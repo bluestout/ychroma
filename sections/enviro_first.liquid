@@ -1,0 +1,93 @@
+<style>
+#shopify-section-{{ section.id }}{
+    background-color: #A9CAC1;
+    text-align: center;
+    padding: 40px 35px 30px;
+}
+#shopify-section-{{section.id}} img{
+  margin-bottom: 25px;
+}
+#shopify-section-{{section.id}} h1{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-weight: normal;
+    font-size: 84px;
+    letter-spacing: -0.02em;
+    line-height: 77px;
+    text-align: center;
+    color: #000;
+    margin: 0 0 15px;
+}
+#shopify-section-{{section.id}} p{
+    font-family: "Source Serif Pro" !important;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+.enviro_first-text{
+    max-width: 1370px;
+    margin: 0 auto 40px;
+}
+@media (max-width: 989px){
+  #shopify-section-{{section.id}} h1{
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+  }
+  #shopify-section-{{section.id}} p{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #shopify-section-{{section.id}} .enviro_first-img{
+    width: 120px;
+  }
+  #shopify-section-{{section.id}} .enviro_sec-img{
+    width: 275px;
+  }
+}
+</style>
+{% if section.settings.image %}
+<img src="{{ section.settings.image | image_url }}" alt="" class="enviro_first-img">
+{% endif %}
+<div class="enviro_first-text">
+  {{ section.settings.text }}
+</div>
+{% if section.settings.image2 %}
+<img src="{{ section.settings.image2 | image_url }}" alt="" class="enviro_sec-img">
+{% endif %}
+{% schema %}
+  {
+    "name": "enviro first",
+    "class": "enviro_first-w",
+    "settings": [
+      {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image top"
+      },
+      {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+      },
+      {
+            "id": "image2",
+            "type": "image_picker",
+            "label": "Image bottom"
+      }
+    ],
+    "presets": [
+      {
+        "name": "enviro first"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

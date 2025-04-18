@@ -1,0 +1,177 @@
+<style>
+  #shopify-section-{{section.id}}{
+    padding: 30px 0 30px;
+  }
+</style>
+
+<div class="yas-collections-section">
+    {% for block in section.blocks %}
+      <div class="yas-collections-block" style="background-image:url({{ block.settings.yas-collections-block-bg | img_url: 'x400' }})">
+       <a href="{{ block.settings.yas-collections-block-url}}">
+          <div class="yas-collections-block-text">
+            <div class="yas-collections-block-subtitle">
+                {{ block.settings.yas-collections-block-subtitle}}
+            </div>
+            <div class="yas-collections-block-title">
+              {{ block.settings.title}}
+            </div>
+          </div>
+       </a>
+      </div>
+   {% endfor %}
+</div>
+
+
+
+{% schema %}
+ {
+    "name": "Yas collections5",
+    "class": "yas-collections5",
+    "settings": [
+     
+    ],
+    "blocks": [
+      {
+        "type": "Baner",
+        "name": "Select baner",
+        "settings": [
+          {
+            "type": "text",
+            "id": "yas-collections-block-subtitle",
+            "label": "Sbu Title for baner",
+            "default": "EXPLORE"
+          },
+            {
+            "type": "text",
+            "id": "title",
+            "label": "Title for baner",
+            "default": "PANTS"
+          },
+          {
+            "id": "yas-collections-block-bg",
+            "type": "image_picker",
+            "label": "Background image"
+          },
+          {
+            "type": "url",
+            "id": "yas-collections-block-url",
+            "label": "Collection url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yas collections5"
+      }
+    ]
+  }
+{% endschema %} 
+  
+{% stylesheet %}
+  .yas-collections-section
+  {
+    width: 100%;
+    height: 100%;
+   
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .yas-collections-block:nth-child(1), .yas-collections-block:nth-child(2){
+    height: 551px;
+    width: calc(50% - 11.25px); 
+    margin-bottom: 22.5px;
+    margin-right: 22.5px; 
+  }
+  .yas-collections-block{
+    height: 511px;
+    width: calc(33.33% - 15px); 
+    transition: all 0.7s linear;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: center;
+    background-position-y: 0;
+    margin-right: 22.5px; 
+    position: relative;
+  }
+  @media (min-width: 1760px){
+    .yas-collections-block{
+      background-size: cover;
+    }
+  }
+  .yas-collections-block:last-child{
+     margin-right: 0px;
+  }
+  .yas-collections-block:nth-child(2){
+    margin-right: 0px;
+  }
+  .yas-collections-block:hover{
+    background-size: auto 130%; 
+    background-position-y: 0;
+  }
+  .yas-collections-block a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .yas-collections-block-subtitle
+  {
+    font-family: 'Centra_No2_Medium';
+    color: #FFFFFF;
+    margin-top: 39px; 
+    margin-left: 67px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 20px;
+
+  } 
+   .yas-collections-block-title
+  {
+    font-size: 30px;
+    letter-spacing: 0.12em;
+    line-height: 40px;
+    font-family: 'CentraNo2-Bold';
+    color: #FFFFFF; 
+    margin-top: 0px;
+    margin-left: 67px;
+    text-transform: uppercase;
+    max-width: 65%;
+  }
+  
+  @media(max-width: 989px){
+    .yas-collections-block:nth-child(1), .yas-collections-block:nth-child(2) {
+      height: 260px;
+      width: 100%;
+      margin: 0 0 25px;
+    }
+    .yas-collections-block{
+      height: 260px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 0 25px;
+    } 
+    .yas-collections-block:last-child{
+      margin: 0;
+    }
+    .yas-collections-block:hover{
+      background-size: 130%;  
+    }
+  }
+  @media(max-width: 768px){
+   
+  }
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

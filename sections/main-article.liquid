@@ -1,0 +1,815 @@
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+
+<link href='https://fonts.googleapis.com/css2?family=Source%20Serif%20Pro:ital@0;1&display=swap' rel='stylesheet'>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<style>
+  #shopify-section-{{section.id}}{
+    background-color: #fff;
+    color: #000;
+    padding: 40px 0px;
+  }
+  #shopify-section-{{section.id}} .page-width--narrow{
+    max-width: 640px;
+  }
+  .article-blog_tag{
+     font-family: "CentraNo2-Bold";
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 0.17em;
+      line-height: normal;
+      text-align: left;
+      color: #fff;
+      background: {{ blog.metafields.custom.color }};
+      padding: 4px 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    
+  }
+  p.article_mini_desc{
+    font-family: "Centra_No2";
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 0.17em;
+    line-height: 26px;
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+  }
+  h1.article-template__title{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-size: 44px;
+    letter-spacing: -0.02em;
+    line-height: 44px;
+    text-align: left;
+    color: #000;
+  }
+  #shopify-section-{{section.id}} span.circle-divider time, #shopify-section-{{section.id}} span.circle-divider {
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.17em;
+    line-height: 26px;
+    text-align: left;
+    color: #000;
+    text-transform: initial;
+  }
+  
+  #shopify-section-{{section.id}} .article-template__content p{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: left;
+    color: #000;
+    max-width: 640px;
+  }
+  #shopify-section-{{section.id}} .article-template__content a{
+     color: #000 !important;
+  }
+  .yas-blog_product-s{
+    text-align: center;
+    padding: 20px 0;
+  }
+  #shopify-section-{{section.id}} .yas-blog-slpr{
+    max-width: 1000px;
+  }
+  #shopify-section-{{section.id}} .swiper img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+   #shopify-section-{{section.id}} .swiper-button-next,
+  #shopify-section-{{section.id}} .swiper-button-prev{
+    display: flex;
+    height: 122px;
+    width: 40px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next{
+    right: -60px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-prev{
+    left: -60px;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next:after,
+  #shopify-section-{{section.id}} .swiper-button-prev:after{
+
+    content: none;
+  }
+  .yas-blog-slpr{
+    position: relative;
+    display: inline-flex;
+   
+  }
+  .yas-blog_product-t{
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  #shopify-section-{{section.id}} .yas-blog_product-t h3{
+    font-family: "Source Serif Pro" !important;
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    line-height: 31px;
+    text-align: left;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    display: inline-flex;
+  }
+  #shopify-section-{{section.id}} .yas-blog_product-t p{
+    font-family: "Source Serif Pro" !important;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    line-height: 31px;
+    text-align: left;
+    color: #fff;
+    font-style: italic;
+  }
+  #shopify-section-{{section.id}} .swiper-slide p{
+    font-family: "Centra_No2";
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.17em;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 5px 0 0;
+  }
+  #shopify-section-{{section.id}} .yas-blog_product-img{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .article-template__content .badge_img-yas{
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .article-template__content .badge_img-yas:after{
+    content: attr(data-badge);
+    font-family: CentraNo2-Book;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 26px;
+    text-align: left;
+    color: #838383;
+    margin-top: -10px;
+  }
+  .shared_yas-link-w {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .shared_yas-link-w div{
+    font-family: "CentraNo2-Bold";
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.17em;
+    line-height: 19px;
+    text-align: left;
+    color: #000;
+    
+  }
+  .article-bread {
+    max-width: 1200px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    margin: 0px auto 10px !important;
+  }
+  .article-bread a{
+    font-family: "Centra_No2";
+    font-weight: bold;
+    font-size: 9.5px;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+    opacity: 0.5;
+    
+  }
+  
+  @media (max-width: 1200px){
+    #shopify-section-{{section.id}} .yas-blog-slpr{
+      max-width: 80%;
+    }
+
+    #shopify-section-{{section.id}} .article-template__content iframe{
+      width: 100% !important;
+      height: 400px !important;
+    }
+
+  }
+  @media (max-width: 989px){
+    #shopify-section-{{section.id}} .yas-blog-slpr{
+      max-width: 100%;
+      padding: 0 50px;
+    }
+    .yas-blog_product-t {
+        padding: 0 25px;
+        max-width: 100%;
+    }
+    #shopify-section-{{section.id}} .swiper-button-next{
+      right: 15px;
+    }
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      left: 15px;
+    }
+    #shopify-section-{{section.id}} .page-width{
+      padding: 0 25px;
+    }
+  }
+  @media (max-width: 640px){
+    
+   
+    
+  }
+</style>
+
+
+<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when '@app' -%}
+        <div class="page-width page-width--narrow">
+          {% render block %}
+        </div>
+      {%- when 'breadcrumbs'-%}
+        <div class="article-bread"><a href="{{ section.settings.journal_url }}">Journal | {{ blog.title | upcase }}</a></div>
+      {%- when 'featured_image'-%}
+        {%- if article.image -%}
+          <div class="article-template__hero-container" {{ block.shopify_attributes }}>
+            <div class="article-template__hero-{{ block.settings.image_height }} media"
+              itemprop="image"
+              {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}
+            >
+              <img
+                srcset="{% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ article.image | image_url }} {{ article.image.width }}w"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                src="{{ article.image | image_url: width: 1100 }}"
+                loading="lazy"
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+                alt="{{ article.image.alt | escape }}">
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- when 'title'-%}
+          <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
+            <span class="article-blog_tag">{{ blog.title }}</span>
+            <p class="article_mini_desc">{{ article.metafields.custom.description }}</p>
+            <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+            {%- if block.settings.blog_show_date -%}
+              {% assign autorYas = article.metafields.custom.author_of_text_and_photo %}
+              {% if article.metafields.custom.custom_date != blank %}
+                  {% assign autorDate = article.metafields.custom.custom_date %}
+              {% else %}
+                 {% assign autorDate = '' %}
+              {% endif %}
+              {% if autorDate != '' %}
+                  <span class="circle-divider " itemprop="dateCreated pubdate datePublished">{% if autorYas != blank %}{{ autorYas }} · {{ autorDate }} {% else %}By Max Israel (text) and Alex Bogaard (photos) · {{ autorDate }}{% endif %} </span>
+              {% else %}
+                   <span class="circle-divider " itemprop="dateCreated pubdate datePublished">{% if autorYas != blank %}{{ autorYas }} · {{ article.published_at | date: "%b %d, %Y" }} {% else %}By Max Israel (text) and Alex Bogaard (photos) · {{ article.published_at | date: "%b %d, %Y"  }}{% endif %} </span>
+              {% endif %}
+            {%- endif -%}
+            {%- if block.settings.blog_show_author -%}
+              <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ article.author }}</span>
+              </span>
+            {%- endif -%}
+          </header>
+
+        {%- when 'content'-%}
+          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+              {{ article.content }}
+          </div>
+
+        {%- when 'slider_produt' -%}
+          <div class="yas-blog_product-s" style="background: {{ article.metafields.custom.slider_product.value.color }};">
+            <div class="yas-blog_product-t">
+              <h3>{{ article.metafields.custom.slider_product.value.title }}</h3>
+              <p>{{ article.metafields.custom.slider_product.value.description }}</p>
+            </div>
+            
+              <div class="yas-blog-slpr">
+                <!-- Slider main container -->
+                <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    {% for recommended_product in article.metafields.custom.slider_product_new.value  %}
+                    <div class="swiper-slide">
+                      <a href="{% if recommended_product.product_variant != blank %}{{ recommended_product.product_variant.value.url }}{% else %}{{ recommended_product.product.value.url }}{% endif %}">
+                        <div class="yas-blog_product-img"><img src="{{ recommended_product.image | img_url: '400x' }}" alt="{{ recommended_product.product.title }}"></div>
+                        {% if recommended_product.title != blank %}
+                          <p>{{ recommended_product.title }}</p>
+                        {% else %}
+                          <p>{{ recommended_product.product.value.title }}</p>
+                        {% endif %}
+                        
+                      </a>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="112" viewBox="0 0 29 112">
+                      <text id="_" data-name="&lt;" fill="#fff" font-size="30" font-family="CentraNo2-Book, Centra No2" letter-spacing="0.166em"><tspan x="0" y="21">&lt;</tspan></text>
+                    </svg>
+    
+                  </div>
+                  <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="112" viewBox="0 0 29 112">
+                      <text id="_" data-name="&gt;" fill="#fff" font-size="30" font-family="CentraNo2-Book, Centra No2" letter-spacing="0.166em"><tspan x="11" y="21">&gt;</tspan></text>
+                    </svg>
+                  </div>
+              </div>
+          </div>
+          <script>
+            $(function(){
+              let slidesCount = $('#shopify-section-{{section.id}} .swiper .swiper-slide').length;
+              let swiper = new Swiper('#shopify-section-{{section.id}} .swiper', {
+                loop: true,
+                slidesPerView: '4',
+                loopedSlides: slidesCount,
+                watchSlidesVisibility: true,
+                spaceBetween: 15,
+                pagination: {
+                  el: '.swiper-pagination',
+                },
+                navigation: {
+                  nextEl: '#shopify-section-{{section.id}} .swiper-button-next',
+                  prevEl: '#shopify-section-{{section.id}} .swiper-button-prev',
+                },
+                breakpoints: {
+                  0: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                  },
+                  490: {
+                    slidesPerView: 3,
+                    spaceBetween: 15
+                  },
+                  // when window width is >= 640px
+                  980: {
+                    slidesPerView: 3,
+                    spaceBetween: 15
+                  },
+                  1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 15
+                  }
+                }
+              });
+            })
+          </script>
+        {%- when 'content2' -%}
+          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+              {{ article.excerpt }}
+          </div>
+        {%- when 'share' -%}
+          {% assign full_url = request.host | append: request.path %}
+
+          <div class="shared_yas-link-w page-width page-width--narrow">
+            <div class="title_share">
+              {{ block.settings.share_label }}
+            </div>
+            {% if block.settings.link_1 != blank %}
+            <a href="javascript:navigator.clipboard.writeText(window.location.href)" targe="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                  <g id="Сгруппировать_602" data-name="Сгруппировать 602" transform="translate(-352 -1242)">
+                    <g id="Эллипс_15" data-name="Эллипс 15" transform="translate(352 1242)" fill="none" stroke="#000" stroke-width="1">
+                      <circle cx="15" cy="15" r="15" stroke="none"/>
+                      <circle cx="15" cy="15" r="14.5" fill="none"/>
+                    </g>
+                    <g id="Сгруппировать_598" data-name="Сгруппировать 598" transform="translate(271.205 -4.125)">
+                      <g id="Сгруппировать_597" data-name="Сгруппировать 597" transform="translate(-863.935 437.026) rotate(-45)">
+                        <path id="Контур_125" data-name="Контур 125" d="M5.658,13.72H2.839A2.339,2.339,0,0,1,.5,11.381v-.574A2.339,2.339,0,0,1,2.839,8.468H8.477a2.339,2.339,0,0,1,2.339,2.339v.478" transform="translate(86.028 1250.281)" fill="none" stroke="#161615" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+                        <path id="Контур_126" data-name="Контур 126" d="M13.426,8.468h2.819a2.339,2.339,0,0,1,2.339,2.339v.574a2.339,2.339,0,0,1-2.339,2.339H10.607a2.339,2.339,0,0,1-2.339-2.339V10.9" transform="translate(86.028 1250.281)" fill="none" stroke="#161615" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+            </a>
+            {% endif %}
+            {% if block.settings.link_2 != blank %}
+              
+            <a href="mailto:{{ shop.email }}?subject={{ article.title | escape }}&body={{ full_url }}" targe="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g id="Сгруппировать_603" data-name="Сгруппировать 603" transform="translate(-395 -1242)">
+                  <g id="Эллипс_16" data-name="Эллипс 16" transform="translate(395 1242)" fill="none" stroke="#000" stroke-width="1">
+                    <circle cx="15" cy="15" r="15" stroke="none"/>
+                    <circle cx="15" cy="15" r="14.5" fill="none"/>
+                  </g>
+                  <g id="Сгруппировать_600" data-name="Сгруппировать 600" transform="translate(0.482 0.745)">
+                    <rect id="Прямоугольник_239" data-name="Прямоугольник 239" width="17.15" height="12.199" transform="translate(400.518 1250.256)" fill="none" stroke="#161615" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                    <path id="Контур_127" data-name="Контур 127" d="M54.336,12.816,45.76,4.175h17.15Z" transform="translate(354.757 1246.08)" fill="none" stroke="#161615" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                    <path id="Контур_128" data-name="Контур 128" d="M56.858,10.919l6.053,6.1H45.76l6.053-6.1" transform="translate(354.757 1245.435)" fill="none" stroke="#161615" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+            {% endif %}
+            {% if block.settings.link_3 != blank %}
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ full_url }}" targe="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g id="Сгруппировать_604" data-name="Сгруппировать 604" transform="translate(-438 -1242)">
+                  <g id="Эллипс_18" data-name="Эллипс 18" transform="translate(438 1242)" fill="none" stroke="#000" stroke-width="1">
+                    <circle cx="15" cy="15" r="15" stroke="none"/>
+                    <circle cx="15" cy="15" r="14.5" fill="none"/>
+                  </g>
+                  <path id="Контур_129" data-name="Контур 129" d="M103.76,4.058V.5h-3.2a4.119,4.119,0,0,0-4.119,4.119v2.5H93.719v3.843h2.723v8.146h3.978V10.965h3.089V7.122H100.42V5.114a1.055,1.055,0,0,1,1.055-1.055Z" transform="translate(353.24 1247)" fill="none" stroke="#161615" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                </g>
+              </svg>
+            </a>
+            {% endif %}
+            {% if block.settings.link_4 != blank %}
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ full_url }}" targe="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g id="Сгруппировать_605" data-name="Сгруппировать 605" transform="translate(-481 -1242)">
+                  <g id="Эллипс_19" data-name="Эллипс 19" transform="translate(481 1242)" fill="none" stroke="#000" stroke-width="1">
+                    <circle cx="15" cy="15" r="15" stroke="none"/>
+                    <circle cx="15" cy="15" r="14.5" fill="none"/>
+                  </g>
+                  <g id="Сгруппировать_599" data-name="Сгруппировать 599" transform="translate(265.211 -4.17)">
+                    <rect id="Прямоугольник_240" data-name="Прямоугольник 240" width="3.321" height="10.789" transform="translate(223.045 1256.635)" fill="none" stroke="#161615" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                    <path id="Контур_130" data-name="Контур 130" d="M153.2,9.975a3.606,3.606,0,0,0-3.716-3.535A4.153,4.153,0,0,0,146,7.948V6.705h-3.321V17.493h3.569V11.2a1.813,1.813,0,1,1,3.626,0v6.3H153.2Z" transform="translate(85.617 1249.93)" fill="none" stroke="#161615" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                    <circle id="Эллипс_21" data-name="Эллипс 21" cx="1.916" cy="1.916" r="1.916" transform="translate(222.789 1251.669)" fill="none" stroke="#161615" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+            {% endif %}
+            <a href="https://web.whatsapp.com/send?text={{ full_url }}" targe="_blank">
+              <svg id="button_whatsapp" data-name="button whatsapp" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+              <g id="Эллипс_28" data-name="Эллипс 28" fill="none" stroke="#000" stroke-width="1">
+                <circle cx="15" cy="15" r="15" stroke="none"/>
+                <circle cx="15" cy="15" r="14.5" fill="none"/>
+              </g>
+              <g id="Сгруппировать_995" data-name="Сгруппировать 995" transform="translate(-281.452 -351.453)">
+                <path id="Контур_156" data-name="Контур 156" d="M8.227.5A7.716,7.716,0,0,0,1.68,12.317L.793,15.772l3.5-.9A7.724,7.724,0,1,0,8.227.5Z" transform="translate(288.225 358.226)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+                <path id="Контур_155" data-name="Контур 155" d="M14.688,11.619c-.058-.087-.214-.14-.447-.246s-1.378-.613-1.592-.683-.369-.1-.524.105-.6.683-.738.824-.273.158-.5.052a6.521,6.521,0,0,1-1.874-1.043,6.444,6.444,0,0,1-1.3-1.455c-.136-.21-.015-.324.1-.428s.233-.246.35-.368A1.444,1.444,0,0,0,8.4,8.026a.353.353,0,0,0-.02-.368c-.058-.1-.524-1.139-.718-1.559s-.381-.354-.524-.361-.291-.008-.447-.008a.9.9,0,0,0-.621.263,2.266,2.266,0,0,0-.815,1.753A3.888,3.888,0,0,0,6.2,9.919a10.038,10.038,0,0,0,3.98,3.172c.556.217.989.345,1.328.443a3.521,3.521,0,0,0,1.467.083,2.409,2.409,0,0,0,1.572-1,1.6,1.6,0,0,0,.136-1" transform="translate(286.465 356.759)" fill-rule="evenodd"/>
+              </g>
+            </svg>
+            </a>
+            
+          </div>
+    {%- endcase -%}
+  {%- endfor -%}
+{% comment %}
+  <div class="article-template__back element-margin-top center">
+    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
+      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
+    </a>
+  </div>
+  {%- if blog.comments_enabled? -%}
+    <div class="article-template__comment-wrapper background-secondary">
+      <div id="comments" class="page-width page-width--narrow">
+        {%- if article.comments_count > 0 -%}
+          {%- assign anchorId = '#Comments-' | append: article.id -%}
+
+          <h2 id="Comments-{{ article.id }}" tabindex="-1">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h2>
+          {% paginate article.comments by 5 %}
+            <div class="article-template__comments">
+              {%- if comment.status == 'pending' and comment.content -%}
+                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                  {{ comment.content }}
+                  <footer class="right">
+                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
+                  </footer>
+                </article>
+              {%- endif -%}
+
+              {%- for comment in article.comments -%}
+                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                  {{ comment.content }}
+                  <footer class="right">
+                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'date' }}</span>
+                  </footer>
+                </article>
+              {%- endfor -%}
+              {% render 'pagination', paginate: paginate, anchor: anchorId %}
+            </div>
+          {% endpaginate %}
+        {%- endif -%}
+        {% form 'new_comment', article %}
+          {%- liquid
+            assign post_message = 'blogs.article.success'
+            if blog.moderated? and comment.status == 'unapproved'
+              assign post_message = 'blogs.article.success_moderated'
+            endif
+          -%}
+          <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
+          {%- if form.errors -%}
+            <div class="form__message" role="alert">
+              <h3 class="form-status caption-large text-body" tabindex="-1" autofocus>
+                {% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}
+              </h3>
+            </div>
+            <ul class="form-status-list caption-large">
+              {%- for field in form.errors -%}
+                <li>
+                  <a href="#CommentForm-{{ field }}" class="link">
+                    {%- if form.errors.translated_fields[field] contains 'author' -%}
+                      {{ 'blogs.article.name' | t }}
+                    {%- elsif form.errors.translated_fields[field] contains 'body'-%}
+                     {{ 'blogs.article.message' | t }}
+                    {%- else -%}
+                      {{ form.errors.translated_fields[field] }}
+                    {%- endif -%}
+                    {{ form.errors.messages[field] }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- elsif form.posted_successfully? -%}
+            <div class="form-status-list form__message" role="status">
+              <h3 class="form-status" tabindex="-1" autofocus>{% render 'icon-success' %} {{ post_message | t }}</h3>
+            </div>
+          {%- endif -%}
+
+          <div{% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>
+            <div class="article-template__comment-fields">
+              <div class="field field--with-error">
+                <input
+                  type="text"
+                  name="comment[author]"
+                  id="CommentForm-author"
+                  class="field__input"
+                  autocomplete="name"
+                  value="{{ form.author }}"
+                  aria-required="true"
+                  required
+                  {% if form.errors contains 'author' %}
+                    aria-invalid="true"
+                    aria-describedby="CommentForm-author-error"
+                  {% endif %}
+                  placeholder="{{ 'blogs.article.name' | t }}"
+                >
+                <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
+                {%- if form.errors contains 'author' -%}
+                  <small id="CommentForm-author-error">
+                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
+                  </small>
+                {%- endif -%}
+              </div>
+              <div class="field field--with-error">
+                <input
+                  type="email"
+                  name="comment[email]"
+                  id="CommentForm-email"
+                  autocomplete="email"
+                  class="field__input"
+                  value="{{ form.email }}"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  aria-required="true"
+                  required
+                  {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="CommentForm-email-error"
+                  {% endif %}
+                  placeholder="{{ 'blogs.article.email' | t }}"
+                >
+                <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label>
+                {%- if form.errors contains 'email' -%}
+                  <small id="CommentForm-email-error">
+                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
+                  </small>
+                {%- endif -%}
+              </div>
+            </div>
+            <div class="field field--with-error">
+              <textarea
+                rows="5"
+                name="comment[body]"
+                id="CommentForm-body"
+                class="text-area field__input"
+                aria-required="true"
+                required
+                {% if form.errors contains 'body' %}
+                  aria-invalid="true"
+                  aria-describedby="CommentForm-body-error"
+                {% endif %}
+                placeholder="{{ 'blogs.article.message' | t }}"
+              >{{ form.body }}</textarea>
+                <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label>
+            </div>
+            {%- if form.errors contains 'body' -%}
+              <small id="CommentForm-body-error">
+                <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+              </small>
+            {%- endif -%}
+          </div>
+          {%- if blog.moderated? -%}
+            <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
+          {%- endif -%}
+          <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
+        {% endform %}
+      </div>
+  </div>
+  {%- endif -%}
+</article>
+{% endcomment %}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{ article.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ request.origin | append: page.url | json }}
+    },
+    "headline": {{ article.title | json }},
+    {% if article.excerpt != blank %}
+      "description": {{ article.excerpt | strip_html | json }},
+    {% endif %}
+    {% if article.image %}
+      "image": [
+        {{ article | image_url: width: article.image.width | prepend: "https:" | json }}
+      ],
+    {% endif %}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      {% if settings.share_image %}
+        "logo": {
+          "@type": "ImageObject",
+          "height": {{ settings.share_image.height | json }},
+          "url": {{ settings.share_image | image_url: width: settings.share_image.width | prepend: "https:" | json }},
+          "width": {{ settings.share_image.width | json }}
+        },
+      {% endif %}
+      "name": {{ shop.name | json }}
+    }
+  }
+  </script>
+
+  <script>
+    $(document).ready(function(){
+    $('.article-template__content img').each(function(){
+      var alt = $(this).attr('alt');
+      if(!alt){
+        alt = '';
+      }
+        
+      $(this).wrap(function() {
+          return "<div class='badge_img-yas' data-badge='" + alt + "'></div>";
+        });
+      
+      });
+    });
+  </script>
+
+{% schema %}
+{
+  "name": "t:sections.main-article.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+     {
+          "type": "url",
+          "id": "journal_url",
+          "label": "Journal page url"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "featured_image",
+      "name": "t:sections.main-article.blocks.featured_image.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "image_height",
+          "options": [
+            {
+              "value": "adapt",
+              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__1.label"
+            },
+            {
+              "value": "small",
+              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__2.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__3.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__4.label"
+            }
+          ],
+          "default": "adapt",
+          "label": "t:sections.main-article.blocks.featured_image.settings.image_height.label",
+          "info": "t:sections.main-article.blocks.featured_image.settings.image_height.info"
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "name": "t:sections.main-article.blocks.title.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "blog_show_date",
+          "default": true,
+          "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "blog_show_author",
+          "default": false,
+          "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "name": "t:sections.main-article.blocks.content.name",
+      "limit": 1
+    },
+    {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "limit": 1
+    },
+    {
+      "type": "slider_produt",
+      "name": "Slider product",
+      "limit": 1
+    },
+    {
+      "type": "content2",
+      "name": "second content",
+      "limit": 1
+    },
+    {
+      "type": "share",
+      "name": "t:sections.main-article.blocks.share.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "share_label",
+          "label": "t:sections.main-article.blocks.share.settings.text.label",
+          "default": "Share"
+        },
+        {
+          "type": "url",
+          "id": "link_1",
+          "label": "link"
+        },
+        {
+          "type": "url",
+          "id": "link_2",
+          "label": "email"
+        },
+        {
+          "type": "url",
+          "id": "link_3",
+          "label": "fb link"
+        },
+        {
+          "type": "url",
+          "id": "link_4",
+          "label": "linkedin link"
+        },
+        {
+          "type": "url",
+          "id": "link_5",
+          "label": "twitter link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

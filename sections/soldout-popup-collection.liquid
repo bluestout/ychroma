@@ -1,0 +1,117 @@
+<style>
+
+  #ProductGridContainer .card_yas_size span[data-aviable=false] .product-form__buttons button {
+    z-index: -1;
+    position: relative;
+  }
+  #ProductGridContainer .card_yas_size span[data-aviable=false]{
+    z-index: 1;
+    position: relative;
+    cursor: help;
+  }
+  .mfp-bg.yas-prod-soldout-popup.mfp-ready{
+    display: block;
+    opacity: .95;
+  }
+  .yas-prod-soldout-popup .mfp-content{
+    max-width: 600px;
+    padding: 0 25px;
+  }
+  .yas-prod-soldout-popup.mfp-close-btn-in .mfp-close {
+    color: #fff;
+    top: -50px;
+    right: 0px;
+  }
+  .yas-prod-soldout-popup #subprod-form .subprod-form__message.form__message{
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+  }
+}
+</style>
+
+<script defer>
+
+$(function(){
+
+  function popopSold(text){
+    let titleProd = text;
+    $.magnificPopup.open({
+            items: [
+                {
+                  src:  '<div class="subscribe_main_form">'+
+  						'<div class="subscirebe_prod-title">This is a popular piece!  We’re sold out for the moment, but if you leave your email you’ll be the first to know when it’s back in stock.</div>'+
+                         '{%- form "customer", class: "subprod-form", id: "subprod-form" -%}'+
+                           {%- if form.posted_successfully? -%}
+                            '<h3 class="subprod-form__message subprod-form__message--success form__message" id="subprod-success--{{ section.id }}" tabindex="-1" autofocus>Thanks for subscribing</h3>'+
+                           {%- else -%}
+                            '<input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓">'+
+  							`<input type="hidden" name="contact[tags]" value="${titleProd}">`+
+  							  '<div class="subprod-form__field-wrapper" >'+
+  								'<div class="field">'+
+  								'<div style="position: relative;width: 100%;">'+
+  								  '<input id="NewsletterForm--{{ section.id }}" type="email" name="contact[email]" class="field__input" value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="Your best email" required="">'+
+  								  '<label class="field__label" for="NewsletterForm--{{ section.id }}">Your best email</label>'+
+  								'</div>' +
+  								'<button type="submit" class="subprod-form__button field__button" name="commit" id="Subscribe" aria-label="Subscribe">Please inform me</button>'+
+  								'</div>'+
+                                {%- if form.errors -%}'<small class="subprod-form__message form__message" id="subprod-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>'+{%- endif -%}
+  							  '</div>'+
+    						{%- endif -%}
+                           '{%- endform -%}'+
+  					  '</div>',
+                  type: 'inline'
+                }
+              ],
+            mainClass: 'yas-prod-soldout-popup',
+            callbacks: {
+              open: function() {
+                $('html').css('overflow', 'hidden');
+               
+              },
+              close: function() {
+                $('html').css('overflow', '');
+              }
+            },
+            type: 'inline'
+        });
+  }
+
+  
+  let url = window.location.href;
+  let subFormProd = url.substring(url.lastIndexOf('?') + 1);
+  let subFormProdMass = subFormProd.split('=')     
+  if(subFormProdMass[0] == 'customer_posted'){
+      popopSold();                   
+   }
+
+  
+  $('.card_yas_size span[data-aviable=false]').click(function(){
+     popopSold($(this).attr('data-name'));  
+  })
+  
+})
+</script>
+
+
+{% schema %}
+  {
+    "name": "Soldout popup collection",
+    "class": "sold_pop_out",
+    "settings": [
+      
+    ],
+    "presets": [
+      {
+        "name": "Soldout popup collection"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

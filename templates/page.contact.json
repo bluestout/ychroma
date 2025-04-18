@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "cc6cb2e1-d807-4a9e-825b-7b5c7e71686f": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "cc6cb2e1-d807-4a9e-825b-7b5c7e71686f",
+    "main",
+    "form"
+  ]
+}
