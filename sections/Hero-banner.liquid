@@ -1,0 +1,341 @@
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Magnific Popup core JS file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+  .mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+  }
+  .mfp-fade.mfp-bg.mfp-ready {
+  	opacity: 0.8;
+  }
+  .mfp-fade.mfp-bg.mfp-removing {
+  	opacity: 0;
+  }
+  
+  .mfp-fade.mfp-wrap .mfp-content {
+  	opacity: 0;
+  	-webkit-transition: all 0.15s ease-out; 
+  	-moz-transition: all 0.15s ease-out; 
+  	transition: all 0.15s ease-out;
+  }
+  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  	opacity: 1;
+  }
+  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  	opacity: 0;
+  }
+  .mfp-bg.mfp-ready{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 1;
+    display: block;
+  }
+  .white-popup-block{
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+  .mfp-close-btn-in .mfp-close {
+    color: #fff;
+    right: -44px;
+    top: -40px;
+    font-size: 44px;
+  }
+  .white-popup-block video{
+    width: 100%;
+  }
+</style>
+
+{% assign video_domen = section.settings.text2_link | replace: 'https://', '' | split: '/' | first %}
+
+{% capture chek_url_video %}{% if video_domen == 'youtu.be' or video_domen == 'vimeo.com' %}popup-frame{% else %}popup-defolt{% endif %}{% endcapture %}
+
+{% capture iframe_video_chek %}{% if chek_url_video == 'popup-frame' %}{{ section.settings.text2_link }}{% else %}#{{ section.id }}-popup{% endif %}{% endcapture %}
+
+<style>
+#shopify-section-{{section.id}} a.second_a-yas{
+    background-color: #EDBA44;
+    color: #000;
+    letter-spacing: 1px;
+    border: 3px solid #EDBA44;
+    font-family: CentraNo2-Extrabold, sans-serif !important;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 15px auto 0px;
+    transition: all 0.3s ease;
+    line-height: normal;
+    width: auto;
+    height: 50px;
+  }
+  #shopify-section-{{section.id}} a.second_a-yas:hover{
+    text-decoration: none;
+    background: transparent;
+    color: #EDBA44;
+  }
+  #shopify-section-{{section.id}} a.second_a-yas svg{
+    margin-left: 25px;
+  }
+  #shopify-section-{{section.id}} a.second_a-yas path{
+    transition: all 0.3s ease;
+    fill: #000;
+  }
+  #shopify-section-{{section.id}} a.second_a-yas:hover path{
+    fill: #EDBA44;
+  }
+  @media (max-width: 989px){
+
+    #shopify-section-{{section.id}} a.second_a-yas{
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      padding: 0 10px;
+      height: 36px;
+      background-color: #EDBA44;
+      color: #000;
+    }
+     #shopify-section-{{section.id}} a.second_a-yas:hover{
+      background-color: transparent;
+      color: #EDBA44;
+    }
+    #shopify-section-{{section.id}} a.second_a-yas path{
+      transition: all 0.3s ease;
+      fill: #000;
+    }
+    #shopify-section-{{section.id}} a.second_a-yas:hover path{
+      fill: #EDBA44;
+    }
+    #shopify-section-{{section.id}} a.second_a-yas svg{
+      margin-left: 10px;
+    }
+  }
+</style>
+<div class="hero-video-section">
+  <div class="video-wraper">
+    <video  id="hero-video-info" class="lazy" width="100%" poster="{{ section.settings.image | image_url }}" preload="none" autoplay muted loop playsinline>
+      <source data-src="{{section.settings.video_link }}" type="video/mp4">
+    </video>
+    <div class="hero-video-content-info">
+      <div class="heading-h2 animate fadeInLeft">
+      	<h2>{{section.settings.text-box}}</h2>
+      </div>
+       <div class="cushero-link-info animate fadeInLeft">
+      {% if section.settings.text1_txt != blank %}
+      <a href="{{section.settings.text1_link}}">{{section.settings.text1_txt}}</a>
+      {% endif %}
+      {% if section.settings.text2_link != blank %}
+        
+      <a href="{{ iframe_video_chek }}" class="second_a-yas {{ chek_url_video | strip }}">{{section.settings.text2_txt}}
+      <svg xmlns="http://www.w3.org/2000/svg" width="18.903" height="21.829" viewBox="0 0 18.903 21.829">
+        <path id="video_triag" data-name="video_triag" d="M683.825,322.925l-18.9-10.914v21.829Z" transform="translate(-664.921 -312.01)" fill="#f7b717"/>
+      </svg>  
+      </a>
+      {% endif %}
+       </div>
+      
+      <div class="hero-video-control animate fadeInRight">
+        <button id="play-pause" class="hero-video-play">{{section.settings.btn_text}}</button>
+      </div>
+        <img src="{{section.settings.arrows_down | img_url:'original'}}" class="arrow_down_info">
+    </div>
+  </div> 
+</div>
+<div id="{{ section.id }}-popup" class="mfp-hide white-popup-block">
+  <video class="lazy"  loop controls controlslist="nodownload" preload="none">
+	  <source data-src="{{ section.settings.text2_link }}" type="video/mp4">
+  </video>
+</div>
+<script defer>
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+
+          video.target.load();
+          video.target.classList.remove("lazy");
+          lazyVideoObserver.unobserve(video.target);
+        }
+      });
+    });
+
+    lazyVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+});
+
+  
+var video = document.getElementById('hero-video-info');
+    video.volume = 0;
+var playPause = document.getElementById("play-pause");
+playPause.addEventListener("click", function() {
+  if (video.paused == true) {
+    video.play();
+    playPause.text="{{section.settings.btn_text}}";
+    playPause.classList.toggle('pause');
+  } else {
+    video.pause();
+    playPause.text="{{section.settings.btn_text}}";
+   playPause.classList.toggle('pause');
+  }
+});
+  
+  
+$(".hero-video-play").click(function() {
+  if ($(this).hasClass('pause')) {
+    $(this).text('{{section.settings.stop_btn_text}}');
+  } else {
+     $(this).text('{{section.settings.btn_text}}');
+  }
+}); 
+    
+    /****************Arrow scroll down*********************/
+    $(function() {
+      $('.arrow_down_info').click (function() {
+        $('html, body').animate({scrollTop: $('#arrow_down_info').offset().top }, 'slow');
+        return false;
+      });
+    });
+
+
+
+  $(document).ready(function() {
+	$('.popup-defolt').magnificPopup({
+		type: 'inline',
+		preloader: false,
+        callbacks: {
+          beforeClose: function() {
+            document.querySelector('.white-popup-block video').pause();
+            document.querySelector('#shopify-section-{{section.id}} video').play();
+          },
+          open: function() {
+            document.querySelector('#shopify-section-{{section.id}} video').pause();
+          },
+        }
+	});
+    $('.popup-frame').magnificPopup({
+	
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false,
+        iframe: {
+        		patterns: {
+        			youtube: {
+        				index: 'youtu.be/',
+        				id: '/',
+        				src: 'https://www.youtube.com/embed/%id%?rel=0&autoplay=1'
+                        }
+                    ,
+                    vimeo: {
+                        index: 'vimeo.com/',
+                        id: '/',
+                        src: '//player.vimeo.com/video/%id%?autoplay=1'
+                      }
+                  }
+        },
+        callbacks: {
+          beforeClose: function() {
+            document.querySelector('#shopify-section-{{section.id}} video').play();
+          },
+          open: function() {
+            document.querySelector('#shopify-section-{{section.id}} video').pause();
+          },
+        }
+      
+	});
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Home hero banner",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "html",
+      "label": "Heading",
+      "default": "Heading"
+    },
+     {
+      "id": "text1_link",
+      "type": "url",
+      "label": "Text1 Link"
+    },
+     {
+      "id": "text1_txt",
+      "type": "text",
+      "label": "Text1"
+    },
+     {
+      "id": "text2_link",
+      "type": "url",
+      "label": "Text2 Link"
+    },
+     {
+      "id": "text2_txt",
+      "type": "text",
+      "label": "Text2"
+    },
+     {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image background"
+    },
+     {
+      "id": "video_link",
+      "type": "text",
+      "label": "Video Link"
+    },
+     {
+      "id": "btn_text",
+      "type": "text",
+      "label": "Button Text"
+    },
+   {
+      "id": "stop_btn_text",
+      "type": "text",
+      "label": "Stop Button Text"
+    },
+    {
+      "id": "arrows_down",
+      "type": "image_picker",
+      "label": "Arrow Image"
+    }
+
+
+  
+  ]
+  ,
+  "presets": [
+    {
+      "name": "Home hero banner",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}

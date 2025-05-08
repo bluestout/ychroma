@@ -1,0 +1,61 @@
+{% if product.metafields.custom.productmatch.value != blank %}
+  <div class="product_matches_heading">
+    <h1>{{ section.settings.heading }}</h1>
+  </div> 
+<div class="product-matches-sliders-info owl-carousel">
+   {% for product_match in product.metafields.custom.productmatch.value %}
+     <div class="destaque-card">
+     <a href="{{ product_match.url }}">
+       <img class="card-img" src="{{product_match | img_url:'original'}}">
+     </a>
+     </div>
+   {% endfor %}
+</div>
+{% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script> 
+<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+{% schema %}
+{
+  "name": "Custom Product Matches",
+  "settings": [
+      {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading"
+      }
+  ], 
+  "presets": [
+    {
+      "name": "Custom Product Matches",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+$(document).ready(function(){
+  
+  $('.product-matches-sliders-info').owlCarousel({
+    loop:true,
+    margin:10,
+    autoplay:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+       900:{
+            items:3
+        }
+    }
+  });
+  
+});
+{% endjavascript %}
+

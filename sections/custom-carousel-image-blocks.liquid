@@ -1,0 +1,168 @@
+{%- style -%}
+  #carousel-image-blocks-{{ section.id }} .carousel-image-blocks__container {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media screen and (max-width: 768px) {
+    #carousel-image-blocks-{{ section.id }} .carousel-image-blocks__container {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+
+  .carousel-image-blocks__item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-image-blocks__item-image img {
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    object-fit: cover;
+  }
+
+  .carousel-image-blocks__container {
+    max-width: calc(90% - -25px);
+    margin-bottom: 40px;
+    padding-inline: 30px;
+  }
+
+  .carousel-image-blocks__container .swiper-button-prev, .swiper-button-next {
+    display: flex!important;
+  }
+
+  .carousel-image-blocks__container .swiper-button-next:after, .carousel-image-blocks__container .swiper-button-prev:after {
+    font-size: 20px;
+    color: black;
+  }
+
+  .carousel-image-blocks__container .swiper-pagination-bullet-active{
+    background-color: black;
+  }
+
+  @media screen and (max-width: 768px) {
+    .carousel-image-blocks__container {
+      margin-bottom: 40px;
+      padding-inline: 20px;
+    }
+    .carousel-image-blocks__item-image img{
+      max-width: 330px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .carousel-image-blocks__item-image img{
+      max-width: 270px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="carousel-image-blocks" id="carousel-image-blocks-{{ section.id }}">
+  <div class="carousel-image-blocks__container swiper">
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="swiper-slide carousel-image-blocks__item" {{ block.shopify_attributes }}>
+          <{% if block.settings.link != blank %}a href="{{ block.settings.link }}"{% else %}div{% endif %} class="carousel-image-blocks__item-image">
+            <img src="{{ block.settings.image | image_url: width: 1000 }}" alt="{{ block.settings.image.alt }}">
+          </{% if block.settings.link != blank %}a{% else %}div{% endif %}>
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  const carouselImageBlocks = document.querySelector('.carousel-image-blocks__container');
+  const swiper = new Swiper(carouselImageBlocks, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3.5,
+      },
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Carousel image blocks",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding top mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel image blocks"
+    }
+  ]
+}
+{% endschema %}

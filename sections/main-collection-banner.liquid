@@ -1,0 +1,636 @@
+<!-------Slider----------->
+ <style>
+
+.col-carousel {
+	margin: 70px 0;
+}
+
+/* owl nav */
+.owl-prev span, .owl-next span {
+	color: #FFF;
+}
+
+.owl-prev span:hover, 
+.owl-next span:hover {
+	color: #8199A3;
+}
+
+.owl-prev, .owl-next {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+.owl-prev {
+	left: 7px;
+}
+
+.owl-next {
+	right: 7px;
+}
+
+/* removing blue outline from buttons */
+button:focus, button:active {
+   outline: none;
+}
+</style>
+
+
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+    }
+  }
+{%- endstyle -%}
+
+<div class="ctm-{{collection.handle}}-info collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
+  <div class="collection-hero__inner page-width">
+    <div class="collection-hero__text-wrapper custom-collection-wrapper-info">
+       {% if collection.handle == "cape-town" or collection.handle == "valencia" or collection.handle == "bordeaux"  or collection.handle == "yokohama"  or collection.handle == "buenos-aires"  %}
+ {% else %}
+      <h1 class="collection-hero__title">
+        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+      {{- collection.title | escape -}}</h1>
+{% endif %}
+   {% if collection.handle == "cape-town" or collection.handle == "valencia" or collection.handle == "bordeaux"  or collection.handle == "yokohama"  or collection.handle == "buenos-aires"  %}
+   <div class="top-image-wrapper">
+  <h2>Wardrobe Tutorial Video</h2>
+    </div>
+      
+      <!----------------start---tabs code--------------------------->
+<ul class="nav nav-tabs" role="tablist">
+	<li class="nav-item navtab-info1 {% if collection.handle == "cape-town" %}active-tab{% endif %}">
+<a class="nav-link" href="{{ section.settings.url_link }}/collections/cape-town">CAPE TOWN</a> 
+	</li>
+	<li class="nav-item navtab-info2 {% if collection.handle == "valencia" %}active-tab{% endif %}">
+<a class="nav-link"  href="{{ section.settings.url_link }}/collections/valencia">VALENCIA</a>
+     
+	</li>
+	<li class="nav-item navtab-info3 {% if collection.handle == "bordeaux" %}active-tab{% endif %}">
+		<a class="nav-link"  href="{{ section.settings.url_link }}/collections/bordeaux">BORDEAUX</a>
+	</li>
+  <li class="nav-item navtab-info4 {% if collection.handle == "yokohama" %}active-tab{% endif %}">
+		<a class="nav-link" href="{{ section.settings.url_link }}/collections/yokohama">YOKOHAMA</a>
+	</li>
+  <li class="nav-item navtab-info5 {% if collection.handle == "buenos-aires" %}active-tab{% endif %}">
+		<a class="nav-link" href="{{ section.settings.url_link }}/collections/buenos-aires">BUENOS AIRES</a>
+	</li>
+</ul><!-- Tab panes -->
+     <style>
+ #div_content sticky-header.header-wrapper{display:none !important;}
+#div_content .collection-hero__text-wrapper {display:none;} 
+#div_content facet-filters-form.facets{display:none !important;} 
+#div_content footer.footer{display:none;} 
+#div_content .pagination-wrapper{display:none;}
+#div_content  div#cart-notification{display:none;} 
+
+     </style>
+    
+{% endif %}
+     
+<div class="tab-content1">
+  {% if collection.handle == "cape-town" %}
+	<div class="tab-pane1">
+<img src="{{ collection.metafields.custom.main_image.value | img_url:'original' }}" class="collection_top_img">
+<div class="custom-droppiece-wrapper">
+<select name="type" class="type custom-droppiece-info" id="select-droppi">
+ <option name="8-piece" value="8-piece">8-piece</option>
+ <option name="16-piece" value="16-piece">16-piece</option>
+ <option name="24-piece" value="24-piece">24-piece</option>
+</select> 
+    <div for="select-droppi" class="arrow-down">
+
+    </div>
+</div>
+<div id="8-piece" class="8-piece row custom-piece-info" >
+   <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>8DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+  <div id="16-piece" class="16-piece row custom-piece-info" >
+ <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>16DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+    <div id="24-piece" class="24-piece row custom-piece-info" >
+  <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>24DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+</div>
+
+<!--------start-slider code--------------->
+{% if collection.metafields.custom.image.value != blank %}
+<div class="carousel-main  owl-carousel">
+   {% for ingredient in collection.metafields.custom.image.value %}
+     <div class="destaque-card card bg-dark text-white">
+       <img class="card-img" src="{{ingredient | img_url:'original'}}">
+     </div>
+   {% endfor %}
+</div>
+{% endif %}
+<div class="prebult-main-content">
+<div class="left_prebult_info">
+ <div class="prebult_txt"><h4>PREBUILT W A RD RO BE</h4></div>
+ <select name="collection" class="custom-collection-info" >
+ <option name="products" value="16-Piece">Cape 16-Piece</option>
+ <option name="buenos-aires" value="26-Piece">Cape 26-Piece</option>
+ </select> 
+
+
+ <div class="custom-item-data">
+  <span class="totalprice_info"></span>
+ <div class="tem_added"><span class="item_count_info"></span> items added</div>
+</div>
+<form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+   <button class="button button--primary button--full-width custom-add-allcart" name="checkout">ADD ALL TO CART</button>
+</form>
+</div>
+    <div class="right_prebuilt_info">
+        <img class="tabs-img" src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/oversize_banner_1024x1024.png?v=1658821958" width="100px" height="100px">
+    <p class="tabs-detail">This 16-piece wardrobe mixes and matches to form over 85 outstanding looks. Download our <a href="#">Valencia Wardrobe 6AM Inspiration Guide.</a></p>
+    </div>
+</div>
+
+    
+  <!--------end-slider code-------------->
+  
+    {% elsif collection.handle == "valencia" %}
+	<div class="tab-pane1">
+    <img src="{{ collection.metafields.custom.main_image.value | img_url:'original' }}" class="collection_top_img">
+<div class="custom-droppiece-wrapper">
+<select name="type" class="type custom-droppiece-info" >
+ <option name="8-piece" value="8-piece">1-piece</option>
+ <option name="16-piece" value="16-piece">2-piece</option>
+ <option name="24-piece" value="24-piece">3-piece</option>
+</select>
+     <div class="arrow-down">
+    </div>
+</div>
+<div  id="8-piece" class="8-piece row custom-piece-info" >
+   <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>1DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+  <div  id="16-piece" class="16-piece row custom-piece-info" >
+ <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>2DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+    <div  id="24-piece" class="24-piece row custom-piece-info" >
+  <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>3DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+    </div>
+<!--------start-slider code--------------->
+{% if collection.metafields.custom.image.value != blank %}
+<div class="carousel-main  owl-carousel">
+   {% for ingredient in collection.metafields.custom.image.value %}
+     <div class="destaque-card card bg-dark text-white">
+       <img class="card-img" src="{{ingredient | img_url:'original'}}">
+     </div>
+   {% endfor %}
+</div>
+{% endif %}
+<!--------end-slider code-------------->
+     <div class="prebult-main-content">
+<div class="left_prebult_info">
+ <div class="prebult_txt"><h4>PREBUILT W A RD RO BE</h4></div>
+ <select name="collection" class="custom-collection-info" >
+ <option value="6-Piece">Valencia 6-Piece</option>
+ <option value="12-Piece">Valencia 12-Piece</option>
+ </select> 
+     <div class="custom-item-data">
+  <span class="totalprice_info"></span>
+ <div class="tem_added"><span class="item_count_info"></span> items added</div>
+     </div>
+<form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+   <button class="button button--primary button--full-width custom-add-allcart" name="checkout">ADD ALL TO CART</button>
+</form>
+</div>
+    <div class="right_prebuilt_info">
+       <img class="tabs-img" src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/knitwear_banner_1024x1024.jpg?v=1658822746" width="100px" height="100px">
+    <p class="tabs-detail">This 6-piece wardrobe mixes and matches to form over 85 outstanding looks. Download our <a href="#">Valencia Wardrobe 6AM Inspiration Guide.</a></p>
+    </div>
+</div>
+{% elsif collection.handle == "bordeaux" %}
+    <div class="tab-pane1">
+    <img src="{{ collection.metafields.custom.main_image.value | img_url:'original' }}" class="collection_top_img">
+<div class="custom-droppiece-wrapper">
+<select name="type" class="type custom-droppiece-info" >
+ <option name="8-piece" value="8-piece">4-piece</option>
+ <option name="16-piece" value="16-piece">6-piece</option>
+ <option name="24-piece" value="24-piece">8-piece</option>
+</select> 
+     <div class="arrow-down">
+
+    </div>
+</div>
+<div id="8-piece" class="8-piece row custom-piece-info">
+   <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>4DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+  <div id="16-piece" class="16-piece row custom-piece-info" >
+ <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>6DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+    <div id="24-piece" class="24-piece row custom-piece-info" >
+  <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>8DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+</div>
+
+<!--------start-slider code--------------->
+ {% if collection.metafields.custom.image.value != blank %}
+<div class="carousel-main  owl-carousel">
+   {% for ingredient in collection.metafields.custom.image.value %}
+     <div class="destaque-card card bg-dark text-white">
+       <img class="card-img" src="{{ingredient | img_url:'original'}}">
+     </div>
+   {% endfor %}
+</div>
+{% endif %}
+  <!--------end-slider code-------------->
+    <div class="prebult-main-content">
+<div class="left_prebult_info">
+ <div class="prebult_txt"><h4>PREBUILT W A RD RO BE</h4></div>
+ <select name="collection" class="custom-collection-info" >
+ <option value="4-Piece">4-Piece</option>
+ <option value="8-Piece">8-Piece</option>
+ </select> 
+     <div class="custom-item-data">
+  <span class="totalprice_info"></span>
+ <div class="tem_added"><span class="item_count_info"></span> items added</div>
+     </div>
+<form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+   <button class="button button--primary button--full-width custom-add-allcart" name="checkout">ADD ALL TO CART</button>
+</form>
+</div>
+    <div class="right_prebuilt_info">
+    <img class="tabs-img" src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/oversize_banner_1024x1024.png?v=1658821958" width="100px" height="100px">
+    <p class="tabs-detail">This 4-piece wardrobe mixes and matches to form over 85 outstanding looks. Download our <a href="#">Valencia Wardrobe 6AM Inspiration Guide.</a></p>
+    </div>
+</div>
+  {%  elsif collection.handle == "yokohama"  %}
+    <div class="tab-pane1">
+    <img src="{{ collection.metafields.custom.main_image.value | img_url:'original' }}" class="collection_top_img">
+<div class="custom-droppiece-wrapper">
+<select name="type" class="type custom-droppiece-info" >
+ <option name="8-piece" value="8-piece">1-piece</option>
+ <option name="16-piece" value="16-piece">11-piece</option>
+ <option name="24-piece" value="24-piece">111-piece</option>
+</select> 
+     <div class="arrow-down">
+
+    </div>
+</div>
+<div id="8-piece" class="8-piece row custom-piece-info" >
+   <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>1DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+  <div id="16-piece" class="16-piece row custom-piece-info" >
+ <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>11DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+    <div id="24-piece" class="24-piece row custom-piece-info" >
+  <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>111DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+</div>
+
+<!--------start-slider code--------------->
+ {% if collection.metafields.custom.image.value != blank %}
+<div class="carousel-main  owl-carousel">
+   {% for ingredient in collection.metafields.custom.image.value %}
+     <div class="destaque-card card bg-dark text-white">
+       <img class="card-img" src="{{ingredient | img_url:'original'}}">
+     </div>
+   {% endfor %}
+</div>
+{% endif %}
+  <!--------end-slider code-------------->
+     <div class="prebult-main-content">
+<div class="left_prebult_info">
+ <div class="prebult_txt"><h4>PREBUILT W A RD RO BE</h4></div>
+ <select name="collection" class="custom-collection-info" >
+ <option value="2-Piece">2-Piece</option>
+ <option value="14-Piece">14-Piece</option>
+ </select> 
+     <div class="custom-item-data">
+  <span class="totalprice_info"></span>
+ <div class="tem_added"><span class="item_count_info"></span> items added</div>
+     </div>
+<form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+   <button class="button button--primary button--full-width custom-add-allcart" name="checkout">ADD ALL TO CART</button>
+</form>
+</div>
+    <div class="right_prebuilt_info">
+       <img class="tabs-img" src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/oversize_banner_1024x1024.png?v=1658821958" width="100px" height="100px">
+    <p class="tabs-detail">This 2-piece wardrobe mixes and matches to form over 85 outstanding looks. Download our <a href="#">Valencia Wardrobe 6AM Inspiration Guide.</a></p>
+    </div>
+</div>
+{%  elsif collection.handle == "buenos-aires"  %}
+  <div class="tab-pane1">
+    <img src="{{ collection.metafields.custom.main_image.value | img_url:'original' }}" class="collection_top_img">
+<div class="custom-droppiece-wrapper">
+<select name="type" class="type custom-droppiece-info" >
+ <option name="8-piece" value="8-piece">8-piece</option>
+ <option name="16-piece" value="16-piece">88-piece</option>
+ <option name="24-piece" value="24-piece">888-piece</option>
+</select> 
+     <div class="arrow-down">
+
+    </div>
+</div>
+<div id="8-piece" class="8-piece row custom-piece-info" >
+   <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>8DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+  <div id="16-piece" class="16-piece row custom-piece-info" >
+ <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>88DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+    <div id="24-piece" class="24-piece row custom-piece-info" >
+  <a class="btn btn-primary" target="_blank" href="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/December_Sunita_Updates.pdf" download>888DOWNLOAD THE USE GUIDE (PDF)</a>
+</div>
+</div>
+
+<!--------start-slider code--------------->
+{% if collection.metafields.custom.image.value != blank %}
+<div class="carousel-main  owl-carousel">
+   {% for ingredient in collection.metafields.custom.image.value %}
+     <div class="destaque-card card bg-dark text-white">
+       <img class="card-img" src="{{ingredient | img_url:'original'}}">
+     </div>
+   {% endfor %}
+</div>
+{% endif %}
+  <!--------end-slider code-------------->
+  <div class="prebult-main-content">
+<div class="left_prebult_info">
+ <div class="prebult_txt"><h4>PREBUILT W A RD RO BE</h4></div>
+ <select name="collection" class="custom-collection-info" >
+ <option value="3-Piece">3-Piece</option>
+ <option value="9-Piece">9-Piece</option>
+ </select> 
+   <div class="custom-item-data">
+  <span class="totalprice_info"></span>
+ <div class="tem_added"><span class="item_count_info"></span> items added</div>
+   </div>
+<form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+   <button class="button button--primary button--full-width custom-add-allcart" name="checkout">ADD ALL TO CART</button>
+</form>
+</div>
+    <div class="right_prebuilt_info">
+     <img class="tabs-img" src="https://cdn.shopify.com/s/files/1/0620/1648/7614/files/knitwear_banner_1024x1024.jpg?v=1658822746" width="100px" height="100px">
+    <p class="tabs-detail">This 3-piece wardrobe mixes and matches to form over 85 outstanding looks. Download our <a href="#">Valencia Wardrobe 6AM Inspiration Guide.</a></p>
+    </div>
+</div>
+  {% else %}
+    {% endif %}
+
+
+</div> 
+<!--------------------end---tabs code--------------------------->
+ {% if collection.handle == "cape-town" or collection.handle == "valencia" or collection.handle == "bordeaux"  or collection.handle == "yokohama"  or collection.handle == "buenos-aires"  %}
+
+
+   <div id="div_content">
+      </div>
+ {% endif %}     
+
+      {%- if section.settings.show_collection_description -%}
+        <div class="collection-hero__description rte">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_collection_image and collection.image -%}
+      <div class="collection-hero__image-container media gradient">
+        <img
+          srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ collection.image | image_url }} {{ collection.image.width }}w"
+          src="{{ collection.image | image_url: width: 750 }}"
+          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+          alt="{{ collection.title | escape }}"
+          width="{{ collection.image.width }}"
+          height="{{ collection.image.height }}"
+        >
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+
+
+
+
+<script>
+$(function() {
+    $('.8-piece').show(); 
+    $('.16-piece').hide();
+    $('.24-piece').hide();
+    $('.type').change(function(){
+        if($('.type').val() == '8-piece') {
+        $('.8-piece').show(); 
+        $('.16-piece').hide();
+        $('.24-piece').hide();
+        }
+        else if($('.type').val() == '16-piece'){
+        $('.8-piece').hide(); 
+        $('.16-piece').show();
+        $('.24-piece').hide();
+        }
+         else if($('.type').val() == '24-piece'){
+       $('.8-piece').hide(); 
+        $('.16-piece').hide();
+        $('.24-piece').show();
+        }
+        else {
+        $('.8-piece').hide(); 
+        $('.16-piece').hide();
+        $('.24-piece').hide(); 
+        } 
+    });
+});
+  
+</script>
+
+<script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous" ></script>
+<script>
+  $( document ).ready(function() {
+   jQuery.getJSON('/cart.js', function(cart) {
+ $(".item_count_info").text(cart.item_count);
+  var cart_price = "€"+cart.total_price +" "+cart.currency;
+   $(".totalprice_info").text(cart_price);
+   //   $(".totalprice_info").html("€"+Number(cart.total_price).toLocaleString('en') +" "+cart.currency);
+  // alert(Shopify.formatMoney(cart.total_price).replace('€', currentCurrency));
+} );
+
+  var current_page_url =$(location).attr('href');
+   if (current_page_url =="{{ section.settings.url_link }}/collections/cape-town" || current_page_url =="{{ section.settings.url_link }}/collections/valencia"){
+   $("div#cart-notification").hide();
+     $(".facets").hide();
+   }else{
+    $("div#cart-notification").show(); 
+     $(".facets").show();
+   }
+   });
+  
+ $(document).on("click","button.quick-add__submit",function() { 
+  setTimeout(function() {  
+jQuery.getJSON('/cart.js', function(cart) {
+$(".item_count_info").text(cart.item_count);
+  var cart_price = "€"+cart.total_price +" "+cart.currency;
+  // $(".totalprice_info").text(cart_price);
+   $(".totalprice_info").html("€"+Number(cart.total_price).toLocaleString('en') +" "+cart.currency);
+   // alert(cart_price);
+    } );
+  }, 2500);
+   var current_page_url =$(location).attr('href');
+   if (current_page_url =="{{ section.settings.url_link }}/collections/cape-town" || current_page_url =="{{ section.settings.url_link }}/collections/valencia" || current_page_url =="{{ section.settings.url_link }}/collections/bordeaux" || current_page_url =="{{ section.settings.url_link }}/collections/yokohama" || current_page_url =="{{ section.settings.url_link }}/collections/buenos-aires"){
+   $("div#cart-notification").hide();
+     $(".facets").hide();
+   }else{
+    $("div#cart-notification").show(); 
+    $(".facets").show();
+   }
+   });
+</script> 
+
+<script>
+$(document).ready(function(){
+$('.custom-collection-info').change(function(){
+if($('.custom-collection-info').val() == '16-Piece') {
+  $("#div_content").load("{{ section.settings.url_link }}/collections/all");
+  $("p.tabs-detail").html('This 16-piece wardrobe mixes and matches to form over 85 outstanding looks. Download our <a href="#">Cape Wardrobe 6AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+  }
+ else if($('.custom-collection-info').val() == '26-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/buenos-aires");
+  $("p.tabs-detail").html('This 26-piece wardrobe mixes and matches to form over 50 outstanding looks. Download our <a href="#">Cape Wardrobe 8AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+ else if($('.custom-collection-info').val() == '6-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/buenos-aires");
+  $("p.tabs-detail").html('This 6-piece wardrobe mixes and matches to form over 40 outstanding looks. Download our <a href="#">Cape Wardrobe 1AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+ else if($('.custom-collection-info').val() == '12-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/all");
+  $("p.tabs-detail").html('This 12-Piece wardrobe mixes and matches to form over 12 Piece outstanding looks. Download our <a href="#">Cape Wardrobe 12AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+ else if($('.custom-collection-info').val() == '4-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/all");
+  $("p.tabs-detail").html('This 4-Piece wardrobe mixes and matches to form over 4 Piece outstanding looks. Download our <a href="#">Cape Wardrobe 4AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+   else if($('.custom-collection-info').val() == '8-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/buenos-aires");
+  $("p.tabs-detail").html('This 8-Piece wardrobe mixes and matches to form over 8 Piece outstanding looks. Download our <a href="#">Cape Wardrobe 8AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+    else if($('.custom-collection-info').val() == '2-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/all");
+  $("p.tabs-detail").html('This 8-Piece wardrobe mixes and matches to form over 8 Piece outstanding looks. Download our <a href="#">Cape Wardrobe 8AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+      else if($('.custom-collection-info').val() == '14-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/buenos-aires");
+  $("p.tabs-detail").html('This 14-Piece wardrobe mixes and matches to form over 8 Piece outstanding looks. Download our <a href="#">Cape Wardrobe 8AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+   else if($('.custom-collection-info').val() == '3-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/all");
+  $("p.tabs-detail").html('This 3-Piece wardrobe mixes and matches to form over 8 Piece outstanding looks. Download our <a href="#">Cape Wardrobe 8AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+      else if($('.custom-collection-info').val() == '9-Piece') {
+   $("#div_content").load("{{ section.settings.url_link }}/collections/buenos-aires");
+  $("p.tabs-detail").html('This 9-Piece wardrobe mixes and matches to form over 8 Piece outstanding looks. Download our <a href="#">Cape Wardrobe 8AM Inspiration Guide.</a>');
+   $(".custom-collectioninfo").hide();
+}
+});
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/owl.carousel.min.js"></script>
+<script>
+$('.carousel-main').owlCarousel({
+	loop: true,
+	autoplay: true,
+//	autoplayTimeout: 1500,
+	margin: 10,
+	nav: true,
+	dots: false,
+	  responsive: {
+         0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1024: {
+      items: 3
+    },
+    1366: {
+      items: 3 
+    }
+    }
+})
+</script>
+
+
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+     {
+      "type": "text",
+      "id": "url_link",
+      "label": "Url link"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    }
+  ]
+}
+{% endschema %}
+

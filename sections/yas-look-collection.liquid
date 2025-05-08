@@ -1,0 +1,952 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="{{ 'look.js' | asset_url }}" defer="defer"></script>
+
+<style>
+
+  .mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+  }
+  .mfp-fade.mfp-bg.mfp-ready {
+  	opacity: 0.8;
+  }
+  .mfp-fade.mfp-bg.mfp-removing {
+  	opacity: 0;
+  }
+  
+  .mfp-fade.mfp-wrap .mfp-content {
+  	opacity: 0;
+  	-webkit-transition: all 0.15s ease-out; 
+  	-moz-transition: all 0.15s ease-out; 
+  	transition: all 0.15s ease-out;
+  }
+  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  	opacity: 1;
+  }
+  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  	opacity: 0;
+  }
+  .mfp-bg.mfp-ready{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: .8;
+    display: block;
+  }
+  .white-popup-block{
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+  .mfp-close-btn-in .mfp-close {
+    color: #fff;
+    right: -44px;
+    top: -40px;
+    font-size: 44px;
+  } 
+  
+  #shopify-section-{{section.id}}{
+    padding-top: 75px;
+  }
+  #shopify-section-{{section.id}} .yas_look_wrapp{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 1742px;
+    margin: 0 auto;
+    padding-top: 120px;
+   border-top: 1px solid #FFC200;
+  }
+  
+  
+  #shopify-section-{{section.id}} .yas-look-white_title h2 {
+      text-align: center;
+      color: #FFFFFF;
+      font-family: "CentraNo2-Bold";
+      font-size: 40px;
+      letter-spacing: 3.5px;
+      margin: 0 auto 80px;
+    
+  }
+  
+  #shopify-section-{{section.id}} .yas_look_slider-main{
+    max-width: 442px;
+    position: relative;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-main .swiper-slide .yas-look-slider_image{
+    max-width: 442px;
+    height: 650px;
+    width: 100%;
+  }
+  
+  #shopify-section-{{section.id}} .yas-look-slider_image{
+    position: relative;
+    height: 100%;
+  }
+  #shopify-section-{{section.id}} .swiper-slide img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product{
+     width: calc(100% - 442px);
+     max-width: calc(100% - 490px);
+     padding-bottom: 57px;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .swiper-wrapper{
+   
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .swiper-slide{
+    height: 325px;
+    
+  }
+  #shopify-section-{{section.id}} .yas-look-slider_second{
+    width: 100% ;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image,
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image img{
+   
+    height: 325px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image:hover img{
+    transform: scale(1.2);
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image:after{
+    content: 'View Product';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.39);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Centra_No2;
+    font-size: 25px;
+    font-waight: bold;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image:hover:after{
+    
+    opacity: 1;
+  }
+ #shopify-section-{{section.id}} .yas_look_slider-chosen_product  .swiper-grid-column>.swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  
+  #shopify-section-{{section.id}} h2{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "CentraNo2-Bold";
+    font-size: 70px;
+    letter-spacing: 3.5px; 
+    margin-bottom: 50px;
+  }
+
+  #shopify-section-{{section.id}} .yas-look-slider_color{
+    padding: 57px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #shopify-section-{{section.id}} .yas-look-slider_color color-look{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 2.5px;
+    border: 1px solid transparent;
+  }
+  #shopify-section-{{section.id}} .yas-look-slider_color color-look[cheked="true"]{
+    border: 1px solid yellow;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next,
+  #shopify-section-{{section.id}} .swiper-button-prev{
+      display: flex;
+      height: 68px;
+      width: 14px;
+      margin-top: calc(0px - 80px);
+    }
+    #shopify-section-{{section.id}} .swiper-button-next{
+      right: 25px;
+    }
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      left: 25px;
+    }
+    #shopify-section-{{section.id}} .swiper-button-next:after,
+    #shopify-section-{{section.id}} .swiper-button-prev:after{
+  
+      content: none;
+    }
+
+#shopify-section-{{section.id}} .yas_look_wrapp-second{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+#shopify-section-{{section.id}} .yas_look_wrapp-second h6{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    font-family: "CentraNo2-Bold" !important;
+}
+#shopify-section-{{section.id}} .yas-look-title{
+  font-family: CentraNo2-Bold;
+  font-size: 70px;
+  letter-spacing: 0.05em;
+  line-height: 80px;
+  text-align: left;
+  color: #f7b717;
+  max-width: 1742px;
+  margin: 0 auto 30px;
+  display: none;
+}  
+#shopify-section-{{section.id}} .yas-look-text_under{
+  font-family: SourceSerifPro-It;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 35px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  padding: 0px 0 70px
+}
+#shopify-section-{{section.id}} .yas-look-text_under.mobile{
+  display: none;
+}
+.add_look_cart{
+    background: #f1b217;
+    color: #000;
+    border: 1px solid #f1b217;
+    font-family: "CentraNo2-Bold" !important;
+    font-size: 22px;
+    width: 275px;
+    height: 68px
+}
+
+#shopify-section-{{section.id}}  .yas_look_slider-main:before{
+    content: attr(data-title);
+    position: absolute;
+    display: block;
+    font-family: CentraNo2-Bold;
+    font-size: 45px;
+    line-height: 80px;
+    text-align: left;
+    color: #f7b717;
+    z-index: 2;
+    top: 25px;
+    left: 30px;
+}
+  
+   @media (max-width: 1580px){
+    #shopify-section-{{section.id}} .yas_look_wrapp-second {
+      flex-wrap: wrap;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp-second > div {
+      margin: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+      #shopify-section-{{section.id}} .yas_look_wrapp-second > div:last-child {
+      margin-top: 25px;
+    }
+   }
+
+  
+ 
+  @media (max-width: 1099px){
+    #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second{
+      display: none;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-chosen_product {
+      width: 100%;
+      max-width: 100%;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp {
+        flex-direction: column;
+        align-items: center;
+    }
+    #shopify-section-{{section.id}} .yas-look-title{
+      text-align: center;
+    }
+     #shopify-section-{{section.id}} .yas_look_wrapp-second{
+      max-width: 670px;
+      margin: 0 auto;
+    }
+     #shopify-section-{{section.id}} .yas_look_wrapp-second > div:last-child {
+      margin-top: 5px;
+    }
+  }
+  @media (max-width: 896px){
+    #shopify-section-{{section.id}} .yas-look-white_title h2 {
+      font-size: 35px;
+      margin: 0 auto 50px;
+      max-width: 250px;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-main {
+      overflow: hidden;
+    }
+     #shopify-section-{{section.id}} .yas-look-slider_color color-look{
+      width: 40px;
+      height: 40px;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-chosen_product {
+      padding: 0 35px;
+    }
+    #shopify-section-{{section.id}}{
+      padding-top: 25px;
+    }
+    #shopify-section-{{section.id}} h2{
+      font-size: 35px;
+      margin: 0 auto 40px;
+      max-width: 250px;
+    }
+    #shopify-section-{{section.id}} h3{
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+    #shopify-section-{{section.id}} .yas-look-title{
+      font-size: 25px;
+      letter-spacing: 0.05em;
+      line-height: 30px;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp-second > div{
+      margin: 35px 0 0px;
+    }
+    #shopify-section-{{section.id}} .yas-look-text_under{
+      font-size: 15px;
+      line-height: 20px;
+      display: none;
+    }
+    #shopify-section-{{section.id}} .yas-look-text_under.mobile {
+      display: block;
+      padding: 0;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-main .swiper-slide .yas-look-slider_image {
+        max-width: unset;
+        height: 487px;
+        width: 100%;
+    }
+    #shopify-section-{{section.id}} .swiper-slide img {
+        object-fit: contain;
+
+    }
+  }
+  @media (max-width: 740px){
+    #shopify-section-{{section.id}} .yas_look_wrapp{
+     padding-top: 0px;
+     border-top: 0px solid #FFC200;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-main {
+      max-width: 100%;
+    }
+    #shopify-section-{{section.id}}  .yas_look_slider-main:before{
+       content: none;
+     }
+    #shopify-section-{{section.id}} .yas-look-title{
+      display: block;
+    }
+     #shopify-section-{{section.id}} .yas_look_wrapp-second{
+      max-width: 370px;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-chosen_product {
+      max-width: 100%;
+    }
+    .add_look_cart{
+      width: 300px;
+      height: 60px;
+      margin-top: 45px;
+    }
+  }
+</style>
+
+<div class="yas-look-white_title">
+  <h2>{{ section.settings.title_white }}</h2>
+</div>
+
+<div class="yas-look-title">{{ section.settings.title }}</div>
+<div class="yas_look_wrapp">
+  
+  <div class="yas_look_slider-main" data-title="{{ section.settings.title }}">
+    
+    <div class="swiper yas-look-slider">
+        <div class="swiper-wrapper">
+          {% assign collection = section.settings.collect %}
+          {% for product in collection.products %}
+            {% capture get_type_tagprod %}
+                  {% assign productTags = product.tags | join: ', ' %}
+                  {% if productTags contains 'look-pants' %}
+                    look-pants
+                  {% endif %}
+                  {% if productTags contains 'look-shirts' %}
+                    look-shirts
+                  {% endif %}
+                  {% if productTags contains 'look-jacket' %}
+                    look-jacket
+                  {% endif %}
+            {% endcapture %}
+          
+            <div class="swiper-slide">
+              <div class="yas-look-slider_image">
+                <img src="{{ product.featured_media | img_url: '770x' }}" alt="{{ product.title }}">
+              </div>
+            
+              <div class="yas-look-slider_color">
+                {%- for option in product.options_with_values -%}
+                  {% if option.name == "Color"  %}
+                    {%- for value in option.values -%}
+                      {% assign option_color_name = value | escape %}
+                      {% capture get_src_img_variant %}
+                        {%- for variant in product.variants -%}
+                            {% assign variant_img_previe = variant.image.src | image_url %}
+                            {% assign variant_color_val = variant.option1 | escape %}
+                            {% if variant_color_val == option_color_name %}
+                              {{ variant_img_previe }}
+                            {% break %}
+                            {% endif %}
+                        {%- endfor -%}
+                      {% endcapture %}
+                      <color-look class="i-yas-color_{{ value | strip | escape | downcase | replace: ' ', '_' }}"
+                      data-varimg="{{ get_src_img_variant | strip }}"
+                      data-varcolor="{{ value | strip }}"
+                      data-typetag="{{ get_type_tagprod | strip }}"
+                      {% if forloop.first %}cheked="true"{% else %}cheked="false"{% endif %}
+                      ></color-look>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% comment %}
+                <i class="i-yas-color" style="background-color: yellow;"></i>
+                <i style="background-color: #fff;"></i>
+                <i style="background-color: orange;"></i>
+                <i style="background-color: green;"></i>
+                <i style="background-color: gold;"></i>
+              {% endcomment %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        
+        <div class="swiper-button-prev">
+          {% render 'yas-arrow-slider-left' %}
+        </div>
+        <div class="swiper-button-next">
+          {% render 'yas-arrow-slider-right' %}
+        </div>
+
+      </div>
+  </div>
+
+  <div class="yas_look_slider-chosen_product">
+    <div class="swiper yas-look-slider_second">
+        <div class="swiper-wrapper">
+          {% for product in collection.products %}
+            <div class="swiper-slide">
+              <div class="yas-look-slider_second_image" data-variantid="{{ product.first_available_variant.id }}" data-produrl="{{ product.url }}">
+                <img src="{{ product.first_available_variant.featured_image | img_url: '770x' }}" alt="{{ product.title }}">
+                <script type="application/json">
+                    {{ product.variants | json }}
+                </script>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        
+        <div class="swiper-button-prev">
+          {% render 'yas-arrow-slider-left' %}
+        </div>
+        <div class="swiper-button-next">
+          {% render 'yas-arrow-slider-right' %}
+        </div>
+    </div>
+    <div class="yas-look-text_under mobile">{{ section.settings.text }}</div>
+    
+    {% render 'yas-look-select-block', collection: collection %}
+  </div>
+</div>
+<div class="yas-look-text_under">{{ section.settings.text }}</div>
+
+      
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Magnific Popup core JS file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<style>
+  .yas-variant-prodpop{
+    background: #000;
+    overflow: hidden auto;
+  }
+  .yas-variant-prodpop.mfp-close-btn-in .mfp-close {
+    right: 60px;
+    top: 60px;
+    font-size: 44px;
+    display: flex;
+    padding: 0;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .yas-variant-prodpop .mfp-figure:after{
+    content: none;
+  }
+  .yas-popop_look-wrapp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 150px 0;
+  }
+  .yas-popop_look-wrapp .cus-product-review-detail{
+    padding: 0;
+  }
+  .yas-popop_look-slider .swiper-button-next,
+  .yas-popop_look-slider .swiper-button-prev{
+      display: flex;
+      height: 68px;
+      width: 14px;
+    }
+    .yas-popop_look-slider .swiper-button-next{
+      right: 50px;
+    }
+    .yas-popop_look-slider .swiper-button-prev{
+      left: 50px;
+    }
+    .yas-popop_look-slider .swiper-button-next:after,
+    .yas-popop_look-slider .swiper-button-prev:after{
+      content: none;
+    }
+  .yas-popop_look-slider{
+    max-width: 617px;
+    width: 40%;
+    max-height: 732px;
+  }
+  .yas-popop_look-slider .swiper{
+    widht: 100%;
+    height: 100%;
+  }
+  .yas-popop_look-slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: flex;
+  }
+  .yas-popop_look-info{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #fff;
+    padding: 0 60px;
+  }
+  .yas-popop_look-info .custom-prod-revi-img{
+    margin: 40px 0;
+  }
+  .yas-popop_look-info h2, .yas-popop_look-info p{
+    color: #fff;
+  }
+  .yas-popop_look-info .cus-product-review-detail h1,
+  .yas-popop_look-info .cus-product-review-detail h2,
+  .yas-popop_look-info .cus-product-review-detail h3,
+  .yas-popop_look-info .cus-product-review-detail h4,
+  .yas-popop_look-info .cus-product-review-detail h5{
+    font-size: 45px;
+  }
+  .yas-popop_look-info .cus-product-review-detail p{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-family: 'Source Serif Pro' !important;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 40px;
+    margin: 0 auto;
+  }
+  .yas-popop_look-info .mfp-title{
+    font-size: 70px;
+    letter-spacing: 0.05em;
+    line-height: 80px;
+    text-align: left;
+    color: #f7b717;
+    font-family: "CentraNo2-Bold";
+  }
+  .yas-popop_look-info .mfp-undertitle{
+    font-family: SourceSerif-Pro-regular;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+  }
+  .yas-popop_look-info .prod_var_link_pop{
+    background: #f1b217;
+    color: #000;
+    border: 1px solid #f1b217;
+    font-family: "CentraNo2-Bold" !important;
+    font-size: 22px;
+    width: 395px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+  }
+  .yas-popop_look-info .autor_content-yas .custom-prod-revi-img img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+  
+  .yas-popop_look-info .autor_content-yas .custom-prod-revi-img .revies_author {
+    width: 69%;
+    color: #fff;
+    font-size: 30px;
+    padding-left: 30px;
+    display: flex;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 40px;
+  }
+  .yas-popop_look-info .autor_content-yas .custom-prod-revi-img .revies_author span {
+    font-weight: 400;
+    font-family: CentraNo2-Light;
+    font-style: italic;
+    font-size: 30px;
+  }
+  @media (max-width: 1280px){
+    .yas-popop_look-info .mfp-title{
+      font-size: 45px;
+      line-height: 50px;
+    }
+    .yas-popop_look-info .mfp-undertitle{
+      font-size: 25px;
+    }
+    .yas-popop_look-info .autor_content-yas .custom-prod-revi-img img {
+      height: 90px;
+      width: 90px;
+    }
+    .yas-popop_look-info .autor_content-yas .custom-prod-revi-img .revies_author{
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .yas-popop_look-info .autor_content-yas .custom-prod-revi-img .revies_author span {
+      font-size: 20px;
+    }
+    .yas-popop_look-info .cus-product-review-detail h1,
+    .yas-popop_look-info .cus-product-review-detail h2,
+    .yas-popop_look-info .cus-product-review-detail h3,
+    .yas-popop_look-info .cus-product-review-detail h4,
+    .yas-popop_look-info .cus-product-review-detail h5 {
+      font-size: 25px;
+    }
+    .yas-popop_look-info .cus-product-review-detail p{
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    .yas-popop_look-slider .swiper-button-next{
+      right: 25px;
+    }
+    .yas-popop_look-slider .swiper-button-prev{
+      left: 25px;
+    }
+  }
+  @media (max-width: 896px){
+
+    .yas-popop_look-wrapp {
+        justify-content: center;
+        padding: 0 0 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .yas-popop_look-slider {
+        max-width: 375px;
+        width: 100%;
+    }
+    .yas-popop_look-info .mfp-title {
+        font-size: 25px;
+        line-height: 30px;
+        padding: 0;
+        margin-top: 35px
+        z-index: 1;
+        text-align: center;
+    }
+    .yas-popop_look-info {
+        padding: 0 25px;
+    }
+    .yas-popop_look-info .mfp-undertitle {
+        font-size: 20px;
+        line-height: 25px;
+        z-index: 1;
+        text-align: center;
+    }
+    .yas-popop_look-info {
+        width: 100%;
+    }
+    .yas-popop_look-info .autor_content-yas .custom-prod-revi-img img {
+      height: 75px;
+      width: 75px;
+    }
+    .yas-popop_look-info .autor_content-yas .custom-prod-revi-img .revies_author span{
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 470px){
+    .yas-variant-prodpop.mfp-close-btn-in .mfp-close {
+        right: 20px;
+        top: 12px;
+        font-size: 20px;
+        z-index: 2;
+        width: 20px;
+    }
+    .yas-popop_look-info .autor_content-yas .custom-prod-revi-img .revies_author span {
+        font-size: 15px;
+    }
+    .yas-popop_look-info .cus-product-review-detail h1,
+    .yas-popop_look-info .cus-product-review-detail h2,
+    .yas-popop_look-info .cus-product-review-detail h3,
+    .yas-popop_look-info .cus-product-review-detail h4,
+    .yas-popop_look-info .cus-product-review-detail h5 {
+      font-size: 20px;
+    }
+    .yas-popop_look-info .cus-product-review-detail p {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .yas-popop_look-info .prod_var_link_pop{
+      width: 100%;
+      max-width: 375px;
+      margin-top: 15px;
+    }
+    .yas-popop_look-info .custom-prod-revi-img {
+        margin: 40px 0 15px;
+    }
+  }
+</style>
+<script defer>
+  $(function(){
+
+  $('.yas_look_slider-main .yas-look-slider_image').click(function(){
+    if($(window).width() <= 1099){
+      let wrapp = this.closest('.yas_look_wrapp');
+      let indexSlide = wrapp.querySelector('.yas-look-slider').swiper.activeIndex;
+      let wrappSec = $(this).closest('.yas_look_wrapp');
+      wrappSec.find(`.yas-look-slider_second_image`)[indexSlide].click();
+    }
+  })
+
+  $('.yas-look-slider_second_image').click(function(){
+    let produrl = $(this).attr('data-produrl');
+    let prodVarId = $(this).attr('data-variantid');
+    fetch(`${produrl}?variant=${prodVarId}`)
+      .then((response) => response.text())
+      .then((responseText) => {
+        let html = new DOMParser().parseFromString(responseText, 'text/html').documentElement;
+        let destination = html.querySelector(`.yas_product-main`);
+        let title = destination.querySelector(`.product__title h1`).textContent ;
+        let titleunder = destination.querySelector(`.product__title span`).textContent;
+        let slider = destination.querySelector('.collection_all_images_info .active_slider').outerHTML;
+       // console.log(title.innerText + ' ' + titleunder.innerText);
+        let content = destination.querySelector('.autor_content-yas').outerHTML;
+
+      $.magnificPopup.open({
+        items: [
+            {
+              src: '<div class="mfp-figure">'+
+                      '<div class="mfp-close" onclick="$.magnificPopup.close();"><svg xmlns="http://www.w3.org/2000/svg" width="45.274" height="45.274" viewBox="0 0 45.274 45.274"><g transform="translate(-6421.873 -245.873)"><line y2="62.028" transform="translate(6466.44 246.58) rotate(45)" fill="none" stroke="#f7b716" stroke-width="2"/><line y2="62.028" transform="translate(6466.44 290.44) rotate(135)" fill="none" stroke="#f7b716" stroke-width="2"/></g></svg></div>'+
+                      '<div class="yas-popop_look-wrapp">'+
+                        `<div class="yas-popop_look-slider">${slider}</div>`+
+                        '<div class="yas-popop_look-info">'+
+                          `<div class="mfp-title">${title}</div>`+
+                          `<div class="mfp-undertitle">${titleunder}</div>`+
+                          content +
+                          `<a href="${produrl}?variant=${prodVarId}" class="prod_var_link_pop">EXPLORE PRODUCT</a>`+
+                        '</div>'+
+                      '</div>'+
+                    '</div>',
+              type: 'inline'
+            }
+          ],
+        mainClass: 'yas-variant-prodpop',
+        callbacks: {
+          open: function() {
+            $('html').css('overflow', 'hidden');
+             let swiper = new Swiper('.yas-popop_look-slider .swiper', {
+              // Optional parameters
+              loop: false,
+         
+              // Navigation arrows
+              navigation: {
+                nextEl: '.yas-popop_look-slider .swiper-button-next',
+                prevEl: '.yas-popop_look-slider .swiper-button-prev',
+              },
+            });
+            let left = '{% render 'yas-arrow-slider-left' %}';
+            let right = '{% render 'yas-arrow-slider-right' %}';
+            $('.yas-popop_look-slider .swiper-button-next').html(right);
+            $('.yas-popop_look-slider .swiper-button-prev').html(left);
+
+            
+          },
+          close: function() {
+            $('html').css('overflow', '');
+          }
+        },
+        type: 'inline'
+      });
+        
+    });
+  })
+    
+    
+  $('.add_look_cart').click(function(){
+    let wrapp = $(this).closest('.yas_look_wrapp');
+    let mass = wrapp.find('.yas-look-slider_second_image');
+    let formData = {
+     'items': []
+    };
+    mass.each(function(){
+        formData.items.push({
+                quantity: 1, 
+                id: $(this).attr('data-variantid')
+        })
+    })
+
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      document.location.href = '/cart';
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  })
+    
+
+
+    
+    let swiper = new Swiper('#shopify-section-{{section.id}} .yas-look-slider', {
+      loop: false,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .yas-look-slider .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .yas-look-slider .swiper-button-prev',
+      }
+    });
+
+    let swiper2 = new Swiper('#shopify-section-{{section.id}} .yas-look-slider_second', {
+      loop: false,
+      slidesPerView: 1,
+      grid: { 
+        rows: 2,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          grid: { 
+            rows: 2,
+          }
+        },
+        1412: {
+          slidesPerView: 3,
+          grid: { 
+            rows: 2,
+          }
+        },
+        1742: {
+          slidesPerView: 4,
+          grid: { 
+            rows: 2,
+          }
+        }
+      },
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .yas-look-slider_second .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .yas-look-slider_second .swiper-button-prev',
+      }
+    });
+    
+  })
+</script>
+{% schema %}
+  {
+    "name": "Yas look collection",
+    "class": "yas_look_collect",
+    "settings": [
+      {
+        "id": "title_white",
+        "type": "text",
+        "label": "Title white section"
+      },
+      {
+         "id": "collect",
+         "type": "collection",
+         "label": "Select collection 8 Pieces"
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "id": "text",
+        "type": "textarea",
+        "label": "Text under section"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yas look collection"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

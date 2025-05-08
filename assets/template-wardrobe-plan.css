@@ -1,0 +1,36 @@
+.custom-collection-wardrobe-plan
+  .kl_reviews__carousel.kl_reviews__carousel.kl_reviews__carousel
+  .swiper {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.custom-collection-wardrobe-plan .shopify-section .page-width {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* .custom-collection-wardrobe-plan
+    .swiper-horizontal
+    > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -4px !important;
+  } */
+
+  .custom-collection-wardrobe-plan .kl_reviews__carousel__content{
+    margin-bottom: 15px !important;
+  }
+  .custom-collection-wardrobe-plan .kl_reviews__carousel.kl_reviews__carousel.kl_reviews__carousel .swiper-slide {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 750px) {
+  .custom-collection-wardrobe-plan
+    .shopify-section
+    .kl_reviews__carousel.kl_reviews__carousel.kl_reviews__carousel
+    .swiper {
+    max-width: 90% !important;
+  }
+}

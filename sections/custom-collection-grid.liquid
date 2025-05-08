@@ -1,0 +1,342 @@
+{%- style -%}
+  .custom-collection-grid__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+
+  .custom-collection-grid__item-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .custom-collection-grid__item-image .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .custom-collection-grid__item-image:hover .hover-image {
+    opacity: 1;
+  }
+  
+  /* Disable hover effect for large blocks */
+  .div5 .custom-collection-grid__item-image:hover .hover-image,
+  .div18 .custom-collection-grid__item-image:hover .hover-image {
+    opacity: 0;
+  }
+
+  #custom-collection-grid-{{ section.id }} .custom-collection-grid__grid {
+    display: grid;
+    gap: {{ section.settings.grid_gap }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+
+  @media screen and (min-width: 769px) {
+    #custom-collection-grid-{{ section.id }} .custom-collection-grid__grid {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #custom-collection-grid-{{ section.id }} .custom-collection-grid__grid {
+      grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+      {% unless section.settings.use_dynamic_layout %}
+        /* Apply specific mobile grid layout for up to 18 items when dynamic layout is off */
+        display: grid; /* Ensure display is grid */
+        margin-top: calc({{ section.settings.margin_top }}px - 3px);
+        margin-bottom: calc({{ section.settings.margin_bottom }}px - 3px);
+        /* grid-template-rows: repeat(12, auto); Adjusted for 18 items in 2 columns */
+        grid-column-gap: calc({{ section.settings.grid_gap }}px - 3px); /* Use section setting */
+        grid-row-gap: calc({{ section.settings.grid_gap }}px - 3px); /* Use section setting */
+        
+        & .div1 { grid-area: 1 / 1 / 2 / 2; }
+        & .div2 { grid-area: 1 / 2 / 2 / 3; }
+        & .div3 { grid-area: 2 / 1 / 3 / 2; }
+        & .div4 { grid-area: 2 / 2 / 3 / 3; }
+        & .div5 { grid-area: 3 / 1 / 5 / 3; } /* Spans 2 rows, 2 cols */
+        & .div6 { grid-area: 5 / 1 / 6 / 2; }
+        & .div7 { grid-area: 5 / 2 / 6 / 3; }
+        & .div8 { grid-area: 6 / 1 / 7 / 2; }
+        & .div9 { grid-area: 6 / 2 / 7 / 3; }
+        & .div10 { grid-area: 7 / 1 / 8 / 2; }
+        & .div11 { grid-area: 7 / 2 / 8 / 3; }
+        & .div12 { grid-area: 8 / 1 / 9 / 2; }
+        & .div13 { grid-area: 8 / 2 / 9 / 3; }
+        & .div14 { grid-area: 9 / 1 / 10 / 2; }
+        & .div15 { grid-area: 9 / 2 / 10 / 3; }
+        & .div16 { grid-area: 10 / 1 / 11 / 2; }
+        & .div17 { grid-area: 10 / 2 / 11 / 3; }
+        & .div18 { grid-area: 11 / 1 / 13 / 3; } /* Spans 2 rows, 2 cols */
+        /* Ensure items beyond 18 are hidden if they somehow appear */
+        & .custom-collection-grid__item:nth-child(n+19) {
+           display: none;
+        }
+      {% endunless %}
+    }
+  }
+
+  /* Show only rows needed based on items count */
+  {% assign item_count = collection_meta.size | at_most: section.settings.grid_limit %}
+  {% if section.settings.use_dynamic_layout %}
+    /* Dynamic layout using CSS grid auto-flow */
+    .custom-collection-grid__grid {
+      grid-auto-flow: row;
+    }
+  {% else %}
+    /* Original layout with specific grid areas */
+    .div1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .div2 {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .div3 {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+    .div4 {
+      grid-area: 1 / 4 / 2 / 5;
+    }
+    .div5 {
+      grid-area: 2 / 1 / 4 / 3;
+    }
+    .div6 {
+      grid-area: 2 / 3 / 3 / 4;
+    }
+    .div7 {
+      grid-area: 2 / 4 / 3 / 5;
+    }
+    .div8 {
+      grid-area: 3 / 3 / 4 / 4;
+    }
+    .div9 {
+      grid-area: 3 / 4 / 4 / 5;
+    }
+    .div10 {
+      grid-area: 4 / 1 / 5 / 2;
+    }
+    .div11 {
+      grid-area: 4 / 2 / 5 / 3;
+    }
+    .div12 {
+      grid-area: 4 / 3 / 5 / 4;
+    }
+    .div13 {
+      grid-area: 4 / 4 / 5 / 5;
+    }
+    .div14 {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+    .div15 {
+      grid-area: 5 / 2 / 6 / 3;
+    }
+    .div16 {
+      grid-area: 6 / 1 / 7 / 2;
+    }
+    .div17 {
+      grid-area: 6 / 2 / 7 / 3;
+    }
+    .div18 {
+      grid-area: 5 / 3 / 7 / 5;
+    }
+  {% endif %}
+{%- endstyle -%}
+
+{% assign collection_meta = collection.metafields.custom.product_template_look.value %}
+
+{% for variant in collection_meta %}
+  {% assign array = variant | map: 'product' %}
+  {% assign collection_meta_prod = collection_meta_prod | concat: array %}
+{% endfor %}
+
+{%- if collection_meta == blank -%}
+  {% assign collection_meta = collection.products %}
+{%- endif -%}
+
+<div class="custom-collection-grid" id="custom-collection-grid-{{ section.id }}">
+  <div class="custom-collection-grid__container">
+    <div class="custom-collection-grid__grid">
+      {% for variant in collection_meta offset: section.settings.grid_offset limit: section.settings.grid_limit %}
+        {% assign main_image = variant.metafields.custom.preview_wardrobe_image %}
+
+        {% if main_image == blank %}
+          {% assign main_image = variant.featured_image %}
+        {% endif %}
+
+        {% assign loop_index = forloop.index %}
+        {% if section.settings.use_dynamic_layout == false %}
+          {% comment %} Only render items up to 18 for the fixed layout {% endcomment %}
+          {% if loop_index <= 18 %}
+            <div class="custom-collection-grid__item div{{ loop_index }}">
+              <a href="{{ variant.url }}" class="custom-collection-grid__item-image">
+                <img
+                  class="main-image"
+                  src="{{ main_image | image_url: width: variant.featured_image.width }}"
+                  alt="{{ variant.title }}"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                >
+                {% comment %} Start new hover image logic {% endcomment %}
+                {% assign hover_metafield_image = variant.product.images[1] %}
+                {%- if variant.metafields.custom.hover_image != blank -%}
+                  {% assign hover_metafield_image = variant.metafields.custom.hover_image.value %}
+                  {%- style -%}
+                    .custom-collection-grid__item:hover .main-image {
+                      opacity: 0;
+                    }
+                  {%- endstyle -%}
+                {%- endif -%}
+
+                {% if hover_metafield_image != blank %}
+                  <img
+                    class="hover-image"
+                    src="{{ hover_metafield_image | image_url: width: hover_metafield_image.width }}"
+                    alt="{{ hover_metafield_image.alt | default: variant.title | append: ' - hover' | escape }}"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                  >
+                {% endif %}
+                {% comment %} End new hover image logic {% endcomment %}
+              </a>
+            </div>
+          {% endif %}
+        {% else %}
+          {% comment %} Dynamic layout renders all items based on limit/offset {% endcomment %}
+          <div class="custom-collection-grid__item div{{ loop_index }}">
+            <a href="{{ variant.url }}" class="custom-collection-grid__item-image">
+              <img
+                class="main-image"
+                src="{{ variant.featured_image | image_url: width: 500 }}"
+                alt="{{ variant.title }}"
+                width="500"
+                height="500"
+                loading="lazy"
+              >
+              {% comment %} Start new hover image logic {% endcomment %}
+              {% assign hover_metafield_image = variant.product.images[1] %}
+              {%- if variant.metafields.custom.hover_image != blank -%}
+                {% assign hover_metafield_image = variant.metafields.custom.hover_image %}
+                {%- style -%}
+                  .custom-collection-grid__item:hover .main-image {
+                    opacity: 0;
+                  }
+                {%- endstyle -%}
+              {%- endif -%}
+
+              {% if hover_metafield_image != blank %}
+                <img
+                  class="hover-image"
+                  src="{{ hover_metafield_image | image_url: width: 500 }}"
+                  alt="{{ hover_metafield_image.alt | default: variant.title | append: ' - hover' | escape }}"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                >
+              {% endif %}
+              {% comment %} End new hover image logic {% endcomment %}
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{%- schema -%}
+{
+  "name": "Custom collection grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Grid Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_dynamic_layout",
+      "label": "Use dynamic grid layout",
+      "default": false,
+      "info": "When enabled, images will flow automatically in a grid based on column settings. When disabled, the original custom layout will be used."
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (Desktop)",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "Columns (Mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top margin (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom margin (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "range",
+      "id": "grid_offset",
+      "label": "Grid offset",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "grid_limit",
+      "label": "Grid limit",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom collection grid"
+    }
+  ]
+}
+{%- endschema -%}

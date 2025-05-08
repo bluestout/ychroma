@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "140840b1-57b1-45a1-adc8-a5f22607168b": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "custom-pant-corner": {
+      "type": "custom-pant-corner",
+      "blocks": {
+        "5b6f8905-2dc7-4896-8dd0-0bea6f488670": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "do-it-all-light-pant"
+          }
+        },
+        "be69c06a-c269-4545-9464-0c7fc17cfc03": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rugged-weight-pant"
+          }
+        },
+        "3efae732-78a9-42a9-928e-a3cd690771af": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "low-cut-pant"
+          }
+        },
+        "9946a188-1c0f-4e58-924c-f9ec5004b79e": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "knee-length-short"
+          }
+        },
+        "80332eba-eac7-4e9a-afa4-1556a01cf948": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "swimwear"
+          }
+        }
+      },
+      "block_order": [
+        "5b6f8905-2dc7-4896-8dd0-0bea6f488670",
+        "be69c06a-c269-4545-9464-0c7fc17cfc03",
+        "3efae732-78a9-42a9-928e-a3cd690771af",
+        "9946a188-1c0f-4e58-924c-f9ec5004b79e",
+        "80332eba-eac7-4e9a-afa4-1556a01cf948"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "140840b1-57b1-45a1-adc8-a5f22607168b",
+    "custom-pant-corner"
+  ]
+}

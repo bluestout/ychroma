@@ -1,0 +1,188 @@
+{%- style -%}
+  .custom-image-video-section__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .custom-image-video-section__content {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    width: 100%;
+  }
+
+  .custom-image-video-section__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 80vh;
+  }
+  video.custom-image-video-section__image-video {
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    object-fit: cover;
+  }
+
+  .color-block-wrapper i {
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    border-radius: 50px;
+    margin-right: 5px;
+  }
+
+  .custom-image-video-section__colors-wrapper {
+    width: 100%;
+    max-width: 90%;
+    padding-left: 5px;
+  }
+
+  .custom-image-video-section__colors {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .custom-image-video-section__content-wrapper {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .custom-image-video-section__title {
+    font-size: 80px;
+    font-family: SourceSerif-Pro-regular !important;
+    font-weight: 400 !important;
+    color: white;
+    line-height: 0.9;
+  }
+
+  .custom-image-video-section__description {
+    color: white;
+    font-size: 20px;
+    padding-left: 5px;
+  }
+
+  .custom-image-video-section__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 749px) {
+    .custom-image-video-section__title {
+      font-size: 80px;
+    }
+    .custom-image-video-section__colors{
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .custom-image-video-section__title {
+      font-size: 100px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .custom-image-video-section__title {
+      font-size: 120px;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .custom-image-video-section__title {
+      font-size: 140px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="custom-image-video-section">
+  <div class="custom-image-video-section__container">
+    <div class="custom-image-video-section__image">
+      {% if section.settings.image != blank and section.settings.video == blank %}
+        {{
+          section.settings.image
+          | image_url: width: section.settings.image.width, height: section.settings.image.height
+          | image_tag: class: 'custom-image-video-section__image-image', loading: 'eager'
+        }}
+      {% endif %}
+      {% if section.settings.video != blank and section.settings.image == blank %}
+        {{
+          section.settings.video
+          | video_tag:
+            class: 'custom-image-video-section__image-video',
+            loading: 'eager',
+            controls: false,
+            muted: true,
+            autoplay: true
+        }}
+      {% endif %}
+    </div>
+    <div class="custom-image-video-section__content">
+      <div class="custom-image-video-section__content-wrapper">
+        <h2 class="custom-image-video-section__title">{{ section.settings.title }}</h2>
+        <p class="custom-image-video-section__description">{{ section.settings.description }}</p>
+        {% if section.settings.show_colors %}
+          <div class="custom-image-video-section__colors">
+            <div class="custom-image-video-section__colors-wrapper">
+              {% assign collection_meta = collection.metafields.custom.color_product_look_template.value %}
+              <div class="color-block-wrapper">
+                {% for color in collection_meta %}
+                  <i class="yas-color_{{ color | strip | escape | downcase | replace: ' ', '_' }}"></i>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- schema -%}
+{
+  "name": "Banner Image/Video",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Please make sure to choose either image or video"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "html",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_colors",
+      "label": "Show Colors",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Image/Video"
+    }
+  ]
+}
+{%- endschema -%}

@@ -1,0 +1,390 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<script>
+      function addClassOrder(){
+        document.querySelector('.order_menu_li').classList.add('active');
+        document.querySelector('.new_customer-content').classList.add('order_page');
+      }
+</script>
+
+
+<style>
+  .new_customer-content
+  {
+    color: white;
+  }
+  .customer
+  {
+    display: flex;
+  }
+  .column
+  {
+    width: 50%;
+  }
+  .customer
+  {
+    height: 510px;
+  }
+  .customer *
+  {
+    color: #F7F6EE;
+  
+  }
+   .customer a
+  {
+    color: #F7F6EE;
+  
+  }
+   .customer a:hover
+  {
+    color: grey;
+  
+  }
+ 
+</style>
+
+<div class="new_customer-title">
+  My Account | <span>{{ customer.name }}</span>
+</div>
+<div class="new_customer-wrapp">
+  <div class="new_customer-menu">
+    <div>
+    <a href="{{ routes.account_url }}">Account</a>
+    </div>
+    <div>
+    <a href="/account#order__wrapp" onclick="addClassOrder()" class="order_menu_li">orders</a>
+    </div>
+    <div>
+    <a href="{{ routes.account_addresses_url }}">Addresses</a>
+    </div>
+    {%- comment -%}
+    <div>
+    <a href="">Payment settings</a>
+    </div>
+    {%- endcomment -%}
+    <a class="accbutton" href="{{ routes.account_logout_url }}">LOG OUT</a>
+  </div>
+  <div class="new_customer-content">
+
+    <script>
+      
+      if(window.location.hash.split('?')[0] != '' || window.location.search != ''){
+        document.querySelector('.new_customer-content').classList.add('order_page');
+        document.querySelector('.order_menu_li').classList.add('active');
+      }
+    </script>
+    <div id="order__wrapp">
+  <h2>{{ 'customer.orders.title' | t }}</h2>
+
+  {% paginate customer.orders by 5 %}
+  {%- if customer.orders.size > 0 -%}
+    {%- for order in customer.orders -%}
+      <div class="order_block-item">
+        <div class="order_block-title">
+          <h3>Order id: {{ order.id }}</h3>
+          <h4>Order date: {{ order.created_at | time_tag: format: 'date' }}</h4>
+        </div>
+       
+        {%- for item in order.line_items -%} 
+          <div class="order_block-info">
+            <div class="order_block-img">
+              <img src="{{ item.image | product_img_url: '200x' }}" alt="{{ item.title }}">
+            </div>
+            <div class="order_block_infitem">
+              <div class="order_block_infitem-name">
+                  <h2>{{ item.title | split: '-' | first | strip }}</h2>
+                  <span>{{ item.title | split: '-' | last | strip }}</span>    
+              </div>
+              <div class="order_block_infitem-detail">
+                  <span class="ord_price">{{ item.price | money }}</span>
+                  <span class="ord_qty">Qty: {{ item.quantity }}</span>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+
+        <div class="order_block-footer">
+          <a href="{{ order.order_status_url}}" class="a_under_line-border">Check order details</a>   
+          <div>
+            <span class="ord_total">Total</span>
+            <span class="ord_total-price">{{ order.total_price | money }}</span>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+
+  
+  {%- else -%}
+          <p>{{ 'customer.orders.none' | t }}</p>
+  {%- endif -%}  
+  
+  {%- if paginate.pages > 1 -%}
+          {%- if paginate.parts.size > 0 -%}
+              <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+                <ul role="list">
+                {%- if paginate.previous -%}
+                  <li>
+                    <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                  <li>
+                    {%- if part.is_link -%}
+                      <a href="{{ part.url }} " aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
+                    {%- else -%}
+                      {%- if part.title == paginate.current_page -%}
+                        <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+                      {%- else -%}
+                        <span>{{ part.title }}</span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                  <li>
+                    <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}" >
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+                </ul>
+              </nav>
+          {%- endif -%}
+        {%- endif -%}
+      {% endpaginate %}
+          
+</div>
+
+
+    {%- comment -%}
+    <div class="new_customer-block">
+      <a href="{{ routes.account_addresses_url }}">
+        <svg id="personal_svg" data-name="personal_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+          <defs>
+            <clipPath id="personal_clip-path">
+              <path id="Контур_447" data-name="Контур 447" d="M29.167,23.333A5.833,5.833,0,1,1,35,29.167a5.832,5.832,0,0,1-5.833-5.833m-5.834,0A11.667,11.667,0,1,0,35,11.666,11.682,11.682,0,0,0,23.333,23.333M16.3,57.5a19.268,19.268,0,0,1,37.392,0,27.573,27.573,0,0,1-37.392,0M5.833,35A29.167,29.167,0,1,1,58.217,52.617a25.094,25.094,0,0,0-46.419.014A28.962,28.962,0,0,1,5.833,35M35,0A35,35,0,1,0,70,35,35.009,35.009,0,0,0,35,0Z" fill="#fff"/>
+            </clipPath>
+          </defs>
+          <g id="personal_svg1" data-name="personal_svg1" clip-path="url(#personal_clip-path)">
+            <path id="personal_svg_path" data-name="personal_svg_path" d="M4.066,4.066h98.995v98.995H4.066Z" transform="translate(-40.75 35) rotate(-45)" fill="#fff"/>
+          </g>
+        </svg>
+        <h2>PERSONAL DATA</h2>
+        <p>
+          Show or update your personal information
+        </p>
+      </a>
+    </div>
+    {%- endcomment -%}
+    <div class="new_customer-block">
+      <a href="/account#order__wrapp" onclick="addClassOrder()">
+        <svg id="order_svg" data-name="order_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62.5" height="75" viewBox="0 0 62.5 75">
+          <defs>
+            <clipPath id="order_clip-path">
+              <path id="order_svg_path" data-name="order_svg_path" d="M48.438,28.125V20.312h4.688a3.129,3.129,0,0,1,3.125,3.125V65.625a3.129,3.129,0,0,1-3.125,3.125H9.375A3.129,3.129,0,0,1,6.25,65.625V23.437a3.129,3.129,0,0,1,3.125-3.125h4.688v7.812a3.125,3.125,0,1,0,6.25,0V20.312H42.187v7.812a3.125,3.125,0,0,0,6.25,0M31.25,6.25a10.953,10.953,0,0,1,10.477,7.812H20.773A10.953,10.953,0,0,1,31.25,6.25m0-6.25A17.206,17.206,0,0,0,14.361,14.062H9.375A9.385,9.385,0,0,0,0,23.437V65.625A9.385,9.385,0,0,0,9.375,75h43.75A9.386,9.386,0,0,0,62.5,65.625V23.437a9.386,9.386,0,0,0-9.375-9.375H48.139A17.206,17.206,0,0,0,31.25,0Z" fill="#fff"/>
+            </clipPath>
+          </defs>
+          <g id="order_svg_g" data-name="order_svg_g" clip-path="url(#order_clip-path)">
+            <rect id="order_svg_rect" data-name="order_svg_rect" width="97.227" height="97.227" transform="translate(-37.5 37.5) rotate(-45)" fill="#fff"/>
+          </g>
+        </svg>
+        <h2>ORDERS</h2>
+        <p>
+          Check the status of your orders or see past orders
+        </p>
+      </a>
+    </div>
+    <div class="new_customer-block">
+      <a href="{{ routes.account_addresses_url }}">
+        <svg id="address_svg" data-name="address_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61" height="81.333" viewBox="0 0 61 81.333">
+          <defs>
+            <clipPath id="address_clip-path">
+              <path id="Контур_452" data-name="Контур 452" d="M12.986,47.259c-3.331-5-6.209-9.312-6.209-16.759a23.722,23.722,0,0,1,47.445,0c0,7.428-2.863,11.74-6.184,16.722L30.5,72.068ZM30.5,0A30.535,30.535,0,0,0,0,30.5C0,40,3.9,45.853,7.4,51.093L27.732,79.9a3.388,3.388,0,0,0,5.537,0L53.6,51.093l.051-.075C57.1,45.853,61,40,61,30.5A30.535,30.535,0,0,0,30.5,0Z" fill="#fff"/>
+            </clipPath>
+            <clipPath id="address_clip-path-2">
+              <path id="Контур_453" data-name="Контур 453" d="M48.477,56.949a8.472,8.472,0,1,1,8.472,8.472,8.483,8.483,0,0,1-8.472-8.472m-6.777,0A15.25,15.25,0,1,0,56.95,41.7,15.267,15.267,0,0,0,41.7,56.949" transform="translate(-41.7 -41.699)" fill="#fff"/>
+            </clipPath>
+          </defs>
+          <g id="Сгруппировать_351" data-name="Сгруппировать 351">
+            <g id="Сгруппировать_350" data-name="Сгруппировать 350" clip-path="url(#address_clip-path)">
+              <rect id="Прямоугольник_349" data-name="Прямоугольник 349" width="100.645" height="100.645" transform="translate(-40.667 40.667) rotate(-45)" fill="#fff"/>
+            </g>
+          </g>
+          <g id="Сгруппировать_353" data-name="Сгруппировать 353" transform="translate(15.25 15.25)">
+            <g id="Сгруппировать_352" data-name="Сгруппировать 352" clip-path="url(#address_clip-path-2)">
+              <rect id="Прямоугольник_350" data-name="Прямоугольник 350" width="43.133" height="43.133" transform="translate(-15.25 15.25) rotate(-45)" fill="#fff"/>
+            </g>
+          </g>
+        </svg>
+        <h2>ADDRESSES</h2>
+        <p>
+          Manage your billing and shipping addresses
+        </p>
+      </a>
+    </div>
+     {%- comment -%}           
+    <div class="new_customer-block">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="58.334" viewBox="0 0 70 58.334">
+          <defs>
+            <clipPath id="payment_clip-path">
+              <path id="Контур_450" data-name="Контур 450" d="M5.833,49.583V21.874H64.167V49.583A2.921,2.921,0,0,1,61.25,52.5H8.75a2.921,2.921,0,0,1-2.917-2.917m0-40.833A2.921,2.921,0,0,1,8.75,5.833h52.5a2.92,2.92,0,0,1,2.916,2.916v7.292H5.833ZM8.75,0A8.76,8.76,0,0,0,0,8.749V49.583a8.76,8.76,0,0,0,8.75,8.75h52.5A8.759,8.759,0,0,0,70,49.583V8.749A8.76,8.76,0,0,0,61.25,0Z" transform="translate(0 0.001)" fill="#fff"/>
+            </clipPath>
+            <clipPath id="payment_clip-path-2">
+              <path id="Контур_451" data-name="Контур 451" d="M35.35,106.566a2.917,2.917,0,1,0,0,5.833H49.933a2.917,2.917,0,0,0,0-5.833Z" transform="translate(-32.433 -106.566)" fill="#fff"/>
+            </clipPath>
+          </defs>
+          <g id="Сгруппировать_349" data-name="Сгруппировать 349" transform="translate(0 0.001)">
+            <g id="Сгруппировать_346" data-name="Сгруппировать 346" transform="translate(0 -0.001)">
+              <g id="Сгруппировать_345" data-name="Сгруппировать 345" clip-path="url(#payment_clip-path)">
+                <rect id="Прямоугольник_347" data-name="Прямоугольник 347" width="90.746" height="90.746" transform="translate(-29.167 29.167) rotate(-45)" fill="#fff"/>
+              </g>
+            </g>
+            <g id="Сгруппировать_348" data-name="Сгруппировать 348" transform="translate(10.208 33.541)">
+              <g id="Сгруппировать_347" data-name="Сгруппировать 347" clip-path="url(#payment_clip-path-2)">
+                <rect id="Прямоугольник_348" data-name="Прямоугольник 348" width="18.562" height="18.562" transform="translate(-2.917 2.917) rotate(-45)" fill="#fff"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <h2>PAYMENT SETTINGS</h2>
+        <p>
+          Manage credit cards
+        </p>
+      </a>
+    </div>
+    {%- endcomment -%}
+  </div>
+</div>
+
+
+
+
+
+                  
+{% comment %}
+<div class="customer account">
+
+  <div>
+    <h1>{{ 'customer.account.title' | t }}</h1>
+    <a href="{{ routes.account_logout_url }}">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 19">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">
+      </svg>
+      {{ 'customer.log_out' | t }}
+    </a>
+  </div>
+
+  <div>
+    <div>
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+
+      {% paginate customer.orders by 20 %}
+        {%- if customer.orders.size > 0 -%}
+          <table role="table" class="order-history">
+            <caption class="visually-hidden">{{ 'customer.orders.title' | t }}</caption>
+            <thead role="rowgroup">
+              <tr role="row">
+                <th id="ColumnOrder" scope="col" role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
+                <th id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
+                <th id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+                <th id="ColumnFulfillment" scope="col" role="columnheader">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              {%- for order in customer.orders -%}
+                <tr role="row">
+                  <td
+                    id="RowOrder"
+                    role="cell"
+                    headers="ColumnOrder"
+                    data-label="{{ 'customer.orders.order_number' | t }}"
+                  >
+                    <a href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">
+                      {{ order.name }}
+                    </a>
+                  </td>
+                  <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
+                    {{ order.created_at | time_tag: format: 'date' }}
+                  </td>
+                  <td headers="RowOrder ColumnPayment" role="cell" data-label="{{ 'customer.orders.payment_status' | t }}">
+                    {{ order.financial_status_label }}
+                  </td>
+                  <td headers="RowOrder ColumnFulfillment" role="cell" data-label="{{ 'customer.orders.fulfillment_status' | t }}">
+                    {{ order.fulfillment_status_label }}
+                  </td>
+                  <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                    {{ order.total_price | money_with_currency }}</td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        {%- else -%}
+          <p>{{ 'customer.orders.none' | t }}</p>
+        {%- endif -%}
+
+        {%- if paginate.pages > 1 -%}
+          {%- if paginate.parts.size > 0 -%}
+              <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+                <ul role="list">
+                {%- if paginate.previous -%}
+                  <li>
+                    <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                  <li>
+                    {%- if part.is_link -%}
+                      <a href="{{ part.url }}" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
+                    {%- else -%}
+                      {%- if part.title == paginate.current_page -%}
+                        <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+                      {%- else -%}
+                        <span>{{ part.title }}</span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                  <li>
+                    <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}" >
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+                </ul>
+              </nav>
+          {%- endif -%}
+        {%- endif -%}
+      {% endpaginate %}
+    </div>
+
+    <div>
+      <h2>{{ 'customer.account.details' | t }}</h2>
+
+      {{ customer.default_address | format_address }}
+
+      <a href="{{ routes.account_addresses_url }}">
+        {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+      </a>
+    </div>
+
+  </div>
+ </div>
+ {% endcomment %}

@@ -1,0 +1,737 @@
+{
+  "sections": {
+    "es_media_with_text_Rc4dC6": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_3nthAw": {
+          "type": "media",
+          "settings": {
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/57e6300ab8e049d0a4851d0fe1e0c428.mp4",
+            "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4603b8933f474f46822b8d4d8e6f8740.mp4",
+            "opacity": 0,
+            "show_mute_button": true,
+            "mute_audio": false,
+            "hover_effect": false,
+            "link": "",
+            "preload": true,
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_3nthAw"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "m_padding_top": 0,
+        "m_padding_bottom": 4,
+        "full_width": true,
+        "title": "",
+        "url": "",
+        "title_sub": "",
+        "url_btn": "",
+        "text_align": "center",
+        "logolist_heading": "As Seen In"
+      }
+    },
+    "es_image_with_products_kDXyiQ": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_Dci3M9": {
+          "type": "product",
+          "settings": {
+            "product": "grand-prix-hand-crocheted-shirt-limited-edition",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g8-grand-prix-white.jpg",
+            "hover_image": "shopify:\/\/shop_images\/look07-326a6428.jpg",
+            "title": "Grand Prix Hand Crocheted Shirt",
+            "sub_title": "Limited Edition"
+          }
+        },
+        "product_haW73c": {
+          "type": "product",
+          "settings": {
+            "product": "greek-linen-v-neck-short-sleeve",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g8-greek-linen-caramel.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look24-02742-lr.jpg",
+            "title": "Greek Linen Short-Sleeve Henley",
+            "sub_title": "A structure that flatters your body"
+          }
+        },
+        "product_GHq8t4": {
+          "type": "product",
+          "settings": {
+            "product": "enduro-jean-button-fly",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g8-enduro-white.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look12-01263-1-lrg-rec-2copy.jpg",
+            "title": "Enduro Jean Button Fly",
+            "sub_title": "Editor's Pick: USA Today™"
+          }
+        },
+        "product_nmeeRL": {
+          "type": "product",
+          "settings": {
+            "product": "furoshiki-scarf",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g8-furoshiki.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-ss2023-look34-03530-lrg-v01.jpg",
+            "title": "Furoshiki",
+            "sub_title": "Built in the traditional Japanese style"
+          }
+        }
+      },
+      "block_order": [
+        "product_Dci3M9",
+        "product_haW73c",
+        "product_GHq8t4",
+        "product_nmeeRL"
+      ],
+      "settings": {
+        "text_color": "#000000",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/76b969a1108c4c578464a9736d8f0e4e.mp4",
+        "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a954ae213c2240d6a6436f08148bc12d.mp4",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/off-script",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "Life’s Not A Race",
+        "text": "<p>Lisbon’s about taking a walk to see a friend<\/p>",
+        "collection": ""
+      }
+    },
+    "es_image_with_products_eBf8qJ": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_3deyKD": {
+          "type": "product",
+          "settings": {
+            "product": "lagos-canvas-workshirt",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-01-lagos.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look11-01155-1-hrg-2-rec.jpg",
+            "title": "Lagos Canvas Work Shirt",
+            "sub_title": "Editor's Pick: Men's Health™, USA Today™"
+          }
+        },
+        "product_4PGUxH": {
+          "type": "product",
+          "settings": {
+            "product": "enduro-jean-button-fly",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-02-enduro.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look12-01263-1-lrg-rec-2copy.jpg",
+            "title": "Enduro Jean Button Fly",
+            "sub_title": "Editor's Pick: USA Today™"
+          }
+        },
+        "product_rLQ8W3": {
+          "type": "product",
+          "settings": {
+            "product": "grand-prix-hand-crocheted-shirt-limited-edition",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-03-grandprix.jpg",
+            "hover_image": "shopify:\/\/shop_images\/look05-326a6763-pfav.jpg",
+            "title": "Grand Prix Hand Crocheted Shirt",
+            "sub_title": "Limited Edition"
+          }
+        },
+        "product_QyecfQ": {
+          "type": "product",
+          "settings": {
+            "product": "the-becker-short",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-04-becker-shorts.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look26-03011-lrg.jpg",
+            "title": "Becker Short",
+            "sub_title": "The short take on our fan-favorite Becker Pant"
+          }
+        }
+      },
+      "block_order": [
+        "product_3deyKD",
+        "product_4PGUxH",
+        "product_rLQ8W3",
+        "product_QyecfQ"
+      ],
+      "settings": {
+        "text_color": "#000000",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/80fc3b9c205c4c3da753c320b75a18a5.mp4",
+        "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6b9dc6a31e18437181209035b4de4401.mp4",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/rest-mode",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "Rest mode",
+        "text": "<p>Palm shadows, slow pages — the calm before the next flow<\/p>",
+        "collection": ""
+      }
+    },
+    "es_testimonial_Mg6nBC": {
+      "type": "es-testimonial",
+      "blocks": {
+        "review_GgLWMd": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"We’re willing to bet you’ve not come across a brand like Y. Chroma before. Vivid colors, like something out of an uber-hip Wes Anderson movie, meet silhouettes that are familiar but at once different… in the most stylish way possible.\"<\/p>",
+            "author": "",
+            "company_logo": "shopify:\/\/shop_images\/dsk-maxim.svg"
+          }
+        },
+        "review_7XKYBE": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"The best part is the colors offered are a touch toned down, so you can sleep well knowing the shirt won’t be too overly vibrant when trying to pair with your current wardrobe.\"<\/p>",
+            "author": "",
+            "company_logo": "shopify:\/\/shop_images\/dsk-menshealth.svg"
+          }
+        },
+        "review_gLwgcR": {
+          "type": "review",
+          "settings": {
+            "review": "<p>\"Men are so used to silencing their appearance that the mere mention of using color can be overwhelming. That is why Y.Chroma is one of the most important brands to arrive on the scene in the last decade.\"<\/p>",
+            "author": "",
+            "company_logo": "shopify:\/\/shop_images\/dsk-themanual.svg"
+          }
+        }
+      },
+      "block_order": [
+        "review_GgLWMd",
+        "review_7XKYBE",
+        "review_gLwgcR"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 28
+      }
+    },
+    "es_image_with_products_KJtQee": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_xip944": {
+          "type": "product",
+          "settings": {
+            "product": "drucken-short",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/drucken-short-web-yc.jpg",
+            "hover_image": "shopify:\/\/shop_images\/img-0385-web-yc_1.webp",
+            "title": "Drücken Short",
+            "sub_title": "The best workout short you'll ever own"
+          }
+        },
+        "product_fVdUTb": {
+          "type": "product",
+          "settings": {
+            "product": "power-cable-sweater",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/power-cable-web-yc_1.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-03-ss2023-look25-02778-lrg_1.jpg",
+            "title": "Power Cable Sweater",
+            "sub_title": "A sweater for every season"
+          }
+        },
+        "product_zBcxA3": {
+          "type": "product",
+          "settings": {
+            "product": "henley-luxury-tropical-weight-short-sleeve",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/linen-web-yc_1.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look29-03367-lrg_57cdedf7-7ca0-48ae-8440-2403e29aabea.jpg",
+            "title": "Greek Linen SHORT-SLEEVE Henley",
+            "sub_title": "A structure that flatters your body"
+          }
+        },
+        "product_9RqBUb": {
+          "type": "product",
+          "settings": {
+            "product": "drucken-pant",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/drucken-pants-web-yc.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-dsc08934.webp",
+            "title": "Drücken Pant",
+            "sub_title": "Our choice for the premium athletic pant"
+          }
+        }
+      },
+      "block_order": [
+        "product_xip944",
+        "product_fVdUTb",
+        "product_zBcxA3",
+        "product_9RqBUb"
+      ],
+      "settings": {
+        "text_color": "#000000",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0f0c548eeb004ef39dd073926e28f099.mp4",
+        "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0562de20a5714f1bb0288624ac529331.mp4",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/athletic-chic-for-working-out-hard-and-everything-after",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "ATHLETIC CHIC",
+        "text": "<p>A look built for serious training (and everything after)<\/p>",
+        "collection": ""
+      }
+    },
+    "1740611898868ee390": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_qtgibz": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_qtgibz"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": true
+      }
+    },
+    "es_image_with_products_kbewnJ": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_RyqRHY": {
+          "type": "product",
+          "settings": {
+            "product": "the-becker-short",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-sevilla-ls-gold-_-1.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look10-00982-1-lrg.jpg",
+            "title": "Becker Short",
+            "sub_title": "The short take on our fan-favorite Becker Pant"
+          }
+        },
+        "product_tptw9j": {
+          "type": "product",
+          "settings": {
+            "product": "the-retinol-pant",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-sevilla-ls-gold-_-7.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look17-01899-lrg.jpg",
+            "title": "Retinol \"No-wrinkle\" Pant",
+            "sub_title": "Fresh + Flexible, with a sleek cut"
+          }
+        },
+        "product_QpXQjf": {
+          "type": "product",
+          "settings": {
+            "product": "full-cream-linen-shirt",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-sevilla-ls-gold-_-6.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look10-01014-1-lrg-copy.jpg",
+            "title": "Full Cream Linen Shirt",
+            "sub_title": "Genuine linen has no substitute"
+          }
+        },
+        "product_a8yGEA": {
+          "type": "product",
+          "settings": {
+            "product": "lagos-canvas-workshirt",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-sevilla-ls-gold-_-8.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look11-01155-1-hrg-2-rec.jpg",
+            "title": "Lagos Canvas Work Shirt",
+            "sub_title": "Editor's Pick: Men's Health™, USA Today™"
+          }
+        }
+      },
+      "block_order": [
+        "product_RyqRHY",
+        "product_tptw9j",
+        "product_QpXQjf",
+        "product_a8yGEA"
+      ],
+      "settings": {
+        "text_color": "#000000",
+        "image": "shopify:\/\/shop_images\/ychroma-main-006-dsk.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/ychroma-main-006-mob.jpg",
+        "video": "",
+        "video_mb": "",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/moroccan-vibes",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "ELEVATED + RUGGED",
+        "text": "<p>A summer ready to explore the exotic<\/p>",
+        "collection": ""
+      }
+    },
+    "es_image_with_products_QkX3zQ": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_PHykhN": {
+          "type": "product",
+          "settings": {
+            "product": "sevilla-shirt",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-sevilla-ls-gold.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-01-ss2023-look28-02975-lr.jpg",
+            "title": "Sevilla Long Sleeve",
+            "sub_title": "Editor's Pick: Men's Health™, USA Today™"
+          }
+        },
+        "product_a7fR9A": {
+          "type": "product",
+          "settings": {
+            "product": "the-becker-short",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-becker-shorts-white.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look26-03011-lrg.jpg",
+            "title": "Becker Short",
+            "sub_title": "The short take on our fan-favorite Becker Pant"
+          }
+        },
+        "product_T6VPtP": {
+          "type": "product",
+          "settings": {
+            "product": "deckmaster-shirt-cut-jacket",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-deckmaster-caramel.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-03-ss2023-look22-02467-lr.jpg",
+            "title": "Deckmaster Shirt-cut Jacket",
+            "sub_title": "Y.Chroma muscle meets French Bouclé"
+          }
+        },
+        "product_kez8A6": {
+          "type": "product",
+          "settings": {
+            "product": "enduro-jean-button-fly",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g5-enduro-white.jpg",
+            "hover_image": "shopify:\/\/shop_images\/ychroma-2324-look12-01263-1-lrg-rec-2copy.jpg",
+            "title": "Enduro Jean Button Fly",
+            "sub_title": "Editor's Pick: USA Today™"
+          }
+        }
+      },
+      "block_order": [
+        "product_PHykhN",
+        "product_a7fR9A",
+        "product_T6VPtP",
+        "product_kez8A6"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_color": "#000000",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7790b57b9cdf4267aad255ba481b567b.mp4",
+        "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6c73e270e6b4466990e4650d32de23c4.mp4",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/golden-hour",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "Golden Hour Escape",
+        "text": "<p>Fire crackling, drink in hand — just letting it all sink in<\/p>",
+        "collection": ""
+      }
+    },
+    "es_image_with_products_hDXG6f": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_wDzCBi": {
+          "type": "product",
+          "settings": {
+            "product": "henley-button-t-shirt",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g1-henley-plum.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g1-henley-plum-hover2.jpg",
+            "title": "Buffed Cotton Long-Sleeve Henley",
+            "sub_title": "Editor's Pick: Men's Health™, The Manual™"
+          }
+        },
+        "product_YkpkKD": {
+          "type": "product",
+          "settings": {
+            "product": "enduro-jean-button-fly",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g1-enduro-blue.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g1-enduro-blue-hover.jpg",
+            "title": "Enduro Jean Button Fly",
+            "sub_title": "Editor's Pick: USA Today™"
+          }
+        },
+        "product_TDJnVm": {
+          "type": "product",
+          "settings": {
+            "product": "grand-prix-hand-crocheted-shirt-limited-edition",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g1-grand-prix-plum.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g1-grand-prix-plum-hover.jpg",
+            "title": "Grand Prix Hand Crocheted Shirt",
+            "sub_title": "Limited Edition"
+          }
+        },
+        "product_ctJqW3": {
+          "type": "product",
+          "settings": {
+            "product": "cognac-pocket-denim-shirt",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g1-cognac-blue_45339493-0c07-49ba-8439-b2df6e6969c6.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g1-cognac-blue-hover.jpg",
+            "title": "Cognac Pocket Denim Shirt",
+            "sub_title": "Denim shirt, but elevated."
+          }
+        }
+      },
+      "block_order": [
+        "product_wDzCBi",
+        "product_YkpkKD",
+        "product_TDJnVm",
+        "product_ctJqW3"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_color": "#000000",
+        "image": "shopify:\/\/shop_images\/yc-g1-main-2.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/yc-g1-main-2-mob.jpg",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/da0c976dc39f4d0e965ef7582a91a144.mp4",
+        "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f7983602c422433baf468f686c2f3118.mp4",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/saturday-morning",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "Sophisticated Plum",
+        "text": "<p>Saturday morning photo hunting in Belém<\/p>",
+        "collection": ""
+      }
+    },
+    "es_image_with_products_bMArk4": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_GRRjTB": {
+          "type": "product",
+          "settings": {
+            "product": "sevilla-shirt",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g2-sevilla.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g2-sevilla-obsidian-hoven.jpg",
+            "title": "Sevilla Long Sleeve",
+            "sub_title": "Editor's Pick: Men's Health™, USA Today™"
+          }
+        },
+        "product_p4d3zh": {
+          "type": "product",
+          "settings": {
+            "product": "varial-shirt-cut-jacket",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g2-varial-citrine.jpg",
+            "hover_image": "shopify:\/\/shop_images\/look06-326A5263-lr.jpg",
+            "title": "Varial Shirt-cut Jacket",
+            "sub_title": "Editor's Pick: Maxim™"
+          }
+        },
+        "product_HyqEMy": {
+          "type": "product",
+          "settings": {
+            "product": "henley-luxury-tropical-weight-short-sleeve",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g2-henley-linen-obsidian.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g2-henley-linen-obsidian-hover.jpg",
+            "title": "Greek Linen Short-Sleeve Henley",
+            "sub_title": "Light, breathable, and luxurious."
+          }
+        },
+        "product_hWPTGK": {
+          "type": "product",
+          "settings": {
+            "product": "the-retinol-pant",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g2-retinol-obsidian.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g2-retinol-obsidian-hover.webp",
+            "title": "Retinol \"No-wrinkle\" Pant",
+            "sub_title": "Sophisticated comfort without wrinkles."
+          }
+        }
+      },
+      "block_order": [
+        "product_GRRjTB",
+        "product_p4d3zh",
+        "product_HyqEMy",
+        "product_hWPTGK"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_color": "#000000",
+        "image": "shopify:\/\/shop_images\/yc-g2-main-1-dsk.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/yc-g2-main-1-mob.jpg",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6c89ce3f4d694301b4284f9c84ef6689.mp4",
+        "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/16edef081c934b428d0c20173f8d011d.mp4",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/midday-meeting",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "Crisp, Fresh Citrine",
+        "text": "<p>A midday meeting in Santos<\/p>",
+        "collection": ""
+      }
+    },
+    "es_image_with_products_jrpN3G": {
+      "type": "es-image-with-products",
+      "blocks": {
+        "product_cnydyt": {
+          "type": "product",
+          "settings": {
+            "product": "enduro-jean-button-fly",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g3-enduro-white.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g3-enduro-white-hover.jpg",
+            "title": "Enduro Jean Button Fly",
+            "sub_title": "Editor's Pick: USA Today™"
+          }
+        },
+        "product_wMeAYm": {
+          "type": "product",
+          "settings": {
+            "product": "altavista-down-jacket",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g3-altavista-real-soy.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g3-altavista-real-soy-hover2.jpg",
+            "title": "Altavista Down Jacket",
+            "sub_title": "Have you ever felt like a Marvel hero?"
+          }
+        },
+        "product_agr4KL": {
+          "type": "product",
+          "settings": {
+            "product": "henley-luxury-tropical-weight-long-sleeve",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g3-henley-linen-caramel.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g3-henley-linen-caramel-hover.jpg",
+            "title": "Greek Linen Long-Sleeve Henley",
+            "sub_title": "Perfect for when the sun comes out."
+          }
+        },
+        "product_Jwc4bz": {
+          "type": "product",
+          "settings": {
+            "product": "dwayne-sweater",
+            "use_variant_metafield": false,
+            "image": "shopify:\/\/shop_images\/yc-g3-dwayne-white.jpg",
+            "hover_image": "shopify:\/\/shop_images\/yc-g3-dwayne-white-hover2.jpg",
+            "title": "Dwayne V-neck Sweater",
+            "sub_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_cnydyt",
+        "product_wMeAYm",
+        "product_agr4KL",
+        "product_Jwc4bz"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_color": "#000000",
+        "image": "shopify:\/\/shop_images\/yc-g3-main-1-dsk.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/yc-g3-main-1-mob.jpg",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/05a51ee04ff546908ac6d374fc17ddd9.mp4",
+        "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ace12b911cd34627ba41cf92763fc813.mp4",
+        "media_link": "https:\/\/www.ychroma.com\/collections\/headed-to-brunch",
+        "overlay": 0,
+        "show_mute_button": false,
+        "hover_effect": false,
+        "hide_mobile": false,
+        "heading": "CLASSIC WHITE DENIM",
+        "text": "<p>Morning puppy patrol in Chiado<\/p>",
+        "collection": ""
+      }
+    },
+    "es_media_with_text_ftAYM9": {
+      "type": "es-media-with-text",
+      "blocks": {
+        "media_cPhyfY": {
+          "type": "media",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/max-wardrobe-plan-web.jpg",
+            "image_mb": "shopify:\/\/shop_images\/max-wardrobe-plan-web-mob.jpg",
+            "video": "",
+            "video_mb": "",
+            "opacity": 0.2,
+            "show_mute_button": false,
+            "mute_audio": true,
+            "hover_effect": true,
+            "link": "https:\/\/www.ychroma.com\/pages\/concierge-service",
+            "preload": false,
+            "title": "<p>CREATE A WARDROBE PLAN<\/p>",
+            "text": "Schedule a call and let’s have fun."
+          }
+        },
+        "media_PxnLg7": {
+          "type": "media",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/enviro-dsk_41dea042-be5f-4bc8-931a-acfaa0ec68e7.jpg",
+            "image_mb": "shopify:\/\/shop_images\/enviro-mob.jpg",
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/43fc744721f442d29692371e581b36e4.mp4",
+            "video_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d41968c4aa2143dc912c914e1fae001b.mp4",
+            "opacity": 0,
+            "show_mute_button": false,
+            "mute_audio": true,
+            "hover_effect": true,
+            "link": "https:\/\/www.ychroma.com\/pages\/enviro",
+            "preload": false,
+            "title": "<p>FOUR KEY WAYS TO A BETTER PLANET<\/p>",
+            "text": "Social and environmental responsibility."
+          }
+        }
+      },
+      "block_order": [
+        "media_cPhyfY",
+        "media_PxnLg7"
+      ],
+      "settings": {
+        "padding_top": 120,
+        "padding_bottom": 0,
+        "m_padding_top": 0,
+        "m_padding_bottom": 0,
+        "full_width": false,
+        "title": "",
+        "url": "",
+        "title_sub": "",
+        "url_btn": "",
+        "text_align": "center",
+        "logolist_heading": "As Seen In"
+      }
+    },
+    "174061294355ab57dd": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_mqqYd4": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_mqqYd4"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "es_media_with_text_Rc4dC6",
+    "es_image_with_products_kDXyiQ",
+    "es_image_with_products_eBf8qJ",
+    "es_testimonial_Mg6nBC",
+    "es_image_with_products_KJtQee",
+    "1740611898868ee390",
+    "es_image_with_products_kbewnJ",
+    "es_image_with_products_QkX3zQ",
+    "es_image_with_products_hDXG6f",
+    "es_image_with_products_bMArk4",
+    "es_image_with_products_jrpN3G",
+    "es_media_with_text_ftAYM9",
+    "174061294355ab57dd"
+  ]
+}

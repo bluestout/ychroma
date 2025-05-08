@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "yas-land-product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner_video_land.jpg",
+        "video_url": "https:\/\/youtu.be\/_g_0wKNttNI?si=AmmUpuAdQPbeRpcO"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

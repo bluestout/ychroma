@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "da6725f3-246f-4f8d-84b8-c63cb87f0ecd": {
+      "type": "yas-clavio-singup",
+      "settings": {
+        "title": "New Collection Launch Alerts",
+        "text": "Be the first to know when each new addition to the <br>\nY.Chroma library drops.",
+        "image": "shopify:\/\/shop_images\/9c3d5653-d9e8-4997-885e-ba604c132266.jpg"
+      }
+    },
+    "ddd38e56-2c33-410b-8b64-6de92629b447": {
+      "type": "yas-slider-logo",
+      "blocks": {
+        "284fb2e3-0af7-46fc-93fe-73577c4b7b7a": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2.png"
+          }
+        },
+        "3cb71eb9-b942-48cf-a41c-f0f709360ab0": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_4.png"
+          }
+        },
+        "a1302660-c330-4ef2-baa1-a9d809fbf198": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_14.png"
+          }
+        },
+        "9b8e098b-5506-4bee-a057-53f8d932e8d7": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_6.png"
+          }
+        }
+      },
+      "block_order": [
+        "284fb2e3-0af7-46fc-93fe-73577c4b7b7a",
+        "3cb71eb9-b942-48cf-a41c-f0f709360ab0",
+        "a1302660-c330-4ef2-baa1-a9d809fbf198",
+        "9b8e098b-5506-4bee-a057-53f8d932e8d7"
+      ],
+      "settings": {
+        "title": "AS SEEN IN"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "da6725f3-246f-4f8d-84b8-c63cb87f0ecd",
+    "ddd38e56-2c33-410b-8b64-6de92629b447"
+  ]
+}
