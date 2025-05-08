@@ -234,31 +234,11 @@ upcartOnCartLoaded = (cart) => {
 	const messageElement = document.createElement('div');
 	messageElement.innerHTML = message;
 
-	// container.append(messageElement);
-
-  // setTimeout(() => {
-  //   const observer = new MutationObserver((mutationsList, observer) => {
-  //     for (const mutation of mutationsList) {
-  //       if (mutation.type === 'childList') {
-  //         const appSection = document.querySelector('#up-upsell-carousel');
-  //         if (appSection) {
-  //           new Flickity(document.querySelector('#up-upsell-carousel'), {
-  //             cellAlign: 'left',
-  //             setGallerySize: false,
-  //             freeScroll: true,
-  //             wrapAround: true,
-  //             prevNextButtons: false,
-  //             pageDots: false
-  //           });
-  //           observer.disconnect();
-  //         }
-  //       }
-  //     }
-  //   });
-  
-  //   observer.observe(document.body, { childList: true, subtree: true });
-  // }, 300);
-  
+  const footer = widget.querySelector(".upcart-footer");
+  const div = document.createElement("div");
+  div.classList.add("checkout-note");
+  div.textContent = "Your total includes all customs duties and taxes. We guarantee no additional charges on delivery.";
+  footer.querySelector(".styles_Footer__checkoutButton__").prepend(div);
 }
 
 console.log('details');
