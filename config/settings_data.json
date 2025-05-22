@@ -767,7 +767,7 @@
             "type": "template2",
             "settings": {
               "anchor": "Collections",
-              "menu": "collections",
+              "menu": "color-plans",
               "menu2": "collection-2",
               "image": "shopify://shop_images/yc04urban.jpg",
               "title1": "URBAN",
@@ -836,11 +836,6 @@
       "6143736321357441667": {
         "type": "shopify://apps/tidio-live-chat-chatbots/blocks/app-embed/1002274d-fb18-4939-98f6-5f05a8deeadc",
         "disabled": false,
-        "settings": {}
-      },
-      "17143716568830177004": {
-        "type": "shopify://apps/shop-protector/blocks/shop-protector/c35d1411-093f-400e-8977-af1ac4720d6d",
-        "disabled": true,
         "settings": {}
       },
       "3999180998444345382": {
