@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "a7d59210-9aeb-4672-8ace-4d4cfadbf39c": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "12a380c5-5b5f-47e7-9fae-abd5b8605895": {
+      "type": "custom-shirt-corner",
+      "blocks": {
+        "template--16031742951614__12a380c5-5b5f-47e7-9fae-abd5b8605895-1670931019f3dc7bcb-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "impact-base-layer"
+          }
+        },
+        "template--16031742951614__12a380c5-5b5f-47e7-9fae-abd5b8605895-1670931019f3dc7bcb-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "core-casual-shirt"
+          }
+        },
+        "template--16031742951614__12a380c5-5b5f-47e7-9fae-abd5b8605895-1670931019f3dc7bcb-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "button-down-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "template--16031742951614__12a380c5-5b5f-47e7-9fae-abd5b8605895-1670931019f3dc7bcb-0",
+        "template--16031742951614__12a380c5-5b5f-47e7-9fae-abd5b8605895-1670931019f3dc7bcb-1",
+        "template--16031742951614__12a380c5-5b5f-47e7-9fae-abd5b8605895-1670931019f3dc7bcb-2"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "a7d59210-9aeb-4672-8ace-4d4cfadbf39c",
+    "main",
+    "12a380c5-5b5f-47e7-9fae-abd5b8605895"
+  ]
+}

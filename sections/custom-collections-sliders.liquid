@@ -1,0 +1,60 @@
+{% comment %}  
+{% if collection.metafields.custom.image.value != blank %}
+  <div class="top_main_heading">
+    <h1>{{ section.settings.heading }}</h1>
+  </div> 
+<div class="collections-sliders-info owl-carousel">
+   {% for ingredient in collection.metafields.custom.image.value %}
+     <div class="destaque-card card bg-dark text-white">
+       <img class="card-img" src="{{ingredient | img_url:'original'}}">
+     </div>
+   {% endfor %}
+</div>
+{% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script> 
+<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+{% schema %}
+{
+  "name": "Collections Pages Sliders",
+  "settings": [
+      {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading"
+      }
+  ], 
+  "presets": [
+    {
+      "name": "Collections Pages Sliders",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+$(document).ready(function(){
+  
+  $('.collections-sliders-info').owlCarousel({
+    loop:true,
+    margin:10,
+    autoplay:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1600:{
+            items:1
+        }
+    }
+  });
+  
+});
+{% endjavascript %}
+{% endcomment %}

@@ -1,0 +1,145 @@
+<div id="accordion" class="myaccordion custom-pro-sec-tabs-wrapper">
+
+
+  <div class="accordion-card accordion-card-review">
+    <div class="accordion-card-header" id="headingFoor">
+      <h2 class="mb-0">
+        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFoor" aria-expanded="false" aria-controls="collapseFoor">
+          <span>customer reviews  <div class="klaviyo-star-rating-widget" data-id="{{product.id}}" data-product-title="{{product.title}}" data-product-type="{{product.type}}"></div></span>
+          <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFoor" class="collapse" aria-labelledby="headingFoor" data-parent="#accordion">
+      <div class="accordion-card-body">
+       <div id="klaviyo-reviews-all" data-id="{{product.id}}"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-card">
+    <div class="accordion-card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         {{section.settings.composition_title}}
+          <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="accordion-card-body">
+       {{section.settings.composition_desc}}
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="accordion-card">
+    <div class="accordion-card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          {{section.settings.delivery_title}}
+          <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="accordion-card-body">
+       <span class="delivery_detail">{{section.settings.delivery_desc}}</span>
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.delivery_title2 != blank %}
+<div class="accordion-card">
+    <div class="accordion-card-header" id="collapseThree2">
+      <h2 class="mb-0">
+        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+          {{section.settings.delivery_title2}}
+          <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo2" class="collapse" aria-labelledby="collapseThree2" data-parent="#accordion">
+      <div class="accordion-card-body">
+       <span class="delivery_detail">{{section.settings.delivery_desc2}}</span>
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+  
+   {% if product.metafields.custom.size_chart_image %}
+
+  
+  <div class="accordion-card">
+    <div class="accordion-card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          {{section.settings.sizex_title}}
+          <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" data-size>
+      <div class="accordion-card-body">
+     
+          <img src="{{product.metafields.custom.size_chart_image |img_url: 'x2000'}} "/>
+         
+          {% assign hassCollection = false  %}
+          {% for collection in product.collections %}
+            {% if collection.title contains "Pants" %}
+              {% assign hassCollection = true %}
+            {% endif %}
+          {% endfor %}
+         
+          {% if hassCollection != false %}
+          <script>
+          $(function(){
+               $('.accordion-card [data-size]').click(function(e){
+                var posY = e.offsetY;
+                if(posY < 425){
+                  $.magnificPopup.open({
+                    items: {
+                      src: 'https://www.youtube.com/watch?v=fJRA9b5PIJ4'
+                    },
+                    type: 'iframe'
+                  
+                    // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+                    // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+                  }, 0);
+                }
+            })
+          })
+        </script>
+        {% endif %}    
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<script>
+    $("#accordion").on("hide.bs.collapse show.bs.collapse", e => {
+      $(e.target)
+        .prev()
+        .find("i:last-child")
+        .toggleClass("fa-minus fa-plus");
+    });
+</script>

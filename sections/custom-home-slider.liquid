@@ -1,0 +1,115 @@
+<style>
+   #shopify-section-{{section.id}} .home-slider-section #carousel{
+    background-color: {{section.settings.bg_color}};
+  }
+  #shopify-section-{{section.id}} .home-slider-section #carousel h2,
+  #shopify-section-{{section.id}} .home-slider-section p{
+    color: #000;
+  }
+</style>
+
+<div class="home-slider-section" id="arrow_down_info">
+  <div class="owl-slider">
+    <div id="carousel" class="owl-carousel">
+      {% for block in section.blocks %}
+        <div class="item">
+          <div class="left-image-text">
+          <img src="{{ block.settings.image | img_url:"original" }}">
+          </div>
+          <div class="right-detail-info">
+            <h2>{{ block.settings.text-box }}</h2>
+            <div class="description-info">
+              <p>{{ block.settings.description }}</p>
+              <p class="author-name">{{ block.settings.author-name }}</p>
+              <p class="author-position">{{ block.settings.author-position }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+{% schema %}
+{
+  "name": "Home slider",
+  "max_blocks":3,
+  "settings": [
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Bg color",
+        "default": "#F5F5ED"
+      }
+  ], 
+"blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+          {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+          },
+          {
+          "id": "text-box",
+          "type": "text",
+          "label": "Heading"
+          },
+          {
+          "id": "description",
+          "type": "html",
+          "label": "Description"
+          },
+         {
+          "id": "author-name",
+          "type": "html",
+          "label": "Author Name"
+          },
+         {
+          "id": "author-position",
+          "type": "text",
+          "label": "Author position"
+          }
+       ]
+     }
+   ]
+  ,
+  "presets": [
+    {
+      "name": "Home slider",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+jQuery("#carousel").owlCarousel({
+  autoplay: true,
+  loop:true,
+  margin: 20,
+  responsiveClass: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+
+    600: {
+      items: 1
+    },
+
+    1024: {
+      items: 1
+    },
+
+    1366: {
+      items: 1
+    }
+  }
+});
+{% endjavascript %}

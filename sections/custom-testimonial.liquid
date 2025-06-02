@@ -1,0 +1,150 @@
+<div class="testimonial-slider-section">
+  <div class="page-width">
+  <div class="owl-slider"> 
+    <h2 class="testimonial-heading-info h1">WHAT OUR CLIENT SAYS</h2>
+    <div id="testimonial_slider1" class="owl-carousel">
+      {% for block in section.blocks %}
+        <div class="item testimonial_slider_items">
+          <div class="testimonial-content-info">
+            <div class="testimonial-img">
+              <img src="{{block.settings.image | img_url:'original'}}">
+            </div>  
+            <div class="start-reviews-info">
+              {% for i in (1..5) %}
+               {% if i == 5 %}
+              {% if block.settings.star_rating >= 5 %}
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              {% endif %}
+              {% elsif i == 4 %}
+              {% if block.settings.star_rating == 4 %}
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              {% endif %}
+              {% elsif i == 3 %}
+              {% if block.settings.star_rating == 3 %}
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star"></span>
+              {% endif %}
+               {% elsif i == 2 %}
+              {% if block.settings.star_rating == 2 %}
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star"></span>
+              {% endif %}
+               {% elsif i == 1 %}
+              {% if block.settings.star_rating == 1 %}
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star"></span>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+            </div>  
+            <div class="testimonial-detail-info">
+              <div class="testimonial-name">
+                  <h2>{{ block.settings.text-box }}</h2>
+              </div>
+              <div class="testimonial-desc">
+                  <p>{{ block.settings.description }}</p>
+              </div>  
+            </div>
+      	  </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>  
+</div>
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+{% schema %}
+{
+  "name": "Testimonial slider",
+  "settings": [
+      {
+      "id": "testimonial_heading",
+      "type": "text",
+      "label": "Heading"
+      }
+  ], 
+"blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+          {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+          },
+          {
+          "id": "star_rating",
+          "type": "number",
+          "label": "Star rating"
+          },
+
+          {
+          "id": "text-box",
+          "type": "text",
+          "label": "Author"
+          },
+          {
+          "id": "description",
+          "type": "html",
+          "label": "customer reviews"
+          }
+       ]
+     }
+   ]
+  ,
+  "presets": [
+    {
+      "name": "Testimonial slider",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+jQuery("#testimonial_slider1").owlCarousel({
+  autoplay: true,
+  margin: 20,
+  responsiveClass: true,
+  loop: true,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+
+    600: {
+      items: 1
+    },
+
+    1024: {
+      items: 3
+    },
+
+    1366: {
+      items: 3
+    }
+  }
+});
+{% endjavascript %}
+

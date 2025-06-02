@@ -1,0 +1,56 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE Shipping 2+ Items \/ 90-day Returns, 1 Year Exchanges",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        },
+        "1c91a460-a542-442d-b62f-fb68d46763f9": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Welcome to our store",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "1c91a460-a542-442d-b62f-fb68d46763f9"
+      ],
+      "settings": {}
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "color_scheme": "accent-1",
+        "logo": "shopify:\/\/shop_images\/headerychroma-brand-06.png",
+        "logo_width": 100,
+        "logo_position": "middle-left",
+        "menu": "new-mobile-menu",
+        "step1_image": "shopify:\/\/shop_images\/pants.png",
+        "step2_image": "shopify:\/\/shop_images\/coreshit.png",
+        "step3_image": "shopify:\/\/shop_images\/shit-cut.png",
+        "step4_image": "shopify:\/\/shop_images\/jucket.png",
+        "step5_image": "shopify:\/\/shop_images\/finishing.png",
+        "menu_type_desktop": "dropdown",
+        "show_line_separator": false,
+        "enable_sticky_header": true,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "9add3b13-3222-400b-a026-7b35f8cb04a5": {
+      "type": "yas-video-yout",
+      "settings": {
+        "title": "CATALOG HOME DELIVERY SERVICE",
+        "text": "SOMETIMES THE OLD WAYS ARE THE BEST WAYS. REQUEST MAX’S SEASONAL CATALOGS AT HOME FOR A PROPER READING EXPERIENCE.  (FIRST ONE ARRIVES IN JUST A FEW DAYS.)",
+        "image": "shopify:\/\/shop_images\/DSC03278.jpg",
+        "url": "https:\/\/youtu.be\/nGYZAaTROBY?si=IB05kFJ6999X86xN"
+      }
+    },
+    "13854937-11ed-496e-a88f-d74cc22f1d3f": {
+      "type": "yas-clavio-request",
+      "settings": {}
+    },
+    "44ec9134-575a-41c0-a89c-299eae203f1f": {
+      "type": "yas-slider-logo",
+      "blocks": {
+        "b83f94a1-c0a9-4de5-94d3-b7c084d3daac": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2.png"
+          }
+        },
+        "689761a6-040c-4166-b954-ab348401a732": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_4.png"
+          }
+        },
+        "d6df4d30-9bc4-4b61-8788-a31dc95e8a53": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/10.png"
+          }
+        },
+        "2c47e57b-5d2a-48e7-909c-c81c911cc1b9": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_14.png"
+          }
+        },
+        "8d717029-cbb9-4218-a19b-9f8043acd617": {
+          "type": "header",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_6.png"
+          }
+        }
+      },
+      "block_order": [
+        "b83f94a1-c0a9-4de5-94d3-b7c084d3daac",
+        "689761a6-040c-4166-b954-ab348401a732",
+        "d6df4d30-9bc4-4b61-8788-a31dc95e8a53",
+        "2c47e57b-5d2a-48e7-909c-c81c911cc1b9",
+        "8d717029-cbb9-4218-a19b-9f8043acd617"
+      ],
+      "settings": {
+        "title": "AS SEEN IN"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "9add3b13-3222-400b-a026-7b35f8cb04a5",
+    "13854937-11ed-496e-a88f-d74cc22f1d3f",
+    "44ec9134-575a-41c0-a89c-299eae203f1f",
+    "main"
+  ]
+}
