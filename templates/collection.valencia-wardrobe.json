@@ -1,0 +1,238 @@
+{
+  "sections": {
+    "custom_image_video_section_fcxihw": {
+      "type": "custom-image-video-section",
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/VALENCIA - DESKTOP - V2.mp4",
+        "video_looping": true,
+        "mobile_video": "shopify:\/\/files\/videos\/VALENCIA - MOBILE - V2.mp4",
+        "title": "",
+        "description": "",
+        "show_colors": true
+      }
+    },
+    "custom_filter_section_TE7DJU": {
+      "type": "custom-filter-section",
+      "settings": {}
+    },
+    "custom_collection_grid_GWNzUP": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 0,
+        "margin_bottom": 5,
+        "grid_offset": 0,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/ychroma-01-ss2023-look28-02975-lr.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/sevilla-shirt?_pos=2&_psq=sevilla&_ss=e&_v=1.0",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma-2324-look09-00924-1-lrg-2-rec_62c80fd7-5314-48b7-a468-b2641efeea66.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/lagos-canvas-workshirt?variant=43372652495038"
+      }
+    },
+    "custom_carousel_image_blocks_6mkkna": {
+      "type": "custom-carousel-image-blocks",
+      "blocks": {
+        "image_cG3gND": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-01_aa59d130-ff44-4990-bf5a-07c1d785b3c2.jpg",
+            "link": ""
+          }
+        },
+        "image_M96RUt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-02.jpg",
+            "link": ""
+          }
+        },
+        "image_XaDxi3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-03_2d2ddfe5-f16d-4832-95f4-a4d1d141d1fc.jpg",
+            "link": ""
+          }
+        },
+        "image_X9NwXj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-04.jpg",
+            "link": ""
+          }
+        },
+        "image_MhLAwA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-05.jpg",
+            "link": ""
+          }
+        },
+        "image_Fdeg3d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-06_b365fef5-840e-45b5-8a8e-c9be5516ce8e.jpg",
+            "link": ""
+          }
+        },
+        "image_wTqFbL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-07.jpg",
+            "link": ""
+          }
+        },
+        "image_FiWK9p": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-08.jpg",
+            "link": ""
+          }
+        },
+        "image_Jka6f4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-09_ca0beedd-6ce2-4fb7-98c0-e72e84f9838f.jpg",
+            "link": ""
+          }
+        },
+        "image_hKzDc6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-valencia-10.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_cG3gND",
+        "image_M96RUt",
+        "image_XaDxi3",
+        "image_X9NwXj",
+        "image_MhLAwA",
+        "image_Fdeg3d",
+        "image_wTqFbL",
+        "image_FiWK9p",
+        "image_Jka6f4",
+        "image_hKzDc6"
+      ],
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "custom_collection_grid_HMPX6x": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 16,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/ychroma-02-ss2023-photo09-12645-lrg.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/skyline-pant?variant=42499778347198",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma-2324-look13-01290-1-lrg.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/drucken-pant?variant=43107083059390"
+      }
+    },
+    "17448885993f9dce8f": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": false
+      }
+    },
+    "custom_collection_grid_QwjVJa": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 32,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/the-henley-long-sleeve-t-shirt-678004_1c5c400c-3805-43a3-a1dc-fe9f18a2bb6e.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/henley-button-t-shirt?variant=42499824976062",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma-2324-look34-04035-lrg2_0ae98ae6-9925-489b-be8b-89e6da972da8.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/henley-luxury-tropical-weight-short-sleeve?variant=43104127287486"
+      }
+    },
+    "custom_collection_grid_DAt6qt": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 48,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/ychroma-2324-look19-02124b-lrg.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/the-becker-short?variant=43098034897086",
+        "custom_div16_image": "shopify:\/\/shop_images\/look04-326A3021.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/dwayne-sweater?variant=42503003013310"
+      }
+    },
+    "custom_collection_grid_a96XH9": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 64,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/look05-326a7024-pfav-lr_fc883d92-d2d2-49bc-aa54-d92eb8057ec9.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/grand-prix-hand-crocheted-shirt-limited-edition?variant=43453604626622",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-dsc03803-web_ac7e3d83-d924-439b-a2a0-8f64eee4f3ab.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/deckmaster-shirt-cut-jacket?variant=44826965541054"
+      }
+    },
+    "video_wardrobe_v2_J4qFdB": {
+      "type": "video-wardrobe-v2",
+      "settings": {
+        "use_youtube_video": true,
+        "youtube_video_id": "LemCq-e7MBk",
+        "video_height": 620,
+        "overlay_show": false,
+        "overlay_opacity": 30,
+        "text-box": "",
+        "title": "",
+        "show_play_button": true
+      }
+    }
+  },
+  "order": [
+    "custom_image_video_section_fcxihw",
+    "custom_filter_section_TE7DJU",
+    "custom_collection_grid_GWNzUP",
+    "custom_carousel_image_blocks_6mkkna",
+    "custom_collection_grid_HMPX6x",
+    "17448885993f9dce8f",
+    "custom_collection_grid_QwjVJa",
+    "custom_collection_grid_DAt6qt",
+    "custom_collection_grid_a96XH9",
+    "video_wardrobe_v2_J4qFdB"
+  ]
+}

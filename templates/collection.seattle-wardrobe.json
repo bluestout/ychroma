@@ -1,0 +1,239 @@
+{
+  "sections": {
+    "custom_image_video_section_fcxihw": {
+      "type": "custom-image-video-section",
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/SEATTLE - DESKTOP - V2.mp4",
+        "video_looping": true,
+        "mobile_video": "shopify:\/\/files\/videos\/SEATTLE - MOBILE - V2.mp4",
+        "title": "",
+        "description": "",
+        "show_colors": true
+      }
+    },
+    "custom_filter_section_TE7DJU": {
+      "type": "custom-filter-section",
+      "settings": {}
+    },
+    "custom_collection_grid_GWNzUP": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 0,
+        "margin_bottom": 5,
+        "grid_offset": 0,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-seattle-ss2023-photo06-11913.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/sevilla-short-sleeve-o?variant=42502897205438",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-seattle-ss2023-look21-02349_1f0a4491-e6a1-4309-aa5e-0a4cf8380ae0.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/basic-workshirt?variant=42503255064766"
+      }
+    },
+    "custom_carousel_image_blocks_6mkkna": {
+      "type": "custom-carousel-image-blocks",
+      "blocks": {
+        "image_r9kpim": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-01.jpg",
+            "link": ""
+          }
+        },
+        "image_fdeXnN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-02.jpg",
+            "link": ""
+          }
+        },
+        "image_q4Qzpj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-03.jpg",
+            "link": ""
+          }
+        },
+        "image_j7DxYd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-04.jpg",
+            "link": ""
+          }
+        },
+        "image_AyiWMK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-05.jpg",
+            "link": ""
+          }
+        },
+        "image_LWNG4R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-06.jpg",
+            "link": ""
+          }
+        },
+        "image_i3thNc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-07.jpg",
+            "link": ""
+          }
+        },
+        "image_AGgcRM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-seattle-08.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_r9kpim",
+        "image_fdeXnN",
+        "image_q4Qzpj",
+        "image_j7DxYd",
+        "image_AyiWMK",
+        "image_LWNG4R",
+        "image_i3thNc",
+        "image_AGgcRM"
+      ],
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "custom_collection_grid_HMPX6x": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 16,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-seattle-ss2023-look72-07788_11b07d66-a53f-4eee-917c-c0ea982c865b.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/sevilla-short-sleeve-o?variant=42502894747838",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma-2324-look39-04652-hrg-rec.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/drucken-pant?variant=43107082666174"
+      }
+    },
+    "17448885993f9dce8f": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": false
+      }
+    },
+    "custom_collection_grid_QwjVJa": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 32,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-seattle-ss2023-look07-00784-hrg.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/deckmaster-shirt-cut-jacket?variant=42503259357374",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-seattle-ss2023-look58-06185.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/the-henley-long-sleeve-t-shirt?variant=42576340582590"
+      }
+    },
+    "custom_collection_grid_8cMBbD": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 48,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-seattle-2324-look33-03931-hrg.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/cognac-pocket-denim-shirt?variant=43153273946302",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-seattle-ss2023-look84-08982.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/dwayne-sweater?variant=42503004815550"
+      }
+    },
+    "custom_collection_grid_abWMWJ": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 64,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/ychroma_2324_look03_00344.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/mazarin-cut-windstopper?variant=43105288650942",
+        "custom_div16_url": ""
+      }
+    },
+    "custom_collection_grid_E3rrpj": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 80,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-carousel-valencia-10.jpg",
+        "custom_div5_url": "",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-carousel-valencia-10.jpg",
+        "custom_div16_url": ""
+      }
+    },
+    "video_wardrobe_v2_J4qFdB": {
+      "type": "video-wardrobe-v2",
+      "settings": {
+        "use_youtube_video": true,
+        "youtube_video_id": "LemCq-e7MBk",
+        "video_height": 620,
+        "overlay_show": false,
+        "overlay_opacity": 30,
+        "text-box": "",
+        "title": "",
+        "show_play_button": true
+      }
+    }
+  },
+  "order": [
+    "custom_image_video_section_fcxihw",
+    "custom_filter_section_TE7DJU",
+    "custom_collection_grid_GWNzUP",
+    "custom_carousel_image_blocks_6mkkna",
+    "custom_collection_grid_HMPX6x",
+    "17448885993f9dce8f",
+    "custom_collection_grid_QwjVJa",
+    "custom_collection_grid_8cMBbD",
+    "custom_collection_grid_abWMWJ",
+    "custom_collection_grid_E3rrpj",
+    "video_wardrobe_v2_J4qFdB"
+  ]
+}

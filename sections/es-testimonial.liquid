@@ -1,0 +1,124 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  #shopify-section-{{ section.id }} .swiper-button-next,
+  #shopify-section-{{ section.id }} .swiper-button-prev {
+    --swiper-navigation-size: 22px;
+    --swiper-navigation-color: #000;
+  }
+
+  @media (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top | times: 0.5 }}px;
+      --padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}px;
+    }
+  }
+</style>
+
+<div class="page-width">
+  <div class="swiper">
+    <div class="testimonial-wrapper">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            <div class="testimonial-quote">
+              {{ block.settings.review }}
+            </div>
+            <div class="testimonial-company-logo">
+              <img 
+                src="{{ block.settings.company_logo | img_url: 'master' }}"
+                width="{{ block.settings.company_logo.width }}"
+                height="{{ block.settings.company_logo.height }}"
+                alt="{{ block.settings.company_logo.alt }}"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    (() => {
+      const sw = new Swiper("#shopify-section-{{ section.id }} .testimonial-wrapper", {
+        loop: false,
+        navigation: {
+          nextEl: '#shopify-section-{{ section.id }} .swiper-button-next',
+          prevEl: '#shopify-section-{{ section.id }} .swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
+        },
+        autoHeight: true,
+      })
+    })()
+  })
+</script>
+
+{%- schema -%}
+{
+  "name": "Testimonial",
+  "class": "es-testimonial",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 400,
+      "step": 4,
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "review",
+          "label": "Review Text"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "image_picker",
+          "id": "company_logo",
+          "label": "Company Logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "@ Testimonial"
+    }
+  ]
+}
+{%- endschema -%}

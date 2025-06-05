@@ -1,0 +1,501 @@
+<style>
+
+  #shopify-section-{{section.id}}{
+    padding-top: 75px;
+  }
+  #shopify-section-{{section.id}} .yas_look_wrapp{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+     max-width: 1742px;
+    margin: 0 auto;
+    padding-top: 120px;
+    border-top: 1px solid #FFC200;
+    
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-main{
+    max-width: 442px;
+    position: relative;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-main .swiper-slide .yas-look-slider_image{
+    max-width: 442px;
+    height: 650px;
+    width: 100%;
+  }
+  
+  #shopify-section-{{section.id}} .yas-look-slider_image{
+    position: relative;
+    height: 100%;
+  }
+  #shopify-section-{{section.id}} .swiper-slide img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product{
+     width: calc(100% - 442px);
+     max-width: calc(100% - 490px);
+     padding-bottom: 57px;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .swiper-wrapper{
+   
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .swiper-slide{
+    height: 325px;
+    
+  }
+  #shopify-section-{{section.id}} .yas-look-slider_second{
+    width: 100% ;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image,
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image img{
+   
+    height: 325px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image:hover img{
+    transform: scale(1.2);
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image:after{
+    content: 'View Product';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.39);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Centra_No2;
+    font-size: 25px;
+    font-waight: bold;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second_image:hover:after{
+    
+    opacity: 1;
+  }
+ #shopify-section-{{section.id}} .yas_look_slider-chosen_product  .swiper-grid-column>.swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  
+  #shopify-section-{{section.id}} h2{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "CentraNo2-Bold";
+    font-size: 70px;
+    letter-spacing: 3.5px; 
+    margin-bottom: 50px;
+  }
+
+  #shopify-section-{{section.id}} .yas-look-slider_color{
+    padding: 57px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #shopify-section-{{section.id}} .yas-look-slider_color color-look{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 2.5px;
+    border: 1px solid transparent;
+  }
+  #shopify-section-{{section.id}} .yas-look-slider_color color-look[cheked="true"]{
+    border: 1px solid yellow;
+  }
+  #shopify-section-{{section.id}} .swiper-button-next,
+  #shopify-section-{{section.id}} .swiper-button-prev{
+      display: flex;
+      height: 68px;
+      width: 14px;
+      margin-top: calc(0px - 80px);
+    }
+    #shopify-section-{{section.id}} .swiper-button-next{
+      right: 25px;
+    }
+    #shopify-section-{{section.id}} .swiper-button-prev{
+      left: 25px;
+    }
+    #shopify-section-{{section.id}} .swiper-button-next:after,
+    #shopify-section-{{section.id}} .swiper-button-prev:after{
+  
+      content: none;
+    }
+
+#shopify-section-{{section.id}} .yas_look_wrapp-second{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+#shopify-section-{{section.id}} .yas_look_wrapp-second h6{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    font-family: "CentraNo2-Bold" !important;
+}
+#shopify-section-{{section.id}} .yas-look-title{
+  font-family: CentraNo2-Bold;
+  font-size: 70px;
+  letter-spacing: 0.05em;
+  line-height: 80px;
+  text-align: left;
+  color: #f7b717;
+  max-width: 1742px;
+  margin: 0 auto 30px;
+  display: none;
+}  
+#shopify-section-{{section.id}} .yas-look-text_under{
+  font-family: SourceSerifPro-It;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 35px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  padding: 0px 0 70px;
+  border-bottom: 1px solid #FFC200;
+  max-width: 1742px;
+  margin: 0 auto;
+}
+#shopify-section-{{section.id}} .yas-look-text_under.mobile{
+  display: none;
+}
+
+#shopify-section-{{section.id}}  .yas_look_slider-main:before{
+    content: attr(data-title);
+    position: absolute;
+    display: block;
+    font-family: CentraNo2-Bold;
+    font-size: 45px;
+    line-height: 80px;
+    text-align: left;
+    color: #f7b717;
+    z-index: 2;
+    top: 25px;
+    left: 30px;
+}
+   @media (max-width: 1580px){
+    #shopify-section-{{section.id}} .yas_look_wrapp-second {
+      flex-wrap: wrap;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp-second > div {
+      margin: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp-second > div:last-child {
+      margin-top: 25px;
+    }
+   }
+
+  
+ 
+  @media (max-width: 1099px){
+    #shopify-section-{{section.id}} .yas_look_slider-chosen_product .yas-look-slider_second{
+      display: none;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-chosen_product {
+    width: 100%;
+      max-width: 100%;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp {
+        flex-direction: column;
+        align-items: center;
+    }
+    #shopify-section-{{section.id}} .yas-look-title{
+      text-align: center;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp-second{
+      max-width: 670px;
+      margin: 0 auto;
+    }
+     #shopify-section-{{section.id}} .yas_look_wrapp-second > div:last-child {
+      margin-top: 5px;
+    }
+  }
+  @media (max-width: 896px){
+    #shopify-section-{{section.id}} .yas_look_slider-main {
+      overflow: hidden;
+    }
+    #shopify-section-{{section.id}} .yas-look-slider_color color-look{
+      width: 40px;
+      height: 40px;
+    }
+     #shopify-section-{{section.id}} .yas_look_slider-chosen_product {
+      padding: 0 35px;
+    }
+    #shopify-section-{{section.id}}{
+      padding-top: 25px;
+    }
+    #shopify-section-{{section.id}} h2{
+      font-size: 35px;
+      margin: 0 auto 40px;
+      max-width: 250px;
+    }
+    #shopify-section-{{section.id}} h3{
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+    #shopify-section-{{section.id}} .yas-look-title{
+      font-size: 25px;
+      letter-spacing: 0.05em;
+      line-height: 30px;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp-second > div{
+      margin: 35px 0 0px;
+    }
+    #shopify-section-{{section.id}} .yas-look-text_under{
+      font-size: 15px;
+      line-height: 20px;
+      display: none;
+    }
+    #shopify-section-{{section.id}} .yas-look-text_under.mobile {
+      display: block;
+      padding: 0;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-main .swiper-slide .yas-look-slider_image {
+        max-width: unset;
+        height: 487px;
+        width: 100%;
+    }
+    #shopify-section-{{section.id}} .swiper-slide img {
+        object-fit: contain;
+
+    }
+  }
+   @media (max-width: 740px){
+    #shopify-section-{{section.id}} .yas-look-text_under{
+      border-bottom: 0px solid #FFC200;
+    }
+    #shopify-section-{{section.id}} .yas_look_wrapp{
+      padding-top: 0px;
+      border-top: 0px solid #FFC200;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-main {
+      max-width: 100%;
+    }
+     #shopify-section-{{section.id}}  .yas_look_slider-main:before{
+       content: none;
+     }
+     #shopify-section-{{section.id}} .yas-look-title{
+      display: block;
+    }
+     #shopify-section-{{section.id}} .yas_look_wrapp-second{
+      max-width: 370px;
+    }
+    #shopify-section-{{section.id}} .yas_look_slider-chosen_product {
+      max-width: 100%;
+    }
+  }
+</style>
+
+
+<div class="yas-look-title">{{ section.settings.title }}</div>
+<div class="yas_look_wrapp">
+  
+  <div class="yas_look_slider-main" data-title="{{ section.settings.title }}">
+    
+    <div class="swiper yas-look-slider">
+        <div class="swiper-wrapper">
+          {% assign collection = section.settings.collect %}
+          {% for product in collection.products %}
+            {% capture get_type_tagprod %}
+                  {% assign productTags = product.tags | join: ', ' %}
+                  {% if productTags contains 'look-pants' %}
+                    look-pants
+                  {% endif %}
+                  {% if productTags contains 'look-shirts' %}
+                    look-shirts
+                  {% endif %}
+                  {% if productTags contains 'look-jacket' %}
+                    look-jacket
+                  {% endif %}
+            {% endcapture %}
+          
+            <div class="swiper-slide">
+              <div class="yas-look-slider_image">
+                <img src="{{ product.featured_media | img_url: '770x' }}" alt="{{ product.title }}">
+              </div>
+            
+              <div class="yas-look-slider_color">
+                {%- for option in product.options_with_values -%}
+                  {% if option.name == "Color"  %}
+                    {%- for value in option.values -%}
+                      {% assign option_color_name = value | escape %}
+                      {% capture get_src_img_variant %}
+                        {%- for variant in product.variants -%}
+                            {% assign variant_img_previe = variant.image.src | image_url %}
+                            {% assign variant_color_val = variant.option1 | escape %}
+                            {% if variant_color_val == option_color_name %}
+                              {{ variant_img_previe }}
+                            {% break %}
+                            {% endif %}
+                        {%- endfor -%}
+                      {% endcapture %}
+                      <color-look class="i-yas-color_{{ value | strip | escape | downcase | replace: ' ', '_' }}"
+                      data-varimg="{{ get_src_img_variant | strip }}"
+                      data-varcolor="{{ value | strip }}"
+                      data-typetag="{{ get_type_tagprod | strip }}"
+                      {% if forloop.first %}cheked="true"{% else %}cheked="false"{% endif %}
+                      ></color-look>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% comment %}
+                <i class="i-yas-color" style="background-color: yellow;"></i>
+                <i style="background-color: #fff;"></i>
+                <i style="background-color: orange;"></i>
+                <i style="background-color: green;"></i>
+                <i style="background-color: gold;"></i>
+              {% endcomment %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        
+        <div class="swiper-button-prev">
+          {% render 'yas-arrow-slider-left' %}
+        </div>
+        <div class="swiper-button-next">
+          {% render 'yas-arrow-slider-right' %}
+        </div>
+
+      </div>
+  </div>
+
+  <div class="yas_look_slider-chosen_product">
+    <div class="swiper yas-look-slider_second">
+        <div class="swiper-wrapper">
+          {% for product in collection.products %}
+            <div class="swiper-slide">
+              <div class="yas-look-slider_second_image" data-variantid="{{ product.first_available_variant.id }}" data-produrl="{{ product.url }}">
+                <img src="{{ product.first_available_variant.featured_image | img_url: '770x' }}" alt="{{ product.title }}">
+                <script type="application/json">
+                    {{ product.variants | json }}
+                </script>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        
+        <div class="swiper-button-prev">
+          {% render 'yas-arrow-slider-left' %}
+        </div>
+        <div class="swiper-button-next">
+          {% render 'yas-arrow-slider-right' %}
+        </div>
+    </div>
+    <div class="yas-look-text_under mobile">{{ section.settings.text }}</div>
+    {% render 'yas-look-select-block', collection: collection %}
+  </div>
+</div>
+<div class="yas-look-text_under">{{ section.settings.text }}</div>
+
+      
+
+
+
+<script defer>
+  $(function(){
+
+    let swiper = new Swiper('#shopify-section-{{section.id}} .yas-look-slider', {
+      loop: false,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .yas-look-slider .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .yas-look-slider .swiper-button-prev',
+      }
+    });
+
+    let swiper2 = new Swiper('#shopify-section-{{section.id}} .yas-look-slider_second', {
+      loop: false,
+      slidesPerView: 1,
+      grid: { 
+        rows: 2,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          grid: { 
+            rows: 2,
+          }
+        },
+        1412: {
+          slidesPerView: 3,
+          grid: { 
+            rows: 2,
+          }
+        },
+        1742: {
+          slidesPerView: 4,
+          grid: { 
+            rows: 2,
+          }
+        }
+      },
+      navigation: {
+        nextEl: '#shopify-section-{{section.id}} .yas-look-slider_second .swiper-button-next',
+        prevEl: '#shopify-section-{{section.id}} .yas-look-slider_second .swiper-button-prev',
+      }
+    });
+    
+  })
+</script>
+{% schema %}
+  {
+    "name": "Yas look collection 16",
+    "class": "yas_look_collect",
+    "settings": [
+      {
+         "id": "collect",
+         "type": "collection",
+         "label": "Select collection 16 Pieces"
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "id": "text",
+        "type": "textarea",
+        "label": "Text under section"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yas look collection16"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

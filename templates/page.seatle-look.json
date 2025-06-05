@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "464e42cc-b115-427f-ab87-f861bc99c0d6": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "ccc52a00-7b87-4346-bc7f-e29f98bfa716": {
+      "type": "yas-video-color",
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 80,
+        "image": "shopify:\/\/shop_images\/Seattle_Wardrobe_Banner_6ba21f42-2b3a-41ce-9ca7-7a9085163a87.jpg",
+        "text-box": "",
+        "title": "Seattle looks good on you",
+        "show_color1": true,
+        "color1": "#b59e5f",
+        "show_color2": true,
+        "color2": "#3b363c",
+        "show_color3": true,
+        "color3": "#405d73",
+        "show_color4": true,
+        "color4": "#009499",
+        "show_color5": true,
+        "color5": "#005d43"
+      }
+    },
+    "8d3e8533-4ede-48c4-af49-0003516a8b84": {
+      "type": "yas-reinvented",
+      "settings": {
+        "title": "YOU. REINVENTED.",
+        "under_title": "Seattle’s been the cradle of innovation for generations. Its palette’s classy golds and blues signal reliability and success. But it also has green – a lot of it – projecting growth, health, and generosity."
+      }
+    },
+    "2a7b7668-6f98-4cb0-ad0a-866cb1b753e3": {
+      "type": "yas-look-bilder-v2",
+      "settings": {
+        "title_white": "Your unique wardrobe.",
+        "collect": "test-8-pieces",
+        "collect_16": "test-16-pick",
+        "collect_24": "test-pieces-24",
+        "text_under_select": "<p><em>Seattle’s been the cradle of innovation for generations. Its palette’s classy golds and blues signal reliability and success. But it also has green – a lot of it – projecting growth, health, and generosity.<\/em><\/p>",
+        "title": "",
+        "text": ""
+      }
+    },
+    "7a871056-8fef-47ad-bbc0-7c3ab99b17bb": {
+      "type": "yas-look-collection",
+      "disabled": true,
+      "settings": {
+        "title_white": "",
+        "collect": "test-8-pieces",
+        "title": "8 Pieces",
+        "text": "Title This look includes 2 Pants, 1 Shorts, 2 Shirts, 1 Sweater, 1 Jacket and 1 Beannie"
+      }
+    },
+    "fac55131-bf38-4cf1-b7dd-73e16b8db926": {
+      "type": "yas-look-collection16",
+      "disabled": true,
+      "settings": {
+        "collect": "test-16-pick",
+        "title": "16 Pieces",
+        "text": "Title This look includes 2 Pants, 1 Shorts, 2 Shirts, 1 Sweater, 1 Jacket and 1 Beannie"
+      }
+    },
+    "7fbf569b-a2a4-4179-b0ee-cae59ae84755": {
+      "type": "yas-reborn",
+      "settings": {
+        "title": "YOU.  REMASTERED.",
+        "under_title": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "464e42cc-b115-427f-ab87-f861bc99c0d6",
+    "ccc52a00-7b87-4346-bc7f-e29f98bfa716",
+    "8d3e8533-4ede-48c4-af49-0003516a8b84",
+    "2a7b7668-6f98-4cb0-ad0a-866cb1b753e3",
+    "7a871056-8fef-47ad-bbc0-7c3ab99b17bb",
+    "fac55131-bf38-4cf1-b7dd-73e16b8db926",
+    "7fbf569b-a2a4-4179-b0ee-cae59ae84755",
+    "main"
+  ]
+}

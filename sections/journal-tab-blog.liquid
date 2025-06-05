@@ -1,0 +1,501 @@
+<link href='https://fonts.googleapis.com/css2?family=Source%20Serif%20Pro:ital@0;1&display=swap' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<style>
+
+  #shopify-section-{{section.id}} .yas-sliderimage-tab{
+    position: relative;
+    background: #f5f5ed;
+    overflow: hidden;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab img{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .blog_slider-img{
+    margin-bottom: 20px;
+  }
+  
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper{
+    overflow: visible;
+  }
+ 
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .yas-sliderimage-wrapp{
+    max-width: 980px;
+    padding: 35px 20px;
+    margin: 0 auto;
+    
+  }
+
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-next,
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-prev{
+    display: flex;
+    height: 122px;
+    width: 40px;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-next{
+    right: 60px;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-prev{
+    left: 60px;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-next:after,
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-prev:after{
+
+    content: none;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-slide:not(.swiper-slide-active){
+    opacity: 0.34;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .blog_slider-bread{
+    font-family: "Centra_No2";
+    font-weight: bold;
+    font-size: 9.5px;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab h5{
+    font-family: "Centra_No2" !important;
+    font-weight: normal !important;
+    font-size: 18px;
+    letter-spacing: 0.17em;
+    line-height: 26px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 5px;;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab h3{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-size: 44px;
+    letter-spacing: -0.02em;
+    line-height: 42px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 10px;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .blog_slider-tag{
+    font-family: "CentraNo2-Bold";
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.17em;
+    line-height: normal;
+    text-align: left;
+    color: #fff;
+    background: #dd4124;
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-pagination{
+    display: none;
+  }
+
+
+  
+  #shopify-section-{{section.id}}{
+    background: #E3DAC3;
+    padding: 0 0 100px;
+  }
+  .masonry-wrapp {
+    padding: 40px 35px 0px;
+  }
+  .masonry-wrapp article {
+    padding: 0px;
+    border: 0px solid #999;
+    border-radius: 0px;
+    background: transparent;
+    
+  }
+  .masonry-wrapp article {
+  	break-inside: avoid-column;
+  	margin-bottom: 30px;
+  }
+  .masonry-wrapp article img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .masonry-wrapp p{
+    font-family: "Centra_No2" !important;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 26px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 5px;
+  }
+  .masonry-wrapp h3{
+    font-family: "Source Serif Pro" !important;
+    font-weight: normal !important;
+    font-size: 33px;
+    letter-spacing: -0.02em;
+    line-height: 37px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 5px;
+  }
+  .masonry-blog_tag{
+    font-family: "CentraNo2-Bold";
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 0.17em;
+    line-height: normal;
+    text-align: left;
+    color: #fff;
+    background: #dd4124;
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+
+  #shopify-section-{{section.id}} .yas_blog-menu-w{
+    background: linear-gradient(
+    to right, 
+    {{ section.blocks.first.settings.background }} 0%, 
+    {{ section.blocks.first.settings.background }} 50%, 
+    {{ section.blocks.last.settings.background }} 50%, 
+    {{ section.blocks.last.settings.background }} 100%
+  );
+  }
+  .yas_blog-menu{
+    margin: 0 auto;
+    text-align: center;
+  }
+  .yas_blog-menu-item{
+    font-family: "Centra_No2" !important;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-flex;
+    min-width: 190px;
+    text-transform: uppercase;
+  }
+  .masonry-tab-sec{
+    display: none;
+  }
+  .masonry-tab-sec[data-tab="active"]{
+    columns: 250px;
+	column-gap: 20px; 
+    max-width: 970px;
+    margin: 0 auto;
+    display: block;
+  }
+  @media (max-width: 1350px){
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-next,
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-prev{
+      height: 68px;
+      width: 19px;
+      margin-top: 0;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-next{
+      right: 45px;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-prev{
+      left: 45px;
+    }
+ }
+  @media (max-width: 989px){
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper {
+      width: 80%;
+      margin: 0 auto;
+    }
+     #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-pagination{
+      display: block;
+      bottom: 0;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-next,
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-button-prev{
+      display: none;
+    }
+    .blog_slider-bread{
+      display: none;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab h3{
+      font-size: 22px;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab h5{
+      font-size: 10px;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .blog_slider-tag{
+      font-size: 9px;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-pagination-bullet{
+      background: #000;
+      opacity: 1;
+    }
+    #shopify-section-{{section.id}} .yas-sliderimage-tab .swiper-pagination-bullet-active{
+      background: #A0A0A0;
+    }
+    
+    .yas_blog-menu-item{
+      min-width: 75px;
+      font-size: 10px;
+      padding: 10px 5px;
+      justify-content: center;
+    }
+
+  }
+  @media (max-width: 374px){
+   
+    .yas_blog-menu-item{
+      min-width: 25px;
+      padding: 10px 1rem;
+    }
+
+  }
+  
+</style>
+
+<div class="yas-sliderimage-tab">
+<div class="yas-sliderimage-wrapp">
+      
+      <div class="swiper yas-sliderimage-slider">
+        {% assign position_slide_itr = 0 %}
+        {% assign position_slide = 0 %}
+        <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.settings.title != 'All' %}
+            {% for article in block.settings.blog.articles %}
+              {% if section.settings.article.title == article.title %}
+                {% assign position_slide = position_slide_itr %}
+              {% else %}
+                {% assign position_slide_itr = position_slide_itr | plus: 1 %}
+              {% endif %}
+              <div class="swiper-slide" data-name="{{ block.settings.title }}">
+                <a href="{{ article.url }}">
+               <!-- <div class="blog_slider-bread">Journal | {{ block.settings.title }}</div> -->
+                <div class="blog_slider-img">
+                  <img src="{{ article.image.src | img_url: 'x1' }}" alt="{{ article.title }}"
+                  srcset="{{ article.image.src | img_url: 'x500' }}"
+                  loading="lazy"
+                  >
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="blog_slider-info">
+                  <h5>{{ article.metafields.custom.description }}</h5>
+                  <h3>{{ article.title }}</h3>
+                  <span class="blog_slider-tag" style="background-color: {{ block.settings.background }};">{{ block.settings.title }}</span>
+                </div>
+                </a>
+              </div>
+            {% endfor %}
+          {% endif %}
+          {%- endfor -%}
+        </div>
+          <div class="swiper-pagination"></div>
+      </div>
+        <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+            <g id="Сгруппировать_519" data-name="Сгруппировать 519" transform="translate(709 1175) rotate(180)">
+              <circle id="Эллипс_14" data-name="Эллипс 14" cx="19.5" cy="19.5" r="19.5" transform="translate(670 1136)"/>
+              <path id="Контур_108" data-name="Контур 108" d="M2238.105-20683.766l9.036,9.25-9.036,9.252" transform="translate(-1552.444 21830.064)" fill="none" stroke="#fff" stroke-width="4"/>
+            </g>
+          </svg>
+
+        </div>
+        <div class="swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+            <g id="Сгруппировать_520" data-name="Сгруппировать 520" transform="translate(-670 -1136)">
+              <circle id="Эллипс_14" data-name="Эллипс 14" cx="19.5" cy="19.5" r="19.5" transform="translate(670 1136)"/>
+              <path id="Контур_108" data-name="Контур 108" d="M2238.105-20683.766l9.036,9.25-9.036,9.252" transform="translate(-1552.444 21830.064)" fill="none" stroke="#fff" stroke-width="4"/>
+            </g>
+          </svg>
+
+        </div>
+</div>
+</div>
+
+
+
+
+<div class="yas_blog-menu-w  ">
+  <div class="yas_blog-menu">
+    {%- for block in section.blocks -%}
+      <a href="#" data-tab="{{ block.settings.title }}" data-active="" class="yas_blog-menu-item" style="background-color: {{ block.settings.background }}; color: {{ block.settings.color }};">{{ block.settings.title }}</a>
+    {%- endfor -%}
+  </div>
+</div>
+<div class="masonry-wrapp">
+ 
+  {% for block in section.blocks %}
+
+    {% if block.settings.title == 'All' %}
+      <div class="masonry-tab-sec" data-name="{{ block.settings.title }}" data-tab="{% if forloop.first %}active{% else %}false{% endif %}">
+       
+        {% for blogAll in section.blocks %}
+          {% if blogAll.settings.title != 'All' %}
+            
+            {%- for article in blogAll.settings.blog.articles -%}
+            <article>
+               <a href="{{ article.url }}">
+               <img src="{{ article.image.src | img_url: '610x' }}" alt="{{ article.title }}">
+               <p>{{ article.metafields.custom.description }}</p>
+               <h3>{{ article.title }}</h3>
+               <span class="masonry-blog_tag" style="background-color: {{ blogAll.settings.blog.metafields.custom.color }};">{{ blogAll.settings.blog.title }}</span>
+               </a>
+            </article>
+            {%- endfor -%}
+          {% endif %}
+        {%- endfor -%}
+      </div>
+    {% else %}
+    <div class="masonry-tab-sec" data-name="{{ block.settings.title }}" data-tab="{% if forloop.first %}active{% else %}false{% endif %}">
+      {%- for article in block.settings.blog.articles -%}
+        <article>
+           <a href="{{ article.url }}">
+           <img src="{{ article.image.src | img_url: '610x' }}" alt="{{ article.title }}">
+           <p>{{ article.metafields.custom.description }}</p>
+           <h3>{{ article.title }}</h3>
+           <span class="masonry-blog_tag" style="background-color: {{ block.settings.blog.metafields.custom.color }};">{{ block.settings.blog.title }}</span>
+           </a>
+        </article>
+      {%- endfor -%}
+    </div>
+    {% endif %}
+  {%- endfor -%}
+</div>
+
+<script>
+   
+   $(function(){
+      const slidemass =  $('#shopify-section-{{section.id}} .swiper .swiper-slide');
+     
+     $('.yas_blog-menu-w a').on('click', function(e){
+         e.preventDefault();
+         swiper.removeAllSlides();
+         let filter = slidemass;
+       
+         let tab_name = $(this).attr('data-tab');
+         console.log(tab_name)
+         $('.masonry-tab-sec').attr('data-tab', 'false');
+         $('.masonry-tab-sec[data-name="'+tab_name+'"]').attr('data-tab', 'active');
+
+          
+          if(tab_name == 'All'){
+            $('.yas-sliderimage-slider .swiper-slide').css('display', '')
+          }else{
+            $('.yas-sliderimage-slider .swiper-slide').css('display', 'none')
+            $('.yas-sliderimage-slider .swiper-slide[data-name="'+tab_name+'"]').css('display', '')
+             filter = slidemass.filter(function(){
+                   return $(this).attr('data-name') == tab_name;
+                });
+          }
+          let index = $('.yas-sliderimage-slider .swiper-slide[data-name="'+tab_name+'"]').first().attr('data-swiper-slide-index');
+          let slidesCountFilter = $('.yas-sliderimage-slider .swiper .swiper-slide').length;
+
+          
+
+         
+          swiper.addSlide(1, filter);
+          swiper.slideToLoop(filter.length)
+          
+          
+          
+          return false;
+   
+     })
+
+     
+     
+     let slidesCount = $('#shopify-section-{{section.id}} .swiper .swiper-slide').length;
+
+
+     
+     
+     var swiper = new Swiper('#shopify-section-{{section.id}} .swiper', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: '1',
+        loopedSlides: slidesCount,
+        watchSlidesVisibility: true,
+        spaceBetween: 15,
+        observer: true,
+        initialSlide:{{ position_slide }},
+        
+        pagination: {
+          el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: '#shopify-section-{{section.id}} .swiper-button-next',
+          prevEl: '#shopify-section-{{section.id}} .swiper-button-prev',
+        }
+      });
+
+   
+     
+   })
+</script>
+
+
+{% schema %}
+  {
+    "name": "journal tab blog",
+    "settings": [
+      {
+        "type": "article",
+        "id": "article",
+        "label": "article highlighted"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "blog",
+        "name": "select blog",
+        "settings": [
+           {
+            "type": "text",
+            "id": "title",
+            "label": "Title menu block"
+          },
+          {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blog"
+          },
+          {
+            "type": "color",
+            "id": "background",
+            "label": "background color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "color",
+            "default": "#fff"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "journal tab blog"
+      }
+    ]
+  }
+{% endschema %}

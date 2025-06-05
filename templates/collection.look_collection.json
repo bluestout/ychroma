@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "yas_youtube_collection_7cMt6U": {
+      "type": "yas-youtube-collection",
+      "disabled": true,
+      "settings": {
+        "title": "<p><strong>title <\/strong>test test<\/p>",
+        "text": "test test  test",
+        "url": "https:\/\/youtu.be\/HfdIAJeBV2c",
+        "title_text": "<p>test test<\/p>",
+        "text_index": "test test test"
+      }
+    },
+    "546e0474-7de7-4f95-86d2-6119b2a3d116": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "5e161a4c-6c73-41b0-90a4-bf243d6e1d18": {
+      "type": "yas-banner-collection-look",
+      "settings": {
+        "title": "{{ collection.title }}"
+      }
+    },
+    "main-look": {
+      "type": "yas-main-collection-look",
+      "settings": {}
+    },
+    "9e395496-eab5-42cc-a76e-edcd9d352b03": {
+      "type": "soldout-popup-collection",
+      "settings": {}
+    }
+  },
+  "order": [
+    "yas_youtube_collection_7cMt6U",
+    "546e0474-7de7-4f95-86d2-6119b2a3d116",
+    "5e161a4c-6c73-41b0-90a4-bf243d6e1d18",
+    "main-look",
+    "9e395496-eab5-42cc-a76e-edcd9d352b03"
+  ]
+}

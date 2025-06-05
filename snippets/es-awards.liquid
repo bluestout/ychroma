@@ -1,0 +1,70 @@
+<style>
+  #shopify-section-{{ section.id }} .es-awards {
+    height: max-content;
+    max-height: max-content;
+    --padding-top: {{ block.settings.padding_top }}px;
+    --padding-bottom: {{ block.settings.padding_bottom }}px;
+    --background-color: {{ block.settings.background_color }};
+  }
+
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .es-awards {
+      --padding-top: {{ block.settings.padding_top | times: 0.5 }}px;
+      --padding-bottom: {{ block.settings.padding_bottom | times: 0.5 }}px;
+    }
+  }
+</style>
+<div class="container">
+  <div class="row">
+    {%- if block.settings.image1 != blank -%}
+      <div class="image">
+        <img
+          src="{{ block.settings.image1 | img_url: 'master' }}"
+          width="{{ block.settings.image1.width }}"
+          height="{{ block.settings.image1.height }}"
+          alt="{{ block.settings.image1.alt }}"
+        >
+      </div>
+    {%- endif -%}
+    {%- if block.settings.image2 != blank -%}
+      <div class="image">
+        <img
+          src="{{ block.settings.image2 | img_url: 'master' }}"
+          width="{{ block.settings.image2.width }}"
+          height="{{ block.settings.image2.height }}"
+          alt="{{ block.settings.image2.alt }}"
+        >
+      </div>
+    {%- endif -%}
+    {%- if block.settings.image3 != blank -%}
+      <div class="image">
+        <img
+          src="{{ block.settings.image3 | img_url: 'master' }}"
+          width="{{ block.settings.image3.width }}"
+          height="{{ block.settings.image3.height }}"
+          alt="{{ block.settings.image3.alt }}"
+        >
+      </div>
+    {%- endif -%}
+    {%- if block.settings.image4 != blank -%}
+      <div class="image">
+        <img
+          src="{{ block.settings.image4 | img_url: 'master' }}"
+          width="{{ block.settings.image4.width }}"
+          height="{{ block.settings.image4.height }}"
+          alt="{{ block.settings.image4.alt }}"
+        >
+      </div>
+    {%- endif -%}
+    {%- if block.settings.image5 != blank -%}
+      <div class="image">
+        <img
+          src="{{ block.settings.image5 | img_url: 'master' }}"
+          width="{{ block.settings.image5.width }}"
+          height="{{ block.settings.image5.height }}"
+          alt="{{ block.settings.image5.alt }}"
+        >
+      </div>
+    {%- endif -%}
+  </div>
+</div>

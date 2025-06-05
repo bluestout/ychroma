@@ -1,0 +1,1278 @@
+{%- style -%}
+  .custom-filter-section {
+    padding: 5px 0;
+    /* position: relative; */
+  }
+
+  /* Add loading indicator styles */
+  .loading-filters .custom-collection-grid__grid {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .filter-loading-indicator {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .loading-filters .filter-loading-indicator {
+    display: block;
+  }
+
+  .filter-loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .custom-filter-section__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(90% - -15px);
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .filter-trigger-button__button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .filter-trigger-container-wrapper {
+    max-width: calc(90% - -35px);
+    margin: 0 auto;
+    padding: 0px 15px;
+  }
+
+  .filter-trigger-button__button-text {
+    margin-right: 8px;
+  }
+
+  .filter-trigger-button__icon {
+    width: 10px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .filter-trigger-button__filter-item-checkbox,
+  .random-filter-section__filter-item-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .filter-trigger-button__filter-container {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    left: 0px;
+    top: 31px;
+    border-top: 1px solid black;
+    z-index: 999;
+  }
+
+  .filter-trigger-button__filter-item {
+    margin-bottom: 5px;
+  }
+  .filter-trigger-button__filter-item-label {
+    cursor: pointer;
+  }
+
+  .random-filter-section__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .random-filter-section__filter-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .random-filter-section__filter-item-label {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-bottom: 0px;
+  }
+
+  .random-filter-section__toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-bottom: 0px;
+  }
+
+  .random-filter-section__toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px; /* Make it rounded */
+  }
+
+  .random-filter-section__toggle-slider:before {
+    position: absolute;
+    content: '';
+    height: 16px; /* Size of the toggle circle */
+    width: 16px;
+    left: 2px; /* Position of the circle */
+    bottom: 2px;
+    background-color: black;
+    transition: 0.4s;
+    border-radius: 50%; /* Make the circle round */
+  }
+
+  .random-filter-section__filter-item-checkbox:checked
+    + .random-filter-section__toggle-switch
+    .random-filter-section__toggle-slider:before {
+    transform: translateX(14px); /* Move the circle to the right when checked */
+  }
+
+  .filter-trigger-button__button[aria-expanded='true'] svg.filter-trigger-button__icon {
+    transform: rotate(180deg);
+  }
+
+  .filter-trigger-inner-child-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 1px;
+  }
+
+  /* SORTING STYLING */
+  .single-facets-column h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .single-facets-column ul {
+    padding-left: 0px;
+    list-style-type: none;
+  }
+
+  .single-facets-column ul li {
+    text-transform: uppercase;
+    margin: 7px 0px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+  }
+
+  .single-facets-column ul li:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .single-facets-column ul li label:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .single-facets-column ul li label {
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  /* Add styling for selected sort option */
+  .single-facets-column ul li input[name='sort_by']:checked + label {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+  }
+
+  .single-facets-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ACTIVE FILTERS STYLING */
+  .single-item-active-filter {
+    display: flex;
+    align-items: center;
+    background: #dbdbdb;
+    padding: 0px 10px;
+  }
+
+  .svg-wrapper {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .single-item-active-filter span {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 10px;
+  }
+
+  .active-filters-items {
+    display: flex;
+    margin-right: 10px;
+    color: black;
+  }
+
+  .active-filters-items:hover {
+    color: black;
+  }
+
+  .active-filter-row-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .active-filter-row-wrapper h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+  }
+
+  /* Hide clear button by default, JS will show it when needed */
+  .filter-drawer .clear-button {
+    display: none;
+  }
+
+  /* Create empty state for active filters */
+  .active-filter-row-wrapper:empty:after {
+    content: 'No active filters';
+    font-size: 12px;
+    color: #777;
+  }
+
+  .single-facets-column ul {
+    max-height: 207px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .filter-trigger-options-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+  }
+
+  .filter_div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .filter_div2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .filter_div3 {
+    grid-area: 1 / 3 / 2 / 6;
+  }
+  .filter_div4 {
+    grid-area: 1 / 6 / 2 / 7;
+  }
+
+  .size_facet-column {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .single_facet_div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .single_facet_div2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .single_facet_div3 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .single_facet_div4 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .single_facet_div5 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .single_facet_div6 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  .single_facet_div7 {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+  .single_facet_div8 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .single_facet_div9 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .single_facet_div10 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .single_facet_div11 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .single_facet_div12 {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+  .single_facet_div13 {
+    grid-area: 6 / 2 / 7 / 3;
+  }
+  .single_facet_div14 {
+    grid-area: 7 / 2 / 8 / 3;
+  }
+  .single_facet_div15 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .single_facet_div16 {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  .single_facet_div17 {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  .single_facet_div18 {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+  .single_facet_div19 {
+    grid-area: 5 / 3 / 6 / 4;
+  }
+  .single_facet_div20 {
+    grid-area: 6 / 3 / 7 / 4;
+  }
+  .single_facet_div21 {
+    grid-area: 7 / 3 / 8 / 4;
+  }
+  .single_facet_div22 {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+  .single_facet_div23 {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+  .single_facet_div24 {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+  .single_facet_div25 {
+    grid-area: 4 / 4 / 5 / 5;
+  }
+  .single_facet_div26 {
+    grid-area: 5 / 4 / 6 / 5;
+  }
+  .single_facet_div27 {
+    grid-area: 6 / 4 / 7 / 5;
+  }
+  .single_facet_div28 {
+    grid-area: 7 / 4 / 8 / 5;
+  }
+  .single_facet_div29 {
+    grid-area: 1 / 5 / 2 / 6;
+  }
+  .single_facet_div30 {
+    grid-area: 2 / 5 / 3 / 6;
+  }
+  .single_facet_div31 {
+    grid-area: 3 / 5 / 4 / 6;
+  }
+  .single_facet_div32 {
+    grid-area: 4 / 5 / 5 / 6;
+  }
+  .single_facet_div33 {
+    grid-area: 5 / 5 / 6 / 6;
+  }
+  .single_facet_div34 {
+    grid-area: 6 / 5 / 7 / 6;
+  }
+  .single_facet_div35 {
+    grid-area: 7 / 5 / 8 / 6;
+  }
+
+  .single-facets-column ul li input {
+    display: none;
+  }
+
+  /* Add styles for active filters */
+  .single-facets-column ul li.active {
+    font-weight: bold;
+  }
+
+  .single-facets-column ul li.active label {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media screen and (max-width: 769px) {
+    .custom-filter-section__container {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    .medium-up-hide {
+      display: none !important;
+    }
+
+    .custom-filter-section {
+      padding-bottom: 8px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .large-up-hide {
+      display: none !important;
+    }
+    .custom-filter-section {
+      position: relative;
+    }
+  }
+
+  .filter-drawer .filter-option.active label {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+{%- endstyle -%}
+
+<div class="custom-filter-section">
+  <div class="custom-filter-section__container">
+    <div class="filter-trigger-button">
+      <div class="filter-trigger-button__container">
+        <button class="filter-trigger-button__button" aria-haspopup="true" aria-expanded="false">
+          {%- if collection.filters != empty -%}
+            <span class="filter-trigger-button__button-text">Filter & Sort</span>
+          {%- else -%}
+            <span class="filter-trigger-button__button-text">Sort</span>
+          {%- endif -%}
+          <svg
+            class="filter-trigger-button__icon medium-up-hide"
+            viewBox="0 0 10 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="filter-trigger-button__filter-container medium-up-hide">
+          <div class="filter-trigger-container-wrapper">
+            <div class="filter-trigger-inner-child-wrapper">
+              <div class="filter-trigger-options-container">
+                <div class="single-facets-column filter_div1" id="sort-by-column">
+                  <h2>Sort By</h2>
+                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                  <ul>
+                    {%- for option in collection.sort_options -%}
+                      <li>
+                        <input
+                          type="radio"
+                          id="sort-by-{{ option.value }}"
+                          name="sort_by"
+                          value="{{ option.value }}"
+                          {% if option.value == sort_by %}
+                            checked
+                          {% endif %}
+                          data-url="{{ collection.url }}?sort_by={{ option.value }}"
+                        >
+                        <label for="sort-by-{{ option.value }}">{{ option.name | escape }}</label>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+                {%- for filter in collection.filters -%}
+                  <div class="single-facets-column filter_div{{ forloop.index | plus: 1 }}">
+                    <h2>{{ filter.label | escape }}</h2>
+                    <ul
+                      {% if filter.label == 'Size' %}
+                        class="size_facet-column"
+                      {% endif %}
+                    >
+                      {%- for value in filter.values -%}
+                        <li
+                          {% if filter.label == 'Size' %}
+                            class="single_facet_div{{ forloop.index }}"
+                          {% endif %}
+                        >
+                          <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}">
+                            <input
+                              type="checkbox"
+                              id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                              name="{{ value.param_name }}"
+                              value="{{ value.value }}"
+                              {% if value.active %}
+                                checked
+                              {% endif %}
+                            >
+                            {{ value.label | escape }}
+                          </label>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endfor -%}
+              </div>
+              <div class="active-filter-row-wrapper" style="display: none;">
+                <h2>Active Filters</h2>
+                {%- for filter in collection.filters -%}
+                  {%- for value in filter.active_values -%}
+                    <a href="{{ value.url_to_remove }}" class="active-filters-items">
+                      <div class="single-item-active-filter">
+                        <div class="svg-wrapper">
+                          {%- render 'icon-close' -%}
+                        </div>
+                        <span>{{ value.label | escape }}</span>
+                      </div>
+                    </a>
+                  {%- endfor -%}
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-trigger-drawer-container large-up-hide">
+          <div class="drawer-overlay"></div>
+          {%- render 'custom-filter-drawer', collection: collection -%}
+        </div>
+      </div>
+    </div>
+    <div class="random-filter-section">
+      <div class="random-filter-section__container">
+        <div class="random-filter-section__filter-item">
+          <label for="random-filter-toggle" class="random-filter-section__filter-item-label">Surprise</label>
+          <input type="checkbox" id="random-filter-toggle" class="random-filter-section__filter-item-checkbox">
+          <label for="random-filter-toggle" class="random-filter-section__toggle-switch">
+            <span class="random-filter-section__toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="filter-loading-indicator">
+  <div class="filter-loading-spinner"></div>
+  <div>Updating products...</div>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    // --- DOM Element References ---
+    const randomFilterToggle = document.getElementById('random-filter-toggle');
+    const filterButton = document.querySelector('.filter-trigger-button__button');
+    const filterContainer = document.querySelector('.filter-trigger-button__filter-container');
+    const filterDrawer = document.querySelector('.filter-drawer');
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const closeDrawerButton = document.querySelector('.filter-drawer .close-button');
+    const applyButton = document.querySelector('.filter-drawer .apply-button');
+    const clearButton = document.querySelector('.filter-drawer .clear-button');
+
+    // --- Constants ---
+    const DEBOUNCE_DELAY = 500;
+    let debounceTimer;
+
+    // --- 1. RANDOM BUTTON FUNCTIONALITY ---
+    if (randomFilterToggle) {
+      // Store original classes on page load
+      document.querySelectorAll('.custom-collection-grid__grid').forEach((grid) => {
+        Array.from(grid.querySelectorAll('.custom-collection-grid__item')).forEach((item) => {
+          const divClass = Array.from(item.classList).find((className) => className.startsWith('div'));
+          if (divClass) {
+            item.dataset.originalClass = divClass;
+          }
+        });
+      });
+
+      // Handle random toggle changes
+      randomFilterToggle.addEventListener('change', function () {
+        const isRandom = this.checked;
+        sessionStorage.setItem('randomFilterEnabled', isRandom);
+        document.querySelectorAll('.custom-collection-grid__grid').forEach((grid) => {
+          if (isRandom) {
+            applyRandomSort(grid);
+          } else {
+            restoreOriginalOrder(grid);
+          }
+        });
+      });
+
+      // Initialize from session storage
+      const randomFilterEnabled = sessionStorage.getItem('randomFilterEnabled') === 'true';
+      if (randomFilterEnabled) {
+        randomFilterToggle.checked = true;
+        randomFilterToggle.dispatchEvent(new Event('change'));
+      }
+    }
+
+    function applyRandomSort(gridElement) {
+      // First, save all items with their original classes and positions
+      const allItems = Array.from(gridElement.querySelectorAll('.custom-collection-grid__item'));
+      
+      // Save original classes for all items if not already saved
+      allItems.forEach(item => {
+        if (!item.dataset.originalClass) {
+          const divClass = Array.from(item.classList).find(className => className.startsWith('div'));
+          if (divClass) item.dataset.originalClass = divClass;
+        }
+      });
+      
+      // Get all regular items (excluding div5 and div16)
+      const regularItems = allItems.filter(item => {
+        const divClasses = Array.from(item.classList).filter(className => className.startsWith('div'));
+        return !divClasses.includes('div5') && !divClasses.includes('div16');
+      });
+      
+      if (regularItems.length === 0) return;
+      
+      // Create an array of div classes from the regular items
+      const divClasses = regularItems.map(item => {
+        return Array.from(item.classList).find(className => className.startsWith('div'));
+      });
+      
+      // Shuffle the div classes
+      for (let i = divClasses.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [divClasses[i], divClasses[j]] = [divClasses[j], divClasses[i]];
+      }
+      
+      // Apply shuffled classes to regular items
+      regularItems.forEach((item, index) => {
+        // Remove all div classes
+        Array.from(item.classList)
+          .filter(className => className.startsWith('div'))
+          .forEach(className => item.classList.remove(className));
+        
+        // Add shuffled class
+        item.classList.add(divClasses[index]);
+      });
+    }
+
+    function restoreOriginalOrder(gridElement) {
+      const items = Array.from(gridElement.querySelectorAll('.custom-collection-grid__item'));
+      items.forEach((item) => {
+        Array.from(item.classList)
+          .filter((className) => className.startsWith('div'))
+          .forEach((className) => item.classList.remove(className));
+        if (item.dataset.originalClass) {
+          item.classList.add(item.dataset.originalClass);
+        }
+      });
+    }
+
+    // --- 2. FILTER BUTTON & DRAWER FUNCTIONALITY ---
+    if (filterButton) {
+      filterButton.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+
+        if (window.innerWidth >= 990) {
+          if (filterContainer) filterContainer.style.display = expanded ? 'none' : 'block';
+        } else {
+          if (filterDrawer) filterDrawer.setAttribute('data-open', !expanded ? 'true' : 'false');
+          if (drawerOverlay) drawerOverlay.setAttribute('data-open', !expanded ? 'true' : 'false');
+          document.body.style.overflow = !expanded ? 'hidden' : '';
+        }
+      });
+    }
+
+    // Handle window resize for responsive behavior
+    window.addEventListener('resize', function () {
+      if (!filterButton) return;
+
+      const expanded = filterButton.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        if (window.innerWidth >= 990) {
+          // Switch to desktop view
+          if (filterContainer) filterContainer.style.display = 'block';
+          if (filterDrawer) filterDrawer.setAttribute('data-open', 'false');
+          if (drawerOverlay) drawerOverlay.setAttribute('data-open', 'false');
+          document.body.style.overflow = '';
+        } else {
+          // Switch to mobile view
+          if (filterContainer) filterContainer.style.display = 'none';
+          if (filterDrawer) filterDrawer.setAttribute('data-open', 'true');
+          if (drawerOverlay) drawerOverlay.setAttribute('data-open', 'true');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    });
+
+    // Close drawer handlers
+    if (closeDrawerButton) {
+      closeDrawerButton.addEventListener('click', closeDrawer);
+    }
+
+    if (drawerOverlay) {
+      drawerOverlay.addEventListener('click', closeDrawer);
+    }
+
+    function closeDrawer() {
+      if (filterDrawer) filterDrawer.setAttribute('data-open', 'false');
+      if (drawerOverlay) drawerOverlay.setAttribute('data-open', 'false');
+      if (filterButton) filterButton.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    // --- 3. FILTER FUNCTIONALITY ---
+
+    // Apply button handler (mobile)
+    if (applyButton) {
+      applyButton.addEventListener('click', function () {
+        closeDrawer();
+
+        // Apply filters and update content
+        const params = getFilterData();
+        const baseUrl = '{{ collection.url }}';
+        const newUrl = `${baseUrl}?${params}`;
+        history.pushState({ params }, '', newUrl);
+        fetchFilteredContent(newUrl + `&timestamp=${Date.now()}`);
+      });
+    }
+
+    // Clear button handler
+    if (clearButton) {
+      clearButton.addEventListener('click', function () {
+        // Clear all checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+          if (checkbox.checked) {
+            checkbox.checked = false;
+
+            // Update active class on parent li
+            const parentLi = checkbox.closest('li');
+            if (parentLi) {
+              parentLi.classList.remove('active');
+            }
+          }
+        });
+
+        // Update URL and fetch content
+        const params = getFilterData();
+        const baseUrl = '{{ collection.url }}';
+        const newUrl = `${baseUrl}?${params}`;
+        history.pushState({ params }, '', newUrl);
+        fetchFilteredContent(newUrl + `&_=${Date.now()}`);
+
+        // Update clear button visibility
+        updateMobileClearButtonVisibility();
+      });
+    }
+
+    // Get filter data from form inputs
+    function getFilterData() {
+      const formData = new FormData();
+
+      // Add checked filters
+      document.querySelectorAll('input[type="checkbox"]:checked').forEach((input) => {
+        if (input.name) {
+          formData.append(input.name, input.value);
+        }
+      });
+
+      // Add sort selection
+      const checkedSortRadio = document.querySelector('input[name="sort_by"]:checked');
+      if (checkedSortRadio) {
+        formData.append('sort_by', checkedSortRadio.value);
+      } else {
+        formData.append('sort_by', '{{ collection.default_sort_by }}');
+      }
+
+      return new URLSearchParams(formData).toString();
+    }
+
+    // Sync filter states between desktop and mobile
+    function syncFilters(changedInput) {
+      const name = changedInput.name;
+      const value = changedInput.value;
+      const checked = changedInput.checked;
+      const type = changedInput.type;
+
+      // Find counterpart in the other view (desktop/mobile)
+      const isDesktop = changedInput.closest('.filter-trigger-button__filter-container');
+      const counterpartSelector = isDesktop
+        ? `.filter-drawer input[name="${name}"][value="${value}"]`
+        : `.filter-trigger-button__filter-container input[name="${name}"][value="${value}"]`;
+      const counterpart = document.querySelector(counterpartSelector);
+
+      if (counterpart && counterpart !== changedInput) {
+        counterpart.checked = checked;
+
+        // Update active class on parent li
+        if (type === 'checkbox') {
+          const parentLi = counterpart.closest('li');
+          if (parentLi) {
+            if (checked) {
+              parentLi.classList.add('active');
+            } else {
+              parentLi.classList.remove('active');
+            }
+          }
+        }
+      }
+
+      // For radio buttons, uncheck others
+      if (type === 'radio') {
+        const selector = isDesktop
+          ? `.filter-drawer input[type="radio"][name="${name}"]`
+          : `.filter-trigger-button__filter-container input[type="radio"][name="${name}"]`;
+
+        document.querySelectorAll(selector).forEach((radio) => {
+          if (radio !== counterpart) radio.checked = false;
+        });
+      }
+
+      // Update clear button visibility for mobile
+      updateMobileClearButtonVisibility();
+    }
+
+    // Update mobile clear button visibility
+    function updateMobileClearButtonVisibility() {
+      if (!clearButton) return;
+
+      const hasCheckedFilters = document.querySelectorAll('.filter-drawer input[type="checkbox"]:checked').length > 0;
+      clearButton.style.display = hasCheckedFilters ? 'flex' : 'none';
+    }
+
+    // --- 4. FILTER CHANGE HANDLERS ---
+
+    // Desktop filter change handler
+    function handleDesktopFilterChange(event) {
+      const targetInput = event.target;
+
+      // Sync to mobile
+      syncFilters(targetInput);
+
+      // Update active class
+      if (targetInput.type === 'checkbox') {
+        const parentLi = targetInput.closest('li');
+        if (parentLi) {
+          if (targetInput.checked) {
+            parentLi.classList.add('active');
+          } else {
+            parentLi.classList.remove('active');
+          }
+        }
+      }
+
+      // Close filter dropdown after a delay
+      setTimeout(() => {
+        if (window.innerWidth >= 990 && filterButton && filterContainer) {
+          filterButton.setAttribute('aria-expanded', 'false');
+          filterContainer.style.display = 'none';
+        }
+      }, 300);
+
+      // Debounce the fetch request
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        const params = getFilterData();
+        const baseUrl = '{{ collection.url }}';
+        const newUrl = `${baseUrl}?${params}`;
+
+        history.pushState({ params }, '', newUrl);
+        fetchFilteredContent(newUrl + `&timestamp=${Date.now()}`);
+      }, DEBOUNCE_DELAY);
+    }
+
+    // Sort change handler
+    function handleSortChange(event) {
+      const sortValue = event.target.value;
+
+      // Uncheck all other sort radios
+      document.querySelectorAll('input[name="sort_by"]').forEach((radio) => {
+        radio.checked = false;
+
+        // Remove active class from parent li
+        const parentLi = radio.closest('li');
+        if (parentLi) {
+          parentLi.classList.remove('active');
+        }
+      });
+
+      // Check the selected radio
+      event.target.checked = true;
+
+      // Add active class to parent li
+      const parentLi = event.target.closest('li');
+      if (parentLi) {
+        parentLi.classList.add('active');
+      }
+
+      // Sync to the other view (desktop/mobile)
+      const isDesktop = event.target.closest('.filter-trigger-button__filter-container');
+      const counterpartSelector = isDesktop
+        ? `.filter-drawer input[name="sort_by"][value="${sortValue}"]`
+        : `.filter-trigger-button__filter-container input[name="sort_by"][value="${sortValue}"]`;
+
+      const counterpart = document.querySelector(counterpartSelector);
+      if (counterpart) {
+        counterpart.checked = true;
+
+        // Add active class to counterpart's parent li
+        const counterpartLi = counterpart.closest('li');
+        if (counterpartLi) {
+          counterpartLi.classList.add('active');
+        }
+      }
+
+      // Close dropdown on desktop
+      setTimeout(() => {
+        if (window.innerWidth >= 990 && filterButton && filterContainer) {
+          filterButton.setAttribute('aria-expanded', 'false');
+          filterContainer.style.display = 'none';
+        }
+      }, 300);
+
+      // Update URL and fetch content
+      const params = getFilterData();
+      const baseUrl = '{{ collection.url }}';
+      const newUrl = `${baseUrl}?${params}`;
+
+      history.pushState({ params }, '', newUrl);
+      fetchFilteredContent(newUrl + `&timestamp=${Date.now()}`);
+    }
+
+    // Active filter click handler
+    function handleActiveFilterClick(event) {
+      event.preventDefault();
+      const url = event.currentTarget.href;
+      if (url) {
+        history.pushState({}, '', url);
+        fetchFilteredContent(url + (url.includes('?') ? '&' : '?') + `timestamp=${Date.now()}`);
+      }
+    }
+
+    // --- 5. CONTENT FETCHING ---
+
+    function fetchFilteredContent(url) {
+      document.body.classList.add('loading-filters');
+
+      // Find all collection grid sections
+      const collectionGridSections = document.querySelectorAll('.custom-collection-grid');
+      if (collectionGridSections.length === 0) {
+        document.body.classList.remove('loading-filters');
+        return;
+      }
+
+      // Create fetch promises array
+      const fetchPromises = [];
+
+      // Add filter section fetch
+      let filterSectionUrl = new URL(url, window.location.origin);
+      filterSectionUrl.searchParams.append('section_id', 'custom-filter-section');
+
+      fetchPromises.push(
+        fetch(filterSectionUrl.toString())
+          .then((response) => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+          })
+          .then((html) => {
+            updateFilterUI(html);
+            updateMobileClearButtonVisibility();
+            return true;
+          })
+      );
+
+      // Add fetch for each collection grid section
+      collectionGridSections.forEach((gridSection) => {
+        const sectionId = gridSection.id.replace('custom-collection-grid-', '');
+        if (!sectionId) return;
+
+        let sectionUrl = new URL(url, window.location.origin);
+        sectionUrl.searchParams.append('section_id', sectionId);
+
+        fetchPromises.push(
+          fetch(sectionUrl.toString())
+            .then((response) => {
+              if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+              return response.text();
+            })
+            .then((html) => {
+              updateGridSection(gridSection, html);
+              return true;
+            })
+        );
+      });
+
+      // Wait for all fetches to complete
+      Promise.all(fetchPromises)
+        .catch((error) => {
+          console.error('Error updating sections:', error);
+        })
+        .finally(() => {
+          document.body.classList.remove('loading-filters');
+        });
+    }
+
+    // Update a single grid section
+    function updateGridSection(gridSection, html) {
+      try {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const newGrid = doc.querySelector('.custom-collection-grid__grid');
+
+        if (!newGrid) return;
+
+        const currentGrid = gridSection.querySelector('.custom-collection-grid__grid');
+        if (currentGrid) {
+          // Preserve div5 and div18 elements if they exist
+          const div5Element = currentGrid.querySelector('.custom-collection-grid__item.div5');
+          const div18Element = currentGrid.querySelector('.custom-collection-grid__item.div18');
+          
+          // Update grid content
+          currentGrid.innerHTML = newGrid.innerHTML;
+          
+          // Re-apply random sort if needed
+          const randomToggle = document.getElementById('random-filter-toggle');
+          if (randomToggle && randomToggle.checked) {
+            applyRandomSort(currentGrid);
+          }
+        }
+      } catch (error) {
+        console.error('Error updating grid section:', error);
+      }
+    }
+
+    // Update filter UI
+    function updateFilterUI(html) {
+      try {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        // Update active filters
+        const newActiveFilters = doc.querySelector('.active-filter-row-wrapper');
+        const currentActiveFilters = document.querySelector('.active-filter-row-wrapper');
+        const hasActualFilters = doc.querySelectorAll('.active-filters-items').length > 0;
+
+        if (hasActualFilters) {
+          if (currentActiveFilters) {
+            currentActiveFilters.style.display = 'flex';
+            currentActiveFilters.innerHTML = newActiveFilters.innerHTML;
+          }
+        } else if (currentActiveFilters) {
+          currentActiveFilters.style.display = 'none';
+        }
+
+        // Update mobile active filters
+        const mobileAppliedFilterWrapper = document.querySelector('.filter-drawer .applied-filter-wrapper');
+        if (mobileAppliedFilterWrapper) {
+          const newMobileAppliedFilterWrapper = doc.querySelector('.filter-drawer .applied-filter-wrapper');
+          mobileAppliedFilterWrapper.style.display = hasActualFilters ? 'flex' : 'none';
+          if (hasActualFilters && newMobileAppliedFilterWrapper) {
+            mobileAppliedFilterWrapper.innerHTML = newMobileAppliedFilterWrapper.innerHTML;
+          }
+        }
+
+        // Save current sort selection
+        let currentSortValue = '';
+        const currentSortInput = document.querySelector('input[name="sort_by"]:checked');
+        if (currentSortInput) {
+          currentSortValue = currentSortInput.value;
+        }
+
+        // Update filter checkbox states
+        updateFilterStates(doc, '.filter-trigger-button__filter-container', currentSortValue);
+        updateFilterStates(doc, '.filter-drawer', currentSortValue);
+
+        // Re-attach event listeners
+        attachEventListeners();
+
+        // Update sort active classes
+        updateSortActiveClasses();
+      } catch (error) {
+        console.error('Error updating filter UI:', error);
+      }
+    }
+
+    // Helper to update filter states
+    function updateFilterStates(doc, containerSelector, currentSortValue) {
+      const newInputs = doc.querySelectorAll(`${containerSelector} input`);
+
+      newInputs.forEach((newInput) => {
+        const selector = `${containerSelector} input[name="${newInput.name}"][value="${newInput.value}"]`;
+        const currentInput = document.querySelector(selector);
+
+        if (currentInput) {
+          // For sort radios, only update if we don't have a current sort selection
+          if (newInput.name === 'sort_by' && currentSortValue) {
+            // Don't update the checked state
+          } else {
+            currentInput.checked = newInput.checked;
+          }
+
+          // Update active class for checkboxes
+          if (newInput.type === 'checkbox') {
+            const parentLi = currentInput.closest('li');
+            if (parentLi) {
+              if (currentInput.checked) {
+                parentLi.classList.add('active');
+              } else {
+                parentLi.classList.remove('active');
+              }
+            }
+          }
+        }
+      });
+
+      // Re-apply the sort selection if we had one
+      if (currentSortValue) {
+        const sortInput = document.querySelector(
+          `${containerSelector} input[name="sort_by"][value="${currentSortValue}"]`
+        );
+        if (sortInput) {
+          sortInput.checked = true;
+        }
+      }
+    }
+
+    // Update sort active classes
+    function updateSortActiveClasses() {
+      const currentSortInput = document.querySelector('input[name="sort_by"]:checked');
+      if (!currentSortInput) return;
+
+      const currentSortValue = currentSortInput.value;
+
+      // Update desktop sort active classes
+      document.querySelectorAll('.filter-trigger-button__filter-container input[name="sort_by"]').forEach((input) => {
+        const parentLi = input.closest('li');
+        if (parentLi) {
+          if (input.value === currentSortValue) {
+            parentLi.classList.add('active');
+          } else {
+            parentLi.classList.remove('active');
+          }
+        }
+      });
+
+      // Update mobile sort active classes
+      document.querySelectorAll('.filter-drawer input[name="sort_by"]').forEach((input) => {
+        const parentLi = input.closest('.filter-option');
+        if (parentLi) {
+          if (input.value === currentSortValue) {
+            parentLi.classList.add('active');
+          } else {
+            parentLi.classList.remove('active');
+          }
+        }
+      });
+    }
+
+    // --- 6. EVENT LISTENERS ---
+
+    // Attach all event listeners
+    function attachEventListeners() {
+      removeEventListeners();
+
+      document.querySelectorAll('.filter-trigger-button__filter-container input[type="checkbox"]').forEach((input) => {
+        input.addEventListener('change', handleDesktopFilterChange);
+      });
+
+      document.querySelectorAll('input[name="sort_by"]').forEach((radio) => {
+        radio.addEventListener('change', handleSortChange);
+      });
+
+      document.querySelectorAll('.active-filters-items').forEach((link) => {
+        link.addEventListener('click', handleActiveFilterClick);
+      });
+
+      document.querySelectorAll('.filter-drawer input[type="checkbox"]').forEach((input) => {
+        input.addEventListener('change', function (event) {
+          event.stopPropagation();
+          syncFilters(input);
+        });
+      });
+      initializeActiveClasses();
+    }
+
+    // Remove event listeners to prevent duplicates
+    function removeEventListeners() {
+      document.querySelectorAll('.filter-trigger-button__filter-container input[type="checkbox"]').forEach((input) => {
+        input.removeEventListener('change', handleDesktopFilterChange);
+      });
+
+      document.querySelectorAll('input[name="sort_by"]').forEach((radio) => {
+        radio.removeEventListener('change', handleSortChange);
+      });
+
+      document.querySelectorAll('.active-filters-items').forEach((link) => {
+        link.removeEventListener('click', handleActiveFilterClick);
+      });
+    }
+
+    // Initialize active classes on page load
+    function initializeActiveClasses() {
+      document
+        .querySelectorAll('.filter-trigger-button__filter-container input[type="checkbox"]:checked')
+        .forEach((input) => {
+          const parentLi = input.closest('li');
+          if (parentLi) {
+            parentLi.classList.add('active');
+          }
+        });
+      const activeFilters = document.querySelectorAll('.active-filters-items');
+      const activeFiltersSection = document.querySelector('.active-filter-row-wrapper');
+
+      if (activeFiltersSection) {
+        activeFiltersSection.style.display = activeFilters.length > 0 ? 'flex' : 'none';
+      }
+      updateMobileClearButtonVisibility();
+      updateSortActiveClasses();
+    }
+
+    attachEventListeners();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Filter Bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Made for only custom collection grid"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Filter Bar"
+    }
+  ]
+}
+{% endschema %}

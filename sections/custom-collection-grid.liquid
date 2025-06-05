@@ -1,0 +1,793 @@
+{%- style -%}
+  #display-collection-grid-{{section.id}} {
+    height: 100px;
+  }
+  
+  .custom-collection-grid__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+
+  .custom-collection-grid__item-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .custom-collection-grid__item-image .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .custom-collection-grid__item-image:hover .hover-image {
+    opacity: 1;
+  }
+
+  /* Disable hover effect for large blocks */
+  .div5 .custom-collection-grid__item-image:hover .hover-image,
+  .div16 .custom-collection-grid__item-image:hover .hover-image {
+    display:none;
+  }
+
+  .div5 .custom-collection-grid__item-image:hover .main-image,
+  .div16 .custom-collection-grid__item-image:hover .main-image {
+    opacity: 1;
+  }
+
+  
+  #custom-collection-grid-{{ section.id }} .custom-collection-grid__grid {
+    display: grid;
+    gap: {{ section.settings.grid_gap }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+
+  @media screen and (min-width: 769px) {
+    #custom-collection-grid-{{ section.id }} .custom-collection-grid__grid {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #custom-collection-grid-{{ section.id }} .custom-collection-grid__grid {
+      grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+      {% unless section.settings.use_dynamic_layout %}
+        /* Apply specific mobile grid layout for up to 18 items when dynamic layout is off */
+        display: grid; /* Ensure display is grid */
+        margin-top: calc({{ section.settings.margin_top }}px - 3px);
+        margin-bottom: calc({{ section.settings.margin_bottom }}px - 3px);
+        /* grid-template-rows: repeat(12, auto); Adjusted for 18 items in 2 columns */
+        grid-column-gap: calc({{ section.settings.grid_gap }}px - 3px); /* Use section setting */
+        grid-row-gap: calc({{ section.settings.grid_gap }}px - 3px); /* Use section setting */
+
+        & .div1 { grid-area: 1 / 1 / 2 / 2; }
+        & .div2 { grid-area: 1 / 2 / 2 / 3; }
+        & .div3 { grid-area: 2 / 1 / 3 / 2; }
+        & .div4 { grid-area: 2 / 2 / 3 / 3; }
+        & .div5 { grid-area: 3 / 1 / 5 / 3; } /* Spans 2 rows, 2 cols */
+        & .div6 { grid-area: 5 / 1 / 6 / 2; }
+        & .div7 { grid-area: 5 / 2 / 6 / 3; }
+        & .div8 { grid-area: 6 / 1 / 7 / 2; }
+        & .div9 { grid-area: 6 / 2 / 7 / 3; }
+        & .div10 { grid-area: 7 / 1 / 8 / 2; }
+        & .div11 { grid-area: 7 / 2 / 8 / 3; }
+        & .div12 { grid-area: 8 / 1 / 9 / 2; }
+        & .div13 { grid-area: 8 / 2 / 9 / 3; }
+        & .div14 { grid-area: 9 / 1 / 10 / 2; }
+        & .div15 { grid-area: 9 / 2 / 10 / 3; }
+        & .div18 { grid-area: 10 / 1 / 11 / 2; }
+        & .div17 { grid-area: 10 / 2 / 11 / 3; }
+        & .div16 { grid-area: 11 / 1 / 13 / 3; } /* Spans 2 rows, 2 cols */
+        & .div19 { grid-area: 13 / 1 / 14 / 2; }
+        & .div20 { grid-area: 13 / 2 / 14 / 3; }
+        & .div21 { grid-area: 14 / 1 / 15 / 2; }
+        & .div22 { grid-area: 14 / 2 / 15 / 3; }
+        /* Ensure items beyond 22 are hidden if they somehow appear */
+        & .custom-collection-grid__item:nth-child(n+23) {
+           display: none;
+        }
+      {% endunless %}
+    }
+  }
+
+  /* Show only rows needed based on items count */
+  {% assign item_count = collection_meta.size | at_most: section.settings.grid_limit %}
+  {% if section.settings.use_dynamic_layout %}
+    /* Dynamic layout using CSS grid auto-flow */
+    .custom-collection-grid__grid {
+      grid-auto-flow: row;
+    }
+  {% else %}
+    /* Original layout with specific grid areas */
+    .div1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .div2 {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .div3 {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+    .div4 {
+      grid-area: 1 / 4 / 2 / 5;
+    }
+    .div5 {
+      grid-area: 2 / 1 / 4 / 3;
+    }
+    .div6 {
+      grid-area: 2 / 3 / 3 / 4;
+    }
+    .div7 {
+      grid-area: 2 / 4 / 3 / 5;
+    }
+    .div8 {
+      grid-area: 3 / 3 / 4 / 4;
+    }
+    .div9 {
+      grid-area: 3 / 4 / 4 / 5;
+    }
+    .div10 {
+      grid-area: 4 / 1 / 5 / 2;
+    }
+    .div11 {
+      grid-area: 4 / 2 / 5 / 3;
+    }
+    .div12 {
+      grid-area: 4 / 3 / 5 / 4;
+    }
+    .div13 {
+      grid-area: 4 / 4 / 5 / 5;
+    }
+    .div14 {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+    .div15 {
+      grid-area: 5 / 2 / 6 / 3;
+    }
+    .div16 {
+      grid-area: 5 / 3 / 7 / 5;
+    }
+    .div17 {
+      grid-area: 6 / 1 / 7 / 2;
+    }
+    .div18 {
+      grid-area: 6 / 2 / 7 / 3;
+    }
+    .div19 {
+      grid-area: 7 / 1 / 8 / 2;
+    }
+    .div20 {
+      grid-area: 7 / 2 / 8 / 3;
+    }
+    .div21 {
+      grid-area: 7 / 3 / 8 / 4;
+    }
+    .div22 {
+      grid-area: 7 / 4 / 8 / 5;
+    }
+  {% endif %}
+{%- endstyle -%}
+
+<style>
+  .hidden {
+    display: none !important;
+  }
+</style>
+
+{% assign collection_meta = collection.metafields.custom.product_template_look.value %}
+
+{% for variant in collection_meta %}
+  {% assign array = variant | map: 'product' %}
+  {% assign collection_meta_prod = collection_meta_prod | concat: array %}
+{% endfor %}
+
+{%- if collection_meta == blank -%}
+  {% assign collection_meta = collection.products %}
+{%- endif -%}
+
+{% assign custom_div5_used = false %}
+{% assign custom_div16_used = false %}
+{% if section.settings.custom_div5_image != blank %}
+  {% assign custom_div5_used = true %}
+{% endif %}
+{% if section.settings.custom_div16_image != blank %}
+  {% assign custom_div16_used = true %}
+{% endif %}
+
+{%comment%}
+<div class="custom-collection-grid " id="custom-collection-grid-{{ section.id }}">
+  <div class="custom-collection-grid__container">
+    <div class="custom-collection-grid__grid">
+      {% assign product_index = 1 %}
+      {% assign actual_index = 0 %}
+      {% for variant in collection_meta offset: section.settings.grid_offset limit: section.settings.grid_limit %}
+        {% assign main_image = variant.metafields.custom.preview_wardrobe_image %}
+
+        {% if main_image == blank %}
+          {% assign main_image = variant.featured_image %}
+        {% endif %}
+
+        {% assign loop_index = forloop.index %}
+        {% assign actual_index = actual_index | plus: 1 %}
+        
+        {% if custom_div5_used and product_index == 5 and section.settings.use_dynamic_layout == false %}
+          <div class="custom-collection-grid__item div5">
+            <a href="{{ section.settings.custom_div5_url | default: '#' }}" class="custom-collection-grid__item-image">
+              <img
+                class="main-image"
+                src="{{ section.settings.custom_div5_image | image_url: width: 1000 }}"
+                alt="{{ section.settings.custom_div5_image.alt | default: 'Featured image' }}"
+                width="1000"
+                height="1000"
+                loading="lazy"
+              >
+            </a>
+          </div>
+          {% assign product_index = product_index | plus: 1 %}
+        {% endif %}
+        
+        {% if custom_div16_used and product_index == 16 and section.settings.use_dynamic_layout == false %}
+          <div class="custom-collection-grid__item div16">
+            <a href="{{ section.settings.custom_div16_url | default: '#' }}" class="custom-collection-grid__item-image">
+              <img
+                class="main-image"
+                src="{{ section.settings.custom_div16_image | image_url: width: 1000 }}"
+                alt="{{ section.settings.custom_div16_image.alt | default: 'Featured image' }}"
+                width="1000"
+                height="1000"
+                loading="lazy"
+              >
+            </a>
+          </div>
+          {% assign product_index = product_index | plus: 1 %}
+        {% endif %}
+        
+        {% assign display_index = product_index %}
+        
+        {% if section.settings.use_dynamic_layout == false %}
+          {% if display_index <= 22 %}
+            <div class="custom-collection-grid__item div{{ display_index }}">
+              <a href="{{ variant.url }}" class="custom-collection-grid__item-image">
+                {%- if variant.metafields.custom.variant_fixed_image != blank -%}
+                  {% assign main_image = variant.metafields.custom.variant_fixed_image %}
+                  <img
+                    class="main-image"
+                    src="{{ main_image | image_url: width: variant.featured_image.width }}"
+                    alt="{{ variant.title }}"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                  >
+                {% else %}
+                  <img
+                    class="main-image"
+                    src="{{ main_image | image_url: width: variant.featured_image.width }}"
+                    alt="{{ variant.title }}"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                  >
+                {% endif %}
+                {% assign hover_metafield_image = variant.product.images[1] %}
+                {%- if variant.metafields.custom.hover_image != blank -%}
+                  {% assign hover_metafield_image = variant.metafields.custom.hover_image.value %}
+                  {%- style -%}
+                    .custom-collection-grid__item:hover .main-image {
+                      opacity: 0;
+                    }
+                  {%- endstyle -%}
+                {%- endif -%}
+
+                {%- if variant.metafields.custom.hover_image != blank -%}
+                  {% assign hover_image = variant.metafields.custom.hover_image %}
+                  <img
+                    class="hover-image"
+                    src="{{ hover_image | image_url: width: hover_image.width, height: hover_image.height }}"
+                    alt="{{ hover_image.alt | escape }}"
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  >
+                {% else %}
+                  {%- for image in variant.product.images -%}
+                    {% assign image_alt = image.alt | escape %}
+                    {% assign name_color = variant.option1 | escape %}
+                    {% if name_color == image_alt %}
+                      <img
+                        class="hover-image"
+                        src="{{ image | image_url: width: image.width, height: image.height }}"
+                        alt="{{ image.alt | escape }}"
+                        width="100%"
+                        height="100%"
+                        loading="eager"
+                      >
+                      {% break %}
+                    {% endif %}
+                  {%- endfor -%}
+                {% endif %}
+              </a>
+            </div>
+          {% endif %}
+        {% else %}
+          {% if custom_div5_used and display_index == 5 %}
+            <div class="custom-collection-grid__item div{{ display_index }}">
+              <a href="{{ section.settings.custom_div5_url | default: '#' }}" class="custom-collection-grid__item-image">
+                <img
+                  class="main-image"
+                  src="{{ section.settings.custom_div5_image | image_url: width: 1000 }}"
+                  alt="{{ section.settings.custom_div5_image.alt | default: 'Featured image' }}"
+                  width="1000"
+                  height="1000"
+                  loading="lazy"
+                >
+              </a>
+            </div>
+            {% assign product_index = product_index | plus: 1 %}
+            {% continue %}
+          {% endif %}
+
+          {% if custom_div16_used and display_index == 16 %}
+            <div class="custom-collection-grid__item div{{ display_index }}">
+              <a href="{{ section.settings.custom_div16_url | default: '#' }}" class="custom-collection-grid__item-image">
+                <img
+                  class="main-image"
+                  src="{{ section.settings.custom_div16_image | image_url: width: 1000 }}"
+                  alt="{{ section.settings.custom_div16_image.alt | default: 'Featured image' }}"
+                  width="1000"
+                  height="1000"
+                  loading="lazy"
+                >
+              </a>
+            </div>
+            {% assign product_index = product_index | plus: 1 %}
+            {% continue %}
+          {% endif %}
+
+          <div class="custom-collection-grid__item div{{ display_index }}">
+            <a href="{{ variant.url }}" class="custom-collection-grid__item-image">
+              {%- if variant.metafields.custom.variant_fixed_image != blank -%}
+                {% assign main_image = variant.metafields.custom.variant_fixed_image %}
+                <img
+                  class="main-image"
+                  src="{{ main_image | image_url: width: variant.featured_image.width }}"
+                  alt="{{ variant.title }}"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                >
+              {% else %}
+                <img
+                  class="main-image"
+                  src="{{ main_image | image_url: width: variant.featured_image.width }}"
+                  alt="{{ variant.title }}"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                >
+              {% endif %}
+              {% assign hover_metafield_image = variant.product.images[1] %}
+              {%- if variant.metafields.custom.hover_image != blank -%}
+                {% assign hover_metafield_image = variant.metafields.custom.hover_image %}
+                {%- style -%}
+                  .custom-collection-grid__item:hover .main-image {
+                    opacity: 0;
+                  }
+                {%- endstyle -%}
+              {%- endif -%}
+
+              {%- if variant.metafields.custom.hover_image != blank -%}
+                {% assign hover_image = variant.metafields.custom.hover_image %}
+                <img
+                  class="hover-image"
+                  src="{{ hover_image | image_url: width: hover_image.width, height: hover_image.height }}"
+                  alt="{{ hover_image.alt | escape }}"
+                  width="100%"
+                  height="100%"
+                  loading="eager"
+                >
+              {% else %}
+                {%- for image in variant.product.images -%}
+                  {% assign image_alt = image.alt | escape %}
+                  {% assign name_color = variant.option1 | escape %}
+                  {% if name_color == image_alt %}
+                    <img
+                      class="hover-image"
+                      src="{{ image | image_url: width: image.width, height: image.height }}"
+                      alt="{{ image.alt | escape }}"
+                      width="100%"
+                      height="100%"
+                      loading="eager"
+                    >
+                    {% break %}
+                  {% endif %}
+                {%- endfor -%}
+              {% endif %}
+            </a>
+          </div>
+        {% endif %}
+        
+        {% assign product_index = product_index | plus: 1 %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{%endcomment%}
+    
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accessToken = 'cb9963e12f6858f970f8b7d1d14996e0';
+    const handle = '{{ collection.handle }}'; // must output a real string here
+    const sectionId = '{{ section.id }}';
+    const custom_div5_used = "{{ custom_div5_used }}";
+    const custom_div16_used = "{{ custom_div16_used }}";
+    const offset = parseInt("{{ section.settings.grid_offset }}")
+    var limit = parseInt("{{ section.settings.grid_limit }}");
+
+    var num = 0;
+
+    if(custom_div5_used == "true") {
+      num = num + 1
+    }
+
+    if(custom_div16_used == "true") {
+      num = num + 1
+    }
+
+    console.log(offset, limit)
+
+    async function fetchProducts() {
+      try {
+        const query = `
+          query getCollectionMetafieldVariants($handle: String!) {
+            collection(handle: $handle) {
+              id
+              title
+              metafield(namespace: "custom", key: "product_template_look") {
+                type
+                references(first: 250) {
+                  nodes {
+                    ... on ProductVariant {
+                      id
+                      title
+                      product {
+                        handle
+                      }
+                      image {
+                        url
+                        altText
+                      }
+                      mainImage: metafield(namespace: "custom", key: "preview_wardrobe_image") {
+                        type
+                        reference {
+                          ... on MediaImage {
+                            image {
+                              url
+                              altText
+                            }
+                          }
+                        }
+                      }
+                      variantFixedImage: metafield(namespace: "custom", key: "variant_fixed_image") {
+                        type
+                        reference {
+                          ... on MediaImage {
+                            image {
+                              url
+                              altText
+                            }
+                          }
+                        }
+                      }
+                      hoverImage: metafield(namespace: "custom", key: "hover_image") {
+                        type
+                        reference {
+                          ... on MediaImage {
+                            image {
+                              url
+                              altText
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `;
+
+
+        const variables = { handle };
+
+        console.log('Fetching collection with handle:', handle);
+
+        const response = await fetch('https://ychroma.myshopify.com/api/2024-04/graphql.json', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Shopify-Storefront-Access-Token': accessToken,
+          },
+          body: JSON.stringify({ query, variables }),
+        });
+
+        const { data, errors } = await response.json();
+
+        if (errors) {
+          console.error('GraphQL Errors:', errors);
+          return;
+        }
+
+        if (!data || !data.collection) {
+          console.error('No collection data returned');
+          return;
+        }
+
+        console.log('Metafield data:', data.collection.metafield);
+
+        if (!data.collection.metafield) {
+          console.error('No metafield found for this collection');
+          return;
+        } else {
+          creatingProductGrid(data.collection.metafield.references.nodes);
+        }
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    }
+
+    function creatingProductGrid(metafields) {
+      const metaProducts = metafields;
+
+      var productNum = offset + 1;
+
+      metaProducts.forEach((item, index) => {
+        var mainImage = item.mainImage;
+        if(item.mainImage != null) {
+          mainImage = item.mainImage.reference.image.url
+        }
+        else {
+          mainImage = item.image.url;
+        }
+
+        if (index + 1 >= offset + 1 && index + 1 < offset + 1 + limit) {
+          if(productNum - offset == 5 && custom_div5_used == "true") {
+            var imageDiv = document.createElement('div');
+            imageDiv.classList.add('custom-collection-grid__item')
+            imageDiv.classList.add(`div${productNum - offset}`);
+            var A = document.createElement('a');
+            A.classList.add('custom-collection-grid__item-image');
+            A.href = `{{ section.settings.custom_div5_url }}`;
+            var fixedImage = document.createElement('img');
+            fixedImage.classList.add('main-image');
+            fixedImage.src = "https://ychroma.com/cdn/shop/{{ section.settings.custom_div5_image}}";
+            fixedImage.loading = 'eager'
+            A.appendChild(fixedImage);
+            imageDiv.appendChild(A);
+            document.querySelector(`.collection-grid-scroll-${sectionId} .custom-collection-grid__grid`).appendChild(imageDiv);
+            productNum ++;
+          }
+          else if(productNum - offset == 16 && custom_div16_used == "true") {
+            var imageDiv = document.createElement('div');
+            imageDiv.classList.add('custom-collection-grid__item')
+            imageDiv.classList.add(`div${productNum - offset}`);
+            var A = document.createElement('a');
+            A.classList.add('custom-collection-grid__item-image');
+            A.href = `{{ section.settings.custom_div16_url }}`;
+            var fixedImage = document.createElement('img');
+            fixedImage.classList.add('main-image');
+            fixedImage.src = "https://ychroma.com/cdn/shop/{{ section.settings.custom_div16_image}}";
+            fixedImage.loading = 'eager'
+            A.appendChild(fixedImage);
+            imageDiv.appendChild(A);
+            document.querySelector(`.collection-grid-scroll-${sectionId} .custom-collection-grid__grid`).appendChild(imageDiv);
+            productNum ++;
+          }
+          var imageDiv = document.createElement('div');
+          imageDiv.classList.add('custom-collection-grid__item')
+          imageDiv.classList.add(`div${productNum - offset}`);
+          var A = document.createElement('a');
+          A.classList.add('custom-collection-grid__item-image');
+          A.href = `/products/${item.product.handle}?variant=${item.id.split("/").pop()}`;
+          var fixedImage = document.createElement('img');
+          fixedImage.classList.add('main-image');
+          if(item.variantFixedImage != null) {
+            fixedImage.src = item.variantFixedImage.reference.image.url;
+          }
+          else {
+            fixedImage.src = mainImage;
+          }
+          fixedImage.loading = 'eager'
+          A.appendChild(fixedImage);
+          var hoverImage = document.createElement('img');
+          hoverImage.classList.add("hover-image");
+          if(item.hoverImage != null) {
+            hoverImage.src = item.hoverImage.reference.image.url;
+          }
+          else {
+            hoverImage.src = mainImage;
+          }
+          hoverImage.loading = 'eager'
+          A.appendChild(hoverImage)
+          imageDiv.appendChild(A);
+          document.querySelector(`.collection-grid-scroll-${sectionId} .custom-collection-grid__grid`).appendChild(imageDiv);
+          productNum ++;
+        }
+      });
+
+    }
+
+    fetchProducts();
+
+    
+  });
+</script>
+
+{% if section.settings.display_scroll == true %}
+  <script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+      setTimeout(()=>{
+        const sentinel    = document.getElementById('display-collection-grid-{{ section.id }}');
+        const hiddenBlock = document.getElementById('collection-grid-scroll-{{ section.id }}');
+    
+        console.log(sentinel)
+        console.log(hiddenBlock)
+    
+        if (!sentinel || !hiddenBlock) return;   // safety
+    
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              hiddenBlock.classList.remove('hidden');
+              sentinel.classList.add('hidden')
+              observer.unobserve(sentinel);
+            }
+          });
+        }, { threshold: 0.1 });
+    
+        observer.observe(sentinel);
+      }, 3000)
+    })
+  </script>
+{% endif %}
+
+{% if section.settings.display_scroll == true %}
+  <div id="display-collection-grid-{{section.id}}" style="display: flex;"></div>
+{% endif %}
+
+<div id="collection-grid-scroll-{{ section.id }}" class="collection-grid-scroll-{{ section.id }} {% if section.settings.display_scroll == true %} hidden {% endif %}">
+  <div class="custom-collection-grid" id="custom-collection-grid-{{ section.id }}">
+    <div class="custom-collection-grid__container">
+      <div class="custom-collection-grid__grid"></div>
+    </div>
+  </div>
+</div>
+
+{%- schema -%}
+{
+  "name": "Custom Collection Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Grid Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_scroll",
+      "label": "Display by inifite scroll",
+      "default": false,
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (Desktop)",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "Columns (Mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top margin (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom margin (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "range",
+      "id": "grid_offset",
+      "label": "Grid offset",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "grid_limit",
+      "label": "Grid limit",
+      "min": 1,
+      "max": 22,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Large Block Customization"
+    },
+    {
+      "type": "paragraph",
+      "content": "These settings allow you to replace products with custom images in the large blocks (5th block and 18th block). Products will not be skipped in the grid when custom images are used."
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_div5_image",
+      "label": "Custom image for 5th (large block)",
+      "info": "This image will replace the default product image in the large block position (5th)"
+    },
+    {
+      "type": "url",
+      "id": "custom_div5_url",
+      "label": "Custom URL for 5th",
+      "info": "Link for the custom image 5th"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_div16_image",
+      "label": "Custom image for 18th (large block)",
+      "info": "This image will replace the default product image in the large block position (18th)"
+    },
+    {
+      "type": "url",
+      "id": "custom_div16_url",
+      "label": "Custom URL for 18th",
+      "info": "Link for the custom image 18th"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Grid"
+    }
+  ]
+}
+{%- endschema -%}

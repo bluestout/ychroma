@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "main": {
+      "type": "yas-land-product-v2",
+      "blocks": {
+        "color_XqpNWM": {
+          "type": "color",
+          "settings": {
+            "collection": "get-warm-with-valencia",
+            "color_filter": "The Valencia Edit"
+          }
+        },
+        "color_RgxYaU": {
+          "type": "color",
+          "settings": {
+            "collection": "lisbon",
+            "color_filter": "The Lisbon Edit"
+          }
+        },
+        "color_nJGGEH": {
+          "type": "color",
+          "settings": {
+            "collection": "you-look-great-in-paris",
+            "color_filter": "The Paris Edit"
+          }
+        },
+        "color_cRWxcR": {
+          "type": "color",
+          "settings": {
+            "collection": "you-re-sophisticated-just-like-tokyo",
+            "color_filter": "The Tokyo Edit"
+          }
+        },
+        "color_XJNWpF": {
+          "type": "color",
+          "settings": {
+            "collection": "seattle-makes-you-stand-out",
+            "color_filter": "The Seattle Edit"
+          }
+        }
+      },
+      "block_order": [
+        "color_XqpNWM",
+        "color_RgxYaU",
+        "color_nJGGEH",
+        "color_cRWxcR",
+        "color_XJNWpF"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner_video_land.jpg",
+        "video_url": "https:\/\/youtu.be\/_g_0wKNttNI?si=AmmUpuAdQPbeRpcO",
+        "product_list": [
+          "henley-luxury-tropical-weight-short-sleeve",
+          "henley-t-shirt-short-sleeve-o",
+          "henley-button-t-shirt",
+          "henley-luxury-tropical-weight-long-sleeve"
+        ]
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

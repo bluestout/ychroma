@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "0145b6a7-4265-40f6-ab63-59c3e81a4183": {
+      "type": "jourtanl-after-header",
+      "settings": {
+        "url": "shopify:\/\/pages\/y-chroma-journal",
+        "title": "Y.Chroma Journal",
+        "text": "Join us on our journey of midlife male re-invention. The places we go, the brand we build, the clothes we wear and the craftsmanship that drives us."
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "breadcrumbs_d6h44b": {
+          "type": "breadcrumbs",
+          "settings": {}
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "medium"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "SHARE",
+            "link_1": "https:\/\/www.ychroma.com",
+            "link_2": "#",
+            "link_3": "#",
+            "link_4": "#",
+            "link_5": "#"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "c8044fb3-feba-4523-9c5d-698d7c6f151e": {
+          "type": "slider_produt",
+          "settings": {}
+        },
+        "8dc767a4-358a-4f4b-a542-a8270bcc58db": {
+          "type": "content2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "breadcrumbs_d6h44b",
+        "featured_image",
+        "title",
+        "share",
+        "content",
+        "c8044fb3-feba-4523-9c5d-698d7c6f151e",
+        "8dc767a4-358a-4f4b-a542-a8270bcc58db"
+      ],
+      "settings": {
+        "journal_url": "shopify:\/\/pages\/y-chroma-journal"
+      }
+    }
+  },
+  "order": [
+    "0145b6a7-4265-40f6-ab63-59c3e81a4183",
+    "main"
+  ]
+}

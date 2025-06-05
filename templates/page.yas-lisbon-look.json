@@ -1,0 +1,135 @@
+{
+  "sections": {
+    "8631eec6-bbf5-4f57-9ecb-a4fc24328340": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "989222ed-4988-4019-b869-d487c1374d97": {
+      "type": "yas-video-color",
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 20,
+        "image": "shopify:\/\/shop_images\/Lisbon_Wardrobe_Banner_a81a7c90-0a6f-4825-824a-a1677c9f41bf.jpg",
+        "text-box": "",
+        "title": "Lisbon looks great on you.",
+        "show_color1": true,
+        "color1": "#533246",
+        "show_color2": true,
+        "color2": "#f7b717",
+        "show_color3": true,
+        "color3": "#ad681b",
+        "show_color4": true,
+        "color4": "#b59e5e",
+        "show_color5": true,
+        "color5": "#f7f6ee"
+      }
+    },
+    "c33dde82-6779-4b68-8c8f-50c9f81ba4c9": {
+      "type": "yas-reinvented",
+      "settings": {
+        "title": "The Lisbon look.",
+        "under_title": "Lisbon’s where Europe and surf culture meet.  Warm tones of charcoal, milk coffee and curry – lit with bright aqua and Spectra Yellow.  Old world tradition with fresh energy in its veins."
+      }
+    },
+    "aac2b9b5-dc14-4e58-8e26-2551839d63c8": {
+      "type": "yas-look-bilder-v2",
+      "blocks": {
+        "f754e956-c5bc-437a-885c-f8224ab6119d": {
+          "type": "Currency",
+          "settings": {
+            "title": "EUR",
+            "rate": "0.95",
+            "countries": "AUT, BEL, CYP, EST, FIN, FRA, DEU, GRC, IRL, ITA, LVA, LTU, LUX, MLT, NLD, PRT, SVK, SVN, ESP",
+            "symbol": "€"
+          }
+        },
+        "0e5c2c70-2a90-499f-ba6b-4486211eb3bf": {
+          "type": "Currency",
+          "settings": {
+            "title": "CAD",
+            "rate": "1,38",
+            "countries": "Canada",
+            "symbol": "C$"
+          }
+        },
+        "bc6c5c5e-5fc5-4196-a48f-763966acd9be": {
+          "type": "Currency",
+          "settings": {
+            "title": "GBP",
+            "rate": "0.845876",
+            "countries": "GBR",
+            "symbol": "£"
+          }
+        },
+        "679c2cf6-0c2a-4d53-855e-32d3187aed0b": {
+          "type": "Currency",
+          "settings": {
+            "title": "USD",
+            "rate": "1",
+            "countries": "rest",
+            "symbol": "$"
+          }
+        }
+      },
+      "block_order": [
+        "f754e956-c5bc-437a-885c-f8224ab6119d",
+        "0e5c2c70-2a90-499f-ba6b-4486211eb3bf",
+        "bc6c5c5e-5fc5-4196-a48f-763966acd9be",
+        "679c2cf6-0c2a-4d53-855e-32d3187aed0b"
+      ],
+      "settings": {
+        "title_white": "Your unique wardrobe.",
+        "collect": "test-8-pieces",
+        "collect_16": "test-16-pick",
+        "collect_24": "test-pieces-24",
+        "text_under_select": "<p>From the old city to the beaches, Lisbon vibrates with a unique blend of culture and creativity, powered in no small part by immigrants from all corners of the world.  (Me included.)  <\/p><p>Even ancient buildings fallen into disrepair support ecosystems of street art and culture around them. <\/p>",
+        "title": "",
+        "text": ""
+      }
+    },
+    "cf4f70a2-d809-4095-a744-3f709e281edc": {
+      "type": "yas-look-collection",
+      "disabled": true,
+      "settings": {
+        "title_white": "Your unique wardrobe.",
+        "collect": "test-8-pieces",
+        "title": "8 Pieces",
+        "text": "Title This look includes 2 Pants, 1 Shorts, 2 Shirts, 1 Sweater, 1 Jacket and 1 Beannie"
+      }
+    },
+    "d459e862-f9be-4e5d-8a08-461893e3e524": {
+      "type": "yas-look-collection16",
+      "disabled": true,
+      "settings": {
+        "collect": "test-16-pick",
+        "title": "16 Pieces",
+        "text": "Title This look includes 2 Pants, 1 Shorts, 2 Shirts, 1 Sweater, 1 Jacket and 1 Beannie"
+      }
+    },
+    "613321da-29c9-4938-a4b1-3f7b05592691": {
+      "type": "yas-reborn",
+      "settings": {
+        "title": "YOU. REBORN.",
+        "under_title": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "8631eec6-bbf5-4f57-9ecb-a4fc24328340",
+    "989222ed-4988-4019-b869-d487c1374d97",
+    "c33dde82-6779-4b68-8c8f-50c9f81ba4c9",
+    "aac2b9b5-dc14-4e58-8e26-2551839d63c8",
+    "cf4f70a2-d809-4095-a744-3f709e281edc",
+    "d459e862-f9be-4e5d-8a08-461893e3e524",
+    "613321da-29c9-4938-a4b1-3f7b05592691",
+    "main"
+  ]
+}

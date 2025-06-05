@@ -1,0 +1,266 @@
+{
+  "sections": {
+    "custom_image_video_section_fcxihw": {
+      "type": "custom-image-video-section",
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/LISBON - DESKTOP - V2.mp4",
+        "video_looping": true,
+        "mobile_video": "shopify:\/\/files\/videos\/LISBON - MOBILE - V2.mp4",
+        "title": "",
+        "description": "",
+        "show_colors": true
+      }
+    },
+    "custom_filter_section_TE7DJU": {
+      "type": "custom-filter-section",
+      "settings": {}
+    },
+    "custom_collection_grid_GWNzUP": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 0,
+        "margin_bottom": 5,
+        "grid_offset": 0,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-lisbon-ss2023-photo02-10991.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/sevilla-shirt?variant=44718969028798",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-lisbon-2324-look17-01950-hrg.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/full-cream-linen-shirt?variant=43205908168894"
+      }
+    },
+    "custom_carousel_image_blocks_6mkkna": {
+      "type": "custom-carousel-image-blocks",
+      "blocks": {
+        "image_eabU7b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-01_abc86ee1-7f4e-4ac8-948e-8095c0feb1e3.jpg",
+            "link": ""
+          }
+        },
+        "image_pcheiW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-02_c495a2f2-38eb-4289-a67b-6315136e6492.jpg",
+            "link": ""
+          }
+        },
+        "image_HExNEr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-03_a1816905-1023-49e7-8685-0dce56b4f420.jpg",
+            "link": ""
+          }
+        },
+        "image_4tQTpK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-04_e741d934-b5e4-4115-bd64-9fd21943df89.jpg",
+            "link": ""
+          }
+        },
+        "image_AYmbqE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-05_d5935163-67b0-421f-84a7-5280c1cb4e52.jpg",
+            "link": ""
+          }
+        },
+        "image_iPPPC4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-06_73c25026-9a9c-4e33-8de9-7b05640b9772.jpg",
+            "link": ""
+          }
+        },
+        "image_B4Jtn3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-07_b6fe23d6-6ddb-4485-bd94-af079c2aa85a.jpg",
+            "link": ""
+          }
+        },
+        "image_6wH7FW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-08_bfad0620-0629-4f12-a7f7-6891ed46153a.jpg",
+            "link": ""
+          }
+        },
+        "image_ij7JQe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-lisbon-09_a5e9622b-78a3-4b29-a28f-1d91674a450d.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_eabU7b",
+        "image_pcheiW",
+        "image_HExNEr",
+        "image_4tQTpK",
+        "image_AYmbqE",
+        "image_iPPPC4",
+        "image_B4Jtn3",
+        "image_6wH7FW",
+        "image_ij7JQe"
+      ],
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "custom_collection_grid_HMPX6x": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 16,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/ychroma-06-ss2023-look52-05529-lr.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/low-fi-pant?variant=42497556054206",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-lisbon-2324-look16-01702-hrg.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/drucken-pant?variant=43107082666174"
+      }
+    },
+    "17448885993f9dce8f": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": false
+      }
+    },
+    "custom_collection_grid_QwjVJa": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 32,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-lisbon-ss2023-photo10-12810.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/the-henley-long-sleeve-t-shirt?variant=42576340582590",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-lisbon-2324-look24-02745.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/henley-luxury-tropical-weight-short-sleeve?variant=43104127942846"
+      }
+    },
+    "custom_collection_grid_jb6iW6": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 48,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-lisbon-2324-look35-04095-hrg.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/cognac-pocket-denim-shirt?variant=43153274339518",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-lisbon-d-look5-9_294ea757-405a-49b2-898e-691926d639ad.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/varial-shirt-cut-jacket?variant=44536631034046"
+      }
+    },
+    "custom_collection_grid_ePEkFh": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 64,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-lisbon-look01-326a1266-pfav.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/deckmaster-shirt-cut-jacket?variant=44826965541054",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-lisbon-ss2023-look30-03171.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/deckmaster-shirt-cut-jacket?variant=42503258996926"
+      }
+    },
+    "custom_collection_grid_Nh7Y6H": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 80,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-carousel-valencia-10.jpg",
+        "custom_div5_url": "",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-carousel-valencia-10.jpg",
+        "custom_div16_url": ""
+      }
+    },
+    "custom_collection_grid_8weE9B": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 96,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/yc-carousel-valencia-10.jpg",
+        "custom_div5_url": "",
+        "custom_div16_image": "shopify:\/\/shop_images\/yc-carousel-valencia-10.jpg",
+        "custom_div16_url": ""
+      }
+    },
+    "video_wardrobe_v2_J4qFdB": {
+      "type": "video-wardrobe-v2",
+      "settings": {
+        "use_youtube_video": true,
+        "youtube_video_id": "LemCq-e7MBk",
+        "video_height": 620,
+        "overlay_show": false,
+        "overlay_opacity": 30,
+        "text-box": "",
+        "title": "",
+        "show_play_button": true
+      }
+    }
+  },
+  "order": [
+    "custom_image_video_section_fcxihw",
+    "custom_filter_section_TE7DJU",
+    "custom_collection_grid_GWNzUP",
+    "custom_carousel_image_blocks_6mkkna",
+    "custom_collection_grid_HMPX6x",
+    "17448885993f9dce8f",
+    "custom_collection_grid_QwjVJa",
+    "custom_collection_grid_jb6iW6",
+    "custom_collection_grid_ePEkFh",
+    "custom_collection_grid_Nh7Y6H",
+    "custom_collection_grid_8weE9B",
+    "video_wardrobe_v2_J4qFdB"
+  ]
+}

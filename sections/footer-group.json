@@ -1,0 +1,66 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "email_i97KeB": {
+          "type": "email",
+          "settings": {
+            "text": "<p>We're all in it together, lads. Sign up and get outfit inspiration for our generation.<\/p>"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info Links",
+            "menu": "footer-item-menu",
+            "text2": "",
+            "menu2": ""
+          }
+        },
+        "dee45b85-b025-4147-b5dd-51f6dd1f2c14": {
+          "type": "link_list",
+          "settings": {
+            "heading": "1 Year Exchanges, 90-day Returns | Free Shipping on 2+ Items",
+            "menu": "footer",
+            "text2": "Quick Links",
+            "menu2": "main-menu"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Quick Links",
+            "menu": "main-menu",
+            "text2": "",
+            "menu2": ""
+          }
+        }
+      },
+      "block_order": [
+        "email_i97KeB",
+        "footer-1",
+        "dee45b85-b025-4147-b5dd-51f6dd1f2c14",
+        "footer-0"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "margin_top": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "sections": {
+    "165848671390165efb": {
+      "type": "custom-product-video",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "size_chart_title": "Size Chart",
+        "about_title": "About this product",
+        "size_title": "Size & Fit",
+        "size_image": "shopify:\/\/shop_images\/size-chart.jpg",
+        "composition_title": "Composition & care",
+        "composition_desc": "<ul>\n          <li>The International Care Labelling System<\/li>\n          <li>The Japanese Care Labelling System<\/li>\n          <li>The Canadian Care Labelling System<\/li>\n          <li>The European Care Labelling System<\/li>\n          <li>The American Care Labelling System<\/li>\n        <\/ul>",
+        "btn_text": "Play Video",
+        "stop_btn_text": "Stop video"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-free-shipping-100.png",
+            "title": "",
+            "text": "<p>Free Delivery<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-transaction-100.png",
+            "title": "",
+            "text": "<p>Free Returns<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1d1a7d29-eab9-4196-8272-14dfbdc3a179": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-chat-100.png",
+            "title": "",
+            "text": "<p>Chat with our concentrate team<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1",
+        "1d1a7d29-eab9-4196-8272-14dfbdc3a179"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "16578875911bf48e71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1657889443d2240800": {
+      "type": "custom-product-gallery",
+      "blocks": {
+        "32dc00a3-cf7a-42c5-84c5-58edd020d8a3": {
+          "type": "first-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/Rush-9.jpg"
+          }
+        },
+        "6624b922-24af-444c-a58b-7e11f3332673": {
+          "type": "first-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/Rush-6.jpg"
+          }
+        },
+        "d3b0fc9c-1cd4-4d67-b9fc-0fbb800da026": {
+          "type": "third-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/mob-home.jpg"
+          }
+        },
+        "ef8cd912-766c-4d4c-87e0-d2a9e39697e2": {
+          "type": "second-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/home-4.png"
+          }
+        },
+        "cf80f131-bfa6-46ec-9a23-18b44e5a0d39": {
+          "type": "second-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/Rush-4.jpg"
+          }
+        },
+        "b67ef685-dbbf-43a8-8254-704335e22d81": {
+          "type": "third-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/Rush-9.jpg"
+          }
+        },
+        "77d96856-dd49-4c09-8e1d-0b85d937bad5": {
+          "type": "second-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/Rush-3.jpg"
+          }
+        },
+        "382485fd-dc91-4617-af6b-355d63bc18df": {
+          "type": "first-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/Rush-2.jpg"
+          }
+        },
+        "5b92a92b-2962-4caf-bdb4-db8abd41eca8": {
+          "type": "third-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/Rush-1.jpg"
+          }
+        },
+        "7f656124-25de-4776-a67c-bcb4ba0d3fc5": {
+          "type": "second-section",
+          "settings": {
+            "imageOne": "shopify:\/\/shop_images\/home-3.png"
+          }
+        }
+      },
+      "block_order": [
+        "32dc00a3-cf7a-42c5-84c5-58edd020d8a3",
+        "6624b922-24af-444c-a58b-7e11f3332673",
+        "d3b0fc9c-1cd4-4d67-b9fc-0fbb800da026",
+        "ef8cd912-766c-4d4c-87e0-d2a9e39697e2",
+        "cf80f131-bfa6-46ec-9a23-18b44e5a0d39",
+        "b67ef685-dbbf-43a8-8254-704335e22d81",
+        "77d96856-dd49-4c09-8e1d-0b85d937bad5",
+        "382485fd-dc91-4617-af6b-355d63bc18df",
+        "5b92a92b-2962-4caf-bdb4-db8abd41eca8",
+        "7f656124-25de-4776-a67c-bcb4ba0d3fc5"
+      ],
+      "settings": {
+        "heading": "Product Gallery"
+      }
+    },
+    "1657879653cc5c6ff4": {
+      "type": "custom-testimonial",
+      "blocks": {
+        "8ff0d64d-3633-42df-b883-e6672296800d": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1212.jpg",
+            "star_rating": 9,
+            "text-box": "Rachael",
+            "description": "I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately UPS lost it during transit. Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush"
+          }
+        },
+        "38fbc5ba-c468-47b2-a8f4-a079fbd84c46": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/21121.jpg",
+            "star_rating": 4,
+            "text-box": "AK mehra",
+            "description": "I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately UPS lost it during transit. Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush.I cannot express the gratitude and appreciation that I have for Ouros Jewels."
+          }
+        },
+        "d962440b-4e9d-4e00-9503-c523217e9fd6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/circle-cropped.png",
+            "star_rating": 5,
+            "text-box": "Rubina gupta",
+            "description": "Unfortunately UPS lost it during transit. Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush.I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece."
+          }
+        },
+        "f4c63289-775c-49a1-ad7b-ec279eb3bdcf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1212.jpg",
+            "star_rating": 3,
+            "text-box": "Rk. Mahajan",
+            "description": "Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush.I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately UPS lost it during transit."
+          }
+        },
+        "2493a732-7c61-44e1-b4aa-9d065dc914cf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/212.jpg",
+            "star_rating": 4,
+            "text-box": "PD. Verma",
+            "description": "UPS lost it during transit.I cannot express the gratitude and appreciation that I have for Ouros Jewels. I purchased this beautiful ring in Oct and enjoyed being updated on the progress of my piece. Unfortunately . Mr. Vijay Sarkheliya remained calm, patient, and assured that he would rectify the situation as he recreated the piece and rush"
+          }
+        }
+      },
+      "block_order": [
+        "8ff0d64d-3633-42df-b883-e6672296800d",
+        "38fbc5ba-c468-47b2-a8f4-a079fbd84c46",
+        "d962440b-4e9d-4e00-9503-c523217e9fd6",
+        "f4c63289-775c-49a1-ad7b-ec279eb3bdcf",
+        "2493a732-7c61-44e1-b4aa-9d065dc914cf"
+      ],
+      "settings": {
+        "testimonial_heading": "WHAT OUR CLIENT SAYS"
+      }
+    },
+    "1658841136cdae99b2": {
+      "type": "custom-product-matching",
+      "settings": {
+        "heading": "Product matches"
+      }
+    }
+  },
+  "order": [
+    "165848671390165efb",
+    "main",
+    "multicolumn",
+    "16578875911bf48e71",
+    "product-recommendations",
+    "1657889443d2240800",
+    "1657879653cc5c6ff4",
+    "1658841136cdae99b2"
+  ]
+}

@@ -1,0 +1,65 @@
+{% comment %}
+{% if product.metafields.custom.productvideo != blank %}
+<div class="product-video-section">
+  <div class="product-video-wraper">
+    <video  id="product-video-info" width="100%" preload  muted loop playsinline poster="">
+      <source src="{{ product.metafields.custom.productvideo }}" type="video/mp4">
+    </video>
+      <div class="product-video-control animate fadeInRight">
+        <button id="product-play-pause" class="product-video-play">{{section.settings.btn_text}}</button>
+      </div>
+  </div> 
+</div>
+  {% endif %}
+
+<script>
+var video = document.getElementById('product-video-info');
+    video.volume = 0;
+var playPause = document.getElementById("product-play-pause");
+playPause.addEventListener("click", function() {
+  if (video.paused == true) {
+    video.play();
+    playPause.text="{{section.settings.btn_text}}";
+    playPause.classList.toggle('pause');
+  } else {
+    video.pause();
+    playPause.text="{{section.settings.btn_text}}";
+   playPause.classList.toggle('pause');
+  }
+});
+  
+  
+$(".product-video-play").click(function() {
+  if ($(this).hasClass('pause')) {
+    $(this).text('{{section.settings.stop_btn_text}}');
+  } else {
+     $(this).text('{{section.settings.btn_text}}');
+  }
+}); 
+    
+</script>
+
+{% schema %}
+{
+  "name": "Product Video",
+  "settings": [
+     {
+      "id": "btn_text",
+      "type": "text",
+      "label": "Button Text"
+    },
+   {
+      "id": "stop_btn_text",
+      "type": "text",
+      "label": "Stop Button Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Video",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+{% endcomment %}

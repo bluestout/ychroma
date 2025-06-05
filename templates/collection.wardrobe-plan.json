@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "custom_image_video_section_fcxihw": {
+      "type": "custom-image-video-section",
+      "settings": {
+        "title": "",
+        "description": "",
+        "show_colors": true
+      }
+    },
+    "custom_filter_section_TE7DJU": {
+      "type": "custom-filter-section",
+      "settings": {}
+    },
+    "custom_collection_grid_GWNzUP": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "use_dynamic_layout": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 0,
+        "margin_bottom": 5,
+        "grid_offset": 0,
+        "grid_limit": 18
+      }
+    },
+    "custom_carousel_image_blocks_6mkkna": {
+      "type": "custom-carousel-image-blocks",
+      "blocks": {
+        "image_yRPiQV": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_wQhEcd": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_RcG4Ve": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_FnP8W3": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_yRPiQV",
+        "image_wQhEcd",
+        "image_RcG4Ve",
+        "image_FnP8W3"
+      ],
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "custom_collection_grid_HMPX6x": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "use_dynamic_layout": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 18,
+        "grid_limit": 18
+      }
+    },
+    "17448885993f9dce8f": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": false
+      }
+    },
+    "custom_collection_grid_QwjVJa": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "use_dynamic_layout": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 36,
+        "grid_limit": 18
+      }
+    },
+    "video_wardrobe_v2_J4qFdB": {
+      "type": "video-wardrobe-v2",
+      "settings": {
+        "overlay_show": true,
+        "overlay_opacity": 30,
+        "text-box": "",
+        "title": "",
+        "show_play_button": true
+      }
+    }
+  },
+  "order": [
+    "custom_image_video_section_fcxihw",
+    "custom_filter_section_TE7DJU",
+    "custom_collection_grid_GWNzUP",
+    "custom_carousel_image_blocks_6mkkna",
+    "custom_collection_grid_HMPX6x",
+    "17448885993f9dce8f",
+    "custom_collection_grid_QwjVJa",
+    "video_wardrobe_v2_J4qFdB"
+  ]
+}

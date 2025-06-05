@@ -1,0 +1,403 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }} {%- style -%} .section-{{ section.id }}-padding { padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px; } @media screen and (min-width: 750px) { .section-{{ section.id }}-padding { padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; } } {%- endstyle -%} <div class="color-{{ section.settings.color_scheme }} gradient">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+  <script async="" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+  <div  class="contact page-width page-width--narrow section-{{ section.id }}-padding"> {%- if section.settings.heading != blank -%} <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2> {%- else -%} <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2> {%- endif -%}
+    {% assign sp_form_action = "/contacts" %}
+    {% comment %}
+    {% if content_for_header contains "/spi.js" %}
+    {% assign sp_form_action = "https://vital-forms-api.humanpresence.app/api/form/vfob/6c09d111-c877-49f4-9fad-0223c7646070$64dbebeb3f56ae00b1a890e1" %}
+    {% endif %}
+    {% endcomment %}
+    {%- form 'contact', id: 'ContactForm', class: 'isolate', action: sp_form_action, data-vfib: "0" -%}
+      <div class="form-status form-status-list form__message" style="color:#fff;"></div>
+    {%- if form.posted_successfully? -%} <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div> {%- elsif form.errors -%} <div class="form__message">
+      <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+    </div>
+    <ul class="form-status-list caption-large" role="list">
+      <li> <a href="#ContactForm-email" class="link"> {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }} </a> </li>
+    </ul> {%- endif -%} <div class="contact__fields">
+      <div class="field"> <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}"> <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label> </div>
+      <div class="field field--with-error"> <input autocomplete="email" type="email" id="ContactForm-email" class="field__input" name="contact[email]" spellcheck="false" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" aria-required="true" {% if form.errors contains 'email' %} aria-invalid="true" aria-describedby="ContactForm-email-error" {% endif %} placeholder="{{ 'templates.contact.form.email' | t }}"> <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label> {%- if form.errors contains 'email' -%} <small class="contact__field-error" id="ContactForm-email-error"> <span class="visually-hidden">{{ 'accessibility.error' | t }}</span> <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span> </small> {%- endif -%} </div>
+    </div>
+      {% comment %}
+    <div class="pn-select field" id="js_pn-select" style="--prefix-length: 2">
+  <button class="pn-selected-prefix" aria-label="Select phonenumber prefix" id="js_trigger-dropdown" tabindex="1">
+    <img class="pn-selected-prefix__flag" id="js_selected-flag" src="https://flagpedia.net/data/flags/icon/36x27/nl.png" />
+    <svg class="pn-selected-prefix__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#081626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </button>
+  <div class="pn-input">
+    <label class="pn-input__label">{{ 'templates.contact.form.phone' | t }}</label>
+    <div class="pn-input__container">
+      <input class="pn-input__prefix" value="+31" type="text" name="phonenumber-prefix" id="js_number-prefix" tabindex="-1" />
+      <input class="pn-input__phonenumber" id="js_input-phonenumber" type="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]"  value="" placeholder=" " autocomplete="off" required max="18" tabindex="0" />
+      <small class="pn-input__error">
+        This is not a valid phone number
+      </small>
+    </div>
+  </div>
+  <div class="pn-dropdown" id="js_dropdown">
+    <div class="pn-search">
+      <svg class="pn-search__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#103155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input placeholder="Search for countries" class="pn-search__input search" type="search" id="js_search-input" autocomplete="nope" />
+    </div>
+    <ul class="pn-list list" id="js_list"></ul>
+    <div class="pn-list-item pn-list-item--no-results" style="display: none" id="js_no-results-found">
+      No results found
+    </div>
+  </div>
+</div>
+        {% endcomment %}
+    
+    <div class="field">
+      <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]"  value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
+      <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+    </div>
+    
+    <div class="field"> <textarea rows="10" id="ContactForm-body" class="text-area field__input" name="contact[{{ 'templates.contact.form.comment' | t }}]" placeholder="{{ 'templates.contact.form.comment' | t }}"> {{- form.body -}} </textarea> <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label> </div>
+    <div class="contact__button"> <button class="button"> {{ 'templates.contact.form.send' | t }} </button> </div> {%- endform -%}
+  </div>      
+</div> 
+            {% comment %}
+             <script src="{{ 'phone-input-cf.js' | asset_url }}" defer="defer"></script>
+             {% endcomment %}
+          <style>
+#js_list {
+  display: block;
+}
+            
+    .pn-select input[type=search],
+    .pn-select input[type=tel],
+    .pn-select input[type=text] {
+      font-size: 1.6rem;
+      border: 0;
+      font-family: inherit;
+      outline: none;
+      color: inherit;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      max-width: 100%;
+    }
+    .pn-select input[type=search]::-webkit-input-placeholder,
+    .pn-select input[type=tel]::-webkit-input-placeholder,
+    .pn-select input[type=text]::-webkit-input-placeholder {
+      font-weight: 300;
+      color: #6b7280;
+    }
+    .pn-select input[type=search]::-moz-placeholder,
+    .pn-select input[type=tel]::-moz-placeholder,
+    .pn-select input[type=text]::-moz-placeholder {
+      font-weight: 300;
+      color: #6b7280;
+    }
+    .pn-select input[type=search]:-ms-input-placeholder,
+    .pn-select input[type=tel]:-ms-input-placeholder,
+    .pn-select input[type=text]:-ms-input-placeholder {
+      font-weight: 300;
+      color: #6b7280;
+    }
+    .pn-select input[type=search]:-moz-placeholder,
+    .pn-select input[type=tel]:-moz-placeholder,
+    .pn-select input[type=text]:-moz-placeholder {
+      font-weight: 300;
+      color: #6b7280;
+    }
+
+    :root {
+      --cf-border-radius: 0em;
+      --cf-border-color: #c3c3c3;
+      --cf-border-color-active: #0047a5;
+      --cf-dropdown-border-color: #eaeaec;
+      --cf-dropdown-trigger-background-color: #f3f5f9;
+      --cf-dropdown-trigger-hover-background-color: #e6eaf1;
+      --cf-input-error-color: #ff0000;
+      --cf-input-label-color: #85898f;
+      --cf-input-prefix-color: #656b73;
+      --cf-input-phonenumber-color: #081627;
+      --cf-list-item-hover-background: #f3f5f9;
+    }
+
+    .pn-select {
+      position: relative;
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--cf-border-color);
+      display: grid; 
+      grid-template-columns: 7.5em 1fr;
+      border-radius: var(--cf-border-radius);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease-out;
+      width: 100%;
+      z-index: 20;
+    }
+    .pn-select:focus, .pn-select:focus-within {
+      border-color: var(--cf-border-color-active);
+      box-shadow: 0 0 2px 0 var(--cf-border-color-active);
+    }
+
+    .pn-dropdown {
+      background: #ffffff;
+      border-radius: var(--cf-border-radius);
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--cf-dropdown-border-color);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.135);
+      opacity: 0;
+      padding: 0 0.5em 0.5em;
+      pointer-events: none;
+      position: absolute;
+      top: 140%;
+      transform-origin: left top;
+      transition: all 0.15s ease-out;
+      width: 100%;
+      visibility: hidden;
+    }
+    .pn-select--open .pn-dropdown {
+      pointer-events: all;
+      transform: none;
+      opacity: 1;
+      top: 120%;
+      visibility: visible;
+    }
+
+    .pn-search {
+      position: relative;
+      display: flex;
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--cf-dropdown-border-color);
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+    }
+    .pn-search svg {
+      display: block;
+      height: 1.25rem;
+      left: 0.5em;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.25rem;
+    }
+    .pn-search input[type=search] {
+      padding-left: 2.5rem;
+      height: 3rem;
+      width: 100%;
+    }
+    .pn-search input[type=search]::-webkit-search-decoration, .pn-search input[type=search]::-webkit-search-cancel-button, .pn-search input[type=search]::-webkit-search-results-button, .pn-search input[type=search]::-webkit-search-results-decoration {
+      display: none;
+    }
+
+    .pn-list {
+      margin: 0;
+    margin-right: 0px;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+      margin-right: -0.5em;
+      max-height: 16.5em;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #ffffff #ffffff;
+      position: relative;
+    }
+    .pn-list::-webkit-scrollbar {
+      width: 10px;
+    }
+    .pn-list:hover {
+      --cf-scrollbar-background: #ffffff;
+      --cf-thumb-background: #c0c4ca;
+      scrollbar-color: var(--cf-thumb-background) var(--cf-scrollbar-background);
+    }
+    .pn-list:hover::-webkit-scrollbar-track {
+      background: var(--cf-scrollbar-background);
+    }
+    .pn-list:hover::-webkit-scrollbar-thumb {
+      background-color: var(--cf-thumb-background);
+      border-radius: 6px;
+      border: 3px solid var(--cf-scrollbar-background);
+    }
+    .pn-list--no-scroll {
+      margin-right: 0;
+    }
+
+    .pn-selected-prefix {
+      align-items: center;
+      -webkit-appearance: none;
+        -moz-appearance: none;
+              appearance: none;
+      background: var(--cf-dropdown-trigger-background-color);
+      border-radius: var(--cf-border-radius) 0 0 var(--cf-border-radius);
+      border: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      outline: none;
+      padding: 0;
+      transition: background 0.2s ease-out;
+    }
+    .pn-selected-prefix:hover, .pn-selected-prefix:focus {
+      background: var(--cf-dropdown-trigger-hover-background-color);
+    }
+    .pn-selected-prefix__flag {
+      height: auto;
+        width: 1.75rem;
+    }
+    .pn-selected-prefix__icon {
+      display: block;
+      height: 1.75rem;
+      margin-left: 0.5em;
+      margin-right: -0.25em;
+      transition: all 0.15s ease-out;
+      width: 1.75rem;
+    }
+    .pn-select--open .pn-selected-prefix__icon {
+      transform: rotate(180deg);
+    }
+
+    .pn-input {
+      background: #ffffff;
+      border-radius: 0 var(--cf-border-radius) var(--cf-border-radius) 0;
+      line-height: 1;
+      overflow: hidden;
+      padding: 1.5em 1em;
+    }
+    .pn-input__container {
+      display: flex;
+      flex-direction: row;
+    }
+    .pn-input__label {
+      color: var(--cf-input-label-color);
+      font-size: 1rem;
+      position: relative;
+      top: -0.25em;
+    }
+    .pn-input__error {
+      bottom: 0;
+      color: var(--cf-input-error-color);
+      font-size: 0.785rem;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      transition: all 0.2s ease-out;
+      z-index: -1;
+    }
+    .pn-input input[type=text] {
+      background: transparent;
+      position: absolute;
+      color: var(--cf-input-prefix-color);
+      pointer-events: none;
+    }
+    .pn-input input[type=tel] {
+      color: var(--cf-input-phonenumber-color);
+      font-weight: 500;
+      padding: 0;
+      position: relative;
+  z-index: 10;
+  background: transparent;
+    }
+    .pn-input input[type=tel]:not(:-moz-placeholder-shown):invalid + .pn-input__error {
+opacity: 1;
+  transform: translateY(155%);
+    }
+    .pn-input input[type=tel]:not(:-ms-input-placeholder):invalid + .pn-input__error {
+opacity: 1;
+  transform: translateY(155%);
+    }
+    .pn-input input[type=tel]:not(:placeholder-shown):invalid + .pn-input__error {
+opacity: 1;
+  transform: translateY(155%);
+    }
+
+    .pn-list-item {
+      align-items: center;
+      border-radius: 0.5em;
+      display: flex;
+      font-weight: 400;
+      padding: 0.6em 0.75em;
+      transition: background-color 0.2s ease-out;
+      cursor: pointer;
+      outline: none;
+        font-size: 1.25em;
+    }
+    .pn-list-item__flag {
+      width: 1.25em;
+      height: auto;
+      margin-right: 1em;
+      display: block;
+    }
+    .pn-list-item__country {
+      margin-right: 0.25em;
+    }
+    .pn-list-item:hover, .pn-list-item:focus {
+      background-color: var(--cf-list-item-hover-background);
+    }
+    .pn-list-item--selected {
+      pointer-events: none;
+      font-weight: 500;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23103155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-position: right 0.75em top 50%;
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+      background-position: right 0.75em top 50%;
+    }
+    .pn-list-item--no-results {
+      pointer-events: none;
+    }
+    .succses_sub{
+      color: #fff;
+      font-size: 20px;
+    }
+</style> 
+
+<script>
+function ajaxFormInit(form) {
+  
+      var form_type = form.querySelector("[name=form_type]").value,
+        form_inner = form;
+
+      var buttonForm = form.querySelector('button');
+      
+        buttonForm.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        var action = '/contact'; //form.getAttribute("action");
+
+          
+        fetch(action, {
+          method: 'POST',
+          body: new FormData(form)
+        }).then(function (response) {
+          console.log(response);
+          console.log(response.status);
+          form_inner.innerHTML = "<div class='succses_sub'>Thanks for contacting us. We'll get back to you as soon as possible.</div>";
+
+        }).catch(function (err) {
+          form_inner.innerHTML = '<div class="succses_sub">Error, Try later</div>';
+        });
+
+          
+      });
+    }
+
+    // Init Shopify Forms
+   document.addEventListener("DOMContentLoaded", function(event) {
+    setTimeout(function(){
+      ajaxFormInit(document.querySelector("#ContactForm"));
+    }, 2000)
+   });
+  
+      
+</script>
+
+{% schema %} { "name": "t:sections.contact-form.name", "tag": "section", "class": "section", "settings": [ { "type": "text", "id": "heading", "default": "Contact form", "label": "Heading" }, { "type": "select", "id": "heading_size", "options": [ { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" }, { "value": "h1", "label": "t:sections.all.heading_size.options__2.label" }, { "value": "h0", "label": "t:sections.all.heading_size.options__3.label" } ], "default": "h1", "label": "t:sections.all.heading_size.label" }, { "type": "select", "id": "color_scheme", "options": [ { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" }, { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" }, { "value": "background-1", "label": "t:sections.all.colors.background_1.label" }, { "value": "background-2", "label": "t:sections.all.colors.background_2.label" }, { "value": "inverse", "label": "t:sections.all.colors.inverse.label" } ], "default": "background-1", "label": "t:sections.all.colors.label" }, { "type": "header", "content": "t:sections.all.padding.section_padding_heading" }, { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_top", "default": 36 }, { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_bottom", "default": 36 } ], "presets": [ { "name": "t:sections.contact-form.presets.name" } ] } {% endschema %}

@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-aboutus",
+      "disabled": true,
+      "settings": {}
+    },
+    "bcab80d4-4caf-4a1b-8aa5-0f446b83189e": {
+      "type": "custom-breadcrumb-info",
+      "settings": {}
+    },
+    "16582970352594b853": {
+      "type": "image-with-text",
+      "blocks": {
+        "1658297035a26cc0b3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "About us",
+            "heading_size": "h0"
+          }
+        },
+        "1658297035a26cc0b3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>I founded Y.Chroma to make wardrobes for midlife re-invention. If getting dressed in the morning is  <a href=\"https:\/\/youtu.be\/HfdIAJeBV2c\" target=\"_blank\" title=\"https:\/\/youtu.be\/HfdIAJeBV2c\">a joyless experience<\/a> for you, then Y.Chroma is where you come to  change that.  <\/p><p>My mission is to provide an appropriately reinvigorated look, composed thoughtfully into well-designed wardrobes you can use to elevate how you look (and how you feel) when you walk out the door. Everything is premium quality, all of it crafted right here in Europe.<\/p><p>When you get dressed in the morning, that's you choosing the version of you that you want the world to see.  I think you're going to love how great that new version is going to look.<\/p><p>Feel free to email me your thoughts at <a href=\"mailto:max@ychroma.com\" title=\"mailto:max@ychroma.com\">max@ychroma.com<\/a>. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "1658297035a26cc0b3-0",
+        "1658297035a26cc0b3-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_5380.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bcab80d4-4caf-4a1b-8aa5-0f446b83189e",
+    "16582970352594b853"
+  ]
+}

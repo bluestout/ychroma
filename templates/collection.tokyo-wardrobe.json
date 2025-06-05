@@ -1,0 +1,222 @@
+{
+  "sections": {
+    "custom_image_video_section_fcxihw": {
+      "type": "custom-image-video-section",
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/TOKYO - DESKTOP - V2.mp4",
+        "video_looping": true,
+        "mobile_video": "shopify:\/\/files\/videos\/TOKYO - MOBILE - V2.mp4",
+        "title": "",
+        "description": "",
+        "show_colors": true
+      }
+    },
+    "custom_filter_section_TE7DJU": {
+      "type": "custom-filter-section",
+      "settings": {}
+    },
+    "custom_collection_grid_GWNzUP": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 0,
+        "margin_bottom": 5,
+        "grid_offset": 0,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/look02-326A5223-pfav.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/sevilla-shirt?variant=44718969225406",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma-02-ss2023-look01-00110-lrg.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/basic-workshirt?variant=42503226065086"
+      }
+    },
+    "custom_carousel_image_blocks_6mkkna": {
+      "type": "custom-carousel-image-blocks",
+      "blocks": {
+        "image_VCrtdX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-01.jpg",
+            "link": ""
+          }
+        },
+        "image_TBQTFB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-02.jpg",
+            "link": ""
+          }
+        },
+        "image_f8K6bJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-03.jpg",
+            "link": ""
+          }
+        },
+        "image_w7wz89": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-04_56ce1581-b245-4401-9fb2-fe4afd209814.jpg",
+            "link": ""
+          }
+        },
+        "image_RDy3WR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-05_d30d43d8-b3ce-49e2-8532-da0cd2dcd3c6.jpg",
+            "link": ""
+          }
+        },
+        "image_XVJAWX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-06.jpg",
+            "link": ""
+          }
+        },
+        "image_C9p7pt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-07.jpg",
+            "link": ""
+          }
+        },
+        "image_GbRCzx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yc-carousel-tokyo-08.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_VCrtdX",
+        "image_TBQTFB",
+        "image_f8K6bJ",
+        "image_w7wz89",
+        "image_RDy3WR",
+        "image_XVJAWX",
+        "image_C9p7pt",
+        "image_GbRCzx"
+      ],
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "custom_collection_grid_HMPX6x": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 16,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/ychroma-2324-look31-03616-lrg-2-rec_2c457fda-157a-4ad0-a453-d62b6cbc50e6.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/the-retinol-pant?_pos=2&_psq=retino&_ss=e&_v=1.0",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma-2324-look39-04545-lr_dd1efbd5-a5ff-4eaf-ab8b-d8f37f875036.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/drucken-pant?variant=43107082666174"
+      }
+    },
+    "17448885993f9dce8f": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_jB4rJm"
+      ],
+      "settings": {
+        "include_margins": true,
+        "full_width": false
+      }
+    },
+    "custom_collection_grid_QwjVJa": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 32,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/the-henley-long-sleeve-t-shirt-279750_8775fe67-f5d0-4993-a3dd-864c7ac7035e.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/henley-button-t-shirt?variant=42499825336510",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma-02-ss2023-look07-00868-lrg2_96b30c78-2d03-4a6b-a720-f7f19930a1bb.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/henley-t-shirt-short-sleeve-o?variant=42502961955006"
+      }
+    },
+    "custom_collection_grid_ftLyGb": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 48,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/ychroma-2324-look18-01968-lrg-2_69e72bb8-0d23-4460-a935-9383a1286ea4.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/henley-luxury-tropical-weight-short-sleeve?variant=43104126959806",
+        "custom_div16_image": "shopify:\/\/shop_images\/look06-326A5325.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/varial-shirt-cut-jacket?variant=44129071628478"
+      }
+    },
+    "custom_collection_grid_J9ML7F": {
+      "type": "custom-collection-grid",
+      "settings": {
+        "display_scroll": false,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "grid_gap": 5,
+        "margin_top": 5,
+        "margin_bottom": 5,
+        "grid_offset": 64,
+        "grid_limit": 16,
+        "custom_div5_image": "shopify:\/\/shop_images\/look03-326A3851_7c64cae6-380a-43a1-81f7-1c65389b2a54.jpg",
+        "custom_div5_url": "https:\/\/www.ychroma.com\/products\/grand-prix-hand-crocheted-shirt-limited-edition?variant=43453604331710",
+        "custom_div16_image": "shopify:\/\/shop_images\/ychroma_2324_look03_00344_6ce119b7-15c1-4c17-8d8e-7b15d142b34f.jpg",
+        "custom_div16_url": "https:\/\/www.ychroma.com\/products\/mazarin-cut-windstopper?variant=43105288650942"
+      }
+    },
+    "video_wardrobe_v2_J4qFdB": {
+      "type": "video-wardrobe-v2",
+      "settings": {
+        "use_youtube_video": true,
+        "youtube_video_id": "LemCq-e7MBk",
+        "video_height": 620,
+        "overlay_show": false,
+        "overlay_opacity": 30,
+        "text-box": "",
+        "title": "",
+        "show_play_button": true
+      }
+    }
+  },
+  "order": [
+    "custom_image_video_section_fcxihw",
+    "custom_filter_section_TE7DJU",
+    "custom_collection_grid_GWNzUP",
+    "custom_carousel_image_blocks_6mkkna",
+    "custom_collection_grid_HMPX6x",
+    "17448885993f9dce8f",
+    "custom_collection_grid_QwjVJa",
+    "custom_collection_grid_ftLyGb",
+    "custom_collection_grid_J9ML7F",
+    "video_wardrobe_v2_J4qFdB"
+  ]
+}

@@ -1,0 +1,47 @@
+<div>
+    {%- for block in section.blocks -%}
+      <div>
+        
+      </div>
+    {%- endfor -%}
+</div>
+{% schema %}
+{
+  "name": "Paralax",
+
+  "class": "section paralax",
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Paralax Section",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

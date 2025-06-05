@@ -1,0 +1,327 @@
+{%- style -%}
+  .filter-drawer {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 999999999999999;
+    transform: translate(100%, 0px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .filter-drawer[data-open='true'] {
+    transform: translate(0%, 0px);
+  }
+
+  /* overlay background when drawer is open */
+  .drawer-overlay {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999999999999998;
+  }
+
+  .drawer-overlay[data-open='true'] {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 1px solid black;
+  }
+
+  .drawer-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0px;
+  }
+
+  ul.filter-options {
+    list-style-type: none;
+    max-height: 365px;
+    overflow-y: auto;
+    padding-bottom: 0px;
+  }
+
+  .drawer-content #sort-by-filter input {
+    display: none;
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .drawer-content {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .filter-drawer details {
+    border-bottom: 1px solid #eee;
+  }
+
+  .filter-drawer summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: CentraNo2-bold;
+  }
+
+  .filter-drawer summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .filter-drawer .chevron {
+    transition: transform 0.3s ease;
+  }
+
+  .filter-drawer details[open] .chevron {
+    transform: rotate(180deg);
+  }
+
+  .filter-options {
+    padding: 0 20px 20px;
+  }
+
+  .drawer-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-bottom: 50px;
+  }
+
+  .apply-button {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  .clear-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    padding: 10px 0;
+  }
+
+  .clear-button span {
+    margin-right: 8px;
+  }
+
+  .filter-drawer li.filter-option {
+    display: flex;
+    align-items: center;
+    padding: 7px 0px;
+  }
+
+  .filter-drawer li.filter-option label {
+    margin: 0px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .filter-drawer .clear-button {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .filter-drawer #sort-by-filter .filter-option {
+    margin: 5px 0px;
+  }
+
+  .filter-drawer #sort-by-filter .filter-option label {
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  body:has(.drawer-overlay[data-open='true']) {
+    overflow: hidden;
+  }
+
+  .filter-drawer details[open] summary .svg-wrapper {
+    transform: rotate(180deg);
+  }
+
+  .filter-drawer details[open] summary {
+    padding-bottom: 7px;
+  }
+
+  .filter-option input[type='radio'],
+  .filter-option input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .filter-option input[type='radio'],
+  .filter-option input[type='checkbox'] {
+    width: 10px;
+    height: 10px;
+    border: solid 1px #cccccc;
+    margin-right: 8px;
+    position: relative;
+  }
+
+  .filter-option input[type='radio'],
+  .filter-option input[type='radio']:checked::before {
+    border-radius: 100%;
+  }
+
+  .filter-option input[type='checkbox']:checked {
+    background: black;
+  }
+
+  .applied-filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 5px;
+  }
+
+  .applied-filter-wrapper .applied-filter {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'CentraNo2-Bold';
+  }
+
+  .applied-filter-items-wrapper {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .applied-filter-items-wrapper a.single-item-active-filter span {
+    color: black;
+    font-size: 14px !important;
+    margin-left: 7px;
+  }
+
+  .applied-filter-items-wrapper .svg-wrapper {
+    width: 10px;
+    height: 10px;
+  }
+
+  .applied-filter-items-wrapper .single-item-active-filter {
+    color: black;
+  }
+{%- endstyle -%}
+
+<div class="filter-drawer">
+  <div class="drawer-header">
+    {%- if collection.filters != empty -%}
+      <h2 class="drawer-title">FILTER & SORT</h2>
+    {%- else -%}
+      <h2 class="drawer-title">SORT</h2>
+    {%- endif -%}
+    <button class="close-button" aria-label="Close filter drawer">×</button>
+  </div>
+  <div class="applied-filter-wrapper" style="display: none;">
+    <div class="applied-filter">
+      <span>Applied Filters</span>
+    </div>
+    <div class="applied-filter-items-wrapper">
+      {% for filter in collection.filters %}
+        {% for value in filter.active_values %}
+          <a href="{{ value.url_to_remove }}" class="single-item-active-filter">
+            <div class="svg-wrapper">
+              {% render 'icon-close' %}
+            </div>
+            <span>{{ value.label | escape }}</span>
+          </a>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="drawer-content">
+    <details id="sort-by-filter">
+      <summary>
+        SORT BY
+        <div class="svg-wrapper">
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </summary>
+      <div class="filter-options">
+        {%- for option in collection.sort_options -%}
+          <div class="filter-option">
+            <input type="radio" id="mobile-sort-by-{{ option.value }}" name="sort_by" value="{{ option.value }}">
+            <label for="mobile-sort-by-{{ option.value }}">{{ option.name }}</label>
+          </div>
+        {%- endfor -%}
+      </div>
+    </details>
+    {%- for filter in collection.filters -%}
+      <details id="filter-{{ filter.label }}">
+        <summary>
+          {{ filter.label }}
+          <div class="svg-wrapper">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L9 1" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </summary>
+        <ul class="filter-options">
+          {%- for value in filter.values -%}
+            <li class="filter-option">
+              <input
+                type="checkbox"
+                id="mobile-Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                name="{{ value.param_name }}"
+                value="{{ value.value }}"
+              >
+              <label for="mobile-Filter-{{ filter.label | escape }}-{{ forloop.index }}">{{ value.label }}</label>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </details>
+    {%- endfor -%}
+  </div>
+  {%- if collection.filters != empty -%}
+    <div class="drawer-footer">
+      <button class="apply-button">APPLY</button>
+      <button class="clear-button">
+        <span>CLEAR ALL FILTERS</span>
+        <span>×</span>
+      </button>
+    </div>
+  {%- endif -%}
+</div>
