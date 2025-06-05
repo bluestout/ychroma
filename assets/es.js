@@ -259,6 +259,14 @@ upcartOnCartLoaded = (cart) => {
   //   observer.observe(document.body, { childList: true, subtree: true });
   // }, 300);
   
+  const footer = widget.querySelector(".upcart-footer");
+  
+  if (!document.querySelector(".checkout-note")) {
+    const div = document.createElement("div");
+    div.classList.add("checkout-note");
+    div.textContent = "Your total includes all customs duties and taxes. We guarantee no additional charges on delivery.";
+    footer.querySelector(".styles_Footer__checkoutButton__").prepend(div);
+  }
 }
 
 console.log('details');
