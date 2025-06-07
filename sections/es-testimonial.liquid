@@ -16,9 +16,49 @@
       --padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}px;
     }
   }
+  
+  @media (min-width: 1150px) {
+    .kl_reviews__carousel__review {
+      padding: 16px 0px 18px 0px !important;
+  }
+}
+
+@media (max-width: 1149px) {
+  .kl_reviews__carousel__review {
+    padding: 16px 20px 18px 30px !important;
+}
+}
+
+@media (min-width: 1400px) {
+.swiper-button-next, .swiper-button-prev {
+  top: 40% !important;
+}
+}
+
+
+  button.kl_reviews__carousel__next_button::after {
+    content: 'next' !important;
+    font-family: swiper-icons !important;
+    font-size: 22px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+button.kl_reviews__carousel__prev_button::after {
+  content: 'prev' !important;
+  font-family: swiper-icons !important;
+  font-size: 22px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+
 </style>
 
-<div class="page-width">
+ <div class="page-width">
   <div class="swiper">
     <div class="testimonial-wrapper">
       <div class="swiper-wrapper">
