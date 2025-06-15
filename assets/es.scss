@@ -474,40 +474,54 @@
 }
 
 
-@media screen and (max-width: 376px) {
-  .media-wrapper {
-    .muteBtn {
-      bottom: 350px !important;      
-    }
-    .soundBtn {
-      position:fixed;
-    }
+// @media screen and (max-width: 376px) {
+//   .media-wrapper {
+//     .muteBtn {
+//       bottom: 350px !important;      
+//     }
+//     .soundBtn {
+//       position:fixed;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 476px) {
+//   .container {
+//   .media-wrapper {
+//     .soundBtn {
+//       bottom: 250px;
+//     }
+//     .soundBtn {
+//       position:fixed;
+//     }
+//   }
+// }
+// }
+
+@media screen and (max-width: 750px) {
+  .media-wrapper {    
+      .soundBtn {
+        margin:0 0px 0px auto;
+        position: sticky;
+        justify-self: flex-end;
+        display: block;
+      }  
+    
   }
 }
 
-@media screen and (max-width: 476px) {
-  .container {
-  .media-wrapper {
-    .soundBtn {
-      bottom: 250px;
-    }
-    .soundBtn {
-      position:fixed;
-    }
+@media screen and (min-width: 751px) {
+  .media-wrapper {    
+      .soundBtn {
+        margin:0 0px 0px auto;
+        position: sticky;
+        justify-self: flex-end;
+        display: block;
+      }  
+    
   }
-}
 }
 
-@media screen and (max-width: 600px) {
-  .media-wrapper {
-    .soundBtn {
-      bottom: 150px;
-    }
-    .soundBtn {
-      position:fixed;
-    }
-  }
-}
 
 @media screen and (max-width: 989px) {
   #shopify-section-header {
@@ -521,9 +535,9 @@
 }
 
 .muteBtn {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+  // position: absolute;
+  bottom: 110px;
+  right: 16px;
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
@@ -531,7 +545,7 @@
   border-radius: 50%;
   cursor: pointer;
   font-size: 20px;
-  z-index: 10;
+  z-index: 9;
 
   img {
     width: 20px;
@@ -610,6 +624,7 @@
           position: relative;
           height: 100%;
           width: 100%;
+          padding-bottom: 15px;
 
           &>video,
           &>img {
